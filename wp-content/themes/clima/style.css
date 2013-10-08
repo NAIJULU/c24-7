@@ -50,6 +50,7 @@ body{
 	padding-top: 0;
 	background-image:url(images/background.jpg);
 	background-repeat:no-repeat;
+	background-position: top center;
 }
 
 /* Admin Top Navigation fixes */
@@ -84,6 +85,12 @@ input, textarea, select, .uneditable-input {
 	padding-left: 20px;
 	padding-right: 20px;
 	}
+
+.logosPatrocinadores {
+	background-color:#090;
+	hanging-punctuation:130px;
+
+}
 
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
@@ -725,7 +732,7 @@ blockquote.pull-left{
 	}
 	
 	.blog .hero-unit{
-		margin-top: 10px;
+		
 	}
 	
 	.page-template-page-homepage-php .hero-unit,
