@@ -7,9 +7,8 @@
 			<div class="clearfix row-fluid">
 				<div class="hero-unit">
 				
-					<h1><?php bloginfo('title'); ?></h1>
-					
-					<p><?php bloginfo('description'); ?></p>
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_widget') ) : ?>
+				<?php endif; ?>
 				
 				</div>
 			</div>
