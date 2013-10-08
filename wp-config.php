@@ -78,9 +78,7 @@ define('WPLANG', 'es_ES');
  * Se recomienda encarecidamente a los desarrolladores de temas y plugins que usen WP_DEBUG
  * en sus entornos de desarrollo.
  */
-error_reporting(E_ALL); ini_set('display_errors', 1);
-
-define( 'WP_DEBUG', true);
+define( 'WP_DEBUG', false);
 
 /* ¡Eso es todo, deja de editar! Feliz blogging */
 
