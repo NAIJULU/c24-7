@@ -79,6 +79,10 @@ input, textarea, select, .uneditable-input {
 
 #logos {
 	height:130px;
+	max-width: 970px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
 	}
 
 .navbar-form, .navbar-search {
@@ -676,6 +680,14 @@ blockquote.pull-left{
 		margin: 0 auto;
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	
+	#logos {
+	height:130px;
+	max-width: 970px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
 	}
 	
 	#inner-footer{

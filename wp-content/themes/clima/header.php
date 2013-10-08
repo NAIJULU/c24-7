@@ -45,7 +45,9 @@
 			<div id="inner-header" class="clearfix">
             	
                 <div id="logos">
-                	<div class="logoClima"></div>
+                	<div class="logoClima">
+                    	<img src="<?php bloginfo('template_directory'); ?>/images/logoClima.png" />
+                    </div>
                     <div class="logosPatrocinadores"></div>
                 </div>
             
