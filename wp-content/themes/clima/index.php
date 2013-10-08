@@ -1,20 +1,8 @@
-<?php get_header(); ?>
+<?php get_header(); ?>	
 			
-			<?php
-				$blog_hero = of_get_option('blog_hero');
-				if ($blog_hero){
-			?>
-			<div class="clearfix row-fluid">
-				<div class="hero-unit">
-				
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_widget') ) : ?>
-				<?php endif; ?>
-				
-				</div>
-			</div>
-			<?php
-				}
-			?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_widget') ) : ?>
+
+			<?php endif; ?>
 			
 			<div id="content" class="clearfix row-fluid">
 			

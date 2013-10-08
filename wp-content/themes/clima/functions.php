@@ -100,6 +100,17 @@ you like. Enjoy!
 
 /************* ACTIVE SIDEBARS ********************/
 
+// Registrando posición para el widget en la página principal
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'Widget Home',
+        'id'=>'home_widget',
+        'before_widget' => '<div class="widget-home">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+  ));
+
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
     register_sidebar(array(
@@ -776,4 +787,12 @@ function get_wpbs_theme_options(){
       }
 } // end get_wpbs_theme_options function
 
+// Añadimos la acción para crear widgets desde el template
+function creaWidgets(){
+ register_widget( 'WidgetPronosticoHome' );
+}
+add_action( 'widgets_init', 'creaWidgets' );
+
+// Incluimos el archivo de widget home
+include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 ?>

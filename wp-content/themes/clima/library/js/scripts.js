@@ -99,5 +99,33 @@ jQuery(document).ready(function($) {
 	$('.alert-message').alert();
 	
 	$('.dropdown-toggle').dropdown();
- 
-}); /* end of as page load scripts */
+
+	/**
+	* Sección para el manejo del widget de Pronóstico / Radar / Temperatura
+	*/
+	$("#radar").css('display','none');
+
+	$("#temperaturas").css('display','none');
+
+	$("#btnMostrarRadar").click(function(e){
+		e.preventDefault();
+		$("#pronosticos").fadeOut();
+		$("#temperaturas").fadeOut();
+		$("#radar").fadeIn(1000);
+	});
+
+	$("#btnMostrarTemperatura").click(function(e){
+		e.preventDefault();
+		$("#pronosticos").fadeOut();
+		$("#radar").fadeOut();
+		$("#temperaturas").fadeIn(1000);
+	});	
+
+	$("#btnMostrarPronostico").click(function(e){
+		e.preventDefault();
+		$("#temperaturas").fadeOut();		
+		$("#radar").fadeOut();
+		$("#pronosticos").fadeIn(1000);
+	});		
+	/* Fin de la sección */ 
+}); 
