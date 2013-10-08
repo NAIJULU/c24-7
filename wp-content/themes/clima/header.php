@@ -43,11 +43,18 @@
 		<header role="banner">
 		
 			<div id="inner-header" class="clearfix">
+            	
+                <div id="logos">
+                	<div class="logoClima"></div>
+                    <div class="logosPatrocinadores"></div>
+                </div>
+            
 				
-				<div class="navbar navbar-fixed-top">
+				<div class="navbar">
 					<div class="navbar-inner">
 						<div class="container-fluid nav-container">
-							<nav role="navigation">
+							
+                            <nav role="navigation">
 								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
 									<?php if(of_get_option('branding_logo','')!='') { ?>
 										<img src="<?php echo of_get_option('branding_logo'); ?>" alt="<?php echo get_bloginfo('description'); ?>">

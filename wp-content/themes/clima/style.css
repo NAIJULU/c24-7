@@ -48,6 +48,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 body{
 	padding-top: 0;
+	background-image:url(images/background.jpg);
+	background-repeat:no-repeat;
 }
 
 /* Admin Top Navigation fixes */
@@ -75,6 +77,10 @@ input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
 
+#logos {
+	height:130px;
+	}
+
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
 }
@@ -82,6 +88,11 @@ input, textarea, select, .uneditable-input {
 .navbar-search{
 	padding-left: 0;
 }
+
+.navbar-inner {
+	background-color:#a5ce39;
+	background-position:center;
+	border-top:5px solid #d2e177;}
 
 #s{
 	width: 100px;
@@ -657,7 +668,7 @@ blockquote.pull-left{
 
 @media only screen and (min-width: 980px) {
 	body{
-		padding-top: 60px;
+		padding-top: 0px;
 	}
 	
 	.container-fluid{
