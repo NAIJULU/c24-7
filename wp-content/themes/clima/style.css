@@ -136,15 +136,15 @@ input, textarea, select, .uneditable-input {
 
 #mapa {
 	height:350px !important;
-	max-width:100% !important;
-	}
+	width:100% !important;
+}
 
 #mapa img {
-max-width: none;
+	max-width: none;
 }
 
 #mapa label {
-width: auto; display:inline;
+	width: auto; display:inline;
 }
 
 .videoEmision {
