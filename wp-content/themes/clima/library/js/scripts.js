@@ -103,6 +103,13 @@ jQuery(document).ready(function($) {
 	/**
 	* Sección para el manejo del widget de Pronóstico / Radar / Temperatura
 	*/
+	$("#pronosticos").carousel({
+		interval: false
+	});
+	$("#temperaturas").carousel({
+		interval: false
+	});	
+
 	$("#radar").css('display','none');
 
 	$("#temperaturas").css('display','none');
