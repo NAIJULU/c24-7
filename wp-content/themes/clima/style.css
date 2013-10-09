@@ -134,6 +134,28 @@ input, textarea, select, .uneditable-input {
 
 /* post styling */
 
+.videoEmision {
+	background-color:#80ad08; 
+	height:300px;
+	}
+	
+.galeriaHome  {
+	margin-top:30px;
+	}
+
+.galeriaHome h2 {
+	background-image:url(images/h2Lineas.png);
+	background-position:center center;
+	color:#80ad08;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:22px;
+	text-align:center;
+	text-transform:uppercase;
+	}
+
+.galeriaHome span3 img {
+	max-width:100%;}
+
 #main p.meta{
 	font-style: italic;
 	color: #808080;
