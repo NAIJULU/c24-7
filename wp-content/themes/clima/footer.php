@@ -1,8 +1,17 @@
 			<footer role="contentinfo">
 			
 				<div id="inner-footer" class="clearfix">
-		          <hr />
+		         
 		          <div id="widget-footer" class="clearfix row-fluid">
+                  	<ul class="menuInstitucional">
+                    	<li class="InstitucionalBtn"><a href="#">INSTITUCIONAL</a></li>
+                        <li class="MapaBtn"><a href="#">MAPA DEL SITIO</a></li>
+                        <li class="FAQBtn"><a href="#">FAQ</a></li>
+                        <li class="GlosarioBtn"><a href="#">GLOSARIO</a></li>
+                        <li class="SuscripcionBtn"><a href="#">SUSCRIPCIÓN</a></li>
+                    </ul>
+                  
+                  
 		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 		            <?php endif; ?>
 		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
@@ -15,9 +24,7 @@
 						<?php bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					
-					<p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p>
-			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
+					
 				
 				</div> <!-- end #inner-footer -->
 				
