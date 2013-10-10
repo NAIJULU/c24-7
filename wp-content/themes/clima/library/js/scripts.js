@@ -119,6 +119,16 @@ jQuery(document).ready(function($) {
 		$("#pronosticos").fadeOut();
 		$("#temperaturas").fadeOut();
 		$("#radar").fadeIn(1000);
+
+		var medellin = new google.maps.LatLng(6.244316, -75.539932);
+		var mapOptions = {
+			zoom: 12,
+			center: medellin,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		}
+		var map = new google.maps.Map(document.getElementById("mapa"), mapOptions);		
+		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
+		georssLayer.setMap(map);
 	});
 
 	$("#btnMostrarTemperatura").click(function(e){
@@ -135,4 +145,5 @@ jQuery(document).ready(function($) {
 		$("#pronosticos").fadeIn(1000);
 	});		
 	/* Fin de la sección */ 
-}); 
+	
+});

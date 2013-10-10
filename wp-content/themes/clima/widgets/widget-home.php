@@ -419,10 +419,10 @@ class WidgetPronosticoHome extends WP_Widget {
 						<li data-target="#pronosticos" data-slide-to="9">Caldas</li>
 					</ol>			  
 				</div>
-				<div id="radar" class="carousel slide">
-					<!-- Carousel items -->
-					<div id="ciudades" class="carousel-inner">
-						<div class="active item"><iframe width="970" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?q=http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml&amp;ie=UTF8&amp;ll=6.2694,-75.590529&amp;spn=0.026619,0.040169&amp;t=m&amp;z=15&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/?ie=UTF8&amp;ll=6.2694,-75.590529&amp;spn=0.026619,0.040169&amp;t=m&amp;z=15&amp;source=embed" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small></div>
+				<div id="radar">
+					<div id="contenedor-radar">
+						<div id="mapa">
+						</div>
 					</div>		  
 				</div>	
 				<div id="temperaturas" class="carousel slide">
