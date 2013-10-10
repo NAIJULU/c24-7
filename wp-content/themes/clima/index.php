@@ -23,20 +23,24 @@
                         <div class="span1"></div>
                         
                         <div class="span3">
-                        	<img src="images/imagenGenerica.jpg" />
+                        	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
+                           	<h3>LAS MANZANAS YA NO SABEN IGUAL POR EL CAMBIO CLIMÁTICO</h3>
+                            <p>Según la Organización Nacional de Agricultura y de investigación alimentaria en Japón (NARO), el sabor y la textura de esta fruta han cambiado en los últimos 40 años.</p>
                         </div>
                         
                         <div class="span3">
-                        	<img src="images/imagenGenerica.jpg" />
+                        	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
+                            <h3>LAS PLANTAS AYUDAN A PREDECIR EL CAMBIO CLIMÁTICO</h3>
+                           <p> El reloj biológico de las plantas, también conocido como reloj circadiano, puede ayudar a predecir los cambios que se van a presentar con el clima.</p>
                         </div>
                         
                         <div class="span3">
-                        	<img src="images/imagenGenerica.jpg" />
+                        	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
+                            <h3>Con 100 toneladas quedó la playa de Acapulco después de "Manuel"</h3>
+                            <p>Centenares de toneladas de basura en las playas de Acapulco han sido el resultado de la tormenta tropical Manuel, que afectó la costa oeste de México en los últimos días.</p>
                         </div>
                         
-                        <div class="span1">
-                        </div>
-                        
+                        <div class="span1"></div>
                     </div>
                         
 					
