@@ -148,7 +148,12 @@ input, textarea, select, .uneditable-input {
 }
 
 .videoEmision {
-	background-color:#80ad08; 
+	background-color:#94c60d; 
+	height:300px;
+	}
+
+.fotosUsuarios {
+	background-color:#94c60d; 
 	height:300px;
 	}
 	

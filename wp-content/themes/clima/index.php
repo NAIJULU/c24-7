@@ -9,7 +9,7 @@
 				<div id="main" class="span12 clearfix" role="main">
                 	<div class="row-fluid">
                 		<div class="span7 videoEmision"></div>
-                        <div class="span5 fotosUsuarios" style="background-color:#9ad400; height:300px;"></div>
+                        <div class="span5 fotosUsuarios"></div>
                     </div>
                     
                 </div>

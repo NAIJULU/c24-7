@@ -51,9 +51,11 @@
                             <img src="<?php bloginfo('template_directory'); ?>/images/logoClima.png" />
                         </div>
                     	<div class="offset2 span4">
+                         <a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoTM.png" /></a>
+                         <a href="hhttp://www.medellin.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoAlcaldia.png" /></a>
                         	<a href="http://www.areadigital.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/LogoArea.png" /></a>
-                            <a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoTM.png" /></a>
-                            <a href="hhttp://www.medellin.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoAlcaldia.png" /></a>
+                           
+                            
                         </div>
                     </div>
                 </div>
