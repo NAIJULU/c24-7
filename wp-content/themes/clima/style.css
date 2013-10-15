@@ -147,6 +147,54 @@ input, textarea, select, .uneditable-input {
 	width: auto; display:inline;
 }
 
+#pronosticos #ciudades {
+	background-image:url(images/backgroundPronostico.png);
+	color:#FFF;
+	font-size:20px;
+	height:350px;
+	max-width: 930px;
+	padding: 0px 20px 10px 20px;
+	}
+
+#pronosticos #ciudades h2 {
+background-image: url(images/h2LineaB.png);
+background-position: center center;
+color: #FFF;
+font-family: Verdana, Geneva, sans-serif;
+font-size: 22px;
+font-weight:bold;
+text-align: center;
+text-transform: uppercase;
+}
+
+#pronosticos #ciudades .dia {
+color: #FFF;
+display:block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+line-height:16px;
+font-weight:bold;
+text-transform: uppercase;
+}
+
+#pronosticos #ciudades .mes {
+color: #FFF;
+display:block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+text-transform: uppercase;
+}
+
+#pronosticos #ciudades .dias {
+color: #FFF;
+display:block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 36px;
+font-weight:bold;
+text-transform: uppercase;
+}
+
+
 .videoEmision {
 	background-color:#94c60d; 
 	height:300px;
