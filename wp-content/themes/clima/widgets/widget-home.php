@@ -338,10 +338,13 @@
 		  ?>
   <div id="widget-pronostico">
 	<div class="controles">
-	  <button id="btnMostrarPronostico">Pronóstico</button>
-	  <button id="btnMostrarRadar">Radar</button>
-	  <button id="btnMostrarTemperatura">Temperatura</button>
+    <ul class="menuControles">
+    	<li><a href="#pronosticos" id="btnMostrarPronostico">Pronóstico</a></li>
+        <li><a href="#radar" id="btnMostrarRadar">Radar</a></li>
+        <li><a href="#temperaturas" id="btnMostrarTemperatura">Temperatura</a></li>
+    </ul> 
 	</div>
+    
 	<div id="pronosticos" class="carousel slide"> 
 	  <!-- Carousel items -->
 	  <div id="ciudades" class="carousel-inner">
@@ -355,12 +358,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxMedellin ?>° 
+				    <div class="tempMax">Máx</div>
+				 	<div class="numMax"> <?php echo $tempMaxMedellin ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinMedellin ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"><?php echo $tempMinMedellin ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -371,12 +374,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxMedellinMa ?>° 
+				  <div class="tempMax">Máx</div>
+				  <div class="numMax"><?php echo $tempMaxMedellinMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinMedellinMa ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinMedellinMa ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -394,12 +397,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxBarbosa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxBarbosa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinBarbosa ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"> <?php echo $tempMinBarbosa ?>°</div> 
                 </div>
 			  </div>
 			</div>
@@ -410,12 +413,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxBarbosaMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxBarbosaMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinBarbosaMa ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinBarbosaMa ?>°</div>
                   </div>
 			  </div>
 			</div>
@@ -433,12 +436,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxGirardota ?>° 
+				  <div class="tempMax">Máx</div>
+				  <div class="numMax"><?php echo $tempMaxGirardota ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinGirardota ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"> <?php echo $tempMinGirardota ?>°</div>
                 </div>
 			  </div>
 			</div>
@@ -449,12 +452,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxGirardotaMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxGirardotaMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinGirardotaMa ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinGirardotaMa ?>°</div> 
                   </div>
 			  </div>
 			</div>
@@ -471,12 +474,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxGCopacabana ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxGCopacabana ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinCopacabana ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"><?php echo $tempMinCopacabana ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -487,12 +490,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxCopacabanaMa ?>° 
+				  <div class="tempMax">Máx</div>
+				  <div class="numMax"><?php echo $tempMaxCopacabanaMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinCopacabanaMa ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinCopacabanaMa ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -509,12 +512,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxBello ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxBello ?>°</div> 
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinBello ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinBello ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -525,12 +528,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxBelloMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxBelloMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinBelloMa ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinBelloMa ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -547,12 +550,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxEnvigado ?>° 
+				  <div class="tempMax">Máx</div>
+				  <div class="numMax"><?php echo $tempMaxEnvigado ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinEnvigado ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"> <?php echo $tempMinEnvigado ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -563,12 +566,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxEnvigadoMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxEnvigadoMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinEnvigadoMa ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinEnvigadoMa ?>°</div> 
                   </div>
 			  </div>
 			</div>
@@ -585,12 +588,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxSabaneta ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxSabaneta ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinSabaneta ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"> <?php echo $tempMinSabaneta ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -601,12 +604,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxSabanetaMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxSabanetaMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinSabanetaMa ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"><?php echo $tempMinSabanetaMa ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -623,12 +626,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxLaEstrella ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxLaEstrella ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinLaEstrella ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"> <?php echo $tempMinLaEstrella ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -639,12 +642,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxLaEstrellaMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxLaEstrellaMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinLaEstrellaMa ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"> <?php echo $tempMinLaEstrellaMa ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -661,12 +664,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxItagui ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxItagui ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinItagui ?>° 
+				  <div class="tempMin">Min</div>
+				   <div class="numMin"><?php echo $tempMinItagui ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -677,12 +680,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxItaguiMa ?>° 
+				  <div class="tempMax">Máx</div>
+				  <div class="numMax"><?php echo $tempMaxItaguiMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinItaguiMa ?>° 
+				  <div class="tempMin">Min</div>
+				  <div class="numMin"><?php echo $tempMinItaguiMa ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -699,12 +702,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> 
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxCaldas ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxCaldas ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinCaldas ?>° 
+				  <div class="tempMin">Min</div>
+				 <div class="numMin"> <?php echo $tempMinCaldas ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -715,12 +718,12 @@
                     <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
                 </div>
 				<div class="span4">
-				  <div>Máx</div>
-				  <?php echo $tempMaxCaldasMa ?>° 
+				  <div class="tempMax">Máx</div>
+				 <div class="numMax"> <?php echo $tempMaxCaldasMa ?>° </div>
                 </div>
 				<div class="span4">
-				  <div>Min</div>
-				  <?php echo $tempMinCaldasMa ?>° 
+				  <div class="tempMin">Min</div>
+				 <div class="numMin"> <?php echo $tempMinCaldasMa ?>° </div>
                   </div>
 			  </div>
 			</div>

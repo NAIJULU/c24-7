@@ -151,7 +151,7 @@ input, textarea, select, .uneditable-input {
 	background-image:url(images/backgroundPronostico.png);
 	color:#FFF;
 	font-size:20px;
-	height:350px;
+	height:260px;
 	max-width: 930px;
 	padding: 0px 20px 10px 20px;
 	}
@@ -165,14 +165,60 @@ font-size: 22px;
 font-weight:bold;
 text-align: center;
 text-transform: uppercase;
+margin: 20px 0 30px 0;
 }
+
+.menuControles {
+	margin:0px 0px 10px 0;
+	text-align:center;}
+
+.menuControles li {
+	display:inline-block;
+	margin:0;
+	}
+
+#btnMostrarPronostico, #btnMostrarRadar, #btnMostrarTemperatura {
+	display:block;
+	color:#FFF;
+	width:320px;
+	height:40px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	padding:20px 0 0 0;
+	text-align: center;
+	text-decoration:none;
+	text-transform: uppercase;
+
+	}
+
+#btnMostrarPronostico {
+	background-image:url(images/bg_boton1.png);
+	background-repeat:no-repeat;
+	}
+
+#btnMostrarRadar, #btnMostrarTemperatura {
+	background-image:url(images/bg_boton2.png);
+	background-repeat:no-repeat;
+	}
+
+#btnMostrarTemperatura {
+	background-image:url(images/bg_boton3.png);
+	background-repeat:no-repeat;
+	}
+
+#btnMostrarPronostico:hover, #btnMostrarRadar:hover, #btnMostrarTemperatura:hover {
+	text-decoration:none;
+	background-position:0 -60px;
+	}
+
 
 #pronosticos #ciudades .dia {
 color: #FFF;
 display:block;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
-line-height:16px;
+line-height:28px;
 font-weight:bold;
 text-transform: uppercase;
 }
@@ -193,6 +239,55 @@ font-size: 36px;
 font-weight:bold;
 text-transform: uppercase;
 }
+
+#pronosticos #ciudades .tempMax {
+	background-image:url(images/max.png);
+	background-repeat:no-repeat;
+	background-position:top center;
+	padding:60px 0 0 0;
+	text-align:center;
+	width:64px;
+	height:40px;
+	}
+	
+#pronosticos #ciudades .tempMin {
+	background-image:url(images/min.png);
+	background-repeat:no-repeat;
+	background-position:top center;
+	padding:60px 0 0 0;
+	text-align:center;
+	width:64px;
+	height:40px;
+	}
+	
+
+#pronosticos #ciudades .numMin {
+	text-align:center;
+	width:64px;
+	font-size: 40px;
+	font-weight:bold;
+	color:#114db0;
+	}
+
+
+#pronosticos #ciudades .numMax {
+	text-align:center;
+	width:64px;
+	font-size: 40px;
+	font-weight:bold;
+	color:#ff6b43;
+	}
+	
+#pronosticos .ciudades  {
+	margin-top:10px;
+	}	
+
+#pronosticos .ciudades li {
+	display:inline-block;
+	list-style:none;
+	padding-right:10px;
+	border-right:1px solid #FFF;
+	}
 
 
 .videoEmision {
