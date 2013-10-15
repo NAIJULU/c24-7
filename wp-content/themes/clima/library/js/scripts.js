@@ -145,5 +145,40 @@ jQuery(document).ready(function($) {
 		$("#pronosticos").fadeIn(1000);
 	});		
 	/* Fin de la sección */ 
-	
+
+	/**
+	* Sección para el manejo de la página Clima en Vivo
+	*/
+	$("#btnMostrarRadarMeteorologico").click(function(e){
+		e.preventDefault();
+		$("#pronostico").fadeOut();
+		$("#vista-vivo").fadeOut();
+		$("#sensores").fadeOut();
+		$("#radar-meterologico").fadeIn(1000);
+	});	
+
+	$("#btnMostrarPronosticoTemperatura").click(function(e){
+		e.preventDefault();
+		$("#radar-meterologico").fadeOut();
+		$("#vista-vivo").fadeOut();
+		$("#sensores").fadeOut();
+		$("#pronostico").fadeIn(1000);
+	});
+
+	$("#btnMostrarVistaVivo").click(function(e){
+		e.preventDefault();
+		$("#radar-meterologico").fadeOut();
+		$("#pronostico").fadeOut();
+		$("#sensores").fadeOut();
+		$("#vista-vivo").fadeIn(1000);
+	});
+
+	$("#btnMostrarSensores").click(function(e){
+		e.preventDefault();
+		$("#radar-meterologico").fadeOut();
+		$("#pronostico").fadeOut();
+		$("#vista-vivo").fadeOut();
+		$("#sensores").fadeIn(1000);
+	});							
+	/* Fin de la sección */
 });

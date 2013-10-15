@@ -282,6 +282,15 @@
 	<input id="<?php echo $this->get_field_id('tempMinBarsosaMa'); ?>" class="span1" name="<?php echo $this->get_field_name('tempMinCaldasMa'); ?>" type="number" value="<?php echo $tempMinCaldasMa; ?>">
   </p>
   <!-- End: Formulario Caldas -->
+  <hr/>
+  <h1>Radar</h1>
+  <!-- Start: Formulario Radar -->
+  <p>
+	<label for="<?php echo $this->get_field_id('urlKML'); ?>">URL Archivo KML: </label>
+	http://<input id="<?php echo $this->get_field_id('urlKML'); ?>" class="widgetfat" name="<?php echo $this->get_field_name('urlKML'); ?>" type="url" value="<?php echo $urlKML; ?>">
+  </p>  
+  <!-- End: Formulario Radar -->
+   
   <?php
 	  }
   
