@@ -472,7 +472,7 @@
                 </div>
 				<div class="span4">
 				  <div>Máx</div>
-				  <?php echo $tempMaxGCopacabana ?>° 
+				  <?php echo $tempMaxCopacabana ?>° 
                 </div>
 				<div class="span4">
 				  <div>Min</div>
