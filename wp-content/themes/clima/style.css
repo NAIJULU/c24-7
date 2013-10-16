@@ -279,14 +279,32 @@ text-transform: uppercase;
 	}
 	
 #pronosticos .ciudades  {
+	margin:0;
+	}	
+	
+#pronosticos .ciudades  {
 	margin-top:10px;
+	background-image:url(images/bg_ciudades.png);
+	max-width:970px;
+	height:25px;
+	padding: 15px 20px 10px 0px;
+	text-align:center;
 	}	
 
 #pronosticos .ciudades li {
+	
+	color:#FFF;
+	cursor:pointer;
 	display:inline-block;
+	font-size:16px;
+	font-weight:bold;
 	list-style:none;
-	padding-right:10px;
-	border-right:1px solid #FFF;
+	padding-right:20px;
+	}
+
+#pronosticos .ciudades li:hover {
+	color:#044589;
+	
 	}
 
 
