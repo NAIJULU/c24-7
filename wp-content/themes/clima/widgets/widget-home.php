@@ -6,8 +6,8 @@
 	  private $manana;
   
 	  function WidgetPronosticoHome(){
-		  $this->hoy = strtotime(date('d-m-y'));
-		  $this->manana = strtotime(date('d-m-y').' +1 day');
+		  $this->hoy = strtotime(date('Y-m-d'));
+		  $this->manana = strtotime(date('Y-m-d').' +1 day');
 		  parent::__construct( false, 'Widget Pronóstico / Radar / Temperatura Actual', array('description'=>'Este widget muestra 3 pestañas que contienen el pronóstico, radar y la temperatura actual.'));
 	  }
   
@@ -340,10 +340,6 @@
 		  $tempMinCaldasMa = apply_filters('widget_title', $instance['tempMinCaldasMa']);																						
 		  /* Se muestra el título del widget */
 		  echo $before_widget;
-		  if(!empty($title))
-			  echo $before_title . $title . $after_title;
-		  else
-			  echo $before_title . "Más comentados" . $after_title;
 		  ?>
   <div id="widget-pronostico">
 	<div class="controles">
@@ -768,7 +764,7 @@
 		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticonorte.png"/></div>
 		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticomedellin.png"/></div>
 		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticosur.png"/></div>
-		<div class="active item"><img src="http://www.areadigital.gov.co/ftpclima/TemperaturaAMVA.png"/></div>
+		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/TemperaturaAMVA.png"/></div>
 		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticonorte.png"/></div>
 		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticomedellin.png"/></div>
 		<div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticosur.png"/></div>
