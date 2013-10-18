@@ -295,49 +295,7 @@
 	  }
   
 	  function mostrarPronosticoHome($args, $instance){
-		  extract($args);
-		  $tempMaxMedellin   = apply_filters('widget_title', $instance['tempMaxMedellin']);
-		  $tempMinMedellin   = apply_filters('widget_title', $instance['tempMinMedellin']);
-		  $tempMaxMedellinMa = apply_filters('widget_title', $instance['tempMaxMedellinMa']);
-		  $tempMinMedellinMa = apply_filters('widget_title', $instance['tempMinMedellinMa']);		
-		  $tempMaxBarbosa   = apply_filters('widget_title', $instance['tempMaxBarbosa']);
-		  $tempMinBarbosa   = apply_filters('widget_title', $instance['tempMinBarbosa']);
-		  $tempMaxBarbosaMa = apply_filters('widget_title', $instance['tempMaxBarbosaMa']);
-		  $tempMinBarbosaMa = apply_filters('widget_title', $instance['tempMinBarbosaMa']);	
-		  $tempMaxBarbosa   = apply_filters('widget_title', $instance['tempMaxBarbosa']);
-		  $tempMinBarbosa   = apply_filters('widget_title', $instance['tempMinBarbosa']);
-		  $tempMaxGirardota   = apply_filters('widget_title', $instance['tempMaxGirardota']);
-		  $tempMinGirardota   = apply_filters('widget_title', $instance['tempMinGirardota']);		
-		  $tempMaxGirardotaMa = apply_filters('widget_title', $instance['tempMaxGirardotaMa']);
-		  $tempMinGirardotaMa = apply_filters('widget_title', $instance['tempMinGirardotaMa']);
-		  $tempMaxCopacabana   = apply_filters('widget_title', $instance['tempMaxCopacabana']);
-		  $tempMinCopacabana   = apply_filters('widget_title', $instance['tempMinCopacabana']);		
-		  $tempMaxCopacabanaMa = apply_filters('widget_title', $instance['tempMaxCopacabanaMa']);
-		  $tempMinCopacabanaMa = apply_filters('widget_title', $instance['tempMinCopacabanaMa']);
-		  $tempMaxBello   = apply_filters('widget_title', $instance['tempMaxBello']);
-		  $tempMinBello   = apply_filters('widget_title', $instance['tempMinBello']);		
-		  $tempMaxBelloMa = apply_filters('widget_title', $instance['tempMaxBelloMa']);
-		  $tempMinBelloMa = apply_filters('widget_title', $instance['tempMinBelloMa']);
-		  $tempMaxEnvigado   = apply_filters('widget_title', $instance['tempMaxEnvigado']);
-		  $tempMinEnvigado   = apply_filters('widget_title', $instance['tempMinEnvigado']);		
-		  $tempMaxEnvigadoMa = apply_filters('widget_title', $instance['tempMaxEnvigadoMa']);
-		  $tempMinEnvigadoMa = apply_filters('widget_title', $instance['tempMinEnvigadoMa']);	
-		  $tempMaxSabaneta   = apply_filters('widget_title', $instance['tempMaxSabaneta']);
-		  $tempMinSabaneta   = apply_filters('widget_title', $instance['tempMinSabaneta']);		
-		  $tempMaxSabanetaMa = apply_filters('widget_title', $instance['tempMaxSabanetaMa']);
-		  $tempMinSabanetaMa = apply_filters('widget_title', $instance['tempMinSabanetaMa']);
-		  $tempMaxLaEstrella   = apply_filters('widget_title', $instance['tempMaxLaEstrella']);
-		  $tempMinLaEstrella   = apply_filters('widget_title', $instance['tempMinLaEstrella']);		
-		  $tempMaxLaEstrellaMa = apply_filters('widget_title', $instance['tempMaxLaEstrellaMa']);
-		  $tempMinLaEstrellaMa = apply_filters('widget_title', $instance['tempMinLaEstrellaMa']);
-		  $tempMaxItagui   = apply_filters('widget_title', $instance['tempMaxItagui']);
-		  $tempMinItagui   = apply_filters('widget_title', $instance['tempMinItagui']);		
-		  $tempMaxItaguiMa = apply_filters('widget_title', $instance['tempMaxItaguiMa']);
-		  $tempMinItaguiMa = apply_filters('widget_title', $instance['tempMinItaguiMa']);
-		  $tempMaxCaldas   = apply_filters('widget_title', $instance['tempMaxCaldas']);
-		  $tempMinCaldas   = apply_filters('widget_title', $instance['tempMinCaldas']);		
-		  $tempMaxCaldasMa = apply_filters('widget_title', $instance['tempMaxCaldasMa']);
-		  $tempMinCaldasMa = apply_filters('widget_title', $instance['tempMinCaldasMa']);																						
+		  extract($args);																					
 		  /* Se muestra el título del widget */
 		  echo $before_widget;
 		  ?>
@@ -364,11 +322,11 @@
                 </div>
 				<div class="span4">
 				    <div class="tempMax">Máx</div>
-				 	<div class="numMax"> <?php echo $tempMaxMedellin ?>° </div>
+				 	<div class="numMax"> <?php echo get_option('tempMaxMedellin'); ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"><?php echo $tempMinMedellin ?>° </div>
+				  <div class="numMin"><?php echo get_option('tempMinMedellin') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -380,11 +338,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo $tempMaxMedellinMa ?>° </div>
+				  <div class="numMax"><?php echo get_option('tempMaxMedellinMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinMedellinMa ?>° </div>
+				   <div class="numMin"><?php echo get_option('tempMinMedellinMa') ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -403,11 +361,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxBarbosa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxBarbosa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo $tempMinBarbosa ?>°</div> 
+				  <div class="numMin"> <?php echo get_option('tempMinBarbosa') ?>°</div> 
                 </div>
 			  </div>
 			</div>
@@ -419,11 +377,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxBarbosaMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxBarbosaMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinBarbosaMa ?>°</div>
+				   <div class="numMin"><?php echo get_option('tempMinBarbosaMa') ?>°</div>
                   </div>
 			  </div>
 			</div>
@@ -442,11 +400,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo $tempMaxGirardota ?>° </div>
+				  <div class="numMax"><?php echo get_option('tempMaxGirardota') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo $tempMinGirardota ?>°</div>
+				  <div class="numMin"> <?php echo get_option('tempMinGirardota') ?>°</div>
                 </div>
 			  </div>
 			</div>
@@ -458,11 +416,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxGirardotaMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxGirardotaMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinGirardotaMa ?>°</div> 
+				   <div class="numMin"><?php echo get_option('tempMinGirardotaMa') ?>°</div> 
                   </div>
 			  </div>
 			</div>
@@ -481,11 +439,11 @@
 				<div class="span4">
 
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxCopacabana ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxCopacabana') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"><?php echo $tempMinCopacabana ?>° </div>
+				  <div class="numMin"><?php echo get_option('tempMinCopacabana') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -497,11 +455,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo $tempMaxCopacabanaMa ?>° </div>
+				  <div class="numMax"><?php echo get_option('tempMaxCopacabanaMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinCopacabanaMa ?>° </div>
+				   <div class="numMin"><?php echo get_option('tempMinCopacabanaMa') ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -519,11 +477,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxBello ?>°</div> 
+				 <div class="numMax"> <?php echo get_option('tempMaxBello') ?>°</div> 
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinBello ?>° </div>
+				   <div class="numMin"><?php echo get_option('tempMinBello') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -535,11 +493,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxBelloMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxBelloMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinBelloMa ?>° </div>
+				   <div class="numMin"><?php echo get_option('tempMinBelloMa') ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -557,11 +515,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo $tempMaxEnvigado ?>° </div>
+				  <div class="numMax"><?php echo get_option('tempMaxEnvigado') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo $tempMinEnvigado ?>° </div>
+				  <div class="numMin"> <?php echo get_option('tempMinEnvigado') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -573,11 +531,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxEnvigadoMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxEnvigadoMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinEnvigadoMa ?>°</div> 
+				   <div class="numMin"><?php echo get_option('tempMinEnvigadoMa') ?>°</div> 
                   </div>
 			  </div>
 			</div>
@@ -595,11 +553,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxSabaneta ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxSabaneta') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo $tempMinSabaneta ?>° </div>
+				  <div class="numMin"> <?php echo get_option('tempMinSabaneta') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -611,11 +569,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxSabanetaMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxSabanetaMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"><?php echo $tempMinSabanetaMa ?>° </div>
+				  <div class="numMin"><?php echo get_option('tempMinSabanetaMa') ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -633,11 +591,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxLaEstrella ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxLaEstrella') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo $tempMinLaEstrella ?>° </div>
+				  <div class="numMin"> <?php echo get_option('tempMinLaEstrella') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -649,11 +607,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxLaEstrellaMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxLaEstrellaMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo $tempMinLaEstrellaMa ?>° </div>
+				  <div class="numMin"> <?php echo get_option('tempMinLaEstrellaMa') ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -671,11 +629,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxItagui ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxItagui') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo $tempMinItagui ?>° </div>
+				   <div class="numMin"><?php echo get_option('tempMinItagui') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -687,11 +645,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo $tempMaxItaguiMa ?>° </div>
+				  <div class="numMax"><?php echo get_option('tempMaxItaguiMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				  <div class="numMin"><?php echo $tempMinItaguiMa ?>° </div>
+				  <div class="numMin"><?php echo get_option('tempMinItaguiMa') ?>° </div>
                   </div>
 			  </div>
 			</div>
@@ -709,11 +667,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxCaldas ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxCaldas') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				 <div class="numMin"> <?php echo $tempMinCaldas ?>° </div>
+				 <div class="numMin"> <?php echo get_option('tempMinCaldas') ?>° </div>
                 </div>
 			  </div>
 			</div>
@@ -725,11 +683,11 @@
                 </div>
 				<div class="span4">
 				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo $tempMaxCaldasMa ?>° </div>
+				 <div class="numMax"> <?php echo get_option('tempMaxCaldasMa') ?>° </div>
                 </div>
 				<div class="span4">
 				  <div class="tempMin">Min</div>
-				 <div class="numMin"> <?php echo $tempMinCaldasMa ?>° </div>
+				 <div class="numMin"> <?php echo get_option('tempMinCaldasMa') ?>° </div>
                   </div>
 			  </div>
 			</div>

@@ -42,6 +42,10 @@ function registrar_opciones() {
 	register_setting( 'climaenvivo-opciones', 'tempMinBarbosa' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxBarbosaMa' );
 	register_setting( 'climaenvivo-opciones', 'tempMinBarbosaMa' );	
+	register_setting( 'climaenvivo-opciones', 'tempMaxGirardota' );
+	register_setting( 'climaenvivo-opciones', 'tempMinGirardota' );
+	register_setting( 'climaenvivo-opciones', 'tempMaxGirardotaMa' );
+	register_setting( 'climaenvivo-opciones', 'tempMinGirardotaMa' );	
 	register_setting( 'climaenvivo-opciones', 'tempMaxCopacabana' );
 	register_setting( 'climaenvivo-opciones', 'tempMinCopacabana' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxCopacabanaMa' );
@@ -186,8 +190,8 @@ function pagina_configuracion(){
 			<input id="tempMaxBello" class="span1" name="tempMaxBello" type="number" value="<?php echo get_option('tempMaxBello'); ?>">
 			</p>
 			<p>
-			<label for="tempMinEnvigado">Temperatura Mínima: </label>
-			<input id="tempMinEnvigado" class="span1" name="tempMinEnvigado" type="number" value="<?php echo get_option('tempMinEnvigado'); ?>">
+			<label for="tempMinBello">Temperatura Mínima: </label>
+			<input id="tempMinBello" class="span1" name="tempMinBello" type="number" value="<?php echo get_option('tempMinBello'); ?>">
 			</p>
 			<h4><?php echo ucfirst(strftime("%B %d", $manana)) ?></h4>
 			<p>
@@ -195,8 +199,8 @@ function pagina_configuracion(){
 			<input id="tempMaxBelloMa" class="span1" name="tempMaxBelloMa" type="number" value="<?php echo get_option('tempMaxBelloMa'); ?>">
 			</p>
 			<p>
-			<label for="tempMinEnvigadoMa">Temperatura Mínima: </label>
-			<input id="tempMinEnvigadoMa" class="span1" name="tempMinEnvigadoMa" type="number" value="<?php echo get_option('tempMinEnvigadoMa'); ?>">
+			<label for="tempMinBelloMa">Temperatura Mínima: </label>
+			<input id="tempMinBelloMa" class="span1" name="tempMinBelloMa" type="number" value="<?php echo get_option('tempMinBelloMa'); ?>">
 			</p>
 		</div>
 		<!-- End: Formulario Bello -->
