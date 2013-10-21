@@ -2,6 +2,8 @@
 /*
 Template Name: Clima en Vivo
 */
+$hoy = strtotime(date('Y-m-d'));
+$manana = strtotime(date('Y-m-d').' +1 day');   
 ?>
 <?php get_header(); ?>
 			
@@ -30,408 +32,403 @@ Template Name: Clima en Vivo
 									<div id="mapa"></div>
 								</div>
 							</div>
-							<div id="pronostico" style="display:none">
-								<div id="pronosticos" class="carousel slide"> 
-									  <!-- Carousel items -->
-									  <div id="ciudades" class="carousel-inner">
-										<div class="item active">
-										  <h2>Pronóstico de Medellín</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  1° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  2° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  3° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  4° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-										</div>
-								        
-								        
-										<div class="item">
-										  <h2>Pronóstico de Barbosa</h2>
-								          <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  5° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  6° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  7° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  8° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          
-								       </div>   
-										 
-										<div class="item">
-										  <h2>Pronóstico de Girardota</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  9° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  10° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  11° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  12° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de Copacabana</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  13° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  14° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  15° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  16° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de Bello</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  17° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  18° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  19° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  20° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de Envigado</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  21° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  22° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  23° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  24° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de Sabaneta</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  25° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  26° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  27° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  28° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de La Estrella</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  29° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  30° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  31° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  32° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de Itagui</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  33° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  34° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  35° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  36° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								          
-								          <div class="item">
-										  <h2>Pronóstico de Caldas</h2>
-										  <div class="row-fluid clearfix">
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4"> 
-								                	<span class="dia">Hoy</span> <span class="mes">octubre </span> 
-								                    <span class="dias">13 </span> 
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  37° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  38° 
-								                </div>
-											  </div>
-											</div>
-											<div class="span6">
-											  <div class="row-fluid clearfix">
-												<div class="span4">
-								                	<span class="dia">Mañana</span> <span class="mes">octubre</span> 
-								                    <span class="dias">14</span>
-								                </div>
-												<div class="span4">
-												  <div>Máx</div>
-												  39° 
-								                </div>
-												<div class="span4">
-												  <div>Min</div>
-												  40° 
-								                  </div>
-											  </div>
-											</div>
-										  </div>
-								          </div>
-								         
-								         
-								         
+							<div id="pronosticos" class="carousel slide"> 
+							  <!-- Carousel items -->
+							  <div id="ciudades" class="carousel-inner">
+								<div class="active item">
+								  <h2>Pronóstico de Medellín</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										    <div class="tempMax">Máx</div>
+										 	<div class="numMax"> <?php echo get_option('tempMaxMedellin'); ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"><?php echo get_option('tempMinMedellin') ?>° </div>
+						                </div>
 									  </div>
-									  <ol class="ciudades">
-										<li data-target="#pronosticos" data-slide-to="0" class="active">Medellín</li>
-										<li data-target="#pronosticos" data-slide-to="1">Barbosa</li>
-										<li data-target="#pronosticos" data-slide-to="2">Girardota</li>
-										<li data-target="#pronosticos" data-slide-to="3">Copacabana</li>
-										<li data-target="#pronosticos" data-slide-to="4">Bello</li>
-										<li data-target="#pronosticos" data-slide-to="5">Envigado</li>
-										<li data-target="#pronosticos" data-slide-to="6">Sabaneta</li>
-										<li data-target="#pronosticos" data-slide-to="7">La Estrella</li>
-										<li data-target="#pronosticos" data-slide-to="8">Itagüi</li>
-										<li data-target="#pronosticos" data-slide-to="9">Caldas</li>
-									  </ol>
 									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										  <div class="numMax"><?php echo get_option('tempMaxMedellinMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinMedellinMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+								</div>						        
+						        
+								<div class="item">
+								  <h2>Pronóstico de Barbosa</h2>
+						          <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxBarbosa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"> <?php echo get_option('tempMinBarbosa') ?>°</div> 
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxBarbosaMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinBarbosaMa') ?>°</div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>						          
+						       </div>   
+								 
+								<div class="item">
+								  <h2>Pronóstico de Girardota</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										  <div class="numMax"><?php echo get_option('tempMaxGirardota') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"> <?php echo get_option('tempMinGirardota') ?>°</div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxGirardotaMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinGirardotaMa') ?>°</div> 
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de Copacabana</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxCopacabana') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"><?php echo get_option('tempMinCopacabana') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										  <div class="numMax"><?php echo get_option('tempMaxCopacabanaMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinCopacabanaMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de Bello</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxBello') ?>°</div> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinBello') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxBelloMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinBelloMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de Envigado</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										  <div class="numMax"><?php echo get_option('tempMaxEnvigado') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"> <?php echo get_option('tempMinEnvigado') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxEnvigadoMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinEnvigadoMa') ?>°</div> 
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de Sabaneta</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxSabaneta') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"> <?php echo get_option('tempMinSabaneta') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxSabanetaMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"><?php echo get_option('tempMinSabanetaMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de La Estrella</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxLaEstrella') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"> <?php echo get_option('tempMinLaEstrella') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxLaEstrellaMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"> <?php echo get_option('tempMinLaEstrellaMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de Itagui</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxItagui') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										   <div class="numMin"><?php echo get_option('tempMinItagui') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										  <div class="numMax"><?php echo get_option('tempMaxItaguiMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										  <div class="numMin"><?php echo get_option('tempMinItaguiMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>
+						          
+						          <div class="item">
+								  <h2>Pronóstico de Caldas</h2>
+								  <div class="row-fluid clearfix">
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4"> 
+						                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
+						                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxCaldas') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										 <div class="numMin"> <?php echo get_option('tempMinCaldas') ?>° </div>
+						                </div>
+									  </div>
+									</div>
+									<div class="span6">
+									  <div class="row-fluid clearfix">
+										<div class="span4">
+						                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $manana); ?></span> 
+						                    <span class="dias"><?php echo strftime("%d", $manana); ?></span>
+						                </div>
+										<div class="span4">
+										  <div class="tempMax">Máx</div>
+										 <div class="numMax"> <?php echo get_option('tempMaxCaldasMa') ?>° </div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Min</div>
+										 <div class="numMin"> <?php echo get_option('tempMinCaldasMa') ?>° </div>
+						                  </div>
+									  </div>
+									</div>
+								  </div>
+						          </div>				         
+
+							  </div>
+							  <ol class="ciudades">
+								<li data-target="#pronosticos" data-slide-to="0" class="active">Medellín</li>
+								<li data-target="#pronosticos" data-slide-to="1">Barbosa</li>
+								<li data-target="#pronosticos" data-slide-to="2">Girardota</li>
+								<li data-target="#pronosticos" data-slide-to="3">Copacabana</li>
+								<li data-target="#pronosticos" data-slide-to="4">Bello</li>
+								<li data-target="#pronosticos" data-slide-to="5">Envigado</li>
+								<li data-target="#pronosticos" data-slide-to="6">Sabaneta</li>
+								<li data-target="#pronosticos" data-slide-to="7">La Estrella</li>
+								<li data-target="#pronosticos" data-slide-to="8">Itagüi</li>
+								<li data-target="#pronosticos" data-slide-to="9">Caldas</li>
+							  </ol>
 							</div>
 							<div id="vista-vivo" style="display:none">
 								<div id="vivo-camara1" class="container-vivo">
