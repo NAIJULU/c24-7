@@ -49,8 +49,8 @@ Template Name: Clima en Vivo
    
 							<div id="radar-meterologico">
                             
-                            	 <a href="#convenciones">Ver convenciones</a>
-                                    <div class="convenciones" style="display:none">
+                            	 <a href="#convencionesRadar">Ver convenciones</a>
+                                    <div class="convencionesRadar" style="display:none">
                                        <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
                                     </div>
                                 
@@ -61,8 +61,8 @@ Template Name: Clima en Vivo
                             
 							<div id="pronostico" style="display:none">
                             	
-                                <a href="#convenciones">Ver convenciones</a>
-                                    <div class="convenciones" style="display:none">
+                                <a href="#convencionesPronostico">Ver convenciones</a>
+                                    <div class="convencionesPronostico" style="display:none">
                                        <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
                                     </div>
                             
@@ -470,8 +470,8 @@ Template Name: Clima en Vivo
 							</div>
                             
 							<div id="vista-vivo" style="display:none">
-                            	 <a href="#convenciones">Ver convenciones</a>
-                                    <div class="convenciones" style="display:none">
+                            	 <a href="#convencionesVistaVivo">Ver convenciones</a>
+                                    <div class="convencionesVistaVivo" style="display:none">
                                        <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
                                     </div>
                             
@@ -521,8 +521,8 @@ Template Name: Clima en Vivo
 								</div>			
 							</div>
 							<div id="sensores" style="display:none">
-                            	  <a href="#convenciones">Ver convenciones</a>
-                                    <div class="convenciones" style="display:none">
+                            	  <a href="#convencionesSensores">Ver convenciones</a>
+                                    <div class="convencionesSensores" style="display:none">
                                        <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
                                     </div>
                                     
