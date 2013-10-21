@@ -48,12 +48,24 @@ Template Name: Clima en Vivo
                             <div class="span8">
    
 							<div id="radar-meterologico">
-								<div id="contenedor-radar">
+                            
+                            	 <a href="#convenciones">Ver convenciones</a>
+                                    <div class="convenciones" style="display:none">
+                                       <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
+                                    </div>
+                                
+                                <div id="contenedor-radar">
 									<div id="mapa"></div>
 								</div>
 							</div>
                             
 							<div id="pronostico" style="display:none">
+                            	
+                                <a href="#convenciones">Ver convenciones</a>
+                                    <div class="convenciones" style="display:none">
+                                       <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
+                                    </div>
+                            
 								<div id="pronosticos" class="carousel slide"> 
 									  <!-- Carousel items -->
 									  <div id="ciudades" class="carousel-inner">
@@ -456,7 +468,13 @@ Template Name: Clima en Vivo
 									  </ol>
 									</div>
 							</div>
+                            
 							<div id="vista-vivo" style="display:none">
+                            	 <a href="#convenciones">Ver convenciones</a>
+                                    <div class="convenciones" style="display:none">
+                                       <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
+                                    </div>
+                            
 								<div id="vivo-camara1" class="container-vivo">
 									<div class="img-vivo">
 										<img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_86_TORRESIATA_nororiente.jpg" alt="Torre SIATA Nororiente"/>
@@ -503,6 +521,11 @@ Template Name: Clima en Vivo
 								</div>			
 							</div>
 							<div id="sensores" style="display:none">
+                            	  <a href="#convenciones">Ver convenciones</a>
+                                    <div class="convenciones" style="display:none">
+                                       <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM -->
+                                    </div>
+                                    
 								<h1>Sensores de Nivel</h1>
 							</div>
                             
