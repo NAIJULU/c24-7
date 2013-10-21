@@ -19,17 +19,38 @@ Template Name: Clima en Vivo
 						</header> <!-- end article header -->
 					
 						<section class="post_content">
-							<ul>
-								<li id="btnMostrarRadarMeteorologico">Radar Meteorológico</li>
-								<li id="btnMostrarPronosticoTemperatura">Pronóstico - Temperatura actual, máxima y mínima</li>
-								<li id="btnMostrarVistaVivo">Vista en vivo del SIATA</li>
-								<li id="btnMostrarSensores">Red de sensores de nivel de quebradas</li>
-							</ul>
+							
+                            <div>
+   						     <!-- menu Clima en vivo -->
+                                <ul>
+                                    <li id="btnMostrarRadarMeteorologico">Radar Meteorológico</li>
+                                    <li id="btnMostrarPronosticoTemperatura">Pronóstico - Temperatura actual, máxima y mínima</li>
+                                    <li id="btnMostrarVistaVivo">Vista en vivo del SIATA</li>
+                                    <li id="btnMostrarSensores">Red de sensores de nivel de quebradas</li>
+                                </ul>
+                                
+                                <!-- Últimas fotos -->
+                                
+                                <div id="ultimasFotos">
+                                    <h2>Últimas fotos</h2>
+                                    <!-- INSERTAR AQUÍ EL WIDGET PARA LAS ÚLTIMAS FOTOS SUBIDAS POR LOS USUARIOS -->
+                                </div>
+                                
+                                <!-- Suscripción -->
+                                <div id="suscripcion">
+                                    Suscríbete a nuestro pronóstico diario
+                                    <input class="suscribete" />
+                                </div>
+							</div>
+                            
+                            <div>
+   
 							<div id="radar-meterologico">
 								<div id="contenedor-radar">
 									<div id="mapa"></div>
 								</div>
 							</div>
+                            
 							<div id="pronostico" style="display:none">
 								<div id="pronosticos" class="carousel slide"> 
 									  <!-- Carousel items -->
@@ -482,6 +503,8 @@ Template Name: Clima en Vivo
 							<div id="sensores" style="display:none">
 								<h1>Sensores de Nivel</h1>
 							</div>
+                            
+                          </div>
 							<?php the_content(); ?>
 					
 						</section> <!-- end article section -->
