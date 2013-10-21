@@ -23,7 +23,7 @@ Template Name: Clima en Vivo
                              <div class="row-fluid clearfix">
 								
                                 <div class="span4">
-                                 <!-- menu Clima en vivo -->
+                                 <!-- menu Clima a fondo -->
                                     <ul>
                                         <li id="btnMostrarTemperaturaAltura">Temperatura y Altura</li>
                                         <li id="btnMostrarImagenVisible">Imagen de lo visible</li>
@@ -88,6 +88,17 @@ Template Name: Clima en Vivo
                                     </div>
                                     
                                     <div id="contendorReporteExtendido">
+                                    	<div id="Reporte">
+                                        	<!-- AQUÍ VA EL WIDGET DEL ÚLTIMO REPORTE -->
+                                        </div>
+                                        
+                                        <div id="controles-reporte">
+                                            <ul>
+                                                <li id="btnMostrarCam1">Reporte últimos 3 minutos</li>
+                                                <li id="btnMostrarCam2">Reporte últimos 30 minutos</li>
+                                                <li id="btnMostrarCam3">Reporte últimas 3 horas</li>
+                                            </ul>
+										</div>	
                                    </div>
 							</div>
 
