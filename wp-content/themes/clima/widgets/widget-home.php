@@ -332,18 +332,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo get_option('tempMaxMedellinMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManMedellin') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo get_option('tempMinMedellinMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarMedellin') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocMedellin') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -371,18 +374,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxBarbosaMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManBarbosa') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo get_option('tempMinBarbosaMa') ?>°</div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarBarbosa') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocBarbosa') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -410,18 +416,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxGirardotaMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManGirardota') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo get_option('tempMinGirardotaMa') ?>°</div> 
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarGirardota') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocGirardota') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -449,18 +458,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo get_option('tempMaxCopacabanaMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManCopacabana') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo get_option('tempMinCopacabanaMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarCopacabana') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocCopacabana') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -487,18 +499,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxBelloMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManCopacabana') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo get_option('tempMinBelloMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarCopacabana') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocCopacabana') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -525,18 +540,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxEnvigadoMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManEnvigado') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				   <div class="numMin"><?php echo get_option('tempMinEnvigadoMa') ?>°</div> 
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarEnvigado') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocEnvigado') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -563,18 +581,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxSabanetaMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManSabaneta') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				  <div class="numMin"><?php echo get_option('tempMinSabanetaMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarSabaneta') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocSabaneta') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -601,18 +622,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxLaEstrellaMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManLaEstrella') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				  <div class="numMin"> <?php echo get_option('tempMinLaEstrellaMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarLaEstrella') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocLaEstrella') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -639,18 +663,21 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				  <div class="numMax"><?php echo get_option('tempMaxItaguiMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManItagui') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				  <div class="numMin"><?php echo get_option('tempMinItaguiMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarItagui') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocItagui') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
@@ -677,25 +704,25 @@
 			</div>
 			<div class="span6">
 			  <div class="row-fluid clearfix">
-				<div class="span4">
-                	<span class="dia">Mañana</span> <span class="mes"><?php echo strftime("%B", $this->manana); ?></span> 
-                    <span class="dias"><?php echo strftime("%d", $this->manana); ?></span>
+				<div class="span3">
+                	<span class="dia">Pronostico Lluvia</span>
                 </div>
-				<div class="span4">
-				  <div class="tempMax">Máx</div>
-				 <div class="numMax"> <?php echo get_option('tempMaxCaldasMa') ?>° </div>
+				<div class="span3">
+				  <div class="tempMax">Mañana</div>
+				  <div class="numMax"><?php echo get_option('LluvManCaldas') ?></div>
                 </div>
-				<div class="span4">
-				  <div class="tempMin">Min</div>
-				 <div class="numMin"> <?php echo get_option('tempMinCaldasMa') ?>° </div>
-                  </div>
+				<div class="span3">
+				  <div class="tempMin">Tarde</div>
+				   <div class="numMin"><?php echo get_option('LluvTarCaldas') ?></div>
+                </div>
+				<div class="span3">
+				  <div class="tempMin">Noche</div>
+				   <div class="numMin"><?php echo get_option('LluvNocCaldas') ?></div>
+                </div>                
 			  </div>
 			</div>
 		  </div>
-          </div>
-         
-         
-         
+          </div>               
 	  </div>
 	  <ol class="ciudades">
 		<li data-target="#pronosticos" data-slide-to="0" class="active">Medellín</li>
