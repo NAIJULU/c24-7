@@ -8,7 +8,11 @@
 			
 				<div id="main" class="span12 clearfix" role="main">
                 	<div class="row-fluid">
-                		<div class="span7 videoEmision"></div>
+                		<div class="span7 videoEmision">
+							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('ultimaemision_widget') ) : ?>
+
+							<?php endif; ?>                			
+                		</div>
                         <div class="span5 fotosUsuarios"></div>
                     </div>
                     

@@ -111,6 +111,17 @@ you like. Enjoy!
         'after_title' => '</h3>',
   ));
 
+// Registrando posición para el widget de la última emisión
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'Widget Última Emisión',
+        'id'=>'ultimaemision_widget',
+        'before_widget' => '<div class="contenedor-ultima-emision">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="titulo-widget-ultima-emision">',
+        'after_title' => '</h3>',
+  ));     
+
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
     register_sidebar(array(
@@ -790,9 +801,11 @@ function get_wpbs_theme_options(){
 // Añadimos la acción para crear widgets desde el template
 function creaWidgets(){
  register_widget( 'WidgetPronosticoHome' );
+ register_widget( 'WidgetUltimaEmision' );
 }
 add_action( 'widgets_init', 'creaWidgets' );
 
 // Incluimos el archivo de widget home
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
+include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
 ?>
