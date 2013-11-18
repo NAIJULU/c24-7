@@ -120,7 +120,18 @@ you like. Enjoy!
         'after_widget' => '</div>',
         'before_title' => '<h3 class="titulo-widget-ultima-emision">',
         'after_title' => '</h3>',
-  ));     
+  ));  
+
+// Registrando posición para el widget de las fotos de usuario en el home
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'Widget Fotos de Usuarios (Home)',
+        'id'=>'fotousuarioshome_widget',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+  ));       
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {

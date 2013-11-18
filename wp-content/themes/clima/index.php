@@ -13,7 +13,11 @@
 
 							<?php endif; ?>                			
                 		</div>
-                        <div class="span5 fotosUsuarios"></div>
+                        <div class="span5 fotosUsuarios">
+							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('fotousuarioshome_widget') ) : ?>
+
+							<?php endif; ?>                           	
+                        </div>
                     </div>
                     
                 </div>
