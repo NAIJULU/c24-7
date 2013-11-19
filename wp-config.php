@@ -25,7 +25,7 @@ define('DB_USER', 'med2018_climau');
 define('DB_PASSWORD', '62^{Md4nZ{GQ');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
-define('DB_HOST', '50.87.145.204');
+define('DB_HOST', 'localhost');
 
 /** Codificación de caracteres para la base de datos. */
 define('DB_CHARSET', 'utf8');
