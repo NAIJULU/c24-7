@@ -71,6 +71,30 @@ input, textarea, select, .uneditable-input {
 	background-color: #090;
 	hanging-punctuation: 130px;
 }
+
+.nav-collapse #menu-menu-principal
+{
+	text-transform:uppercase;
+	text-shadow:none;
+	color:#FFF;
+}
+
+.nav-collapse #menu-menu-principal li
+{
+background-image: url(images/linea-item-menu.png);
+background-repeat:no-repeat;
+
+
+
+
+
+}
+
+.nav-collapse #menu-menu-principal li:first-child
+{
+	background-image:none;
+	}
+
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
 }
@@ -117,17 +141,19 @@ input, textarea, select, .uneditable-input {
 	display: inline;
 }
 
-
+   
 
 
 #pronosticos #ciudades {
-	/*background-image:url(images/backgroundPronostico.png);*/
+	
 	background-color: rgba(255,255,255,0.3);
 	color: #FFF;
 	font-size: 20px;
-	height: 450px;
 	max-width: 930px;
 	padding: 0px 20px 10px 20px;
+	-moz-box-shadow:    inset 0 0 130px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
+    box-shadow:         inset 0 0 130px rgba(255,255,255,0.7);
 }
 #pronosticos #ciudades h2 {
 	background-image: url(images/h2LineaB.png);
@@ -138,7 +164,8 @@ input, textarea, select, .uneditable-input {
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 20px 0 0px 0;
+	margin: 10px 0 0px 0;
+	text-shadow:0 0 10px  #699;
 }
 #ciudades .lluvias {
 	padding-bottom: 20px;
@@ -163,22 +190,48 @@ input, textarea, select, .uneditable-input {
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+	
 }
+
 #btnMostrarPronostico {
-	background-image: url(images/bg_boton1.png);
+	background-image: url(images/icons-btns-pronostico.png);
+	background-position:20px 11px;
 	background-repeat: no-repeat;
+	 background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+	
 }
-#btnMostrarRadar, #btnMostrarTemperatura {
-	background-image: url(images/bg_boton2.png);
+#btnMostrarRadar {
+	background-image: url(images/icons-btns-pronostico.png);
+	background-position:20px -46px;
 	background-repeat: no-repeat;
+	 background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
 }
 #btnMostrarTemperatura {
-	background-image: url(images/bg_boton3.png);
+	background-image: url(images/icons-btns-pronostico.png);
+	background-position:20px -100px;
 	background-repeat: no-repeat;
+	 background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
 }
 #btnMostrarPronostico:hover, #btnMostrarRadar:hover, #btnMostrarTemperatura:hover {
 	text-decoration: none;
-	background-position: 0 -60px;
+	 background-color: rgba(255,255,255,0.4);
+	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+}
+
+#pronosticos
+{
+	margin-bottom: 0px;
 }
 #pronosticos #ciudades .titulo2 {
 	background-color: rgba(255,255,255,0.2);
@@ -203,7 +256,7 @@ input, textarea, select, .uneditable-input {
 #pronosticos #ciudades .dia {
 	color: #FFF;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
+	font-size: 26px;
 	line-height: 28px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -211,56 +264,65 @@ input, textarea, select, .uneditable-input {
 #pronosticos #ciudades .mes {
 	color: #FFF;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
+	font-size: 26px;
 	text-transform: uppercase;
 }
 #pronosticos #ciudades .dias {
 	color: #FFF;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 #pronosticos #ciudades .tempMax {
 	background-image: url(images/max.png);
 	background-repeat: no-repeat;
-	background-position:center 21px;
+	background-position:center -9px;
 	padding: 0 0 0 0;
 	text-align: center;
-	width: 70px;
-	height: 79px;
+	width: 130px;
+	height: 110px;
+	margin-left:9px;
 }
 #pronosticos #ciudades .tempMin {
 	background-image: url(images/min.png);
 	background-repeat: no-repeat;
-	background-position: center 21px;
+	background-position: center -9px;
 	padding: 0 0 0 0;
 	text-align: center;
-	width: 70px;
-	height: 79px;
+	width: 130px;
+	height: 110px;
+	margin-left:9px;
 }
 #pronosticos #ciudades .tempMaxgrados, #pronosticos #ciudades .tempMingrados {
+	color:#114db0;
+	font-size:18px;
+	font-weight:bold;
+	text-transform:uppercase;
 	background-image: url(images/max.png);
 	background-repeat: no-repeat;
-	background-position: top center;
-	padding: 60px 0 0 0;
+	background-position:center -30px;
+	padding: 91px 0 0 0;
 	text-align: center;
-	width: 64px;
-	height: 30px;
+	width: 128px;
 	display:inline-block;
+	margin-left:17px;
+	float:left;
+	
 	}
 
 #pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados	
 {	
 	text-align: center;
-	width: 64px;
+	width: 50px;
 	font-size: 30px;
 	font-weight: 900;
 	color: #114db0;
 	background-color:rgba(255,255,255,0.5);
-	padding:4px;
+	padding:7px;
 	border-radius:3px;
-	display:inline;
+	display:inline-block;
+	margin:30px 0 0 0;
 }
 
 
@@ -273,6 +335,7 @@ input, textarea, select, .uneditable-input {
 	background-color:rgba(255,255,255,0.5);
 	padding:4px;
 	border-radius:3px;
+	margin-left:37px;
 }
 /*#pronosticos #ciudades .numMax {
 	text-align: center;
@@ -281,30 +344,35 @@ input, textarea, select, .uneditable-input {
 	font-weight: 400;
 	color: #ff6b43;
 	
-}
-*/
+}*/
+
+
+
 #pronosticos .ciudades {
-	margin: 0;
-}
-#pronosticos .ciudades {
-	margin-top: 10px;
-	background-image: url(images/bg_ciudades.png);
+	 background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+	margin: 10px 0 0 0;
 	max-width: 970px;
-	height: 25px;
-	padding: 15px 20px 10px 0px;
+	padding: 10px 0px 10px 0px;
 	text-align: center;
 }
 #pronosticos .ciudades li {
-	color: #FFF;
+	color: #114db0;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 16px;
-	font-weight: bold;
+	font-size: 14px;
 	list-style: none;
-	padding-right: 20px;
+	padding: 3px 10px;
+	text-transform:uppercase;
+	border-radius:4px; 
 }
 #pronosticos .ciudades li:hover {
-	color: #044589;
+	color: ##114db0;
+	
+	background-color: #84C0FD;
+	
 }
 .videoEmision {
 	background-color: #94c60d;
@@ -312,10 +380,11 @@ input, textarea, select, .uneditable-input {
 }
 .fotosUsuarios {
 	background-color: #94c60d;
+	padding:25px;
 	
 }
 .galeriaHome {
-	margin-top: 30px;
+	margin-top: 15px;
 }
 .galeriaHome .span1 {
 	width: 5.2%;
@@ -589,6 +658,13 @@ video {
 	font-size: 3em;
 }
 
+/* blog*/
+
+.page-header
+{
+	/* pendiente juan gaviria*/
+	}
+
 /* comments */
 
 #comments {
@@ -795,12 +871,16 @@ blockquote.pull-left {
 }
 
 /* witget ultima emision style*/
+.video-ultima-emision
+{
+	text-align:center;
+}
 
 .contenedor-ultima-emision
 
  {
 	 text-transform:uppercase;
-	 text-align:right;
+	 
 	 padding: 0px 0px 10px 0px;
  }
  
@@ -808,29 +888,55 @@ h3.titulo-widget-ultima-emision
  {
 	 color:#FFF;
 	 text-align:right;
-	 padding-right: 20px;
+	 padding-right: 30px;
+	 background-image: url(images/tv-icon-ultima-emision_01.png);
+	 background-repeat:no-repeat;
+	 background-position: 31px 9px;
+	
+	 
  }
+ 
+ h3.titulo-widget-ultima-emision:before  
+ { content:" ";
+ height:6px;
+ width:45%;
+ border-top: solid 1px #fff;
+ display:inline-block;
+ margin: 0 15px 0 35px;
+
+	 
+	 }
  
 .contenedor-ultima-emision .emision
 
- {   display:inline-block;
+ {   
+	padding-top:15px;
+	color:#FFF;
+	text-transform:uppercase;
+	padding-left:71px;
+	 background-image: url(images/icon2-ult-emision_02.png);
+	 background-repeat:no-repeat;
+	 background-position: 30px 7px;
 	
-	 text-align:left;
 	 
  }
-.contenedor-ultima-emision .historial
+.contenedor-ultima-emision .btnHistorial
 
- {   display:inline-block;
-	
-	 text-align:right;
-	 
-	 
+ { 
+	float:right;
+	color:#FFF;
+	text-decoration:none;
+	padding:0px 30px 5px 35px ;
+	 background-repeat:no-repeat;
+	 background-position: 0px -5px;
+	 background-image: url(images/icon2-ult-emision_03.png);		 
  }
  
-.video-ultima-emision
-{
-	text-align:center;
-}
+  .contenedor-ultima-emision .btnHistorial:hover
+ { text-shadow:white 0 0 5px;
+	 
+	 }
+
 
 
  @media only screen and (min-width: 768px) {

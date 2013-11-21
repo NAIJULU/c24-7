@@ -60,7 +60,7 @@ class WidgetUltimaEmision extends WP_Widget {
 		if( $codigo ) {
 		 echo '<div class="video-ultima-emision">'.$codigo.'</div>';
 		}
-		echo '<p class="emision">' . $emision . ' <a class="btnHistorial">Ver Historial</a></p>';
+		echo '<p class="emision">' . $emision . ' <a href="#" class="btnHistorial">Ver Historial</a></p>';
 		echo $after_widget;
 	}
 }
