@@ -60,17 +60,14 @@
                     </div>
                 </div>
             
-				
-				<div class="navbar">
+            
+            
+		<div class="navbar">
 					<div class="navbar-inner">
 						<div class="container-fluid nav-container">
 							
                             <nav role="navigation">
-								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">
-									<?php if(of_get_option('branding_logo','')!='') { ?>
-										<img src="<?php echo of_get_option('branding_logo'); ?>" alt="<?php echo get_bloginfo('description'); ?>">
-										<?php }
-										if(of_get_option('site_name','1')) bloginfo('name'); ?></a>
+								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"></a>
 								
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
@@ -93,6 +90,11 @@
 						</div> <!-- end .nav-container -->
 					</div> <!-- end .navbar-inner -->
 				</div> <!-- end .navbar -->
+                
+                <div class="recomendaciones-tw">
+                
+                <div class="cont-recomendaciones-tw"> <a href="https://twitter.com/Clima24_7" target="_blank" class="link-twitter">RECOMENDACIONES</a> <span>Prevención oención de Prevención de inundaciones y desbordamientos . #YoPrevengo http://goo.gl/4O9r3P</span></div>
+            </div>
 			
 			</div> <!-- end #inner-header -->
 		

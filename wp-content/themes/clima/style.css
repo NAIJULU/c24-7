@@ -42,13 +42,22 @@ body {
 }
 /* Admin Top Navigation fixes */
 
+.navbar
+{margin-bottom:0px;
+	}
+
 body.admin-bar .navbar-fixed-top {
 	top: 28px;
 }
 .navbar .brand {
-	color: #000;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
-	font-weight: bold !important;
+	background-image:url(images/home-icon.png);
+	background-repeat:no-repeat;
+	background-position: 39px 3px;
+	height:20px;
+	width:30px;
+	
+	
+	
 }
 .nav-container {
 	padding-left: 0;
@@ -72,28 +81,34 @@ input, textarea, select, .uneditable-input {
 	hanging-punctuation: 130px;
 }
 
-.nav-collapse #menu-menu-principal
+.navbar .nav > li > a
 {
 	text-transform:uppercase;
 	text-shadow:none;
 	color:#FFF;
+	padding:10px 31px 10px;
 }
-
-.nav-collapse #menu-menu-principal li
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover
 {
-background-image: url(images/linea-item-menu.png);
-background-repeat:no-repeat;
-
-
-
-
-
-}
-
-.nav-collapse #menu-menu-principal li:first-child
-{
-	background-image:none;
+	text-transform:uppercase;
+	background-color: #95b935;
+	color:#FFF;
 	}
+
+
+.navbar .nav > li > a:hover
+{
+	text-transform:uppercase;
+	background-color: #95b935;
+	color:#FFF;
+	
+}
+
+
+
+
+
+
 
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
@@ -127,6 +142,60 @@ background-repeat:no-repeat;
 	float: left;
 	margin-left: 10px;
 }
+
+
+
+/*recomendaciones twitter*/
+.recomendaciones-tw
+
+{ height: 37px;
+	background-color: rgba(255,255,255,0.2);
+	margin-bottom:18px;
+	
+	}
+
+ .cont-recomendaciones-tw
+{ 
+height: 37px;
+max-width: 970px;
+margin:0 auto;
+background-image:url(images/recom-tw-bg.png);
+background-position:left;
+background-repeat:no-repeat;
+}
+
+ .link-twitter
+ { 
+ color:#304d79;
+ width:200px;
+ height:30px;
+ padding: 8px 24px 0px 37px;
+ text-align:center;
+ float:left;
+ text-decoration:none;
+ font-weight:bold;
+ font-size:15px;
+	 
+} 
+	 
+.link-twitter:hover
+ {  
+ text-decoration:none;	 
+	 }
+	 
+	 .cont-recomendaciones-tw  span
+	 {
+		 color:white;
+		 
+		 font-size:14px;
+		 float:left;
+		padding-top:7px;
+		
+		
+		
+		 
+  }
+
 /* post styling */
 
 #mapa {
@@ -348,7 +417,7 @@ background-repeat:no-repeat;
 
 
 
-#pronosticos .ciudades {
+#pronosticos .ciudades,  #temperaturas .ciudades {
 	 background-color: rgba(255,255,255,0.3);
 	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
     -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
@@ -358,7 +427,10 @@ background-repeat:no-repeat;
 	padding: 10px 0px 10px 0px;
 	text-align: center;
 }
-#pronosticos .ciudades li {
+
+
+
+#pronosticos .ciudades li, #temperaturas .ciudades li {
 	color: #114db0;
 	cursor: pointer;
 	display: inline-block;
@@ -368,27 +440,64 @@ background-repeat:no-repeat;
 	text-transform:uppercase;
 	border-radius:4px; 
 }
-#pronosticos .ciudades li:hover {
+#pronosticos .ciudades li:hover,  #temperaturas .ciudades li:hover {
 	color: ##114db0;
 	
 	background-color: #84C0FD;
 	
 }
+
+.mapa-ciudades
+{ height:430px;
+width:430px;
+
+
+background-image:url(images/caldas-mapa.png);
+	
+	}
+	
+	
 .videoEmision {
 	background-color: #94c60d;
+	width:59%;
+	display:inline-block;
 	
 }
 .fotosUsuarios {
 	background-color: #94c60d;
-	padding:25px;
+	width:40.5%;
+	display:inline-block;
+	float:right;
 	
 }
 .galeriaHome {
 	margin-top: 15px;
 }
-.galeriaHome .span1 {
+.galeriaHome .prev1 {
 	width: 5.2%;
+	height: 80px;
+	background-image:url(images/prev.png);
+	margin-top:80px;
+	margin-right:17px;
+	float:left;
+	cursor:pointer;
 }
+
+.galeriaHome .prev1:hover, .galeriaHome .next1:hover
+{
+	background-position:0 78px;
+	
+	}
+
+.galeriaHome .next1 {
+	width: 5.2%;
+	height: 80px;
+	background-image:url(images/next.png);
+	margin-top:80px;
+	float:right;
+	cursor:pointer;
+	}
+	
 .galeriaHome .span3 {
 	width: 25.404255319148934%;
  *width: 25.351063829787233%;
@@ -874,6 +983,17 @@ blockquote.pull-left {
 .video-ultima-emision
 {
 	text-align:center;
+	padding: 0 25px;
+	height:245px;
+}
+
+.video-ultima-emision iframe
+{   position:relative;
+	height:100%;
+	width:100%;
+	top:0px;
+	left:0px;
+	
 }
 
 .contenedor-ultima-emision

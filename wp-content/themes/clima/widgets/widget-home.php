@@ -95,7 +95,7 @@
               </div>
             </div>
           </div>
-          <div class="span6"> Mapa </div>
+          <div class="span6 mapa-ciudades"> </div>
         </div>
       </div>
     <?php endforeach?>
