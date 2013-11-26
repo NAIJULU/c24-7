@@ -42,7 +42,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
             
             <!-- Suscripción -->
             <div id="suscripcion"><p>Suscríbete a nuestro <strong>pronóstico diario</strong></p>
-              <input class="suscribete" /><a href="#" class="enviar-suscripcion">e</a>
+              <input class="suscribete" /><a href="#" class="enviar-suscripcion"><i class="icon-play icon-white"></i></a>
             </div>
           </div>
           <div class="span8">
@@ -54,7 +54,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 <div id="mapa"></div>
               </div>
             </div>
-            <div id="pronostico" style="display:none"> <a href="#convencionesPronostico">Ver convenciones</a>
+            <div id="pronostico" style="display:none"> <a class="convencion" href="#convencionesPronostico">Ver convenciones</a>
               <div class="convencionesPronostico" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
               </div>
@@ -486,48 +486,68 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 				  </ol>
 				</div>
             </div>
-            <div id="vista-vivo" style="display:none"> <a href="#convencionesVistaVivo">Ver convenciones</a>
+            <div id="vista-vivo" style="display:none"> <a class="convencion" href="#convencionesVistaVivo">Ver convenciones</a>
               <div class="convencionesVistaVivo" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
               </div>
               <div id="vivo-camara1" class="container-vivo">
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_86_TORRESIATA_nororiente.jpg" alt="Torre SIATA Nororiente"/> </div>
                 <div class="description">
-                  <h4>Cámara hacia el Nororiente</h4>
-                  <p><strong>Lugares que cubre:</strong> Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
+                  <h4>Vista Nororiente - Torre Siata</h4>
+                  <p>Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
                 </div>
               </div>
               <div id="vivo-camara2" class="container-vivo" style="display:none">
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_82_TORRESIATA_suroriente.jpg" alt="Torre SIATA Suroriente"/> </div>
                 <div class="description">
-                  <h4>Cámara hacia el Suroriente</h4>
-                  <p><strong>Lugares que cubre:</strong> Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
+                  <h4>Vista Suroriente - Torre Siata</h4>
+                  <p>Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
                 </div>
               </div>
               <div id="vivo-camara3" class="container-vivo" style="display:none">
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_81_TORRESIATA_oriente.jpg" alt="Torre SIATA Oriente"/> </div>
                 <div class="description">
-                  <h4>Cámara hacia el Oriente</h4>
-                  <p><strong>Lugares que cubre:</strong> Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
+                  <h4>Vista Oriente - Torre Siata</h4>
+                  <p>Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
                 </div>
               </div>
               <div id="vivo-camara4" class="container-vivo" style="display:none">
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_89_TORRESIATA_occidente.jpg" alt="Torre SIATA Occidente"/> </div>
                 <div class="description">
-                  <h4>Cámara hacia el Occidente</h4>
-                  <p><strong>Lugares que cubre:</strong> Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
+                  <h4>VistaOccidente - Torre Siata</h4>
+                  <p>Poblado, Envigado, Itagüi, Sabaneta, Caldas, La Estrella.</p>
                 </div>
               </div>
               <div id="controles-vivo">
                 <ul>
-                  <li id="btnMostrarCam1">Cámara 1</li>
-                  <li id="btnMostrarCam2">Cámara 2</li>
-                  <li id="btnMostrarCam3">Cámara 3</li>
-                  <li id="btnMostrarCam4">Cámara 4</li>
+                  <li>
+                  	<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  		<img src="">
+                  		<p>Noroccidente1</p>
+                  	</a>
+                  </li>
+                  <li id="btnMostrarCam2">
+					<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  		<img src="">
+                  		<p>Noroccidente2</p>
+                  	</a>
+                  </li>
+                  <li id="btnMostrarCam3">
+                  	<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  		<img src="">
+                  		<p>Noroccidente3</p>
+                  	</a>
+                  </li>
+                  <li id="btnMostrarCam4">
+                  	<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  		<img src="">
+                  		<p>Noroccidente4</p>
+                  	</a>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div id="sensores" style="display:none"> <a href="#convencionesSensores">Ver convenciones</a>
+            <div id="sensores" style="display:none"> <a class="convencion" href="#convencionesSensores">Ver convenciones</a>
               <div class="convencionesSensores" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
               </div>
