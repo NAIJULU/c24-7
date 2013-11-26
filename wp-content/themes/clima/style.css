@@ -42,22 +42,18 @@ body {
 }
 /* Admin Top Navigation fixes */
 
-.navbar
-{margin-bottom:0px;
-	}
-
+.navbar {
+	margin-bottom: 0px;
+}
 body.admin-bar .navbar-fixed-top {
 	top: 28px;
 }
 .navbar .brand {
-	background-image:url(images/home-icon.png);
-	background-repeat:no-repeat;
+	background-image: url(images/home-icon.png);
+	background-repeat: no-repeat;
 	background-position: 39px 3px;
-	height:20px;
-	width:30px;
-	
-	
-	
+	height: 20px;
+	width: 30px;
 }
 .nav-container {
 	padding-left: 0;
@@ -80,36 +76,22 @@ input, textarea, select, .uneditable-input {
 	background-color: #090;
 	hanging-punctuation: 130px;
 }
-
-.navbar .nav > li > a
-{
-	text-transform:uppercase;
-	text-shadow:none;
-	color:#FFF;
-	padding:10px 31px 10px;
+.navbar .nav > li > a {
+	text-transform: uppercase;
+	text-shadow: none;
+	color: #FFF;
+	padding: 10px 31px 10px;
 }
-.navbar .nav > .active > a, .navbar .nav > .active > a:hover
-{
-	text-transform:uppercase;
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover {
+	text-transform: uppercase;
 	background-color: #95b935;
-	color:#FFF;
-	}
-
-
-.navbar .nav > li > a:hover
-{
-	text-transform:uppercase;
-	background-color: #95b935;
-	color:#FFF;
-	
+	color: #FFF;
 }
-
-
-
-
-
-
-
+.navbar .nav > li > a:hover {
+	text-transform: uppercase;
+	background-color: #95b935;
+	color: #FFF;
+}
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
 }
@@ -142,60 +124,40 @@ input, textarea, select, .uneditable-input {
 	float: left;
 	margin-left: 10px;
 }
-
-
-
 /*recomendaciones twitter*/
-.recomendaciones-tw
-
-{ height: 37px;
+.recomendaciones-tw {
+	height: 37px;
 	background-color: rgba(255,255,255,0.2);
-	margin-bottom:18px;
-	
-	}
-
- .cont-recomendaciones-tw
-{ 
-height: 37px;
-max-width: 970px;
-margin:0 auto;
-background-image:url(images/recom-tw-bg.png);
-background-position:left;
-background-repeat:no-repeat;
+	margin-bottom: 18px;
 }
-
- .link-twitter
- { 
- color:#304d79;
- width:200px;
- height:30px;
- padding: 8px 24px 0px 37px;
- text-align:center;
- float:left;
- text-decoration:none;
- font-weight:bold;
- font-size:15px;
-	 
-} 
-	 
-.link-twitter:hover
- {  
- text-decoration:none;	 
-	 }
-	 
-	 .cont-recomendaciones-tw  span
-	 {
-		 color:white;
-		 
-		 font-size:14px;
-		 float:left;
-		padding-top:7px;
-		
-		
-		
-		 
-  }
-
+.cont-recomendaciones-tw {
+	height: 37px;
+	max-width: 970px;
+	margin: 0 auto;
+	background-image: url(images/recom-tw-bg.png);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.link-twitter {
+	color: #304d79;
+	width: 200px;
+	height: 30px;
+	padding: 8px 24px 0px 37px;
+	text-align: center;
+	float: left;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+}
+.link-twitter:hover {
+	text-decoration: none;
+}
+.cont-recomendaciones-tw span {
+	color: white;
+	font-size: 14px;
+	float: left;
+	padding-top: 7px;
+}
 /* post styling */
 
 #mapa {
@@ -209,20 +171,15 @@ background-repeat:no-repeat;
 	width: auto;
 	display: inline;
 }
-
-   
-
-
 #pronosticos #ciudades {
-	
 	background-color: rgba(255,255,255,0.3);
 	color: #FFF;
 	font-size: 20px;
 	max-width: 930px;
 	padding: 0px 20px 10px 20px;
-	-moz-box-shadow:    inset 0 0 130px rgba(255,255,255,0.7);
-    -webkit-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
-    box-shadow:         inset 0 0 130px rgba(255,255,255,0.7);
+	-moz-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
 }
 #pronosticos #ciudades h2 {
 	background-image: url(images/h2LineaB.png);
@@ -234,7 +191,7 @@ background-repeat:no-repeat;
 	text-align: center;
 	text-transform: uppercase;
 	margin: 10px 0 0px 0;
-	text-shadow:0 0 10px  #699;
+	text-shadow: 0 0 10px #699;
 }
 #ciudades .lluvias {
 	padding-bottom: 20px;
@@ -259,47 +216,42 @@ background-repeat:no-repeat;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	
 }
-
 #btnMostrarPronostico {
 	background-image: url(images/icons-btns-pronostico.png);
-	background-position:20px 11px;
+	background-position: 20px 11px;
 	background-repeat: no-repeat;
-	 background-color: rgba(255,255,255,0.3);
-	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
-    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
-    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
-	
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
 }
 #btnMostrarRadar {
 	background-image: url(images/icons-btns-pronostico.png);
-	background-position:20px -46px;
+	background-position: 20px -46px;
 	background-repeat: no-repeat;
-	 background-color: rgba(255,255,255,0.3);
-	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
-    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
-    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
 }
 #btnMostrarTemperatura {
 	background-image: url(images/icons-btns-pronostico.png);
-	background-position:20px -100px;
+	background-position: 20px -100px;
 	background-repeat: no-repeat;
-	 background-color: rgba(255,255,255,0.3);
-	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
-    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
-    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
 }
 #btnMostrarPronostico:hover, #btnMostrarRadar:hover, #btnMostrarTemperatura:hover {
 	text-decoration: none;
-	 background-color: rgba(255,255,255,0.4);
-	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
-    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
-    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+	background-color: rgba(255,255,255,0.4);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
 }
-
-#pronosticos
-{
+#pronosticos {
 	margin-bottom: 0px;
 }
 #pronosticos #ciudades .titulo2 {
@@ -346,12 +298,12 @@ background-repeat:no-repeat;
 #pronosticos #ciudades .tempMax {
 	background-image: url(images/max.png);
 	background-repeat: no-repeat;
-	background-position:center -9px;
+	background-position: center -9px;
 	padding: 0 0 0 0;
 	text-align: center;
 	width: 130px;
 	height: 110px;
-	margin-left:9px;
+	margin-left: 9px;
 }
 #pronosticos #ciudades .tempMin {
 	background-image: url(images/min.png);
@@ -361,50 +313,45 @@ background-repeat:no-repeat;
 	text-align: center;
 	width: 130px;
 	height: 110px;
-	margin-left:9px;
+	margin-left: 9px;
 }
 #pronosticos #ciudades .tempMaxgrados, #pronosticos #ciudades .tempMingrados {
-	color:#114db0;
-	font-size:18px;
-	font-weight:bold;
-	text-transform:uppercase;
+	color: #114db0;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
 	background-image: url(images/max.png);
 	background-repeat: no-repeat;
-	background-position:center -30px;
+	background-position: center -30px;
 	padding: 91px 0 0 0;
 	text-align: center;
 	width: 128px;
-	display:inline-block;
-	margin-left:17px;
-	float:left;
-	
-	}
-
-#pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados	
-{	
+	display: inline-block;
+	margin-left: 17px;
+	float: left;
+}
+#pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados {
 	text-align: center;
 	width: 50px;
 	font-size: 30px;
 	font-weight: 900;
 	color: #114db0;
-	background-color:rgba(255,255,255,0.5);
-	padding:7px;
-	border-radius:3px;
-	display:inline-block;
-	margin:30px 0 0 0;
+	background-color: rgba(255,255,255,0.5);
+	padding: 7px;
+	border-radius: 3px;
+	display: inline-block;
+	margin: 30px 0 0 0;
 }
-
-
 #pronosticos #ciudades .numMin, #pronosticos #ciudades .numMax {
 	text-align: center;
 	width: 64px;
 	font-size: 19px;
 	font-weight: 400;
 	color: #114db0;
-	background-color:rgba(255,255,255,0.5);
-	padding:4px;
-	border-radius:3px;
-	margin-left:37px;
+	background-color: rgba(255,255,255,0.5);
+	padding: 4px;
+	border-radius: 3px;
+	margin-left: 37px;
 }
 /*#pronosticos #ciudades .numMax {
 	text-align: center;
@@ -417,19 +364,17 @@ background-repeat:no-repeat;
 
 
 
-#pronosticos .ciudades,  #temperaturas .ciudades {
-	 background-color: rgba(255,255,255,0.3);
-	-moz-box-shadow:    inset 0 0 30px rgba(255,255,255,0.7);
-    -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
-    box-shadow:         inset 0 0 30px rgba(255,255,255,0.7);
+#pronosticos .ciudades, #temperaturas .ciudades {
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
 	margin: 10px 0 0 0;
 	max-width: 970px;
 	padding: 10px 0px 10px 0px;
 	text-align: center;
+
 }
-
-
-
 #pronosticos .ciudades li, #temperaturas .ciudades li {
 	color: #114db0;
 	cursor: pointer;
@@ -437,38 +382,28 @@ background-repeat:no-repeat;
 	font-size: 14px;
 	list-style: none;
 	padding: 3px 10px;
-	text-transform:uppercase;
-	border-radius:4px; 
+	text-transform: uppercase;
+	border-radius: 4px;
 }
-#pronosticos .ciudades li:hover,  #temperaturas .ciudades li:hover {
+#pronosticos .ciudades li:hover, #temperaturas .ciudades li:hover {
 	color: ##114db0;
-	
 	background-color: #84C0FD;
-	
 }
-
-.mapa-ciudades
-{ height:430px;
-width:430px;
-
-
-background-image:url(images/caldas-mapa.png);
-	
-	}
-	
-	
+.mapa-ciudades {
+	height: 430px;
+	width: 430px;
+	background-image: url(images/caldas-mapa.png);
+}
 .videoEmision {
 	background-color: #94c60d;
-	width:59%;
-	display:inline-block;
-	
+	width: 59%;
+	display: inline-block;
 }
 .fotosUsuarios {
 	background-color: #94c60d;
-	width:40.5%;
-	display:inline-block;
-	float:right;
-	
+	width: 40.5%;
+	display: inline-block;
+	float: right;
 }
 .galeriaHome {
 	margin-top: 15px;
@@ -476,28 +411,23 @@ background-image:url(images/caldas-mapa.png);
 .galeriaHome .prev1 {
 	width: 5.2%;
 	height: 80px;
-	background-image:url(images/prev.png);
-	margin-top:80px;
-	margin-right:17px;
-	float:left;
-	cursor:pointer;
+	background-image: url(images/prev.png);
+	margin-top: 80px;
+	margin-right: 17px;
+	float: left;
+	cursor: pointer;
 }
-
-.galeriaHome .prev1:hover, .galeriaHome .next1:hover
-{
-	background-position:0 78px;
-	
-	}
-
+.galeriaHome .prev1:hover, .galeriaHome .next1:hover {
+	background-position: 0 78px;
+}
 .galeriaHome .next1 {
 	width: 5.2%;
 	height: 80px;
-	background-image:url(images/next.png);
-	margin-top:80px;
-	float:right;
-	cursor:pointer;
-	}
-	
+	background-image: url(images/next.png);
+	margin-top: 80px;
+	float: right;
+	cursor: pointer;
+}
 .galeriaHome .span3 {
 	width: 25.404255319148934%;
  *width: 25.351063829787233%;
@@ -766,10 +696,7 @@ video {
 .hero-unit h1 {
 	font-size: 3em;
 }
-
 /* blog*/
-
-
 
 /* comments */
 
@@ -975,87 +902,60 @@ li.previous a:hover:before {
 blockquote.pull-left {
 	padding-right: 15px;
 }
-
 /* witget ultima emision style*/
-.video-ultima-emision
-{
-	text-align:center;
+.video-ultima-emision {
+	text-align: center;
 	padding: 0 25px;
-	height:245px;
+	height: 245px;
 }
-
-.video-ultima-emision iframe
-{   position:relative;
-	height:100%;
-	width:100%;
-	top:0px;
-	left:0px;
-	
+.video-ultima-emision iframe {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
 }
-
-.contenedor-ultima-emision
-
- {
-	 text-transform:uppercase;
-	 
-	 padding: 0px 0px 10px 0px;
- }
- 
-h3.titulo-widget-ultima-emision   
- {
-	 color:#FFF;
-	 text-align:right;
-	 padding-right: 30px;
-	 background-image: url(images/tv-icon-ultima-emision_01.png);
-	 background-repeat:no-repeat;
-	 background-position: 31px 9px;
-	
-	 
- }
- 
- h3.titulo-widget-ultima-emision:before  
- { content:" ";
- height:6px;
- width:45%;
- border-top: solid 1px #fff;
- display:inline-block;
- margin: 0 15px 0 35px;
-
-	 
-	 }
- 
-.contenedor-ultima-emision .emision
-
- {   
-	padding-top:15px;
-	color:#FFF;
-	text-transform:uppercase;
-	padding-left:71px;
-	 background-image: url(images/icon2-ult-emision_02.png);
-	 background-repeat:no-repeat;
-	 background-position: 30px 7px;
-	
-	 
- }
-.contenedor-ultima-emision .btnHistorial
-
- { 
-	float:right;
-	color:#FFF;
-	text-decoration:none;
-	padding:0px 30px 5px 35px ;
-	 background-repeat:no-repeat;
-	 background-position: 0px -5px;
-	 background-image: url(images/icon2-ult-emision_03.png);		 
- }
- 
-  .contenedor-ultima-emision .btnHistorial:hover
- { text-shadow:white 0 0 5px;
-	 
-	 }
-
-
-
+.contenedor-ultima-emision {
+	text-transform: uppercase;
+	padding: 0px 0px 10px 0px;
+}
+h3.titulo-widget-ultima-emision {
+	color: #FFF;
+	text-align: right;
+	padding-right: 30px;
+	background-image: url(images/tv-icon-ultima-emision_01.png);
+	background-repeat: no-repeat;
+	background-position: 31px 9px;
+}
+h3.titulo-widget-ultima-emision:before {
+	content: " ";
+	height: 6px;
+	width: 45%;
+	border-top: solid 1px #fff;
+	display: inline-block;
+	margin: 0 15px 0 35px;
+}
+.contenedor-ultima-emision .emision {
+	padding-top: 15px;
+	color: #FFF;
+	text-transform: uppercase;
+	padding-left: 71px;
+	background-image: url(images/icon2-ult-emision_02.png);
+	background-repeat: no-repeat;
+	background-position: 30px 7px;
+}
+.contenedor-ultima-emision .btnHistorial {
+	float: right;
+	color: #FFF;
+	text-decoration: none;
+	padding: 0px 30px 5px 35px;
+	background-repeat: no-repeat;
+	background-position: 0px -5px;
+	background-image: url(images/icon2-ult-emision_03.png);
+}
+.contenedor-ultima-emision .btnHistorial:hover {
+	text-shadow: white 0 0 5px;
+}
  @media only screen and (min-width: 768px) {
 .carousel-caption p {
 	display: block;
@@ -1172,7 +1072,7 @@ body {
 }
 .blog .hero-unit {
 }
-.page-template-page-homepage-php .hero-unit,  .blog .hero-unit {
+.page-template-page-homepage-php .hero-unit, .blog .hero-unit {
 	padding: 60px;
 }
 .hero-unit h1 {

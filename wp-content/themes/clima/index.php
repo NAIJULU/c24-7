@@ -57,6 +57,7 @@
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						<?php get_template_part( 'content', get_post_format() ); ?>					
 					<?php endwhile; ?>	
+                    
 					
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 						
@@ -87,12 +88,12 @@
 					<?php endif; ?>
                     <?php endif; ?>
                    
-			
 				</div> <!-- end #main -->
                 
     
 				<?php
 				if(!is_home()){
+					
 					get_sidebar(); 
 					// sidebar 1
 				}
