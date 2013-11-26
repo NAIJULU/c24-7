@@ -25,6 +25,7 @@
 		<![endif]-->
 		
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+  		<link rel="stylesheet" type="text/css" href="/c24-7/clima-en-vivo.css">
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>

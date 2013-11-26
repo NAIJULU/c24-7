@@ -11,26 +11,28 @@ $manana = strtotime(date('Y-m-d').' +1 day');
   <div id="main" class="span12 clearfix" role="main">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-      <header>
-        <div class="page-header">
-          <h1>
-            <?php the_title(); ?>
-          </h1>
-        </div>
-      </header>
+	     <header>
+	      <div class="page-header">
+	          <h1>
+	            <?php the_title(); ?>
+	          </h1>
+	      </div>
+	     </header>
       <!-- end article header -->
       
       <section class="post_content">
         <div class="row-fluid clearfix">
           <div class="span4"> 
             <!-- menu Clima en vivo -->
-            <ul>
-              <li id="btnMostrarRadarMeteorologico">Radar Meteorológico</li>
-              <li id="btnMostrarPronosticoTemperatura">Pronóstico - Temperatura actual, máxima y mínima</li>
-              <li id="btnMostrarVistaVivo">Vista en vivo del SIATA</li>
-              <li id="btnMostrarSensores">Red de sensores de nivel de quebradas</li>
-            </ul>
-            
+	         <div class="menu-clima">
+	            <ul>
+	              <li><a id="btnMostrarRadarMeteorologico" class="radar" href="#">Radar Meteorológico</a></li>
+	              <li><a id="btnMostrarPronosticoTemperatura" class="pronostico" href="#">Pronóstico - Temperatura actual, máxima y mínima</a></li>
+	              <li><a id="btnMostrarVistaVivo" class="siata" href="#">Vista en vivo del SIATA</a></li>
+	              <li><a id="btnMostrarSensores" class="sensores" href="#">Red de sensores de nivel de quebradas</a></li>
+	            </ul>
+            </div>
+
             <!-- Últimas fotos -->
             
             <div id="ultimasFotos">
@@ -39,12 +41,12 @@ $manana = strtotime(date('Y-m-d').' +1 day');
             </div>
             
             <!-- Suscripción -->
-            <div id="suscripcion"> Suscríbete a nuestro pronóstico diario
-              <input class="suscribete" />
+            <div id="suscripcion"><p>Suscríbete a nuestro <strong>pronóstico diario</strong></p>
+              <input class="suscribete" /><a href="#" class="enviar-suscripcion">e</a>
             </div>
           </div>
           <div class="span8">
-            <div id="radar-meterologico"> <a href="#convencionesRadar">Ver convenciones</a>
+            <div id="radar-meterologico"> <a class="convencion" href="#convencionesRadar">Ver convenciones</a>
               <div class="convencionesRadar" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
               </div>
