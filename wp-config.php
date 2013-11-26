@@ -19,10 +19,10 @@
 define('DB_NAME', 'med2018_clima');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'med2018_climau');
+define('DB_USER', 'root');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', '62^{Md4nZ{GQ');
+define('DB_PASSWORD', '');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 define('DB_HOST', 'localhost');
