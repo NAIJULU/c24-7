@@ -104,21 +104,25 @@ section #suscripcion .enviar-suscripcion {
   display: inline-block;
   margin: 1em 0 0 0;
 }
+#controles-vivo ul li:first-child a {
+  padding-left: 0;
+}
 #controles-vivo ul li a {
-  padding: 1em;
+  padding: 0 0.5em;
   color: #fff;
   text-decoration: none;
   text-align: center;
+  display: block;
 }
 #controles-vivo ul li a img {
-  width: 90px;
-  height: 90px;
+  width: 105px;
+  height: 80px;
 }
 #controles-vivo ul li a p {
   background: #a3d039;
   padding: 0.2em 0.5em;
   display: block;
-  margin: 0.5em;
+  margin: 0.5em 0 0 0;
 }
 .convencion {
   background: #a4ce3a;
@@ -160,4 +164,7 @@ section #suscripcion .enviar-suscripcion {
   float: right;
   margin: 10px 0;
   font-size: 12px;
+}
+.img-vivo img {
+  width: 100%;
 }
