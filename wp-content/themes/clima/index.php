@@ -7,13 +7,13 @@
 			<div id="content" class="clearfix row-fluid">
 			
 				<div id="main" class="span12 clearfix" role="main">
-                	<div class="row-fluid">
-                		<div class="span7 videoEmision">
+                	<div class="clearfix">
+                		<div class="videoEmision">
 							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('ultimaemision_widget') ) : ?>
 
 							<?php endif; ?>                			
                 		</div>
-                        <div class="span5 fotosUsuarios">
+                        <div class="fotosUsuarios">
 							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('fotousuarioshome_widget') ) : ?>
 
 							<?php endif; ?>                           	
@@ -28,7 +28,7 @@
                     <div class="galeriaHome span12">
                    	 	<h2>Artículos destacados</h2>
                         
-                        <div class="span1"></div>
+                        <div class="prev1"></div>
                         
                         <div class="span3">
                         	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
@@ -48,7 +48,7 @@
                             <p>Centenares de toneladas de basura en las playas de Acapulco han sido el resultado de la tormenta tropical Manuel, que afectó la costa oeste de México en los últimos días.</p>
                         </div>
                         
-                        <div class="span1"></div>
+                        <div class="next1"></div>
                     </div>
                         
 					
@@ -57,6 +57,7 @@
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						<?php get_template_part( 'content', get_post_format() ); ?>					
 					<?php endwhile; ?>	
+                    
 					
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 						
@@ -87,12 +88,12 @@
 					<?php endif; ?>
                     <?php endif; ?>
                    
-			
 				</div> <!-- end #main -->
                 
     
 				<?php
 				if(!is_home()){
+					
 					get_sidebar(); 
 					// sidebar 1
 				}

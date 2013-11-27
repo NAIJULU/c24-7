@@ -12,403 +12,486 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 /* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 /* For modern browsers */
-.clearfix:before,
-.clearfix:after {
-    content:"";
-    display:table;
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
 }
-
 .clearfix:after {
-    clear:both;
+	clear: both;
 }
-
 /* For IE 6/7 (trigger hasLayout) */
 .clearfix {
-    zoom:1;
+	zoom: 1;
 }
-
 /* wp-specific classes */
-.wp-caption{
-	
+.wp-caption {
 }
-
-.wp-caption-text{
-	
+.wp-caption-text {
 }
-
-.sticky{
-	
+.sticky {
 }
-
-.gallery-caption{
-	
+.gallery-caption {
 }
-
 /* layout */
 
-body{
+body {
 	padding-top: 0;
-	background-image:url(images/background.jpg);
-	background-repeat:no-repeat;
+	background-image: url(images/background.jpg);
+	background-repeat: no-repeat;
 	background-position: top center;
 }
-
 /* Admin Top Navigation fixes */
 
-body.admin-bar .navbar-fixed-top{ 
-	top: 28px; 
+.navbar {
+	margin-bottom: 0px;
 }
-
-.navbar .brand{
-	color: #000;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
-	font-weight: bold !important;
+body.admin-bar .navbar-fixed-top {
+	top: 28px;
 }
-
-.nav-container{
+.navbar .brand {
+	background-image: url(images/home-icon.png);
+	background-repeat: no-repeat;
+	background-position: 39px 3px;
+	height: 20px;
+	width: 30px;
+}
+.nav-container {
 	padding-left: 0;
 	padding-right: 0;
 }
-
-#inner-header{
+#inner-header {
 	width: 100%;
 }
-
 input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
-
 #logos {
-	height:130px;
+	height: 130px;
 	max-width: 970px;
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
-	}
-
-.logosPatrocinadores {
-	background-color:#090;
-	hanging-punctuation:130px;
-
 }
-
+.logosPatrocinadores {
+	background-color: #090;
+	hanging-punctuation: 130px;
+}
+.navbar .nav > li > a {
+	text-transform: uppercase;
+	text-shadow: none;
+	color: #FFF;
+	padding: 10px 31px 10px;
+}
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover {
+	text-transform: uppercase;
+	background-color: #95b935;
+	color: #FFF;
+}
+.navbar .nav > li > a:hover {
+	text-transform: uppercase;
+	background-color: #95b935;
+	color: #FFF;
+}
 .navbar-form, .navbar-search {
 	margin: 0 0 9px;
 }
-
-.navbar-search{
+.navbar-search {
 	padding-left: 0;
 }
-
 .navbar-inner {
-	background-color:#a5ce39;
-	background-position:center;
-	border-top:5px solid #d2e177;}
-
-#s{
+	background-color: #a5ce39;
+	background-position: center;
+	border-top: 5px solid #d2e177;
+}
+#s {
 	width: 100px;
 }
-
-#content{
+#content {
 	padding: 10px 0 0;
 }
-
-.more-link{
+.more-link {
 	white-space: nowrap;
 }
-
-.footer-links{
+.footer-links {
 	float: right;
 	margin-bottom: 18px;
 }
-
-.footer-links .menu{
+.footer-links .menu {
 	list-style-type: none;
 	margin-left: 0;
 }
-
-.footer-links .menu li{
+.footer-links .menu li {
 	float: left;
 	margin-left: 10px;
 }
-
+/*recomendaciones twitter*/
+.recomendaciones-tw {
+	height: 37px;
+	background-color: rgba(255,255,255,0.2);
+	margin-bottom: 18px;
+}
+.cont-recomendaciones-tw {
+	height: 37px;
+	max-width: 970px;
+	margin: 0 auto;
+	background-image: url(images/recom-tw-bg.png);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.link-twitter {
+	color: #304d79;
+	width: 200px;
+	height: 30px;
+	padding: 8px 24px 0px 37px;
+	text-align: center;
+	float: left;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 15px;
+}
+.link-twitter:hover {
+	text-decoration: none;
+}
+.cont-recomendaciones-tw span {
+	color: white;
+	font-size: 14px;
+	float: left;
+	padding-top: 7px;
+}
 /* post styling */
 
 #mapa {
-	height:350px !important;
-	width:100% !important;
+	height: 350px !important;
+	width: 100% !important;
 }
-
 #mapa img {
 	max-width: none;
 }
-
 #mapa label {
-	width: auto; display:inline;
+	width: auto;
+	display: inline;
 }
-
 #pronosticos #ciudades {
-	background-image:url(images/backgroundPronostico.png);
-	color:#FFF;
-	font-size:20px;
-	height:260px;
+	background-color: rgba(255,255,255,0.3);
+	color: #FFF;
+	font-size: 20px;
 	max-width: 930px;
 	padding: 0px 20px 10px 20px;
-	}
-
-#pronosticos #ciudades h2 {
-background-image: url(images/h2LineaB.png);
-background-position: center center;
-color: #FFF;
-font-family: Verdana, Geneva, sans-serif;
-font-size: 22px;
-font-weight:bold;
-text-align: center;
-text-transform: uppercase;
-margin: 20px 0 30px 0;
+	-moz-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
 }
-
+#pronosticos #ciudades h2 {
+	background-image: url(images/h2LineaB.png);
+	background-position: center center;
+	color: #FFF;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 10px 0 0px 0;
+	text-shadow: 0 0 10px #699;
+}
+#ciudades .lluvias {
+	padding-bottom: 20px;
+}
 .menuControles {
-	margin:0px 0px 10px 0;
-	text-align:center;}
-
+	margin: 0px 0px 10px 0;
+	text-align: center;
+}
 .menuControles li {
-	display:inline-block;
-	margin:0;
-	}
-
+	display: inline-block;
+	margin: 0;
+}
 #btnMostrarPronostico, #btnMostrarRadar, #btnMostrarTemperatura {
-	display:block;
-	color:#FFF;
-	width:320px;
-	height:40px;
+	display: block;
+	color: #FFF;
+	width: 320px;
+	height: 40px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	padding:20px 0 0 0;
+	padding: 20px 0 0 0;
 	text-align: center;
-	text-decoration:none;
+	text-decoration: none;
 	text-transform: uppercase;
-
-	}
-
+}
 #btnMostrarPronostico {
-	background-image:url(images/bg_boton1.png);
-	background-repeat:no-repeat;
-	}
-
-#btnMostrarRadar, #btnMostrarTemperatura {
-	background-image:url(images/bg_boton2.png);
-	background-repeat:no-repeat;
-	}
-
+	background-image: url(images/icons-btns-pronostico.png);
+	background-position: 20px 11px;
+	background-repeat: no-repeat;
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+}
+#btnMostrarRadar {
+	background-image: url(images/icons-btns-pronostico.png);
+	background-position: 20px -46px;
+	background-repeat: no-repeat;
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+}
 #btnMostrarTemperatura {
-	background-image:url(images/bg_boton3.png);
-	background-repeat:no-repeat;
-	}
-
+	background-image: url(images/icons-btns-pronostico.png);
+	background-position: 20px -100px;
+	background-repeat: no-repeat;
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+}
 #btnMostrarPronostico:hover, #btnMostrarRadar:hover, #btnMostrarTemperatura:hover {
-	text-decoration:none;
-	background-position:0 -60px;
-	}
-
-
+	text-decoration: none;
+	background-color: rgba(255,255,255,0.4);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+}
+#pronosticos {
+	margin-bottom: 0px;
+}
+#pronosticos #ciudades .titulo2 {
+	background-color: rgba(255,255,255,0.2);
+	display: block;
+	padding: 5px 0px;
+	margin: 0px 0px 10px 0px;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+#pronosticos #ciudades .lluvias, #pronosticos #ciudades .temp {
+	background-color: rgba(255,255,255,0.3);
+	display: block;
+	padding: 0px 0px 8px 0px;
+	margin: 10px 0px;
+	border-radius: 3px;
+}
+#pronosticos #ciudades .lluvias {
+	text-align: center;
+}
 #pronosticos #ciudades .dia {
-color: #FFF;
-display:block;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 14px;
-line-height:28px;
-font-weight:bold;
-text-transform: uppercase;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	line-height: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
-
 #pronosticos #ciudades .mes {
-color: #FFF;
-display:block;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 18px;
-text-transform: uppercase;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	text-transform: uppercase;
 }
-
 #pronosticos #ciudades .dias {
-color: #FFF;
-display:block;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 36px;
-font-weight:bold;
-text-transform: uppercase;
+	color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
-
 #pronosticos #ciudades .tempMax {
-	background-image:url(images/max.png);
-	background-repeat:no-repeat;
-	background-position:top center;
-	padding:60px 0 0 0;
-	text-align:center;
-	width:64px;
-	height:40px;
-	}
-	
-#pronosticos #ciudades .tempMin {
-	background-image:url(images/min.png);
-	background-repeat:no-repeat;
-	background-position:top center;
-	padding:60px 0 0 0;
-	text-align:center;
-	width:64px;
-	height:40px;
-	}
-	
-
-#pronosticos #ciudades .numMin {
-	text-align:center;
-	width:64px;
-	font-size: 40px;
-	font-weight:bold;
-	color:#114db0;
-	}
-
-
-#pronosticos #ciudades .numMax {
-	text-align:center;
-	width:64px;
-	font-size: 40px;
-	font-weight:bold;
-	color:#ff6b43;
-	}
-	
-#pronosticos .ciudades  {
-	margin:0;
-	}	
-	
-#pronosticos .ciudades  {
-	margin-top:10px;
-	background-image:url(images/bg_ciudades.png);
-	max-width:970px;
-	height:25px;
-	padding: 15px 20px 10px 0px;
-	text-align:center;
-	}	
-
-#pronosticos .ciudades li {
-	
-	color:#FFF;
-	cursor:pointer;
-	display:inline-block;
-	font-size:16px;
-	font-weight:bold;
-	list-style:none;
-	padding-right:20px;
-	}
-
-#pronosticos .ciudades li:hover {
-	color:#044589;
-	
-	}
-
-
-.videoEmision {
-	background-color:#94c60d; 
-	height:300px;
-	}
-
-.fotosUsuarios {
-	background-color:#94c60d; 
-	height:300px;
-	}
-	
-.galeriaHome  {
-	margin-top:30px;
-	}
-
-.galeriaHome .span1 {
-	width: 5.2%;
-	}
-
-.galeriaHome .span3 {
-  width: 25.404255319148934%;
-  *width: 25.351063829787233%;
+	background-image: url(images/max.png);
+	background-repeat: no-repeat;
+	background-position: center -9px;
+	padding: 0 0 0 0;
+	text-align: center;
+	width: 130px;
+	height: 110px;
+	margin-left: 9px;
 }
+#pronosticos #ciudades .tempMin {
+	background-image: url(images/min.png);
+	background-repeat: no-repeat;
+	background-position: center -9px;
+	padding: 0 0 0 0;
+	text-align: center;
+	width: 130px;
+	height: 110px;
+	margin-left: 9px;
+}
+#pronosticos #ciudades .tempMaxgrados, #pronosticos #ciudades .tempMingrados {
+	color: #114db0;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-image: url(images/max.png);
+	background-repeat: no-repeat;
+	background-position: center -30px;
+	padding: 91px 0 0 0;
+	text-align: center;
+	width: 128px;
+	display: inline-block;
+	margin-left: 17px;
+	float: left;
+}
+#pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados {
+	text-align: center;
+	width: 50px;
+	font-size: 30px;
+	font-weight: 900;
+	color: #114db0;
+	background-color: rgba(255,255,255,0.5);
+	padding: 7px;
+	border-radius: 3px;
+	display: inline-block;
+	margin: 30px 0 0 0;
+}
+#pronosticos #ciudades .numMin, #pronosticos #ciudades .numMax {
+	text-align: center;
+	width: 64px;
+	font-size: 19px;
+	font-weight: 400;
+	color: #114db0;
+	background-color: rgba(255,255,255,0.5);
+	padding: 4px;
+	border-radius: 3px;
+	margin-left: 37px;
+}
+/*#pronosticos #ciudades .numMax {
+	text-align: center;
+	width: 64px;
+	font-size: 19px;
+	font-weight: 400;
+	color: #ff6b43;
+	
+}*/
 
 
+
+#pronosticos .ciudades, #temperaturas .ciudades {
+	background-color: rgba(255,255,255,0.3);
+	-moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	-webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
+	margin: 10px 0 0 0;
+	max-width: 970px;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+
+}
+#pronosticos .ciudades li, #temperaturas .ciudades li {
+	color: #114db0;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	list-style: none;
+	padding: 3px 10px;
+	text-transform: uppercase;
+	border-radius: 4px;
+}
+#pronosticos .ciudades li:hover, #temperaturas .ciudades li:hover {
+	color: ##114db0;
+	background-color: #84C0FD;
+}
+.mapa-ciudades {
+	height: 430px;
+	width: 430px;
+	background-image: url(images/caldas-mapa.png);
+}
+.videoEmision {
+	background-color: #94c60d;
+	width: 59%;
+	display: inline-block;
+}
+.fotosUsuarios {
+	background-color: #94c60d;
+	width: 40.5%;
+	display: inline-block;
+	float: right;
+}
+.galeriaHome {
+	margin-top: 15px;
+}
+.galeriaHome .prev1 {
+	width: 5.2%;
+	height: 80px;
+	background-image: url(images/prev.png);
+	margin-top: 80px;
+	margin-right: 17px;
+	float: left;
+	cursor: pointer;
+}
+.galeriaHome .prev1:hover, .galeriaHome .next1:hover {
+	background-position: 0 78px;
+}
+.galeriaHome .next1 {
+	width: 5.2%;
+	height: 80px;
+	background-image: url(images/next.png);
+	margin-top: 80px;
+	float: right;
+	cursor: pointer;
+}
+.galeriaHome .span3 {
+	width: 25.404255319148934%;
+ *width: 25.351063829787233%;
+}
 .galeriaHome h2 {
-	background-image:url(images/h2Lineas.png);
-	background-position:center center;
-	color:#80ad08;
-	font-family:Verdana, Geneva, sans-serif;
-	font-size:22px;
-	text-align:center;
-	text-transform:uppercase;
-	}
-	
+	background-image: url(images/h2Lineas.png);
+	background-position: center center;
+	color: #80ad08;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 22px;
+	text-align: center;
+	text-transform: uppercase;
+}
 .galeriaHome h3 {
-	color:#3962a2;
-	font-weight:bold;
-	font-size:13px;
-	line-height:16px;
-	text-transform:uppercase;
-	}
-
+	color: #3962a2;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
 .galeriaHome p {
-	font-size:13px;
-	line-height:15px;
-	text-align:justify;
-	}
-
+	font-size: 13px;
+	line-height: 15px;
+	text-align: justify;
+}
 .galeriaHome .span3 img {
-	max-width:100%;}
-	
-
-	
-
-
-#main p.meta{
+	max-width: 100%;
+}
+#main p.meta {
 	font-style: italic;
 	color: #808080;
 }
-
-#main article{
+#main article {
 	margin-bottom: 18px;
 	border-bottom: 1px solid #eeeeee;
 	padding: 0 0 9px;
 }
-
-#main article footer{
+#main article footer {
 	border-top: none;
 	margin-top: 0;
 	padding-top: 0;
 	position: relative;
-	height:122px;
-
+	height: 122px;
 }
-
-#main article footer a.edit-post{
+#main article footer a.edit-post {
 	position: absolute;
 	right: 0;
 	top: 0;
 	display: none;
 }
-
-.post:hover a.edit-post{
+.post:hover a.edit-post {
 	display: inline;
 }
-
 /* Shared Post Format styling */
-article.format-quote footer.entry-meta,
-article.format-link footer.entry-meta,
-article.format-status footer.entry-meta {
+article.format-quote footer.entry-meta, article.format-link footer.entry-meta, article.format-status footer.entry-meta {
 	font-size: 11px;
 	font-size: 0.785714286rem;
 	line-height: 2.181818182;
 }
-
 /* =Aside post format
 -------------------------------------------------------------- */
 #main article.format-aside {
 	padding: 0;
 }
-
 article.format-aside h1 {
 	margin-bottom: 24px;
 	margin-bottom: 1.714285714rem;
@@ -428,8 +511,7 @@ article.format-aside p {
 	font-size: 0.928571429rem;
 	line-height: 1.846153846;
 }
-article.format-aside blockquote:last-child,
-article.format-aside p:last-child {
+article.format-aside blockquote:last-child, article.format-aside p:last-child {
 	margin-bottom: 0;
 }
 article.format-aside footer.aside {
@@ -437,7 +519,6 @@ article.format-aside footer.aside {
 	padding: 1.714285714rem;
 	border-left: 22px solid;
 }
-
 /* Image posts */
 article.format-image footer h1 {
 	font-size: 13px;
@@ -453,7 +534,6 @@ article.format-image footer h2 {
 article.format-image footer a h2 {
 	font-weight: normal;
 }
-
 /* Link posts */
 article.format-link header {
 	padding: 0 10px;
@@ -479,11 +559,9 @@ article.format-link .entry-content a {
 	line-height: 1.090909091;
 	text-decoration: none;
 }
-
-article.format-link footer.entry-meta { 
+article.format-link footer.entry-meta {
 	clear: both;
 }
-
 /* Quote posts */
 article.format-quote .entry-content p {
 	margin: 0;
@@ -499,17 +577,14 @@ article.format-quote .entry-content blockquote {
 	line-height: 1.6;
 	font-style: normal;
 }
-
 article.format-quote .entry-content blockquote p:before {
 	content: "\201C  ";
 	font-size: 2rem;
 }
-
 article.format-quote .entry-content blockquote p:after {
 	content: " \201D ";
 	font-size: 2rem;
 }
-
 /* Status posts */
 .format-status .entry-header {
 	margin-bottom: 24px;
@@ -543,59 +618,47 @@ article.format-quote .entry-content blockquote p:after {
 	margin-right: 21px;
 	margin-right: 1.5rem;
 }
-
-p.tags{
+p.tags {
 	line-height: 20px;
 }
-
-div[id*='attachment_']{
+div[id*='attachment_'] {
 	max-width: 100%;
 	height: 100%;
 }
-
-#credit320{
+#credit320 {
 	background: url('images/320press_mini.png') no-repeat left top transparent;
 	padding-left: 20px;
 }
-
-#main .hero-unit img{
+#main .hero-unit img {
 	margin-bottom: 1em;
 }
-
-#main article img{
+#main article img {
 	height: auto;
 	max-width: 100%;
 }
-
-img.alignleft{
+img.alignleft {
 	margin-right: 10px;
 	float: left;
 }
-
-img.alignright{
+img.alignright {
 	margin-left: 10px;
 	float: right;
 }
-
-img.aligncenter{
+img.aligncenter {
 	display: block;
 	margin: 0 auto;
 }
-
-.post header img{
+.post header img {
 	margin-bottom: 18px;
 }
-
-.archive #main .post h3{
+.archive #main .post h3 {
 	line-height: 24px;
 	margin-bottom: 10px;
 }
-
 video {
 	max-width: 100%;
 	height: auto;
 }
-
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -603,194 +666,152 @@ video {
 	height: 0;
 	overflow: hidden;
 }
-
-.video-container iframe,  
-.video-container object,  
-.video-container embed {
+.video-container iframe, .video-container object, .video-container embed {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
-
 .video-wrapper {
 	width: 630px;
 	max-width: 100%;
 	margin-bottom: 18px;
 }
-
 /* page styling */
 
-#featured-carousel .item{
+#featured-carousel .item {
 	width: 970px;
 	height: 600px;
 }
-
-.carousel-caption p{
+.carousel-caption p {
 	display: none;
 }
-
-.page-template-page-homepage-php #main article{
+.page-template-page-homepage-php #main article {
 	border-bottom: none;
 }
-
-.page-template-page-homepage-php .hero-unit,
-.blog .hero-unit{
+.page-template-page-homepage-php .hero-unit, .blog .hero-unit {
 	padding: 1em;
 }
-
 .hero-unit h1 {
 	font-size: 3em;
 }
+/* blog*/
 
 /* comments */
 
-
-
-#comments{
+#comments {
 	line-height: 24px;
 	margin-bottom: 18px;
 }
-
-ol.commentlist,
-ol.commentlist ul.children{
+ol.commentlist, ol.commentlist ul.children {
 	list-style-type: none;
 	margin-left: 0;
 }
-
-.comment .vcard > div{
+.comment .vcard > div {
 	margin-top: 8px;
 	padding: 0 10px;
 }
-
-ol.commentlist time{
+ol.commentlist time {
 	font-size: .8em;
 	color: #eeeeee;
 }
-
-ol.commentlist div.comment-author{
+ol.commentlist div.comment-author {
 	position: relative;
 }
-
-ol.commentlist a.comment-edit-link{
+ol.commentlist a.comment-edit-link {
 	color: #ffffff;
 	text-decoration: none;
 	padding-left: 5px;
 }
-
-ol.commentlist span.edit-comment{
+ol.commentlist span.edit-comment {
 	position: absolute;
 	right: 0;
 	top: 8px;
 }
-
-ol.commentlist li.bypostauthor{
+ol.commentlist li.bypostauthor {
 	background-color: #dddddd;
 }
-
-ol.commentlist ul.children li{
+ol.commentlist ul.children li {
 	background-color: #cccccc;
 }
-
-ol.commentlist ul.children li ul.children li{
+ol.commentlist ul.children li ul.children li {
 	background-color: #bbbbbb;
 }
-
-ol.commentlist ul.children li ul.children li ul.children li{
+ol.commentlist ul.children li ul.children li ul.children li {
 	background-color: #aaaaaa;
 }
-
-ol.commentlist article{
+ol.commentlist article {
 	border-bottom: none !important;
 }
-
-a.comment-reply-link{
+a.comment-reply-link {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
-
-#comment-nav ul{
+#comment-nav ul {
 	list-style-type: none;
 	margin: 0;
 }
-
-#comment-form-elements{
+#comment-form-elements {
 	list-style-type: none;
 	margin: 0;
 }
-
-.comment .vcard .avatar{
+.comment .vcard .avatar {
 	padding-right: 0;
 }
-
-.comment .vcard .comment-text{
+.comment .vcard .comment-text {
 	margin-left: 0;
 }
-
-img.avatar{
+img.avatar {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #dedede;
 	border-right: 1px solid #dedede;
 	border-left: 1px solid #ddd;
-	
 }
-
-ol.commentlist li{
+ol.commentlist li {
 	padding-right: 10px;
 	background-color: #F0F0F0;
 }
-
-#pings{
+#pings {
 	margin-bottom: 9px;
 }
-
-ol.pinglist{
+ol.pinglist {
 	list-style-type: none;
 	margin: 0 0 9px 0;
 }
-
-#comment{
+#comment {
 	width: 270px;
 }
-
-ol.commentlist #respond{
+ol.commentlist #respond {
 	padding: 5px 10px;
 }
-
 /* specific post-type styles */
 
 /* image attachment */
 
-.attachment #main .post_content img{
+.attachment #main .post_content img {
 	max-width: 100%;
 }
-
-.ie8 #main .media-grid img{
+.ie8 #main .media-grid img {
 	max-height: none !important;
 	max-width: none !important;
 }
-
-.attachment-img{
+.attachment-img {
 	margin-bottom: 18px;
 }
-
-.metadata p.alert-message{
+.metadata p.alert-message {
 	margin-right: 0;
 	margin-bottom: 18px;
 }
-
-#gallery-nav{
+#gallery-nav {
 	list-style-type: none;
 	margin-left: 0;
 }
-
-li.next a, li.previous a{
+li.next a, li.previous a {
 	position: relative;
 }
-
-li.next a:hover:before{
+li.next a:hover:before {
 	content: "\2190";
 	position: absolute;
 	display: block;
@@ -804,8 +825,7 @@ li.next a:hover:before{
 	text-decoration: none;
 	box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
-
-li.previous a:hover:before{
+li.previous a:hover:before {
 	content: "\2192";
 	position: absolute;
 	display: block;
@@ -819,256 +839,261 @@ li.previous a:hover:before{
 	text-decoration: none;
 	box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
 }
-
-
 /* widget styles */
 
-.widget{
+.widget {
 	margin-bottom: 18px;
 }
-
-.widgettitle{
+.widgettitle {
 	margin-bottom: 9px;
 }
-
-#tag-cloud{
+#tag-cloud {
 	margin-bottom: 18px;
 	line-height: 160%;
 }
-
 /* for some reason the bs version currently available for download doesn't have this style */
-.label{
+.label {
 	text-transform: uppercase;
 }
-
 /* override standard link hover for the tag cloud widget */
-#tag-cloud a:hover,
-.tags a:hover{
+#tag-cloud a:hover, .tags a:hover {
 	color: #ffffff;
 	text-decoration: none;
 }
-
-#tag-cloud a{
+#tag-cloud a {
 	white-space: pre;
 	text-transform: uppercase;
 }
-
 /* change default form padding for search */
 
-.widget_search form{
+.widget_search form {
 	padding-left: 0;
 }
-
-.widget_search input{
+.widget_search input {
 	width: 121px;
 }
-
 /* calendar widget */
 
-#calendar_wrap{
+#calendar_wrap {
 	border: 1px solid #ddd;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	padding: 5px;
 }
-
-#wp-calendar{
+#wp-calendar {
 	width: 100%;
-	
 }
-
-#wp-calendar caption{
+#wp-calendar caption {
 	font-weight: bold;
 	padding: 8px;
 }
-
-#wp-calendar tr{
+#wp-calendar tr {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
-
-#wp-calendar tr:last-child{
+#wp-calendar tr:last-child {
 	border-bottom: none;
 }
-
-#wp-calendar td{
+#wp-calendar td {
 	text-align: center;
 	padding: 8px 0;
 }
-
-blockquote.pull-left{
+blockquote.pull-left {
 	padding-right: 15px;
 }
-
-@media only screen and (min-width: 768px) {
-	.carousel-caption p{
-		display: block;
-	}
+/* witget ultima emision style*/
+.video-ultima-emision {
+	text-align: center;
+	padding: 0 25px;
+	height: 245px;
 }
-
-@media only screen and (min-width: 980px) {
-	body{
-		padding-top: 0px;
-	}
-	
-	.container-fluid{
-		max-width: 970px;
-		margin: 0 auto;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	
-	#logos {
-	height:130px;
+.video-ultima-emision iframe {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+.contenedor-ultima-emision {
+	text-transform: uppercase;
+	padding: 0px 0px 10px 0px;
+}
+h3.titulo-widget-ultima-emision {
+	color: #FFF;
+	text-align: right;
+	padding-right: 30px;
+	background-image: url(images/tv-icon-ultima-emision_01.png);
+	background-repeat: no-repeat;
+	background-position: 31px 9px;
+}
+h3.titulo-widget-ultima-emision:before {
+	content: " ";
+	height: 6px;
+	width: 45%;
+	border-top: solid 1px #fff;
+	display: inline-block;
+	margin: 0 15px 0 35px;
+}
+.contenedor-ultima-emision .emision {
+	padding-top: 15px;
+	color: #FFF;
+	text-transform: uppercase;
+	padding-left: 71px;
+	background-image: url(images/icon2-ult-emision_02.png);
+	background-repeat: no-repeat;
+	background-position: 30px 7px;
+}
+.contenedor-ultima-emision .btnHistorial {
+	float: right;
+	color: #FFF;
+	text-decoration: none;
+	padding: 0px 30px 5px 35px;
+	background-repeat: no-repeat;
+	background-position: 0px -5px;
+	background-image: url(images/icon2-ult-emision_03.png);
+}
+.contenedor-ultima-emision .btnHistorial:hover {
+	text-shadow: white 0 0 5px;
+}
+ @media only screen and (min-width: 768px) {
+.carousel-caption p {
+	display: block;
+}
+}
+ @media only screen and (min-width: 980px) {
+body {
+	padding-top: 0px;
+}
+.container-fluid {
 	max-width: 970px;
 	margin: 0 auto;
 	padding-left: 20px;
 	padding-right: 20px;
-	}
-	
-	#inner-footer{
-		padding: 0;
-		background-color:#185b9f;
-		height:122px;
-		border-top:6px solid #3c87d2;
-	}
-	
-	#inner-footer #widget-footer {
-		max-width: 970px;
-		margin: 0 auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top:40px;
-	}
-	
-	#inner-footer #widget-footer .menuInstitucional  {
-		text-align:center;
-		}
-	
-	#inner-footer #widget-footer .menuInstitucional  li {
-		display:inline-block;
-		color:#FFF;
-		margin-left:30px;
-		}
-	
-	#inner-footer #widget-footer .menuInstitucional  li  a {
-		color:#FFF;
-		text-decoration:none;
-		}
-	
-	#inner-footer #widget-footer .menuInstitucional  li  a:hover {
-		color:#7cbeff;
-		text-decoration:none;
-		}
-	
-	.InstitucionalBtn {
-		background-image:url(images/icon_1.png);
-		background-position:left center;
-		background-repeat:no-repeat;
-		height:36px;
-		padding-left:40px;
-		padding-top:16px;
-		}
-		
-		.MapaBtn {
-		background-image:url(images/icon_2.png);
-		background-position:left center;
-		background-repeat:no-repeat;
-		height:36px;
-		padding-left:40px;
-		padding-top:16px;
-		}
-		
-		.FAQBtn {
-		background-image:url(images/icon_3.png);
-		background-position:left center;
-		background-repeat:no-repeat;
-		height:36px;
-		padding-left:40px;
-		padding-top:16px;
-		}
-		
-		.GlosarioBtn {
-		background-image:url(images/icon_4.png);
-		background-position:left center;
-		background-repeat:no-repeat;
-		height:36px;
-		padding-left:40px;
-		padding-top:16px;
-		}
-		.SuscripcionBtn {
-		background-image:url(images/icon_5.png);
-		background-position:left center;
-		background-repeat:no-repeat;
-		height:36px;
-		padding-left:40px;
-		padding-top:16px;
-		}
-		
-	#content{
-		padding-left: 0;
-		padding-right: 0;
-	}
-	
-	.topbar-inner{
-		padding: 0;
-	}
-	
-	.topbar form.pull-right {
-		float: right;
-	}
-	
-	.navbar-form, .navbar-search {
-		margin-top: 6px;
-		margin-bottom: 0;
-	}
-	
-	.navbar-search{
-		padding-left: 0;
-	}
-	
-	.sidebar{
-		margin-top: 0 !important;
-	}
-	
-	.widget_search input{
-		width: 230px;
-	}
-	
-	.blog .hero-unit{
-		
-	}
-	
-	.page-template-page-homepage-php .hero-unit,
-	.blog .hero-unit{
-		padding: 60px;
-	}
-	
-	.hero-unit h1 {
-		font-size: 60px;
-	}
-	
-	/* hide edit comment button and show on hover on desktop version */
-	.edit-comment{
-		display: none;
-	}
-	
-	.vcard:hover .edit-comment{
-		display: inline-block;
-	}
-	
-	#s{
-		width: 210px;
-		margin-bottom: 6px;
-	}
-	
-	.widget_search input{
-		width: 209px;
-	}
-	
-	.comment .vcard .comment-text{
-		padding-left: 0;
-		padding-right: 0;
-	}
+}
+#logos {
+	height: 130px;
+	max-width: 970px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#inner-footer {
+	padding: 0;
+	background-color: #185b9f;
+	height: 122px;
+	border-top: 6px solid #3c87d2;
+}
+#inner-footer #widget-footer {
+	max-width: 970px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 40px;
+}
+#inner-footer #widget-footer .menuInstitucional {
+	text-align: center;
+}
+#inner-footer #widget-footer .menuInstitucional li {
+	display: inline-block;
+	color: #FFF;
+	margin-left: 30px;
+}
+#inner-footer #widget-footer .menuInstitucional li a {
+	color: #FFF;
+	text-decoration: none;
+}
+#inner-footer #widget-footer .menuInstitucional li a:hover {
+	color: #7cbeff;
+	text-decoration: none;
+}
+.InstitucionalBtn {
+	background-image: url(images/icon_1.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.MapaBtn {
+	background-image: url(images/icon_2.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.FAQBtn {
+	background-image: url(images/icon_3.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.GlosarioBtn {
+	background-image: url(images/icon_4.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.SuscripcionBtn {
+	background-image: url(images/icon_5.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+#content {
+	padding-left: 0;
+	padding-right: 0;
+}
+.topbar-inner {
+	padding: 0;
+}
+.topbar form.pull-right {
+	float: right;
+}
+.navbar-form, .navbar-search {
+	margin-top: 6px;
+	margin-bottom: 0;
+}
+.navbar-search {
+	padding-left: 0;
+}
+.sidebar {
+	margin-top: 0 !important;
+}
+.widget_search input {
+	width: 230px;
+}
+.blog .hero-unit {
+}
+.page-template-page-homepage-php .hero-unit, .blog .hero-unit {
+	padding: 60px;
+}
+.hero-unit h1 {
+	font-size: 60px;
+}
+/* hide edit comment button and show on hover on desktop version */
+.edit-comment {
+	display: none;
+}
+.vcard:hover .edit-comment {
+	display: inline-block;
+}
+#s {
+	width: 210px;
+	margin-bottom: 6px;
+}
+.widget_search input {
+	width: 209px;
+}
+.comment .vcard .comment-text {
+	padding-left: 0;
+	padding-right: 0;
+}
 }
