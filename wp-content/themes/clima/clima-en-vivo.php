@@ -22,7 +22,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
       
       <section class="post_content">
         <div class="row-fluid clearfix">
-          <div class="span4"> 
+          <div class="span3"> 
             <!-- menu Clima en vivo -->
 	         <div class="menu-clima">
 	            <ul>
@@ -41,11 +41,13 @@ $manana = strtotime(date('Y-m-d').' +1 day');
             </div>
             
             <!-- Suscripción -->
-            <div id="suscripcion"><p>Suscríbete a nuestro <strong>pronóstico diario</strong></p>
-              <input class="suscribete" /><a href="#" class="enviar-suscripcion"><i class="icon-play icon-white"></i></a>
+            <div id="suscripcion">
+            	<img src="/c24-7/wp-content/themes/clima/images/rss-ico.png" class="icono-sus"></img>
+            	<p>Suscríbete a nuestro <strong>pronóstico diario</strong></p>
+             	<input class="suscribete" /><a href="#" class="enviar-suscripcion"><i class="icon-play icon-white"></i></a>
             </div>
           </div>
-          <div class="span8">
+          <div class="span9">
             <div id="radar-meterologico"> <a class="convencion" href="#convencionesRadar">Ver convenciones</a>
               <div class="convencionesRadar" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
@@ -526,20 +528,20 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                   		<p>Noroccidente1</p>
                   	</a>
                   </li>
-                  <li id="btnMostrarCam2">
-					<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  <li>
+					<a id="btnMostrarCam2" href="#" class="thumb-camara">
                   		<img src="">
                   		<p>Noroccidente2</p>
                   	</a>
                   </li>
-                  <li id="btnMostrarCam3">
-                  	<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  <li>
+                  	<a id="btnMostrarCam3" href="#" class="thumb-camara">
                   		<img src="">
                   		<p>Noroccidente3</p>
                   	</a>
                   </li>
-                  <li id="btnMostrarCam4">
-                  	<a id="btnMostrarCam1" href="#" class="thumb-camara">
+                  <li>
+                  	<a id="btnMostrarCam4" href="#" class="thumb-camara">
                   		<img src="">
                   		<p>Noroccidente4</p>
                   	</a>

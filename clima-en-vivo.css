@@ -48,7 +48,7 @@ section .menu-clima ul li a.radar {
 }
 section .menu-clima ul li a.pronostico {
   background-image: url("/c24-7/wp-content/themes/clima/images/clima-en-vivo-iconos.png");
-  background-position: 4px -41px;
+  background-position: 4px -31px;
   background-repeat: no-repeat;
 }
 section .menu-clima ul li a.siata {
@@ -61,19 +61,25 @@ section .menu-clima ul li a.sensores {
   background-position: 4px -151px;
   background-repeat: no-repeat;
 }
+section #suscripcion img {
+  width: 50px;
+}
 section #suscripcion p {
   color: #0b3c88;
+  display: inline-block;
   font-family: "Century Gothic";
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.2em;
-  padding: 0 0 0 70px;
-  background-image: url("/c24-7/wp-content/themes/clima/images/suscripcion.png");
-  background-position: 4px -2px;
-  background-repeat: no-repeat;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0.3em;
+  vertical-align: bottom;
+/*background-image: url(/c24-7/wp-content/themes/clima/images/suscripcion.png)
+			background-position: 4px -2px
+			background-repeat: no-repeat*/
 }
 section #suscripcion p strong {
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   margin: 0 0 0.5em 0;
 }
 section #suscripcion .suscribete {
@@ -81,7 +87,7 @@ section #suscripcion .suscribete {
   float: left;
   font-size: 20px;
   padding: 0.5em;
-  width: 75%;
+  width: 65%;
 }
 section #suscripcion .enviar-suscripcion {
   background: #0b3c88;
@@ -96,9 +102,23 @@ section #suscripcion .enviar-suscripcion {
 }
 #controles-vivo ul li {
   display: inline-block;
+  margin: 1em 0 0 0;
 }
 #controles-vivo ul li a {
   padding: 1em;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+#controles-vivo ul li a img {
+  width: 90px;
+  height: 90px;
+}
+#controles-vivo ul li a p {
+  background: #a3d039;
+  padding: 0.2em 0.5em;
+  display: block;
+  margin: 0.5em;
 }
 .convencion {
   background: #a4ce3a;
