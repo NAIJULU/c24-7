@@ -4,7 +4,8 @@ if(imgCache.length){c.resize(function(){for(var i=0;i<imgCache.length;i++){var r
 var src=img.src;img.style.width=img.offsetWidth+"px";img.style.height=img.offsetHeight+"px";img.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+src+"', sizingMethod='scale')"
 img.oldSrc=src;img.src=c.Config.spacer;},resize:function(func){var oldonresize=window.onresize;if(typeof window.onresize!='function'){window.onresize=func;}else{window.onresize=function(){if(oldonresize){oldonresize();}
 func();}}}}
-
+// Variable para almacenar los filtros
+var filtro = [];
 // add twitter bootstrap classes and color based on how many times tag is used
 function addTwitterBSClass(thisObj) {
   var title = $(thisObj).attr('title');
@@ -225,4 +226,98 @@ jQuery(document).ready(function($) {
 		$("#vivo-camara4").fadeIn(1500);
 	});											
 	/* Fin de la sección */
+	
+	/* Inicio: Sección Blog */
+	$(".filtro").change(function(){
+		if($("#medio-ambiente").is(':checked')){
+			if(filtro.indexOf(".category-medio-ambiente") == -1){
+				filtro.push(".category-medio-ambiente");
+			}			
+		}
+		else{
+			var i = filtro.indexOf(".category-medio-ambiente");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}
+		if($("#clima-autos").is(':checked')){
+			if(filtro.indexOf(".category-clima-y-autos") == -1){
+				filtro.push(".category-clima-y-autos");
+			}
+		}
+		else{
+			var i = filtro.indexOf(".category-clima-y-autos");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}
+		if($("#clima-ciencia").is(':checked')){
+			if(filtro.indexOf(".category-clima-y-ciencia") == -1){
+				filtro.push(".category-clima-y-ciencia");
+			}
+		}
+		else{
+			var i = filtro.indexOf(".category-clima-y-ciencia");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}	
+		if($("#clima-salud").is(':checked')){
+			if(filtro.indexOf(".category-clima-y-salud") == -1){
+				filtro.push(".category-clima-y-salud");
+			}
+		}
+		else{
+			var i = filtro.indexOf(".category-clima-y-salud");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}
+		if($("#innovacion-sostenible").is(':checked')){
+			if(filtro.indexOf(".category-innovacion-sostenible") == -1){
+				filtro.push(".category-innovacion-sostenible");
+			}
+		}
+		else{
+			var i = filtro.indexOf(".category-innovacion-sostenible");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}
+		if($("#clima-novedades").is(':checked')){
+			if(filtro.indexOf(".category-clima-novedades") == -1){
+				filtro.push(".category-clima-novedades");
+			}
+		}
+		else{
+			var i = filtro.indexOf(".category-clima-novedades");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}
+		if($("#prevencion").is(':checked')){
+			if(filtro.indexOf(".category-prevencion") == -1){
+				filtro.push(".category-prevencion");
+			}
+		}
+		else{
+			var i = filtro.indexOf(".category-prevencion");
+			if(i != -1){
+				filtro.splice(i, 1);
+			}			
+		}	
+		var valor = "", separador = "";
+		for(i=0; i<filtro.length; i++){
+			
+			if(i == 0 || i == filtro.length)
+				separador = "";
+			else
+				separador =", ";
+
+			valor = valor + separador + filtro[i];
+
+		}
+		$("#size option[value='"+valor+"']").attr("selected",true).change();
+	});
+    /* Fin: Sección Blog */
 });

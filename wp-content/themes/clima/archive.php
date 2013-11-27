@@ -1,9 +1,44 @@
 <?php get_header(); ?>
-			
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="medio-ambiente">
+				Medio Ambiente
+			</label>
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="clima-autos">
+				Clima y Autos
+			</label>
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="clima-ciencia">
+				Clima y Ciencia
+			</label>			
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="clima-salud">
+				Clima y Salud
+			</label>		
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="innovacion-sostenible">
+				Innovación Sostenible
+			</label>				
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="clima-novedades">
+				Clima Novedades
+			</label>			
+			<label class="checkbox">
+				<input class="filtro" type="checkbox" id="prevencion">
+				Prevención
+			</label>			
+			<select id="size" name="filter by" class="isotopenav" style="display:none">
+				<option value="">View by...</option>
+				<option value="*">All</option>
+				<option value=".category-innovacion-sostenible">Innovación Sostenible</option>
+				<option value=".category-medio-ambiente">Medio Ambiente</option>
+				<option value=".category-clima-y-autos, .category-medio-ambiente">Clima y Autos</option>
+			</select>
+			<?php moveplugins_isotopes(); ?>
 			<div id="content" class="clearfix row-fluid">
 			
 				<div id="main" class="span8 clearfix" role="main">
-				
+					<div id="main-articulos">
 					<div class="page-header">
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
@@ -58,21 +93,7 @@
 					
 					</article> <!-- end article -->
 					
-					<?php endwhile; ?>	
-					
-					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						
-						<?php page_navi(); // use the page navi function ?>
-
-					<?php } else { // if it is disabled, display regular wp prev & next links ?>
-						<nav class="wp-prev-next">
-							<ul class="clearfix">
-								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
-								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-							</ul>
-						</nav>
-					<?php } ?>
-								
+					<?php endwhile; ?>									
 					
 					<?php else : ?>
 					
@@ -88,11 +109,27 @@
 					</article>
 					
 					<?php endif; ?>
-			
+					</div>
+					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
+						<div class="pagination">
+							<ul class="clearfix">
+								<li class=""><?php next_posts_link("VER MÁS") ?></li>
+							</ul>
+						</div>
+						<?php //page_navi(); // use the page navi function ?>
+
+					<?php } else { // if it is disabled, display regular wp prev & next links ?>
+						<nav class="wp-prev-next">
+							<ul class="clearfix">
+								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
+								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
+							</ul>
+						</nav>
+					<?php } ?> 					   							
 				</div> <!-- end #main -->
-    
+	    
 				<?php get_sidebar(); // sidebar 1 ?>
-    
+
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
