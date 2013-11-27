@@ -37,13 +37,9 @@
 			<?php moveplugins_isotopes(); ?>
 			<div id="content" class="clearfix row-fluid">
 			
-<<<<<<< HEAD
-				<div id="main" class="span8 clearfix" role="main">
-					<div id="main-articulos">
-=======
 				<div id="main" class="span12 clearfix" role="main">
-				
->>>>>>> 7dbef887bac5fc10231ce2d2556fe485509187be
+				<div id="main-articulos">
+
 					<div class="page-header">
 					<?php if (is_category()) { ?>
 						<h1 class="archive_title h2">
@@ -132,15 +128,7 @@
 						</nav>
 					<?php } ?> 					   							
 				</div> <!-- end #main -->
-<<<<<<< HEAD
-	    
-				<?php get_sidebar(); // sidebar 1 ?>
 
-=======
-    
-				
-    
->>>>>>> 7dbef887bac5fc10231ce2d2556fe485509187be
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>

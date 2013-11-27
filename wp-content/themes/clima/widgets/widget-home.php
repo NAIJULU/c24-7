@@ -95,7 +95,7 @@
               </div>
             </div>
           </div>
-          <div class="span6 mapa-ciudades"> </div>
+          <div class="span6 mapa-ciudades"> <img src="wp-content/uploads/mapas/mapa_<?php echo ucfirst($ciudad)?>.png" />   </div>
         </div>
       </div>
     <?php endforeach?>

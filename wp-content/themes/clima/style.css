@@ -392,7 +392,7 @@ input, textarea, select, .uneditable-input {
 .mapa-ciudades {
 	height: 430px;
 	width: 430px;
-	background-image: url(images/caldas-mapa.png);
+	
 }
 .videoEmision {
 	background-color: #94c60d;
