@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 			
-			<div id="content" class="clearfix row-fluid">
+			<div id="content" class=" row-fluid">
             
 			<?php get_sidebar(); // sidebar 1 ?>
 				<div id="main" class="span8 clearfix" role="main">
@@ -12,10 +12,10 @@
 						<header>
 						
 							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							<div class="clearfix row-fluid" id="titulo-int-blog">
+							<div class="titulo-entrada span10"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
 							
-							<div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
-							
-							<p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?> <span class="amp">&</span> <?php _e("filed under", "bonestheme"); ?> <?php the_category(', '); ?>.</p>
+							<p class="meta-titulo span2"> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></p> </div>
 						
 						</header> <!-- end article header -->
 					

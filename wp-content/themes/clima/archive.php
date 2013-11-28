@@ -1,5 +1,42 @@
 <?php get_header(); ?>
-			<label class="checkbox">
+			
+			
+			
+			<?php moveplugins_isotopes(); ?>
+            
+            <div class="clearfix row-fluid">
+            
+            
+					<div class="blog-title page-header span12">
+					<?php if (is_category()) { ?>
+						<h1 class="archive_title h2">
+							<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+						</h1>
+					<?php } elseif (is_tag()) { ?> 
+						<h1 class="archive_title h2">
+							<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
+						</h1>
+					<?php } elseif (is_author()) { ?>
+						<h1 class="archive_title h2">
+							<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
+						</h1>
+					<?php } elseif (is_day()) { ?>
+						<h1 class="archive_title h2">
+							<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+						</h1>
+					<?php } elseif (is_month()) { ?>
+					    <h1 class="archive_title h2">
+					    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
+					    </h1>
+					<?php } elseif (is_year()) { ?>
+					    <h1 class="archive_title h2">
+					    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
+					    </h1>
+					<?php } ?>
+					</div>
+                    </div>
+			<div id="content" class="clearfix row-fluid">
+            <div class="span3"><div class="menu-clima"><label class="checkbox">
 				<input class="filtro" type="checkbox" id="medio-ambiente">
 				Medio Ambiente
 			</label>
@@ -33,40 +70,11 @@
 				<option value=".category-innovacion-sostenible">Innovación Sostenible</option>
 				<option value=".category-medio-ambiente">Medio Ambiente</option>
 				<option value=".category-clima-y-autos, .category-medio-ambiente">Clima y Autos</option>
-			</select>
-			<?php moveplugins_isotopes(); ?>
-			<div id="content" class="clearfix row-fluid">
+			</select> </div> </div>
 			
-				<div id="main" class="span12 clearfix" role="main">
+			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
 
-					<div class="page-header">
-					<?php if (is_category()) { ?>
-						<h1 class="archive_title h2">
-							<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
-						</h1>
-					<?php } elseif (is_tag()) { ?> 
-						<h1 class="archive_title h2">
-							<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
-						</h1>
-					<?php } elseif (is_author()) { ?>
-						<h1 class="archive_title h2">
-							<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
-						</h1>
-					<?php } elseif (is_day()) { ?>
-						<h1 class="archive_title h2">
-							<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
-						</h1>
-					<?php } elseif (is_month()) { ?>
-					    <h1 class="archive_title h2">
-					    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
-					    </h1>
-					<?php } elseif (is_year()) { ?>
-					    <h1 class="archive_title h2">
-					    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
-					    </h1>
-					<?php } ?>
-					</div>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
