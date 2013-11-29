@@ -758,7 +758,8 @@ video {
   -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
   background-color: rgba(255,255,255,0.3);
   box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
-  padding: 1em 1em 1em 0.5em;
+  padding: 1em 1em 1em 2em;
+
 }
 
 .menu-clima .checkbox, #categories-2, #categories-2 a {
@@ -766,10 +767,46 @@ video {
 display: block;
 font-size: 12px;
 font-weight: bold;
-padding: 0.2em 0 0.2em 35px;
+
 text-decoration: none;
 text-transform: uppercase;
+
 }
+#sidebar1 ul
+
+{
+	
+	list-style:none;
+	margin-left:0.4em;
+	}
+
+
+ .pagination ul
+{
+	
+	display: block;
+	
+	}
+	
+.pagination  a
+{
+	
+width: 100%;
+box-sizing: border-box;
+background: #a5ce39 !important;	
+border:0 !important;
+text-align:center;
+color:#FFF;
+
+}
+.pagination  a:hover
+{
+	
+
+background: #93b931 !important;	
+
+}	
+	
 /* blog*/
 
 /* comments */

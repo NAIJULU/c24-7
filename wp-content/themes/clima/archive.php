@@ -122,7 +122,7 @@
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 						<div class="pagination">
 							<ul class="clearfix">
-								<li class=""><?php next_posts_link("VER MÁS") ?></li>
+								<li class="more-post"><?php next_posts_link("VER MÁS") ?></li>
 							</ul>
 						</div>
 						<?php //page_navi(); // use the page navi function ?>

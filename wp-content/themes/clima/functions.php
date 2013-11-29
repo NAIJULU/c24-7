@@ -74,7 +74,7 @@ add_filter( 'wp_title', 'bones_filter_title', 10, 2 );
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'wpbs-featured', 638, 300, true );
+add_image_size( 'wpbs-featured', 721, 300, true );
 add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
 
