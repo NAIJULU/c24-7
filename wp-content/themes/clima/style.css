@@ -314,12 +314,18 @@ input, textarea, select, .uneditable-input {
 
 div.en-vivo .tempMax {
 	width: 100% !important;
+	background-size: cover;
+	background-position: center 12px !important;
 }
 div.en-vivo .tempMin {
 	width: 100% !important;
+	background-size: cover;
+	background-position: center 3px !important;
 }
 div.en-vivo .numMax {
-	margin-left: 20px !important;
+	margin-left: 50px !important;
+	background-size: cover;
+	background-position: center 3px !important;
 }
 div.en-vivo .numMin {
 	margin-left: 20px !important;

@@ -77,7 +77,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 					                <div class="row-fluid en-vivo">
 										<div class="span4">
 										  <div class="tempMax">Mañana</div>
-										  <div class="numMax"><?php echo get_option('LluvManMedellin') ?></div>
+										  <div class="numMin"><?php echo get_option('LluvManMedellin') ?></div>
 						                </div>
 										<div class="span4">
 										  <div class="tempMin">Tarde</div>
@@ -89,7 +89,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 						                </div>
 						    </div>
 				            </div>
-			                <div class="span12 temp">
+			                <div class="span12 temp en-vivo">
 			                	<span class="dia titulo2">Pronostico TEmperatura</span>
 				                <div class="row-fluid">
 									<div class="span6">
@@ -98,7 +98,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 					                </div>
 									<div class="span6">
 									  <div class="tempMin">Min</div>
-									  <div class="numMin"><?php echo get_option('tempMinMedellin') ?>° </div>
+									  <div class="numMax"><?php echo get_option('tempMinMedellin') ?>° </div>
 					                </div>
 					            </div>
 					        </div>               
