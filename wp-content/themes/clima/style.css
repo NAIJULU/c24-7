@@ -180,6 +180,8 @@ input, textarea, select, .uneditable-input {
 	-moz-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
 	-webkit-box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
 	box-shadow: inset 0 0 130px rgba(255,255,255,0.7);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 #pronosticos #ciudades h2 {
 	background-image: url(images/h2LineaB.png);
@@ -261,6 +263,7 @@ input, textarea, select, .uneditable-input {
 	margin: 0px 0px 10px 0px;
 	text-align: center;
 	font-weight: bold;
+	font-size: 20px !important;
 	text-transform: uppercase;
 	border-radius: 3px;
 }
@@ -297,23 +300,43 @@ input, textarea, select, .uneditable-input {
 }
 #pronosticos #ciudades .tempMax {
 	background-image: url(images/max.png);
-	background-repeat: no-repeat;
 	background-position: center -9px;
+	background-repeat: no-repeat;
+	color: #114db0;
+	font-size: 18px;
+	font-weight: bold;
+	height: 110px;
+	margin-left: 9px;
 	padding: 0 0 0 0;
 	text-align: center;
 	width: 130px;
-	height: 110px;
-	margin-left: 9px;
 }
+
+div.en-vivo .tempMax {
+	width: 100% !important;
+}
+div.en-vivo .tempMin {
+	width: 100% !important;
+}
+div.en-vivo .numMax {
+	margin-left: 20px !important;
+}
+div.en-vivo .numMin {
+	margin-left: 20px !important;
+}
+
 #pronosticos #ciudades .tempMin {
 	background-image: url(images/min.png);
-	background-repeat: no-repeat;
 	background-position: center -9px;
+	background-repeat: no-repeat;
+	color: #114db0;
+	font-size: 18px;
+	font-weight: bold;
+	height: 110px;
+	margin-left: 9px;
 	padding: 0 0 0 0;
 	text-align: center;
 	width: 130px;
-	height: 110px;
-	margin-left: 9px;
 }
 #pronosticos #ciudades .tempMaxgrados, #pronosticos #ciudades .tempMingrados {
 	color: #114db0;
@@ -379,9 +402,9 @@ input, textarea, select, .uneditable-input {
 	color: #114db0;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 12px;
 	list-style: none;
-	padding: 3px 10px;
+	padding: 3px 3px;
 	text-transform: uppercase;
 	border-radius: 4px;
 }

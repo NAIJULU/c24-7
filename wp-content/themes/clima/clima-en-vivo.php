@@ -68,38 +68,44 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 					  <div class="row-fluid clearfix">
 						<div class="span6">
 						  <div class="row-fluid clearfix">
-							<div class="span4"> 
+						  	<div class="span12"> 
 			                	<span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $hoy); ?> </span> 
 			                    <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
 			                </div>
-							<div class="span4">
-							    <div class="tempMax">Máx</div>
-							 	<div class="numMax"> <?php echo get_option('tempMaxMedellin'); ?>° </div>
-			                </div>
-							<div class="span4">
-							  <div class="tempMin">Min</div>
-							  <div class="numMin"><?php echo get_option('tempMinMedellin') ?>° </div>
-			                </div>
+							<div class="span12 lluvias">
+			                	<span class="dia titulo2">Pronostico Lluvia</span>
+					                <div class="row-fluid en-vivo">
+										<div class="span4">
+										  <div class="tempMax">Mañana</div>
+										  <div class="numMax"><?php echo get_option('LluvManMedellin') ?></div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Tarde</div>
+										   <div class="numMin"><?php echo get_option('LluvTarMedellin') ?></div>
+						                </div>
+										<div class="span4">
+										  <div class="tempMin">Noche</div>
+										   <div class="numMin"><?php echo get_option('LluvNocMedellin') ?></div>
+						                </div>
+						    </div>
+				            </div>
+			                <div class="span12 temp">
+			                	<span class="dia titulo2">Pronostico TEmperatura</span>
+				                <div class="row-fluid">
+									<div class="span6">
+									    <div class="tempMax">Máx</div>
+									 	<div class="numMax"> <?php echo get_option('tempMaxMedellin'); ?>° </div>
+					                </div>
+									<div class="span6">
+									  <div class="tempMin">Min</div>
+									  <div class="numMin"><?php echo get_option('tempMinMedellin') ?>° </div>
+					                </div>
+					            </div>
+					        </div>               
 						  </div>
 						</div>
 						<div class="span6">
-						  <div class="row-fluid clearfix">
-							<div class="span3">
-			                	<span class="dia">Pronostico Lluvia</span>
-			                </div>
-							<div class="span3">
-							  <div class="tempMax">Mañana</div>
-							  <div class="numMax"><?php echo get_option('LluvManMedellin') ?></div>
-			                </div>
-							<div class="span3">
-							  <div class="tempMin">Tarde</div>
-							   <div class="numMin"><?php echo get_option('LluvTarMedellin') ?></div>
-			                </div>
-							<div class="span3">
-							  <div class="tempMin">Noche</div>
-							   <div class="numMin"><?php echo get_option('LluvNocMedellin') ?></div>
-			                </div>                
-						  </div>
+						  Acá viene el mapa
 						</div>
 					  </div>
 					</div>
