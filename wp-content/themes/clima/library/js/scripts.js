@@ -410,6 +410,7 @@ function handleTweets(tweets){
 
 	$('.marquee-twitter').marquee({
 		speed: 10000,
+		pauseOnHover: true,
 		gap: 50
 	});      
     //element.innerHTML = html;
