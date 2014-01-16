@@ -29,6 +29,7 @@
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
+
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script>
 		<!-- end of wordpress head -->
 
@@ -92,13 +93,14 @@
 					</div> <!-- end .navbar-inner -->
 				</div> <!-- end .navbar -->
                 
-                <div class="recomendaciones-tw">
-                
-                <div class="cont-recomendaciones-tw"> <a href="https://twitter.com/Clima24_7" target="_blank" class="link-twitter">RECOMENDACIONES</a> <span>Prevención oención de Prevención de inundaciones y desbordamientos . #YoPrevengo http://goo.gl/4O9r3P</span></div>
-            </div>
-			
+                <div class="recomendaciones-tw">                
+                	<div class="cont-recomendaciones-tw"> 
+                		<a href="https://twitter.com/Clima24_7" target="_blank" class="link-twitter">RECOMENDACIONES</a>
+                		<div class="marquee-twitter" style="width: 700px; overflow: hidden;"></div>
+                	</div>
+            	</div>            	
 			</div> <!-- end #inner-header -->
-		
+			<div id="twitter-feed"></div>
 		</header> <!-- end header -->
 		
 		<div class="container-fluid">

@@ -1239,3 +1239,10 @@ body {
 	padding-right: 0;
 }
 }
+
+
+
+.tweet {
+	display: inline-block;
+	margin-right: 60px;
+}
