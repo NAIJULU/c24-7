@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-			
-			
-			
-			<?php moveplugins_isotopes(); ?>
             
             <div class="clearfix row-fluid">
             
@@ -75,7 +71,6 @@
 			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
 
-
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
@@ -137,7 +132,23 @@
 					<?php } ?> 					   							
 				</div> <!-- end #main -->
 
-				<?php get_sidebar(); // sidebar 1 ?>
+<ul id="filters">
+  <li><a href="#" data-filter="*">show all</a></li>
+  <li><a href="#" data-filter=".metal">metal</a></li>
+  <li><a href="#" data-filter=".transition">transition</a></li>
+  <li><a href="#" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</a></li>
+  <li><a href="#" data-filter=":not(.transition)">not transition</a></li>
+  <li><a href="#" data-filter=".metal:not(.transition)">metal but not transition</a></li>
+</ul>			
+<div id="container">
+  <div class="element transition metal"><img src="http://lorempixel.com/200/200"/></div>
+  <div class="element post-transition metal"><img src="http://lorempixel.com/200/200"/></div>
+  <div class="element alkali metal"><img src="http://lorempixel.com/200/200"/></div>
+  <div class="element transition metal"><img src="http://lorempixel.com/200/200"/></div>
+  <div class="element lanthanoid metal inner-transition"><img src="http://lorempixel.com/200/200"/></div> 
+  <div class="element halogen nonmetal"><img src="http://lorempixel.com/200/200"/></div> 
+  <div class="element alkaline-earth metal"><img src="http://lorempixel.com/200/200"/></div>
+</div>				<?php get_sidebar(); // sidebar 1 ?>
 
 			</div> <!-- end #content -->
 
