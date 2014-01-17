@@ -191,8 +191,8 @@ input, textarea, select, .uneditable-input {
 .cont-recomendaciones-tw span {
 	color: white;
 	font-size: 14px;
-	float: left;
-	padding-top: 7px;
+	padding-right: 7px;
+	
 }
 /* post styling */
 
@@ -1280,5 +1280,18 @@ body {
 
 .tweet {
 	display: inline-block;
-	margin-right: 60px;
+	margin: 7px 0px 0px 0px;
+	color:#FFF;
+	
 }
+
+.tweet a {
+	color:#FFF7BE;
+}
+
+.separador {
+	
+margin: 0px 20px 0px 20px;
+}
+	
+
