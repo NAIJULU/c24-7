@@ -1021,8 +1021,33 @@ li.previous a:hover:before {
 	margin-bottom: 18px;
 }
 .widgettitle {
-	margin-bottom: 9px;
+	
+	background-color: #a5ce39;
+	padding: 12px 12px;
+color: white;
+text-transform: uppercase;
+font-size: 15px;
+font-weight: bold;
 }
+.mlrp_ul 
+{
+	background-color:rgba(0, 0, 0, 0.70);
+	padding:12px;
+	margin: 0px !important;
+	font-size: 12px;
+	
+	
+	}
+	
+.mlrp_ul a
+{color:#FFF !important;
+text-transform: uppercase;
+text-decoration:none;
+	}
+	
+	.mlrp_ul a:hover
+{color: #CCC !important;
+	}
 #tag-cloud {
 	margin-bottom: 18px;
 	line-height: 160%;
