@@ -31,6 +31,23 @@
 					<?php } ?>
 					</div>
                     </div>
+			<ul id="filters">
+				<li><a href="#" data-filter="*">show all</a></li>
+				<li><a href="#" data-filter=".metal">metal</a></li>
+				<li><a href="#" data-filter=".transition">transition</a></li>
+				<li><a href="#" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</a></li>
+				<li><a href="#" data-filter=":not(.transition)">not transition</a></li>
+				<li><a href="#" data-filter=".metal:not(.transition)">metal but not transition</a></li>
+			</ul>	
+			<div id="container">
+			  <div class="element transition metal"><img src="http://lorempixel.com/200/200"/></div>
+			  <div class="element post-transition metal"><img src="http://lorempixel.com/200/200"/></div>
+			  <div class="element alkali metal"><img src="http://lorempixel.com/200/200"/></div>
+			  <div class="element transition metal"><img src="http://lorempixel.com/200/200"/></div>
+			  <div class="element lanthanoid metal inner-transition"><img src="http://lorempixel.com/200/200"/></div> 
+			  <div class="element halogen nonmetal"><img src="http://lorempixel.com/200/200"/></div> 
+			  <div class="element alkaline-earth metal"><img src="http://lorempixel.com/200/200"/></div>
+			</div>			
 			<div id="content" class="clearfix row-fluid">
             <div class="span3"><div class="menu-clima"><label class="checkbox">
 				<input class="filtro" type="checkbox" id="medio-ambiente">
@@ -132,23 +149,8 @@
 					<?php } ?> 					   							
 				</div> <!-- end #main -->
 
-<ul id="filters">
-  <li><a href="#" data-filter="*">show all</a></li>
-  <li><a href="#" data-filter=".metal">metal</a></li>
-  <li><a href="#" data-filter=".transition">transition</a></li>
-  <li><a href="#" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</a></li>
-  <li><a href="#" data-filter=":not(.transition)">not transition</a></li>
-  <li><a href="#" data-filter=".metal:not(.transition)">metal but not transition</a></li>
-</ul>			
-<div id="container">
-  <div class="element transition metal"><img src="http://lorempixel.com/200/200"/></div>
-  <div class="element post-transition metal"><img src="http://lorempixel.com/200/200"/></div>
-  <div class="element alkali metal"><img src="http://lorempixel.com/200/200"/></div>
-  <div class="element transition metal"><img src="http://lorempixel.com/200/200"/></div>
-  <div class="element lanthanoid metal inner-transition"><img src="http://lorempixel.com/200/200"/></div> 
-  <div class="element halogen nonmetal"><img src="http://lorempixel.com/200/200"/></div> 
-  <div class="element alkaline-earth metal"><img src="http://lorempixel.com/200/200"/></div>
-</div>				<?php get_sidebar(); // sidebar 1 ?>
+		
+				<?php get_sidebar(); // sidebar 1 ?>
 
 			</div> <!-- end #content -->
 

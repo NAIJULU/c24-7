@@ -79,6 +79,7 @@ function addTwitterBSClass(thisObj) {
   return true;
 }
 
+
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
