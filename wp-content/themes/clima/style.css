@@ -9,6 +9,9 @@ Tags: black, white, one-column, two-columns, flexible-width, custom-background, 
 License: GNU General Public License v2.0 & Apache License 2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
 */
+.isotope-item{
+	width: 33%;
+}
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */

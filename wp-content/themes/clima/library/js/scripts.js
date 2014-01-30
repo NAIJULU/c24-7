@@ -79,27 +79,36 @@ function addTwitterBSClass(thisObj) {
   return true;
 }
 
-
+function metodoC(data){
+	document.getElementById('all').click();
+}
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
-
 	// cache container
-	var $container = $('#container');
+	var $container = $('#main-articulos');
 	// initialize isotope
 	$container.isotope({
 		animationOptions: {
 			duration: 500000,
 			easing: 'linear',
 			queue: false
-		}
+		},
+		layoutMode: 'fitRows'
 	});
 
 	// filter items when filter link is clicked
-	$('#filters a').click(function(){
+	$('#menu-clima input').click(function(){
 	  var selector = $(this).attr('data-filter');
+	  $(this).attr('checked','checked');
 	  $container.isotope({ filter: selector });
 	  return false;
 	});	 	
+
+	$(".more-post").click(function(){
+		$container.isotope('destroy');
+		$("article").addClass('isotope-item');
+		$("article").css('float','left');
+	});
 
 	// modify tag cloud links to match up with twitter bootstrap
 	$("#tag-cloud a").each(function() {
