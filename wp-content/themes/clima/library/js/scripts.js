@@ -92,16 +92,39 @@ jQuery(document).ready(function($) {
 			duration: 500000,
 			easing: 'linear',
 			queue: false
+
 		},
 		layoutMode: 'fitRows'
 	});
 
 	// filter items when filter link is clicked
 	$('#menu-clima input').click(function(){
-	  var selector = $(this).attr('data-filter');
-	  $(this).attr('checked','checked');
+
+	  var selector = [];
+	  var all = ( $(this).attr('data-filter') == '.todos') ? true : false;
+
+	  $(".filtro").each(function()
+	  {
+	  		if(all)
+	  		{
+	  			selector.push($(this).attr('data-filter'));	
+	  		}
+	  		else
+	  		{	
+		  		if( $(this).attr('checked') )
+		  		{
+		  			selector.push($(this).attr('data-filter'));
+		  		}	
+	  		}
+	  });
+
+	  selector = selector.join(',');
+
+	  //$(this).attr('checked','checked');
+
 	  $container.isotope({ filter: selector });
-	  return false;
+
+	  return;
 	});	 	
 
 	$(".more-post").click(function(){

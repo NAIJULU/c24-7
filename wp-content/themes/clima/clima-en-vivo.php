@@ -19,7 +19,6 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 	      </div>
 	     </header>
       <!-- end article header -->
-      
       <section class="post_content">
         <div class="row-fluid clearfix">
           <div class="span3"> 

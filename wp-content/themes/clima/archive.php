@@ -1,69 +1,76 @@
 <?php get_header(); ?>
-            
-            <div class="clearfix row-fluid">
-            
-            
-					<div class="blog-title page-header span12">
-					<?php if (is_category()) { ?>
-						<h1 class="archive_title h2">
-							<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
-						</h1>
-					<?php } elseif (is_tag()) { ?> 
-						<h1 class="archive_title h2">
-							<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
-						</h1>
-					<?php } elseif (is_author()) { ?>
-						<h1 class="archive_title h2">
-							<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
-						</h1>
-					<?php } elseif (is_day()) { ?>
-						<h1 class="archive_title h2">
-							<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
-						</h1>
-					<?php } elseif (is_month()) { ?>
-					    <h1 class="archive_title h2">
-					    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
-					    </h1>
-					<?php } elseif (is_year()) { ?>
-					    <h1 class="archive_title h2">
-					    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
-					    </h1>
-					<?php } ?>
-					</div>
-                    </div>
-			<div id="content" class="clearfix row-fluid">
-            <div class="span3"><div class="menu-clima" id="menu-clima">
-            <label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-medio-ambiente">
-				Medio Ambiente
-			</label>
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-autos">
-				Clima y Autos
-			</label>
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-ciencia">
-				Clima y Ciencia
-			</label>			
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-salud">
-				Clima y Salud
-			</label>		
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-innovacion-sostenible">
-				Innovación Sostenible
-			</label>				
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-novedades">
-				Clima Novedades
-			</label>			
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-prevencion">
-				Prevención
-			</label>			
-			<select id="size" name="filter by" class="isotopenav" style="display:none">
 
-			</select> </div> </div>
+            <div class="clearfix row-fluid">
+					<div class="blog-title page-header span12">
+								<?php if (is_category()) { ?>
+									<h1 class="archive_title h2">
+										<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+									</h1>
+								<?php } elseif (is_tag()) { ?> 
+									<h1 class="archive_title h2">
+										<span><?php _e("Posts Tagged:", "bonestheme"); ?></span> <?php single_tag_title(); ?>
+									</h1>
+								<?php } elseif (is_author()) { ?>
+									<h1 class="archive_title h2">
+										<span><?php _e("Posts By:", "bonestheme"); ?></span> <?php get_the_author_meta('display_name'); ?>
+									</h1>
+								<?php } elseif (is_day()) { ?>
+									<h1 class="archive_title h2">
+										<span><?php _e("Daily Archives:", "bonestheme"); ?></span> <?php the_time('l, F j, Y'); ?>
+									</h1>
+								<?php } elseif (is_month()) { ?>
+								    <h1 class="archive_title h2">
+								    	<span><?php _e("Monthly Archives:", "bonestheme"); ?>:</span> <?php the_time('F Y'); ?>
+								    </h1>
+								<?php } elseif (is_year()) { ?>
+								    <h1 class="archive_title h2">
+								    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
+								    </h1>
+								<?php } ?>
+
+							
+					</div>
+
+             </div>
+			<div id="content" class="clearfix row-fluid">
+            <div class="span3">
+            	<div class="menu-clima" id="menu-clima">
+		            <label class="checkbox">
+						<input id="filtro" class="filtro" type="checkbox" data-filter=".category-medio-ambiente">
+						Medio Ambiente
+					</label>
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".category-clima-y-autos">
+						Clima y Autos
+					</label>
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".category-clima-y-ciencia">
+						Clima y Ciencia
+					</label>			
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".category-clima-y-salud">
+						Clima y Salud
+					</label>		
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".category-innovacion-sostenible">
+						Innovación Sostenible
+					</label>				
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".category-clima-novedades">
+						Clima Novedades
+					</label>			
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".category-prevencion">
+						Prevención
+					</label>
+					<label class="checkbox">
+						<input class="filtro" type="checkbox" data-filter=".todos">
+						Todos
+					</label>						
+					<select id="size" name="filter by" class="isotopenav" style="display:none"></select> 
+			</div> 
+			<?php get_sidebar(); // sidebar 1 ?>
+		</div>
 			
 			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
@@ -126,7 +133,7 @@
 					<?php } ?>								   							
 				</div> <!-- end #main -->
 		
-				<?php get_sidebar(); // sidebar 1 ?>
+				
 
 			</div> <!-- end #content -->
 
