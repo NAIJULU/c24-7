@@ -1,5 +1,6 @@
-<?php get_header(); ?>
 
+
+<?php get_header(); ?>
             <div class="clearfix row-fluid">
 					<div class="blog-title page-header span12">
 								<?php if (is_category()) { ?>

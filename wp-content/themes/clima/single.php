@@ -1,11 +1,15 @@
-<?php get_header(); ?>
+<?php get_header();?>
 			
 			<div id="content" class=" row-fluid">
-            
-			<?php get_sidebar(); // sidebar 1 ?>
+			
+			<div class="span3">
+					<?php get_sidebar(); ?>
+			</div>		
+			
 				<div id="main" class="span9 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
@@ -18,7 +22,13 @@
 							<p class="meta-titulo span2"> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></p> </div>
 						
 						</header> <!-- end article header -->
-					
+						
+						<!-- Boton imprimir articulo -->
+						<?php if(function_exists('wp_print')) { print_link(); } ?> 
+						
+						<!-- Boton aumentar letra -->
+						<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
+						
 						<section class="post_content clearfix" itemprop="articleBody">
 							<?php the_content(); ?>
 							
