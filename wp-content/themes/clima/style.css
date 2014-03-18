@@ -805,7 +805,7 @@ video {
 		
 .meta-titulo
 {
-   color:#FFF;
+  color:#FFF;
   font-size: 14px;
   font-weight: bold;
   padding: 0.5em;
@@ -815,7 +815,8 @@ video {
   margin: 0 0 1em 0;
   border-radius:4px;
   height:100%;
-	}	
+  text-align: center;
+}	
 	
 	
 	
@@ -960,7 +961,7 @@ ol.pinglist {
 	margin: 0 0 9px 0;
 }
 #comment {
-	width: 270px;
+	width: 98%;
 }
 ol.commentlist #respond {
 	padding: 5px 10px;

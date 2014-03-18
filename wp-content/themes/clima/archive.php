@@ -129,6 +129,7 @@
 							<ul class="clearfix">
 								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
 								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
+									<li class="more-post"><?php next_posts_link("VER MÁS") ?></li>
 							</ul>
 						</nav>
 					<?php } ?>								   							

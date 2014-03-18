@@ -17,22 +17,38 @@
 						
 							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 							<div class="clearfix row-fluid" id="titulo-int-blog">
-							<div class="titulo-entrada span10"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="titulo-entrada span9"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
 							
-							<p class="meta-titulo span2"> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_date(); ?></p> </div>
-						
+							<!-- Fecha con el formato deseado -->
+
+							<span class="meta-titulo span2">  <p style="font-size: 45px;margin-top:10px;"><?php echo get_the_date('d'); ?><p>  <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate> <?php the_date('F'); ?>  </span></div>
+							
+							<div class="span2">
+							<!-- Boton imprimir articulo -->
+							<?php if(function_exists('wp_print')) { print_link(); } ?> 
+							</div>
+
+							<div  style="width:50px;">
+								<!-- Boton aumentar letra -->
+								<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
+							</div>
+
+
 						</header> <!-- end article header -->
 						
-						<!-- Boton imprimir articulo -->
-						<?php if(function_exists('wp_print')) { print_link(); } ?> 
-						
-						<!-- Boton aumentar letra -->
-						<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
-						
 						<section class="post_content clearfix" itemprop="articleBody">
+
 							<?php the_content(); ?>
-							
-							<?php wp_link_pages(); ?>
+
+							<?php 
+							//NAV 
+
+							//previous_post_link();
+							previous_post_link('%link', 'Anterior');
+							echo '----';
+							next_post_link('%link', 'Siguiente'); 
+							?>
+							<?php //wp_link_pages(); ?>
 					
 						</section> <!-- end article section -->
 						
@@ -54,7 +70,7 @@
 					<?php comments_template('',true); ?>
 					
 					<?php endwhile; ?>			
-					
+						
 					<?php else : ?>
 					
 					<article id="post-not-found">
@@ -69,10 +85,15 @@
 					</article>
 					
 					<?php endif; ?>
-			
+
 				</div> <!-- end #main -->
     
-				
+					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
+		            <?php endif; ?>
+		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
+		            <?php endif; ?>
+		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
+		            <?php endif; ?>
     
 			</div> <!-- end #content -->
 

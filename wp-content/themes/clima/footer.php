@@ -10,18 +10,10 @@
                         <li class="GlosarioBtn"><a href="#">GLOSARIO</a></li>
                         <li class="SuscripcionBtn"><a href="#">SUSCRIPCIÓN</a></li>
                     </ul>
-                  
-                  
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
-		            <?php endif; ?>
 		          </div>
 					
 					<nav class="clearfix">
-						<?php bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
+						<?php  bones_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
 					
 					
