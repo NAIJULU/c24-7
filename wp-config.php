@@ -33,6 +33,16 @@ define('DB_CHARSET', 'utf8');
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
 
+/*
+define('DB_NAME', 'med2018_clima');
+define('DB_USER', 'med2018_climau');
+define('DB_PASSWORD', '62^{Md4nZ{GQ');
+define('DB_HOST', '50.87.145.204');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+*/
+
+
 /**#@+
  * Claves únicas de autentificación.
  *

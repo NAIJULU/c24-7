@@ -30,11 +30,11 @@
 		<!-- wordpress head functions -->
 		<?php  wp_head(); ?>
 
-	<!--	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script> -->
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script>
 		<!-- end of wordpress head -->
 
 		<!-- theme options from options panel -->
-		<?php // get_wpbs_theme_options(); ?>
+		<?php get_wpbs_theme_options(); ?>
 
 		<!-- typeahead plugin - if top nav search bar enabled -->
 		<?php require_once('library/typeahead.php'); ?>

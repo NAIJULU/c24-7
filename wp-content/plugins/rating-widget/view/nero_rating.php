@@ -6,7 +6,7 @@ if (!function_exists("show_nero_rating")){
         $dislikes = max(0, $dislikes);
         $type = " rw-ui-" . $roptions->type;
         $size = " rw-size-" . $roptions->size;
-        $style = " rw-style-" . $roptions->style;
+      //  $style = " rw-style-" . $roptions->style;
         $theme = isset($roptions->theme) ? " rw-theme-" . $roptions->theme : "";
         $class = isset($roptions->rclass) ? " rw-class-" . $roptions->rclass : "";
         $halign = " rw-halign-" . $roptions->advanced->layout->align->hor;
@@ -19,7 +19,7 @@ if (!function_exists("show_nero_rating")){
 ?>
 <div class="rw-ui-container rw-no-render<?php echo $type . $size . $dir . $halign . $valign . $style;?>">
     <div class="rw-action-area rw-clearfix"><span class="rw-ui-like"><i class="rw-ui-like-icon"></i><span class="rw-ui-like-label" style="<?php echo $font_type . $font_size . $line_height;?>"><?php echo $likes;?></span></span><span class="rw-ui-dislike"><i class="rw-ui-dislike-icon"></i><span class="rw-ui-dislike-label" style="<?php echo $font_type . $font_size . $line_height;?>"><?php echo $dislikes;?></span></span>
-    <a class="rw-report-link" target="_blank" title="Rating-Widget Report"></a></div><span class="rw-ui-info" style="<?php echo $font_type . $font_color . $font_size . $line_height;?>"><?php echo $label;?></span>
+    </div><span class="rw-ui-info" style="<?php echo $font_type . $font_color . $font_size . $line_height;?>"><?php echo //$label;?></span>
 </div>
 <?php
     }

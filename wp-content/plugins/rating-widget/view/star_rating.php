@@ -34,7 +34,7 @@ if (!function_exists("show_star_rating")){
         for ($i = $i + 1; $i < 5; $i++){
             echo '<li></li>';
         }
-    ?></ul><a class="rw-report-link" target="_blank" title="Rating-Widget Report"></a></div><span class="rw-ui-info" style="<?php echo $font_type . $font_color . $font_size . $line_height;?>"><?php echo $label;?></span>
+    ?></ul></div><span class="rw-ui-info" style="<?php echo $font_type . $font_color . $font_size . $line_height;?>"><?php echo $label;?></span>
 </div>
 <?php
     }
