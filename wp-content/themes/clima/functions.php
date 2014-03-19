@@ -819,4 +819,12 @@ add_action( 'widgets_init', 'creaWidgets' );
 // Incluimos el archivo de widget home
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
+include_once(TEMPLATEPATH.'/blogConfig.php');
+
+
+
+
+
+
+
 ?>

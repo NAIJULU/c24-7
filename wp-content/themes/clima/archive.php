@@ -75,31 +75,26 @@
 			
 			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
+					<?php
+					// set the "paged" parameter (use 'page' if the query is on a static front page)
+					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					// the query
+					$the_query = new WP_Query( 'cat=3&paged=' . $paged ); 
+					?>
+					<?php if ($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" style="display:block; width: 220px; height: 220px; padding-right: 20px;">
-
-						<?php
-						$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-
-						?>
-						<section class="post_content" style="background-image:url('<?php echo $url ?>'); display:block; width: 220px; height: 220px">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
+								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+								<figure><img src="" alt="" class="thumb" style="background-image:url('<?php echo $url ?>');"></figure>
+								<header ><!-- key isotope --><span class="categorias"><?php the_category(); ?><!-- end key isotope --></span>
+									<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+								</header>
+								<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.</p>
+								<a href="" class="btr-leer-mas"></a>
+					</article>
 						
-							<p class="meta" style="background-color: #000; color: #FFF">
-								<?php the_category(', '); ?><br/> 
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a><br/>
-								<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
-							</p>							
-											
-						</section> <!-- end article section -->
-						
-						<footer>
-							
-						</footer> <!-- end article footer -->
-					
-					</article> <!-- end article -->
-				
 					<?php $i++; endwhile; ?>									
 					
 					<?php else : ?>
@@ -119,7 +114,9 @@
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 						<div class="pagination">
 							<ul class="clearfix">
-								<li class="more-post"><?php next_posts_link("VER MÁS") ?></li>
+								<li class="more-post"><?php //next_posts_link("VER MÁS") ?>
+									<a href="#">VER MÁS</a>
+									</li></li>
 							</ul>
 						</div>
 						<?php //page_navi(); // use the page navi function ?>
@@ -129,13 +126,10 @@
 							<ul class="clearfix">
 								<li class="prev-link"><?php next_posts_link(_e('&laquo; Older Entries', "bonestheme")) ?></li>
 								<li class="next-link"><?php previous_posts_link(_e('Newer Entries &raquo;', "bonestheme")) ?></li>
-									<li class="more-post"><?php next_posts_link("VER MÁS") ?></li>
 							</ul>
 						</nav>
 					<?php } ?>								   							
 				</div> <!-- end #main -->
-		
-				
 
 			</div> <!-- end #content -->
 

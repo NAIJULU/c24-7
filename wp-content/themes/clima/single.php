@@ -23,14 +23,19 @@
 
 							<span class="meta-titulo span2">  <p style="font-size: 45px;margin-top:10px;"><?php echo get_the_date('d'); ?><p>  <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate> <?php the_date('F'); ?>  </span></div>
 							
-							<div class="span2">
-							<!-- Boton imprimir articulo -->
-							<?php if(function_exists('wp_print')) { print_link(); } ?> 
+							<div class="span6">
+								<div class="span3">	
+									<!-- Boton imprimir articulo -->
+									<?php if(function_exists('wp_print')) { print_link(); } ?>
+								</div>	 
+								<div class="span3">
+									<!-- Boton aumentar letra -->
+									<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
+								</div>	
 							</div>
 
 							<div  style="width:50px;">
-								<!-- Boton aumentar letra -->
-								<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
+								
 							</div>
 
 
@@ -39,23 +44,26 @@
 						<section class="post_content clearfix" itemprop="articleBody">
 
 							<?php the_content(); ?>
+							<div>
+								<div class="span5">
+									<?php if(function_exists('email_link')){ email_link(); } ?>
+								</div>
+							</div>
 
-							<?php 
-							//NAV 
+							<div class="span9">
+								<div class="row pagination">
+									<ul class="clearfix">
+										<li ><?php previous_post_link('%link', 'Anterior'); ?></li>
+										<li ><?php next_post_link('%link', 'Siguiente'); ?></li>
+									<ul>	
+								</div>
+								<?php //wp_link_pages(); ?>
+							</div>
 
-							//previous_post_link();
-							previous_post_link('%link', 'Anterior');
-							echo '----';
-							next_post_link('%link', 'Siguiente'); 
-							?>
-							<?php //wp_link_pages(); ?>
-					
 						</section> <!-- end article section -->
 						
 						<footer>
-			
-							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ' ', '</p>'); ?>
-							
+							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ' ', '</p>'); ?>							
 							<?php 
 							// only show edit button if user has permission to edit posts
 							if( $user_level > 0 ) { 

@@ -89,6 +89,7 @@ jQuery(document).ready(function($) {
 	// initialize isotope
 	$container.isotope({
 		animationOptions: {
+			itemSelector : '.categorias',
 			duration: 500000,
 			easing: 'linear',
 			queue: false
@@ -485,4 +486,21 @@ function handleTweets(tweets){
 }
 	  
     /* Fin Twitter Feed */
+
+    /*
+    	@author Pablo Martinez
+    	Funcion para paginar y filtrar resultados de los blogs
+    */
+    
+    $('.more-post a').on('click', getBlog);
 });
+
+function getBlog(event)
+{
+console.log(jQuery('#main').html());
+return
+		jQuery.ajax( "../../blogConfig.php" )
+			.done(function() {
+			alert( "success" );
+			});
+}
