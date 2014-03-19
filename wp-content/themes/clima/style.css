@@ -878,6 +878,41 @@ background: #93b931 !important;
 	
 /* blog*/
 
+
+/* landing blog Calvin*/
+
+#main-articulos article 
+{height: 250px;
+width: 250px;
+color:white;
+
+}
+
+#main-articulos article h1
+
+{color:white;
+	text-transform:uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 5px;
+}
+
+#main-articulos time
+
+{
+ font-size: 12px;	
+}
+
+#main-articulos p
+
+{
+	
+	line-height: 15px;
+}
+
+
+
 /* comments */
 
 #comments {
