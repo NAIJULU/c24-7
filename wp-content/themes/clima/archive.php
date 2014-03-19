@@ -1,5 +1,7 @@
-
-
+<?php
+// ID DE LOS ARTICULOS TIPO BLOG.
+$blogId	= 2; 
+?>
 <?php get_header(); ?>
             <div class="clearfix row-fluid">
 					<div class="blog-title page-header span12">
@@ -76,11 +78,24 @@
 			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<?php
+					// set the "paged" parameter (use 'page' if the query is on a static front page)
+				//	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+					// the query
+					//$the_query = new WP_Query( 'cat=3&paged=' . $paged ); 
+					?>
+					<?php //if ($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
+								<?php in_category($blogId); ?>
+								<?php 
+									$categoria 		= get_the_category();
+									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
+								 ?>
 								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 								<figure><img src="" alt="" class="thumb" style="background-image:url('<?php echo $url ?>');"></figure>
-								<header ><!-- key isotope --><span class="categorias"><?php the_category(); ?><!-- end key isotope --></span>
+								<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
 									<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 								</header>

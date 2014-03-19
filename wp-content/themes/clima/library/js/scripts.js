@@ -492,7 +492,7 @@ function handleTweets(tweets){
     	Funcion para paginar y filtrar resultados de los blogs
     */
     
-    $('.more-post a').on('click', getBlog);
+    //$('.more-post a').on('click', getBlog);
 });
 
 function getBlog(event)
