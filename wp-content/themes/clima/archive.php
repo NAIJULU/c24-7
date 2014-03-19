@@ -75,14 +75,7 @@
 			
 			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
-					<?php
-					// set the "paged" parameter (use 'page' if the query is on a static front page)
-					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-					// the query
-					$the_query = new WP_Query( 'cat=3&paged=' . $paged ); 
-					?>
-					<?php if ($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
 								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
