@@ -492,15 +492,38 @@ function handleTweets(tweets){
     	Funcion para paginar y filtrar resultados de los blogs
     */
     
-    //$('.more-post a').on('click', getBlog);
+    $('.more-post a').on('click', getBlog);
 });
 
 function getBlog(event)
 {
-console.log(jQuery('#main').html());
-return
-		jQuery.ajax( "../../blogConfig.php" )
-			.done(function() {
-			alert( "success" );
-			});
+		var pag = parseInt( jQuery("#pagina").attr('rel') );
+
+		if(pag >= 1)
+		{
+				pag = pag+1;
+
+				jQuery.ajax({
+					type: "GET",
+					url: "../wp-content/themes/clima/blogConfig.php",
+					data: {paged:pag},
+					dataType: "html"
+
+				})
+				.done(function(data) {
+					console.log(data);
+					return
+					jQuery("#main-articulos").append(data);
+					jQuery("#pagina").attr('rel',pag);
+					console.log(jQuery("#pagina").attr('rel'));
+				
+				})
+				.fail(function() {
+					throw "Error,no results";
+				});
+		}
+		else
+		{
+			return false;
+		}
 }

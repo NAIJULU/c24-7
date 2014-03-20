@@ -88,19 +88,21 @@ $blogId	= 2;
 					<?php //if ($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 								<?php in_category($blogId); ?>
 								<?php 
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 								 ?>
 								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-								<figure><img src="" alt="" class="thumb" style="background-image:url('<?php echo $url ?>');"></figure>
+								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 								<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
-									<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<h1><?php the_title(); ?></h1>
 									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 								</header>
-								<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.</p>
-								<a href="" class="btr-leer-mas"></a>
+								<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
+								<span>Leer Más +<span></p>
+						</a>
 					</article>
 						
 					<?php $i++; endwhile; ?>									
@@ -123,7 +125,7 @@ $blogId	= 2;
 						<div class="pagination">
 							<ul class="clearfix">
 								<li class="more-post"><?php //next_posts_link("VER MÁS") ?>
-									<a href="#">VER MÁS</a>
+									<a id="pagina" rel=1 href="#">VER MÁS</a>
 									</li></li>
 							</ul>
 						</div>
