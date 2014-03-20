@@ -816,6 +816,57 @@ function creaWidgets(){
 }
 add_action( 'widgets_init', 'creaWidgets' );
 
+
+
+function loadBlogs()
+{
+
+$paged   = ( isset($_GET['paged']) ) ? $_GET['paged'] : 1;
+$content = "";
+$i = 0;
+$the_query = new WP_Query( 'paged=' . $paged ); 
+
+if ($the_query->have_posts())
+{
+
+while ($the_query->have_posts() ) : $the_query->the_post(); 
+
+$categoria    = get_the_category();
+$categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
+$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+
+$pClass = "";
+
+foreach (get_post_class(array('clearfix')) as $post_cass) 
+{
+  $pClass .= $post_cass." ";
+}
+
+
+
+$content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+          <a href="'.get_permalink().'" rel="bookmark" title="'.the_title('','',false).'">
+                 '.in_category($blogId).'
+                <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+                <header ><span class="categorias">'.$categoria.'</span>
+                  <h1>'.the_title('','',false).'</h1>
+                  <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
+                </header>
+                <p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
+                <span>Leer Más +<span></p>
+            </a>
+          </article>';
+          
+    $i++;
+  endwhile;
+}
+
+echo $content;
+die();
+
+}
+add_action('wp_ajax_nopriv_getBlog', 'loadBlogs');
+
 // Incluimos el archivo de widget home
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');

@@ -118,16 +118,6 @@ The comments page for Bones
 			  </div>
 		  	</div>
 		</li>
-		
-		<li>
-			<div class="control-group">
-			  <label for="url"><?php _e("Website","bonestheme"); ?></label>
-			  <div class="input-prepend">
-			  <span class="add-on"><i class="icon-home"></i></span><input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="<?php _e("Your Website","bonestheme"); ?>" tabindex="3" />
-			  </div>
-		  	</div>
-		</li>
-		
 	</ul>
 
 	<?php endif; ?>

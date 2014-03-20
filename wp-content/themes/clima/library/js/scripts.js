@@ -128,11 +128,6 @@ jQuery(document).ready(function($) {
 	  return;
 	});	 	
 
-	$(".more-post").click(function(){
-		$container.isotope('destroy');
-		$("article").addClass('isotope-item');
-		$("article").css('float','left');
-	});
 
 	// modify tag cloud links to match up with twitter bootstrap
 	$("#tag-cloud a").each(function() {
@@ -491,8 +486,9 @@ function handleTweets(tweets){
     	@author Pablo Martinez
     	Funcion para paginar y filtrar resultados de los blogs
     */
-    
     $('.more-post a').on('click', getBlog);
+ 
+
 });
 
 function getBlog(event)
@@ -505,18 +501,42 @@ function getBlog(event)
 
 				jQuery.ajax({
 					type: "GET",
-					url: "../wp-content/themes/clima/blogConfig.php",
-					data: {paged:pag},
-					dataType: "json"
-
+					url: "../wp-admin/admin-ajax.php",
+					//url: "../wp-content/themes/clima/blogConfig.php",
+					data: {action : 'getBlog',paged:pag}
 				})
 				.done(function(data) {
-					console.log(data[0]);
-					return;
-					jQuery("#main-articulos").append(data);
-					jQuery("#pagina").attr('rel',pag);
-					console.log(jQuery("#pagina").attr('rel'));
-				
+					if(data == "")
+					{
+						throw "No results";
+					}
+					else
+					{
+						/*
+							volvemos a recostruir el isotope para 
+							que me tome nuevos cambios
+						*/
+
+						var container = jQuery('#main-articulos');
+						container.append(data);
+					//	jQuery($container).isotope( 'reLayout');
+						jQuery("#pagina").attr('rel',pag);
+						container.isotope('destroy');
+						//container.isotope( 'reLayout');
+	
+						// initialize isotope
+						container.isotope({
+							animationOptions: {
+								itemSelector : '.categorias',
+								duration: 500000,
+								easing: 'linear',
+								queue: false
+
+							},
+							layoutMode: 'fitRows'
+						});
+					}
+					
 				})
 				.fail(function() {
 					throw "Error,no results";
