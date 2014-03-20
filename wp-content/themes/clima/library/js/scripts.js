@@ -507,12 +507,12 @@ function getBlog(event)
 					type: "GET",
 					url: "../wp-content/themes/clima/blogConfig.php",
 					data: {paged:pag},
-					dataType: "html"
+					dataType: "json"
 
 				})
 				.done(function(data) {
-					console.log(data);
-					return
+					console.log(data[0]);
+					return;
 					jQuery("#main-articulos").append(data);
 					jQuery("#pagina").attr('rel',pag);
 					console.log(jQuery("#pagina").attr('rel'));
