@@ -895,7 +895,8 @@ color:white;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 16px;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 #main-articulos time
@@ -907,12 +908,23 @@ color:white;
 #main-articulos p
 
 {
-	
 	line-height: 15px;
 }
 
 
+#main-articulos .categorias
 
+{
+text-transform: uppercase;
+font-size: 12px;
+}
+
+#main-articulos figure
+
+{
+height: 250px;
+width: 250px;
+margin: 0px}
 /* comments */
 
 #comments {
