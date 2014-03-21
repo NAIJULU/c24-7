@@ -6,7 +6,7 @@ require_once('../../../wp-load.php');
 
 //set the "paged" parameter (use 'page' if the query is on a static front page)
 $paged 	 = ( isset($_GET['paged']) ) ? $_GET['paged'] : 1;
-$content = array();
+$content = "";
 $i = 0;
 $the_query = new WP_Query( 'paged=' . $paged ); 
 
@@ -18,9 +18,6 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 $categoria 		= get_the_category();
 $categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-
-
-$content[i]	 = the_title();
 
 
 $content .='<article id="post-'.the_ID().'role="article" class="blog-thumb">
@@ -41,5 +38,5 @@ $content .='<article id="post-'.the_ID().'role="article" class="blog-thumb">
 }
 
 echo $content;
-
+die;
 ?>
