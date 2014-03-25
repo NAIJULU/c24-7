@@ -1,6 +1,6 @@
 <?php
 // ID DE LOS ARTICULOS TIPO BLOG.
-$blogId	= 2; 
+$blogId		= 2;
 ?>
 <?php get_header(); ?>
             <div class="clearfix row-fluid">
@@ -94,7 +94,9 @@ $blogId	= 2;
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 								 ?>
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) ; ?>
+								<?php $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; ?>
+
 								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 								<div class="contenido">
 									<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
@@ -103,7 +105,7 @@ $blogId	= 2;
 									</header>
 									<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
 									<span>Leer Más +<span></p>
-								<div>	
+								</div>	
 						</a>
 					</article>
 						
@@ -125,9 +127,9 @@ $blogId	= 2;
 					</div> 		
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 						<div class="span10 pagination">
-							<ul class="more-post clearfix">
-								<li class="span8"><?php //next_posts_link("VER MÁS") ?><a id="pagina" rel=1 >VER MÁS</a></li>
-								<li class="span2"><a id="pagina" href="#" title="Inicio">&#9650;</a></li>
+							<ul class="clearfix">
+								<li class="span8 more-post"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
+								<li class="span2"><a href="#" title="Inicio">&#9650;</a></li>
 							</ul>
 						</div>
 						<?php //page_navi(); // use the page navi function ?>
