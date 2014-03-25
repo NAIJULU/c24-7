@@ -95,6 +95,7 @@ jQuery(document).ready(function($) {
 			queue: false
 
 		},
+		
 		layoutMode: 'fitRows'
 	});
 

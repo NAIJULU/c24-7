@@ -890,12 +890,15 @@ background: #93b931 !important;
 }
 
 #main-articulos article a
-{position: relative;
+{	display: block;
+
+	position: relative;
 	z-index: 0;
-	margin: 7px;
+	/*margin: 7px;*/
 	height: 237px;
 	width: 237px;
 	color:white;
+	padding-right: 5px;
 }
 #main-articulos article .categorias
 {text-transform: uppercase;
@@ -914,7 +917,8 @@ text-decoration: none;}
 display:block;
 margin: 0px;
 overflow: hidden;
-width: 237px;
+width: 100%;
+height: 237px;
 }
 #main-articulos article a p span
 
