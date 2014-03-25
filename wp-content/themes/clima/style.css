@@ -893,7 +893,6 @@ background: #93b931 !important;
 
 #main-articulos article a
 {	display: block;
-
 	position: relative;
 	z-index: 0;
 	/*margin: 7px;
@@ -906,6 +905,8 @@ background: #93b931 !important;
 >>>>>>> FETCH_HEAD
 	color:white;
 	margin-right: 10px;
+	overflow: hidden;
+
 
 }
 #main-articulos article .categorias
@@ -920,13 +921,24 @@ background: #93b931 !important;
 {color:#ECECEC;
 text-decoration: none;}
 
-#main-articulos article a figure
-{position: absolute; 
+#main-articulos article a figure {
 display:block;
 margin: 0px;
 overflow: hidden;
 width: 100%;
+height: 100%;
 
+}
+#main-articulos article a .contenido{
+	position: absolute;
+	bottom: -82px;
+	transition:all 1s ease;         
+	-o-transition:all 1s ease;
+	-moz-transition:all 1s ease;         
+	-webkit-transition:all 1s ease;
+}
+#main-articulos article a:hover .contenido{
+	bottom: -11px;
 }
 #main-articulos article a p span
 
