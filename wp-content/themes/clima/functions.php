@@ -843,7 +843,6 @@ foreach (get_post_class(array('clearfix')) as $post_cass)
 }
 
 
-
 $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
           <a href="'.get_permalink().'" rel="bookmark" title="'.the_title('','',false).'">
                  '.in_category($blogId).'
