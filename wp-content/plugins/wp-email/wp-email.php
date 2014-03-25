@@ -171,18 +171,18 @@ function email_scripts() {
 	wp_localize_script('wp-email', 'emailL10n', array(
 		'ajax_url' => admin_url('admin-ajax.php', (is_ssl() ? 'https' : 'http')),
 		'max_allowed' => $email_max,
-		'text_error' => __('The Following Error Occurs:', 'wp-email'),
-		'text_name_invalid' => __('- Your Name is empty/invalid', 'wp-email'),
-		'text_email_invalid' => __('- Your Email is empty/invalid', 'wp-email'),
+		'text_error' => __('Error en los siguientes datos:', 'wp-email'),
+		'text_name_invalid' => __('- Tu nombre contiene valores invalidos o esta en blanco.', 'wp-email'),
+		'text_email_invalid' => __('- Tu correo contiene valores invalidos o esta en blanco.', 'wp-email'),
 		'text_remarks_invalid' => __('- Your Remarks is invalid', 'wp-email'),
 		'text_friend_names_empty' => __('- Friend Name(s) is empty', 'wp-email'),
 		'text_friend_name_invalid' => __('- Friend Name is empty/invalid: ', 'wp-email'),
-		'text_max_friend_names_allowed' => sprintf(_n('- Maximum %s Friend Name allowed', '- Maximum %s Friend Names allowed', $email_max, 'wp-email'), number_format_i18n($email_max)),
-		'text_friend_emails_empty' => __('- Friend Email(s) is empty', 'wp-email'),
-		'text_friend_email_invalid' => __('- Friend Email is invalid: ', 'wp-email'),
-		'text_max_friend_emails_allowed' => sprintf(_n('- Maximum %s Friend Email allowed', '- Maximum %s Friend Emails allowed', $email_max, 'wp-email'), number_format_i18n($email_max)),
-		'text_friends_tally' => __('- Friend Name(s) count does not tally with Friend Email(s) count', 'wp-email'),
-		'text_image_verify_empty' => __('- Image Verification is empty', 'wp-email')
+		'text_max_friend_names_allowed' => sprintf(_n('- Maximo %s direcciones', '- Maximo %s direcciones', $email_max, 'wp-email'), number_format_i18n($email_max)),
+		'text_friend_emails_empty' => __('- correo destino incorrecto.', 'wp-email'),
+		'text_friend_email_invalid' => __('- correo destino es invalido: ', 'wp-email'),
+		'text_max_friend_emails_allowed' => sprintf(_n('- Maximo %s correos.', '- Maximo %s correos', $email_max, 'wp-email'), number_format_i18n($email_max)),
+		'text_friends_tally' => __('- Los nombres no corresponden a la cantidad de correos.', 'wp-email'),
+		'text_image_verify_empty' => __('- Texto de verificacion incorrecto.', 'wp-email')
 	));
 }
 
