@@ -14,21 +14,22 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
-						
-							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							<div class ="span14"><?php the_post_thumbnail( 'wpbs-featured' ); ?></div>
 							<div class="clearfix row-fluid" id="titulo-int-blog">
-							<div class="titulo-entrada span9"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="titulo-entrada span9">
+								<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
+							</div>
 							
 							<!-- Fecha con el formato deseado -->
 
 							<span class="meta-titulo span2">  <p style="font-size: 45px;margin-top:10px;"><?php echo get_the_date('d'); ?><p>  <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate> <?php the_date('F'); ?>  </span></div>
 							
-							<div class="span6">
-								<div class="span3">	
+							<div class="span10">
+								<div class="span5">	
 									<!-- Boton imprimir articulo -->
 									<?php if(function_exists('wp_print')) { print_link(); } ?>
 								</div>	 
-								<div class="span3">
+								<div class="span5">
 									<!-- Boton aumentar letra -->
 									<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
 								</div>	
@@ -41,20 +42,23 @@
 
 						</header> <!-- end article header -->
 						
-						<section class="post_content clearfix" itemprop="articleBody">
-
+						<section class="span9 clearfix" itemprop="articleBody">
+							
+							<!-- Contenido del blog -->
+							
 							<?php the_content(); ?>
+							
 							<div>
-								<div class="span5">
+								<span class="span5">
 									<?php if(function_exists('email_link')){ email_link(); } ?>
-								</div>
+								</span>
 							</div>
 
-							<div class="span9">
-								<div class="row pagination">
+							<div class="row span14">
+								<div class="pagination">
 									<ul class="clearfix">
-										<li ><?php previous_post_link('%link', 'Anterior'); ?></li>
-										<li ><?php next_post_link('%link', 'Siguiente'); ?></li>
+										<li class="span6"><?php previous_post_link('%link', 'Anterior'); ?></li>
+										<li class="span6"><?php next_post_link('%link', 'Siguiente'); ?></li>
 									<ul>	
 								</div>
 								<?php //wp_link_pages(); ?>
