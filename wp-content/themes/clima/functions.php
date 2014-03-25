@@ -834,6 +834,7 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 $categoria    = get_the_category();
 $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+$url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
 
 $pClass = "";
 
@@ -847,12 +848,12 @@ $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-ite
           <a href="'.get_permalink().'" rel="bookmark" title="'.the_title('','',false).'">
                  '.in_category($blogId).'
                 <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
-                <header ><span class="categorias">'.$categoria.'</span>
+                <div class="contenido"><header ><span class="categorias">'.$categoria.'</span>
                   <h1>'.the_title('','',false).'</h1>
                   <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
                 </header>
                 <p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
-                <span>Leer Más +<span></p>
+                <span>Leer Más +<span></p></div>
             </a>
           </article>';
           
@@ -862,9 +863,9 @@ $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-ite
 
 echo $content;
 die();
-
 }
 add_action('wp_ajax_nopriv_getBlog', 'loadBlogs');
+add_action('wp_ajax_getBlog', 'loadBlogs');
 
 // Incluimos el archivo de widget home
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');

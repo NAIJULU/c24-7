@@ -503,10 +503,12 @@ function getBlog(event)
 				jQuery.ajax({
 					type: "GET",
 					url: "../wp-admin/admin-ajax.php",
-					//url: "../wp-content/themes/clima/blogConfig.php",
-					data: {action : 'getBlog',paged:pag}
+					data: {
+							'action' : 'getBlog', 'paged':pag
+						},
 				})
 				.done(function(data) {
+
 					if(data == "")
 					{
 						throw "No results";
