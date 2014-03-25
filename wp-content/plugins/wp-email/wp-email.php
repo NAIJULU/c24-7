@@ -624,18 +624,18 @@ function email_form_header($echo = true, $temp_id) {
 	$output = '';
 	if(!empty($using_permalink)) {
 		if(is_page()) {
-			$output .= '<form action="'.$permalink.'emailpage/" method="post">'."\n";
+			$output .= '<form class="form-horizontal" action="'.$permalink.'emailpage/" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="page_id" name="page_id" value="'.$id.'" /></p>'."\n";
 		} else {
-			$output = '<form action="'.$permalink.'email/" method="post">'."\n";
+			$output = '<form class="form-horizontal" action="'.$permalink.'email/" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="p" name="p" value="'.$id.'" /></p>'."\n";
 		}
 	} else {
 		if(is_page()) {
-			$output .= '<form action="'.$permalink.'&amp;email=1" method="post">'."\n";
+			$output .= '<form class="form-horizontal" action="'.$permalink.'&amp;email=1" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="page_id" name="page_id" value="'.$id.'" /></p>'."\n";
 		} else {
-			$output .= '<form action="'.$permalink.'&amp;email=1" method="post">'."\n";
+			$output .= '<form class="form-horizontal" action="'.$permalink.'&amp;email=1" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="p" name="p" value="'.$id.'" /></p>'."\n";
 		}
 	}
@@ -666,18 +666,18 @@ function email_popup_form_header($echo = true, $temp_id) {
 	$output = '';
 	if(!empty($using_permalink)) {
 		if(is_page()) {
-			$output .= '<form action="'.$permalink.'emailpopuppage/" method="post">'."\n";
+			$output .= '<form class="form-horizontal" action="'.$permalink.'emailpopuppage/" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="page_id" name="page_id" value="'.$id.'" /></p>'."\n";
 		} else {
-			$output = '<form action="'.$permalink.'emailpopup/" method="post">'."\n";
+			$output = '<form class="form-horizontal" action="'.$permalink.'emailpopup/" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="p" name="p" value="'.$id.'" /></p>'."\n";
 		}
 	} else {
 		if(is_page()) {
-			$output .= '<form action="'.$permalink.'&amp;emailpopup=1" method="post">'."\n";
+			$output .= '<form class="form-horizontal"  action="'.$permalink.'&amp;emailpopup=1" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="page_id" name="page_id" value="'.$id.'" /></p>'."\n";
 		} else {
-			$output .= '<form action="'.$permalink.'&amp;emailpopup=1" method="post">'."\n";
+			$output .= '<form class="form-horizontal" action="'.$permalink.'&amp;emailpopup=1" method="post">'."\n";
 			$output .= '<p style="display: none;"><input type="hidden" id="p" name="p" value="'.$id.'" /></p>'."\n";
 		}
 	}
@@ -694,7 +694,7 @@ function email_popup_form_header($echo = true, $temp_id) {
 function email_multiple($echo = true) {
 	$email_multiple = intval(get_option('email_multiple'));
 	if($email_multiple > 1) {
-		$output = '<br /><em>'.sprintf(_n('Separate multiple entries with a comma. Maximum %s entry.', 'Separate multiple entries with a comma. Maximum %s entries.', $email_multiple, 'wp-email'), number_format_i18n($email_multiple)).'</em>';
+		$output = '<br /><em>'.sprintf(_n('Multiples valores separados por coma (,). Maximo %s .', 'Multiples valores separados por coma (,). Maximo %s.', $email_multiple, 'wp-email'), number_format_i18n($email_multiple)).'</em>';
 		if($echo) {
 			echo $outut;
 		} else {
@@ -886,19 +886,19 @@ function process_email_form() {
 		// Checking Your Name Field For Errors
 		if(intval($email_fields['yourname']) == 1) {
 			if(empty($yourname)) {
-				$error .= '<br /><strong>&raquo;</strong> '.__('Your Name is empty', 'wp-email');
+				$error .= '<br /><strong>&raquo;</strong> '.__('Nombre en blanco', 'wp-email');
 			}
 			if(!is_valid_name($yourname)) {
-				$error .= '<br /><strong>&raquo;</strong> '.__('Your Name is invalid', 'wp-email');
+				$error .= '<br /><strong>&raquo;</strong> '.__('Entrada invalida', 'wp-email');
 			}
 		}
 		// Checking Your E-Mail Field For Errors
 		if(intval($email_fields['youremail']) == 1) {
 			if(empty($youremail)) {
-				$error .= '<br /><strong>&raquo;</strong> '.__('Your Email is empty', 'wp-email');
+				$error .= '<br /><strong>&raquo;</strong> '.__('Nombre en blanco', 'wp-email');
 			}
 			if(!is_valid_email($youremail)) {
-				$error .= '<br /><strong>&raquo;</strong> '.__('Your Email is invalid', 'wp-email');
+				$error .= '<br /><strong>&raquo;</strong> '.__('Correo inavalido', 'wp-email');
 			}
 		}
 		// Checking Your Remarks Field For Errors
@@ -910,15 +910,15 @@ function process_email_form() {
 		// Checking Friend's Name Field For Errors
 		if(intval($email_fields['friendname']) == 1) {
 			if(empty($friendname)) {
-				$error .= '<br /><strong>&raquo;</strong> '.__('Friend Name(s) is empty', 'wp-email');
+				$error .= '<br /><strong>&raquo;</strong> '.__('Nombre no valido', 'wp-email');
 			} else {
 				if($multiple_names) {
 					foreach($multiple_names as $multiple_name) {
 						$multiple_name = trim($multiple_name);
 						if(empty($multiple_name)) {
-							$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Friend Name is empty: %s', 'wp-email'), $multiple_name);
+							$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Nombre en blanco: %s', 'wp-email'), $multiple_name);
 						} elseif(!is_valid_name($multiple_name)) {
-							$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Friend Name is invalid: %s', 'wp-email'), $multiple_name);
+							$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Nombre en blanco: %s', 'wp-email'), $multiple_name);
 						} else {
 							$friends[$friendname_count]['name'] = $multiple_name;
 							$friendname_count++;
@@ -932,15 +932,15 @@ function process_email_form() {
 		}
 		// Checking Friend's E-Mail Field For Errors
 		if(empty($friendemail)) {
-			$error .= '<br /><strong>&raquo;</strong> '.__('Friend Email(s) is empty', 'wp-email');
+			$error .= '<br /><strong>&raquo;</strong> '.__('Correo en blanco', 'wp-email');
 		} else {
 			if($multiple_emails) {
 				foreach($multiple_emails as $multiple_email) {
 					$multiple_email = trim($multiple_email);
 					if(empty($multiple_email)) {
-						$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Friend Email is empty: %s', 'wp-email'), $multiple_email);
+						$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Correo en blanco: %s', 'wp-email'), $multiple_email);
 					} elseif(!is_valid_email($multiple_email)) {
-						$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Friend Email is invalid: %s', 'wp-email'), $multiple_email);
+						$error .= '<br /><strong>&raquo;</strong> '.sprintf(__('Correo no valido: %s', 'wp-email'), $multiple_email);
 					} else {
 						$friends[$friendemail_count]['email'] = $multiple_email;
 						$friendemail_count++;
@@ -953,7 +953,7 @@ function process_email_form() {
 		}
 		// Checking If The Fields Exceed The Size Of Maximum Entries Allowed
 		if(sizeof($friends) > $multiple_max) {
-			$error .= '<br /><strong>&raquo;</strong> '.sprintf(_n('Maximum %s Friend allowed', 'Maximum %s Friend(s) allowed', $multiple_max, 'wp-email'), number_format_i18n($multiple_max));
+			$error .= '<br /><strong>&raquo;</strong> '.sprintf(_n('Maximo permitido', 'Maximo permitido', $multiple_max, 'wp-email'), number_format_i18n($multiple_max));
 		}
 		if(intval($email_fields['friendname']) == 1) {
 			if($friendname_count != $friendemail_count) {
@@ -964,10 +964,10 @@ function process_email_form() {
 		if($email_image_verify) {
 			$imageverify = strtoupper($imageverify);
 			if(empty($imageverify)) {
-				$error .= '<br /><strong>&raquo;</strong> '.__('Image Verification is empty', 'wp-email');
+				$error .= '<br /><strong>&raquo;</strong> '.__('Texto de verificacion en blanco', 'wp-email');
 			} else {
 				if($_SESSION['email_verify'] != md5($imageverify)) {
-					$error .= '<br /><strong>&raquo;</strong> '.__('Image Verification failed', 'wp-email');
+					$error .= '<br /><strong>&raquo;</strong> '.__('Error en texto de verificacion', 'wp-email');
 				}
 			}
 		}
@@ -1140,7 +1140,7 @@ function email_form($content, $echo = true, $subtitle = true, $div = true, $erro
 	}
 	// Display WP-EMail Form
 	if($div) {
-		$output .= '<div id="wp-email-content" class="wp-email">'."\n";
+		$output .= '<div id="wp-email-content" class="wp-email span=8">'."\n";
 	}
 	if (not_spamming()) {
 		if(!post_password_required()) {
@@ -1149,23 +1149,23 @@ function email_form($content, $echo = true, $subtitle = true, $div = true, $erro
 			} else {
 				$output .= email_form_header(false, (!empty($error_field['id']) ? $error_field['id'] : 0));
 			}
-			$output .= '<p id="wp-email-required">'.__('* Required Field', 'wp-email').'</p>'."\n";
+			$output .= '<div id="wp-email-required" class="span4">'.__('* Requerido', 'wp-email')."</div>";
 			if(intval($email_fields['yourname']) == 1) {
-				$output .= '<p>'."\n";
-				$output .= '<label for="yourname">'.__('Your Name: *', 'wp-email').'</label><br />'."\n";
-				$output .= '<input type="text" size="50" id="yourname" name="yourname" class="TextField" value="'.(!empty($error_field['yourname']) ? $error_field['yourname'] : '').'" />'."\n";
-				$output .= '</p>'."\n";
+				$output .= '<div class="control-group">';
+				$output .= '<label class="control-label" for="yourname">'.__('Tu nombre: *', 'wp-email').'</label>';
+				$output .= '<div class="controls"><input type="text" size="50" id="yourname" name="yourname" class="TextField" value="'.(!empty($error_field['yourname']) ? $error_field['yourname'] : '').'" /></div>';
+				$output .= '</div>';
 			}
 			if(intval($email_fields['youremail']) == 1) {
-				$output .= '<p>'."\n";
-				$output .= '<label for="youremail">'.__('Your E-Mail: *', 'wp-email').'</label><br />'."\n";
-				$output .= '<input type="text" size="50" id="youremail" name="youremail" class="TextField" value="'.(!empty($error_field['youremail']) ? $error_field['youremail'] : '').'" dir="ltr" />'."\n";
-				$output .= '</p>'."\n";
+				$output .= '<div class="control-group">';
+				$output .= '<label class="control-label" for="youremail">'.__('Tu correo: *', 'wp-email').'</label>';
+				$output .= '<div class="controls"><input size="50" id="youremail" type="email" name="youremail" required class="TextField" value="'.(!empty($error_field['youremail']) ? $error_field['youremail'] : '').'" dir="ltr" /></div>';
+				$output .= '</div>';
 			}
 			if(intval($email_fields['yourremarks']) == 1) {
-				$output .= '<p>'."\n";
-				$output .= '	<label for="yourremarks">'.__('Your Remark:', 'wp-email').'</label><br />'."\n";
-				$output .= '	<textarea cols="49" rows="8" id="yourremarks" name="yourremarks" class="Forms">';
+				$output .= '<div class="control-group">';
+				$output .= '<label class="control-label" for="yourremarks">'.__('Your Remark:', 'wp-email').'</label>';
+				$output .= '<div class="controls"><textarea cols="49" rows="8" id="yourremarks" name="yourremarks" class="Forms"></textarea></div>';
 				$val = email_get_remark();
 				if ( !empty($error_field['yourremarks']) ) {
 					$val = $error_field['yourremarks'];
@@ -1173,32 +1173,33 @@ function email_form($content, $echo = true, $subtitle = true, $div = true, $erro
 				if ( !empty($val) ) {
 					$output .= esc_html($val);
 				}
-				$output .= '</textarea>'."\n";
-				$output .= '</p>'."\n";
+				$output .= '</textarea>';
+				$output .= '</div>';
 			}
 			if(intval($email_fields['friendname']) == 1) {
-				$output .= '<p>'."\n";
-				$output .= '<label for="friendname">'.__('Friend\'s Name: *', 'wp-email').'</label><br />'."\n";
-				$output .= '<input type="text" size="50" id="friendname" name="friendname" class="TextField" value="'.(!empty($error_field['friendname']) ? $error_field['friendname'] : '').'" />'.email_multiple(false)."\n";
-				$output .= '</p>'."\n";
+				$output .= '<div class="control-group">';
+				$output .= '<label class="control-label" for="friendname">'.__('Nombre Amigo: *', 'wp-email').'</label>';
+				$output .= '<div class="controls"><input type="text" size="50" id="friendname" name="friendname" type="email" class="TextField" required value="'.(!empty($error_field['friendname']) ? $error_field['friendname'] : '').'" />'.email_multiple(false).'</.div>';
+				$output .= '</div>';
 			}
-			$output .= '<p>'."\n";
-			$output .= '<label for="friendemail">'.__('Friend\'s E-Mail: *', 'wp-email').'</label><br />'."\n";
-			$output .= '<input type="text" size="50" id="friendemail" name="friendemail" class="TextField" value="'.(!empty($error_field['friendemail']) ? $error_field['friendemail'] : '').'" dir="ltr" />'.email_multiple(false)."\n";
-			$output .= '</p>'."\n";
+			$output .= '<div class="control-group">';
+			$output .= '<label class="control-label" for="friendemail">'.__('Correo destino: *', 'wp-email').'</label>';
+			$output .= '<div class="controls"><input type="text" size="50" id="friendemail" name="friendemail" class="TextField" value="'.(!empty($error_field['friendemail']) ? $error_field['friendemail'] : '').'" dir="ltr" />'.email_multiple(false).'</div>';
+			$output .= '</div>';
 			if($email_image_verify) {
-				$output .= '<p>'."\n";
-				$output .= '<label for="imageverify">'.__('Image Verification: *', 'wp-email').'</label><br />'."\n";
-				$output .= '<img src="'.plugins_url('wp-email/email-image-verify.php').'" width="55" height="15" alt="'.__('E-Mail Image Verification', 'wp-email').'" /><input type="text" size="5" maxlength="5" id="imageverify" name="imageverify" class="TextField" />'."\n";
-				$output .= '</p>'."\n";
+				$output .= '<div class="control-group">';
+				$output .= '<label class="control-label" for="imageverify">'.__('Texto de verificacion: *', 'wp-email').'</label>';
+				$output .= '<div class="controls"><img src="'.plugins_url('wp-email/email-image-verify.php').'" width="55" height="15" alt="'.__('E-Mail Image Verification', 'wp-email').'" /><input type="text" size="5" maxlength="5" id="imageverify" name="imageverify" class="TextField" /></div>';
+				$output .= '</div>';
 			}
-			$output .= '<p id="wp-email-button"><input type="button" value="'.__('     Mail It!     ', 'wp-email').'" id="wp-email-submit" class="Button" onclick="email_form();" onkeypress="email_form();" /></p>'."\n";
+			$output .= '<div class="control-group"><div class="controls">';
+			$output .= '<div class="form-actions" id="wp-email-button"><input type="button" value="'.__('     Enviar     ', 'wp-email').'" id="wp-email-submit" class="btn btn-primary" onclick="email_form();" onkeypress="email_form();" /></div></div></div>';
 			$output .= '</form>'."\n";
 		} else {
 			$output .= get_the_password_form();
 		} // End if(!post_password_required())
 	} else {
-		$output .= '<p>'.sprintf(_n('Please wait for <strong>%s Minute</strong> before sending the next article.', 'Please wait for <strong>%s Minutes</strong> before sending the next article.', email_flood_interval(false), 'wp-email'), email_flood_interval(false)).'</p>'."\n";
+		$output .= '<p>'.sprintf(_n('Espere <strong>%s Minutos</strong> mientras se envia el articulo.', 'Espere <strong>%s Minutos</strong> mientras se envia el articulo.', email_flood_interval(false), 'wp-email'), email_flood_interval(false)).'</p>'."\n";
 	} // End if (not_spamming())
 	$output .= '<div id="wp-email-loading" class="wp-email-loading"><img src="'.plugins_url('wp-email/images/loading.gif').'" width="16" height="16" alt="'.__('Loading', 'wp-email').' ..." title="'.__('Loading', 'wp-email').' ..." class="wp-email-image" />&nbsp;'.__('Loading', 'wp-email').' ...</div>'."\n";
 	if($div) {

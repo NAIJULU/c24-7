@@ -538,8 +538,11 @@ function getBlog(event)
 						});
 					}
 					
+					jQuery(".filtro").removeAttr("checked");
+					
 				})
 				.fail(function() {
+					
 					throw "Error,no results";
 				});
 		}

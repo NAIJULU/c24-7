@@ -96,12 +96,14 @@ $blogId	= 2;
 								 ?>
 								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
-								<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
-									<h1><?php the_title(); ?></h1>
-									<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
-								</header>
-								<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
-								<span>Leer Más +<span></p>
+								<div class="contenido">
+									<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
+										<h1><?php the_title(); ?></h1>
+										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+									</header>
+									<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
+									<span>Leer Más +<span></p>
+								<div>	
 						</a>
 					</article>
 						
@@ -122,11 +124,10 @@ $blogId	= 2;
 					<?php endif; ?>
 					</div> 		
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						<div class="pagination">
-							<ul class="clearfix">
-								<li class="more-post"><?php //next_posts_link("VER MÁS") ?>
-									<a id="pagina" rel=1 href="#">VER MÁS</a>
-									</li></li>
+						<div class="span10 pagination">
+							<ul class="more-post clearfix">
+								<li class="span8"><?php //next_posts_link("VER MÁS") ?><a id="pagina" rel=1 >VER MÁS</a></li>
+								<li class="span2"><a id="pagina" href="#" title="Inicio">&#9650;</a></li>
 							</ul>
 						</div>
 						<?php //page_navi(); // use the page navi function ?>
