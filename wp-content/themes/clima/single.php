@@ -40,31 +40,30 @@
 
 
 						</header> <!-- end article header -->
-						
-						<section class="span9 clearfix" itemprop="articleBody">
-							
-							<!-- Contenido del blog -->
-							
-							<?php the_content(); ?>
-							
-							<div>
-								<span class="span5">
-									<?php if(function_exists('email_link')){ email_link(); } ?>
-								</span>
-							</div>
-
-							<div class="row span14">
-								<div class="pagination">
-									<ul class="clearfix">
-										<li class="span6"><?php previous_post_link('%link', 'Anterior'); ?></li>
-										<li class="span6"><?php next_post_link('%link', 'Siguiente'); ?></li>
-									<ul>	
+						<div class="row-fluid">
+							<section class="span12 clearfix" itemprop="articleBody">
+								
+								<!-- Contenido del blog -->
+								
+								<?php the_content(); ?>
+								
+								<div>
+									<span class="span6 enviar-correo">
+										<?php if(function_exists('email_link')){ email_link(); } ?>
+									</span>
 								</div>
-								<?php //wp_link_pages(); ?>
-							</div>
 
-						</section> <!-- end article section -->
-						
+								<div class="row span14">
+									<div class="pagination">
+										<ul class="clearfix">
+											<li class="art-anterior span6"><?php previous_post_link('%link', 'Anterior'); ?></li>
+											<li class="art-siguiente span6"><?php next_post_link('%link', 'Siguiente'); ?></li>
+										<ul>	
+									</div>
+									<?php //wp_link_pages(); ?>
+								</div>
+							</section> <!-- end article section -->
+						</div>
 						<!--<footer>
 							<?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ' ', '</p>'); ?>							
 							<?php 
