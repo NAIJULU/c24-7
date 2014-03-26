@@ -11,10 +11,10 @@
         $halign = isset($args["halign"]) ? $args["halign"] : "right";
         $type = isset($args["type"]) ? $args["type"] : "star";
 ?>
-<div class="rw-ui-container rw-ui-<?php echo $type;?> rw-style-<?php echo $style;?> rw-halign-<?php echo $halign;?> rw-dir-<?php echo $dir;?> rw-valign-middle rw-size-small"><?php
+<div class="span6 rw-ui-container rw-ui-<?php echo $type;?> rw-style-<?php echo $style;?> rw-halign-<?php echo $halign;?> rw-dir-<?php echo $dir;?> rw-valign-middle rw-size-small"><?php
     if ($type == "star")
     {
-        echo '<div class="rw-action-area rw-clearfix"><ul class="rw-ui-stars">';
+        echo '<div class="span6 rw-action-area rw-clearfix"><ul class="rw-ui-stars">';
         $tmp_num = ($votes > 0) ? 
                    round(($rate / $votes) * 2) : 
                    0;

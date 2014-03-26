@@ -3486,7 +3486,7 @@ class RatingWidgetPlugin
                 $ratingData .= ' data-' . $key . '="' . esc_attr(trim($val)) . '"';
         }
         
-        $rating_html = '<div class="rw-ui-container rw-class-' . $pElementClass . ' rw-urid-' . $pUrid . '"' . $ratingData;
+        $rating_html = '<div class="span6 rw-ui-container rw-class-' . $pElementClass . ' rw-urid-' . $pUrid . '"' . $ratingData;
         
         if (true === $pAddSchema && 'front-post' !== $this->post_class)
         {
@@ -3740,7 +3740,7 @@ class RatingWidgetPlugin
         $this->QueueRatingData($urid, strip_tags($title), bp_activity_get_permalink($activities_template->activity->id), $rclass);
 
         // Return rating html container.
-        return '<div class="rw-ui-container rw-class-' . $rclass . ' rw-urid-' . $urid . '"></div>';*/
+        return '<div class="span6 rw-ui-container rw-class-' . $rclass . ' rw-urid-' . $urid . '"></div>';*/
     }
     
     // Activity item top rating.
@@ -3810,7 +3810,7 @@ class RatingWidgetPlugin
         // Queue activity-comment rating.
         $this->QueueRatingData($comment_urid, strip_tags($this->current_comment->content), bp_activity_get_permalink($this->current_comment->id), "activity-comment");
         
-        $rw = '<div class="rw-' . $this->activity_align["activity-comment"]->hor . '"><div class="rw-ui-container rw-class-activity-comment rw-urid-' . $comment_urid . '"></div></div><p></p>';
+        $rw = '<div class="rw-' . $this->activity_align["activity-comment"]->hor . '"><div class="span6 rw-ui-container rw-class-activity-comment rw-urid-' . $comment_urid . '"></div></div><p></p>';
         */
         
         $options = array();
@@ -4161,7 +4161,7 @@ class RatingWidgetPlugin
         // Queue activity-comment rating.
         $this->QueueRatingData($post_urid, strip_tags($topic_template->post->post_text), bp_get_the_topic_permalink() . "#post-" . $post_id, $rclass);
         
-        $rw = '<div class="rw-' . $this->forum_align[$rclass]->hor . '"><div class="rw-ui-container rw-class-' . $rclass . ' rw-urid-' . $post_urid . '"></div></div>';
+        $rw = '<div class="rw-' . $this->forum_align[$rclass]->hor . '"><div class="span6 rw-ui-container rw-class-' . $rclass . ' rw-urid-' . $post_urid . '"></div></div>';
         */
         
         global $topic_template;
@@ -4802,7 +4802,7 @@ class RatingWidgetPlugin
         <div class="rw-wp-ui-top-rated-list-item-data">
             <div>
                 <a class="rw-wp-ui-top-rated-list-item-title" href="' . $permalink . '" title="' . $title . '">' . $short . '</a>
-                <div class="rw-ui-container rw-class-' . $rclass . ' rw-urid-' . $urid . ' rw-size-small rw-prop-readOnly-true"></div>
+                <div class="span6 rw-ui-container rw-class-' . $rclass . ' rw-urid-' . $urid . ' rw-size-small rw-prop-readOnly-true"></div>
             </div>
             <p class="rw-wp-ui-top-rated-list-item-excerpt">' . $excerpt . '</p>
         </div>

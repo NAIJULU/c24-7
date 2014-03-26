@@ -3,7 +3,7 @@ if (!function_exists("show_star_rating")){
     function show_star_rating($roptions, $rate = 5, $label = "")
     {
         $rate = min(5, max(0, $rate));
-        $type = " rw-ui-" . $roptions->type;
+        $type = "span6 rw-ui-" . $roptions->type;
         $size = " rw-size-" . $roptions->size;
         $style = " rw-style-" . $roptions->style;
         $theme = isset($roptions->theme) ? " rw-theme-" . $roptions->theme : "";
@@ -16,8 +16,8 @@ if (!function_exists("show_star_rating")){
         $font_size = "font-size: " . (isset($roptions->advanced->font->size) ? $roptions->advanced->font->size : "12px") . ";";
         $line_height = "line-height: " . (isset($roptions->advanced->layout->lineHeight) ? $roptions->advanced->layout->lineHeight : "16px") . ";";
 ?>
-<div class="rw-ui-container rw-no-render<?php echo $type . $size . $dir . $halign . $valign . $style;?>">
-    <div class="rw-action-area rw-clearfix"><ul class="rw-ui-stars"><?php
+<div class="span6 rw-ui-container rw-no-render<?php echo $type . $size . $dir . $halign . $valign . $style;?>">
+    <div class="span6 rw-action-area rw-clearfix"><ul class="rw-ui-stars"><?php
         $floor = floor($rate);
         for ($i = 0; $i < $floor; $i++)
         {
@@ -34,7 +34,7 @@ if (!function_exists("show_star_rating")){
         for ($i = $i + 1; $i < 5; $i++){
             echo '<li></li>';
         }
-    ?></ul></div><span class="rw-ui-info" style="<?php echo $font_type . $font_color . $font_size . $line_height;?>"><?php echo $label;?></span>
+    ?></ul></div><span class="rw-ui-info span6" style="<?php echo $font_type . $font_color . $font_size . $line_height;?>"><?php echo $label;?></span>
 </div>
 <?php
     }
