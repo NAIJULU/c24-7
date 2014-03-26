@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Clima en Vivo
+Template Name: Blog
 */
 ?>
 <?php get_header(); ?>

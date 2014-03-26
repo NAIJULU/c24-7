@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Clima en Vivo
+Template Name: Clima a fondo
 */
 ?>
 <?php get_header(); ?>
