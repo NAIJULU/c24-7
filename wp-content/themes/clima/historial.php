@@ -1,9 +1,8 @@
 <?php
 /*
-Template Name: Historial de Emisiones
+Template Name: Historial
 */
 get_header(); ?>
-			
 			<div id="content" class="clearfix row-fluid">
 			
 				<div id="main" class="span12 clearfix" role="main">
