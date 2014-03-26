@@ -79,13 +79,10 @@ $blogId		= 2;
 				<div id="main-articulos">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php
-					// set the "paged" parameter (use 'page' if the query is on a static front page)
-				//	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-					// the query
-					//$the_query = new WP_Query( 'cat=3&paged=' . $paged ); 
+						/* Para sacar etiquetas HTML del contenido */
+						$content = get_the_content();
+						$content = apply_filters('the_content', $content);
 					?>
-					<?php //if ($the_query->have_posts()) : while ($the_query->have_posts() ) : $the_query->the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
@@ -103,7 +100,7 @@ $blogId		= 2;
 										<h1><?php the_title(); ?></h1>
 										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 									</header>
-									<p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
+									<p><?php echo substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; ?>
 									<span>Leer Más +<span></p>
 								</div>	
 						</a>
