@@ -81,7 +81,6 @@ $blogId		= 2;
 					<?php
 						/* Para sacar etiquetas HTML del contenido */
 						$content = get_the_content();
-						$content = apply_filters('the_content', $content);
 					?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
