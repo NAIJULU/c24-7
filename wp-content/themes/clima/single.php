@@ -16,7 +16,7 @@
 						<header>
 							<div class ="span14"><?php the_post_thumbnail( 'wpbs-featured' ); ?></div>
 							<div class="clearfix row-fluid" id="titulo-int-blog">
-								<div class="titulo-entrada span9">
+								<div class="titulo-entrada span10">
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
 								</div>
 							
@@ -24,18 +24,17 @@
 
 								<span class="meta-titulo span2">  <p style="font-size: 45px;margin-top:10px;"><?php echo get_the_date('d'); ?><p>  <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate> <?php the_date('F'); ?>  </span>
 							</div>
-							
-							<div class="span10">
-								<div class="span5">	
-									<!-- Boton imprimir articulo -->
-									<?php if(function_exists('wp_print')) { print_link(); } ?>
-								</div>	 
-								<div class="span5">
-									<!-- Boton aumentar letra -->
-									<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
+							<div class="row-fluid">
+								<div class="span6">
+										<!-- Boton aumentar letra -->
+										<p class="aumentar-letra pull-left">TAMAÑO DE LETRA</p>
+										<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
 								</div>	
+								<div class="span6 text-right">	
+										<!-- Boton imprimir articulo -->
+										<?php if(function_exists('wp_print')) { print_link(); } ?>
+								</div>	 
 							</div>
-
 							<div  style="width:50px;">					
 							</div>
 
