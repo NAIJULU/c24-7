@@ -835,6 +835,7 @@ $categoria    = get_the_category();
 $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
+$contenuto = get_the_content();
 
 $pClass = "";
 
@@ -852,7 +853,7 @@ $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-ite
                   <h1>'.the_title('','',false).'</h1>
                   <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
                 </header>
-                <p>Entradilla del articulo. Este es el texto que se muestra al hacer HOVER sobre este articulo.
+                <p>'.substr(wp_filter_nohtml_kses( $contenuto ), 0,80).'...'.'
                 <span>Leer Más +<span></p></div>
             </a>
           </article>';

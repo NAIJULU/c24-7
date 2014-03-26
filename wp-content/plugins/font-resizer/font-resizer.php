@@ -99,9 +99,9 @@ Author URI: http://www.cubetech.ch/
 
     function fontResizer_place(){
 		echo '<li class="fontResizer" style="text-align: center; font-weight: bold;">';
-		echo '<a class="fontResizer_minus" title="Decrease font size" style="font-size: 0.7em;">A</a> ';
+		echo '<a class="fontResizer_minus" title="Decrease font size" style="font-size: 0.7em;">A-</a> ';
 		echo '<a class="fontResizer_reset" title="Reset font size">A</a> ';
-		echo '<a class="fontResizer_add" title="Increase font size" style="font-size: 1.2em;">A</a> ';
+		echo '<a class="fontResizer_add" title="Increase font size" style="font-size: 1.2em;">A+</a> ';
 		echo '<input type="hidden" id="fontResizer_value" value="'.get_option('fontResizer').'" />';
 		echo '<input type="hidden" id="fontResizer_ownid" value="'.get_option('fontResizer_ownid').'" />';
 		echo '<input type="hidden" id="fontResizer_ownelement" value="'.get_option('fontResizer_ownelement').'" />';
