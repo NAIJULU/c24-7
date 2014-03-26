@@ -122,11 +122,11 @@ $blogId		= 2;
 					<?php endif; ?>
 					</div> 		
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-						<div class="span10 pagination">
-							<ul class="clearfix">
-								<li class="span8 more-post"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
-								<li class="span2"><a href="#" title="Inicio">&#9650;</a></li>
-							</ul>
+							<div class="row pagination">
+								<ul class="span12">
+									<li class="span10 more-post"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
+									<li class="span2"><a href="#" title="Inicio">&#9650;</a></li>
+								</ul>
 						</div>
 						<?php //page_navi(); // use the page navi function ?>
 
