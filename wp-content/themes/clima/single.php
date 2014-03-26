@@ -30,7 +30,7 @@
 										<p class="aumentar-letra pull-left">TAMAÑO DE LETRA</p>
 										<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
 								</div>	
-								<div class="span6 text-right">	
+								<div class="span6 text-right imprimir">	
 										<!-- Boton imprimir articulo -->
 										<?php if(function_exists('wp_print')) { print_link(); } ?>
 								</div>	 

@@ -851,7 +851,20 @@ header p.aumentar-letra{
 header li.fontResizer a.fontResizer_minus, a.fontResizer_add {
 	font-size: 0.8em !important;
 }	
-
+header div.imprimir a{
+	padding: 0.5em 0.8em;
+	display: inline-block;
+	background: #3478D9;
+	border-radius:4px;
+}
+header div.imprimir a:hover{
+	background: #679FEA;
+	color: #FFF;
+	text-decoration: none;
+}
+header div.imprimir a img{
+	margin-bottom: 0px;
+}
 .menu-clima, #categories-2 {
   -moz-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
   -webkit-box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
