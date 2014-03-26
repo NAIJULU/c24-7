@@ -15,8 +15,8 @@ The comments page for Bones
 ?>
 
 <!-- You can start editing here. -->
-
-<?php if ( have_comments() ) : ?>
+<!-- Descomente este archivo para hacer funcionar los comentarios Nativos de wordpress -->
+<?php /* if ( have_comments() ) : ?>
 	<?php if ( ! empty($comments_by_type['comment']) ) : ?>
 	<h3 id="comments"><?php comments_number('<span>' . __("No","bonestheme") . '</span> ' . __("Responses","bonestheme") . '', '<span>' . __("One","bonestheme") . '</span> ' . __("Response","bonestheme") . '', '<span>%</span> ' . __("Responses","bonestheme") );?> <?php _e("to","bonestheme"); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 
@@ -144,3 +144,4 @@ The comments page for Bones
 </section>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
+*/
