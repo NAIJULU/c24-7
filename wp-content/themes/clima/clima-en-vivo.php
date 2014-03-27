@@ -19,10 +19,12 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 	      </div>
 	     </header>
       <!-- end article header -->
+  
       <section class="post_content">
         <div class="row-fluid clearfix">
           <div class="span3"> 
             <!-- menu Clima en vivo -->
+           
 	         <div class="menu-clima">
 	            <ul>
 	              <li><a id="btnMostrarRadarMeteorologico" class="radar" href="#">Radar Meteorológico</a></li>
@@ -61,6 +63,10 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               </div>
 				<div id="pronosticos" class="carousel slide"> 
 				  <!-- Carousel items -->
+				  			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_widget') ) : ?>
+
+			<?php endif; ?>
+		<!--		  
 				  <div id="ciudades" class="carousel-inner">
 					<div class="active item">
 					  <h2>Pronóstico de Medellín</h2>
@@ -493,6 +499,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 				  </ol>
 				</div>
             </div>
+        -->
             <div id="vista-vivo" style="display:none"> <a class="convencion" href="#convencionesVistaVivo">Ver convenciones</a>
               <div class="convencionesVistaVivo" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
@@ -554,6 +561,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 </ul>
               </div>
             </div>
+           
             <div id="sensores" style="display:none"> <a class="convencion" href="#convencionesSensores">Ver convenciones</a>
               <div class="convencionesSensores" style="display:none"> 
                 <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
