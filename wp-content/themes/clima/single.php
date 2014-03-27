@@ -53,8 +53,8 @@
 									</span>
 								</div>
 
-								<div class="row span14">
-									<div class="pagination">
+								<div class="row-fluid">
+									<div class="pagination articulos-antysig">
 										<ul class="clearfix">
 											<li class="art-anterior span6"><?php previous_post_link('%link', 'Artículo anterior'); ?></li>
 											<li class="art-siguiente span6"><?php next_post_link('%link', 'Artículo siguiente'); ?></li>

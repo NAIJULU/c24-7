@@ -903,6 +903,9 @@ text-transform: uppercase;
 .rw-ui-container{
 	float: left;
 }
+div.pagination.articulos-antysig{
+	margin-top: 55px;
+}
 
  .pagination ul
 {
@@ -1054,6 +1057,13 @@ line-height: 15px;
 
 /* comments */
 
+.titulo-fb{
+	padding: 0 0.5em;
+	background: #0B3C88;
+	color: #fff;
+	font-size: 1.5em;
+	border-radius: 4px;
+}
 #comments {
 	line-height: 24px;
 	margin-bottom: 18px;
