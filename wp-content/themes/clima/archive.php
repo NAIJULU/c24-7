@@ -125,7 +125,7 @@ $blogId		= 2;
 							<div class="row pagination">
 								<ul class="span12">
 									<li class="span10 more-post"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
-									<li class="span2"><a href="#" title="Inicio">&#9650;</a></li>
+									<li class="span2 subir"><a href="#" title="Inicio">&#9650;</a></li>
 								</ul>
 						</div>
 						<?php //page_navi(); // use the page navi function ?>
