@@ -833,7 +833,7 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 
 $categoria    = get_the_category();
 $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
-$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+$url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') );
 $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
 $contenuto = get_the_content();
 

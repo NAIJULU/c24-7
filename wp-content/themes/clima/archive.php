@@ -90,7 +90,7 @@ $blogId		= 2;
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 								 ?>
-								<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) ; ?>
+								<?php $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; ?>
 								<?php $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; ?>
 
 								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
