@@ -63,7 +63,8 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               </div>
 				<div id="pronosticos" class="carousel slide"> 
 				  <!-- Carousel items -->
-				  			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_widget') ) : ?>
+				  			<!-- para mas info consulte a functions.php -->
+				  			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('pronostico-widget') ) : ?>
 
 			<?php endif; ?>
 		<!--		  

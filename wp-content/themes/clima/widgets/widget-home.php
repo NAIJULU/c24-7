@@ -1,6 +1,7 @@
 <?php
   setlocale(LC_ALL, 'es_ES.UTF8');
-  class WidgetPronosticoHome extends WP_Widget {
+  class WidgetPronosticoHome extends WP_Widget 
+   {
   
 	  private $hoy;
 	  private $manana;
@@ -36,6 +37,7 @@
   <div id="pronosticos" class="carousel slide"> 
     <!-- Carousel items -->
     <div id="ciudades" class="carousel-inner">
+
     <?php $i=1;
 	$ciudades = array(
 		'Medellín' => 'Medellin', 

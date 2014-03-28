@@ -11,10 +11,8 @@ sidebars, comments, ect.
 // Get Bones Core Up & Running!
 require_once('library/bones.php');            // core functions (don't remove)
 require_once('library/plugins.php');          // plugins & extra functions (optional)
-
 // Options panel
 require_once('library/options-panel.php');
-
 // Shortcodes
 require_once('library/shortcodes.php');
 
@@ -111,6 +109,18 @@ you like. Enjoy!
         'after_title' => '</h3>',
   ));
 
+// Registrando posición para el widget de pronosticos
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'Widget Pronostico',
+        'id'=>'pronostico-widget',
+        'before_widget' => '<div class="widget-pronostico">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+  ));
+
+
 // Registrando posición para el widget de la última emisión
  if ( function_exists('register_sidebar') )
        register_sidebar(array(
@@ -158,7 +168,7 @@ function bones_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget span10 %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',
@@ -812,6 +822,7 @@ function get_wpbs_theme_options(){
 // Añadimos la acción para crear widgets desde el template
 function creaWidgets(){
  register_widget( 'WidgetPronosticoHome' );
+ register_widget( 'WidgetPronostico');
  register_widget( 'WidgetUltimaEmision' );
 }
 add_action( 'widgets_init', 'creaWidgets' );
@@ -865,16 +876,18 @@ $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-ite
 echo $content;
 die();
 }
+
+
 add_action('wp_ajax_nopriv_getBlog', 'loadBlogs');
 add_action('wp_ajax_getBlog', 'loadBlogs');
 
+include_once(TEMPLATEPATH.'/blogConfig.php');
+
+
 // Incluimos el archivo de widget home
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
+include_once(TEMPLATEPATH.'/widgets/widget-pronostico.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
-
-
-
-
 
 
 
