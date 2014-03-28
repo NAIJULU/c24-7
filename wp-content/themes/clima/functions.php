@@ -141,7 +141,20 @@ you like. Enjoy!
         'after_widget' => '',
         'before_title' => '',
         'after_title' => '',
+  ));
+
+
+  // Registrando posición para el widget de las fotos de usuario en el home
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'Widget Convencion',
+        'id'=>'fotousuarioshome_widget',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
   ));       
+       
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
@@ -820,11 +833,13 @@ function get_wpbs_theme_options(){
 } // end get_wpbs_theme_options function
 
 // Añadimos la acción para crear widgets desde el template
-function creaWidgets(){
+function creaWidgets()
+{
  register_widget( 'WidgetPronosticoHome' );
  register_widget( 'WidgetPronostico');
  register_widget( 'WidgetUltimaEmision' );
 }
+
 add_action( 'widgets_init', 'creaWidgets' );
 
 
@@ -882,12 +897,14 @@ add_action('wp_ajax_nopriv_getBlog', 'loadBlogs');
 add_action('wp_ajax_getBlog', 'loadBlogs');
 
 include_once(TEMPLATEPATH.'/blogConfig.php');
+include_once(TEMPLATEPATH.'/viewConvenciones.php');
 
 
 // Incluimos el archivo de widget home
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 include_once(TEMPLATEPATH.'/widgets/widget-pronostico.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
+
 
 
 

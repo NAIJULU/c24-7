@@ -1496,4 +1496,39 @@ body {
 	
 margin: 0px 20px 0px 20px;
 }
-	
+
+
+.convencion
+{
+	cursor:pointer;
+}
+
+
+.container-function-1{
+	display: 	block;
+    height: 	500px;
+    position: 	relative;
+}
+
+.contenedor-convencion{
+	background-color: #000000;
+	opacity:0.8;
+	filter:alpha(opacity=90); /* For IE8 and earlier */
+	height: 		100%;
+	width: 			100%;
+	position: 		absolute;
+	z-index: 		2;
+	display: 		none;
+}
+
+.contenedor-convencion p{
+
+	color:#F2F2F2;
+	font-size: 14px;
+	margin: 15% 15% 15% 15%;
+
+}
+
+.fondo-contenido-1{
+    z-index: 1;
+}

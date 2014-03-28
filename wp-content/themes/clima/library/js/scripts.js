@@ -321,7 +321,20 @@ jQuery(document).ready(function($) {
 		$("#vivo-camara3").fadeOut();
 		$("#vivo-camara1").fadeOut();
 		$("#vivo-camara4").fadeIn(1500);
-	});											
+	});	
+
+	$(".convencion").click(function(e){
+		if( $(".contenedor-convencion").css("display") == "none" )
+		  {
+			$(".contenedor-convencion").fadeIn('fast');  	
+		  }
+		  else
+		  {
+		  	$(".contenedor-convencion").fadeOut('fast');
+		  	$(".contenedor-convencion").css('dsiplay','none');
+		  }
+		
+	});										
 	/* Fin de la sección */
 	
 	/* Inicio: Sección Blog */
