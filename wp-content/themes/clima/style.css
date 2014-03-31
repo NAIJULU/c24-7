@@ -1506,7 +1506,7 @@ margin: 0px 20px 0px 20px;
 
 .container-function-1{
 	display: 	block;
-    height: 	500px;
+    height: 	100%;
     position: 	relative;
 }
 
@@ -1525,10 +1525,11 @@ margin: 0px 20px 0px 20px;
 
 	color:#F2F2F2;
 	font-size: 14px;
-	margin: 15% 15% 15% 15%;
+	margin: 10% 10% 10% 10%;
 
 }
 
 .fondo-contenido-1{
     z-index: 1;
 }
+

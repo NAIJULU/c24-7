@@ -35,9 +35,9 @@
 ?>
 <div id="widget-pronostico">
 	  <div class="controles">
-	    <ul class="menuControles">
+	<!--    <ul class="menuControles">
 	      <li><a href="#pronosticos" id="btnMostrarPronostico">Pronóstico</a></li>
-	    </ul>
+	    </ul> -->
   	</div>
 	  <div id="pronosticos" class="carousel slide"> 
 	    <!-- Carousel items -->
@@ -117,6 +117,7 @@
 
 	    </ol>
 	  </div>
+	</div>  
 <?php
 	echo $after_widget;
 	}

@@ -259,69 +259,6 @@ jQuery(document).ready(function($) {
 		georssLayer.setMap(map);
 	});
 
-	$("#btnMostrarRadarMeteorologico").click(function(e){
-		e.preventDefault();
-		$("#pronostico").fadeOut();
-		$("#vista-vivo").fadeOut();
-		$("#sensores").fadeOut();
-		$("#radar-meterologico").fadeIn(1000);
-	});	
-
-	$("#btnMostrarPronosticoTemperatura").click(function(e){
-		e.preventDefault();
-		$("#radar-meterologico").fadeOut();
-		$("#vista-vivo").fadeOut();
-		$("#sensores").fadeOut();
-		$("#pronostico").fadeIn(1000);
-	});
-
-	$("#btnMostrarVistaVivo").click(function(e){
-		e.preventDefault();
-		$("#radar-meterologico").fadeOut();
-		$("#pronostico").fadeOut();
-		$("#sensores").fadeOut();
-		$("#vista-vivo").fadeIn(1000);
-	});
-
-	$("#btnMostrarSensores").click(function(e){
-		e.preventDefault();
-		$("#radar-meterologico").fadeOut();
-		$("#pronostico").fadeOut();
-		$("#vista-vivo").fadeOut();
-		$("#sensores").fadeIn(1000);
-	});	
-
-	$("#btnMostrarCam1").click(function(e){
-		e.preventDefault();
-		$("#vivo-camara4").fadeOut();
-		$("#vivo-camara3").fadeOut();
-		$("#vivo-camara2").fadeOut();
-		$("#vivo-camara1").fadeIn(1500);
-	});
-
-	$("#btnMostrarCam2").click(function(e){
-		e.preventDefault();
-		$("#vivo-camara4").fadeOut();
-		$("#vivo-camara3").fadeOut();
-		$("#vivo-camara1").fadeOut();
-		$("#vivo-camara2").fadeIn(1500);
-	});
-
-	$("#btnMostrarCam3").click(function(e){
-		e.preventDefault();
-		$("#vivo-camara4").fadeOut();
-		$("#vivo-camara2").fadeOut();
-		$("#vivo-camara1").fadeOut();
-		$("#vivo-camara3").fadeIn(1500);
-	});	
-
-	$("#btnMostrarCam4").click(function(e){
-		e.preventDefault();
-		$("#vivo-camara2").fadeOut();
-		$("#vivo-camara3").fadeOut();
-		$("#vivo-camara1").fadeOut();
-		$("#vivo-camara4").fadeIn(1500);
-	});	
 
 	$(".convencion").click(function(e){
 		if( $(".contenedor-convencion").css("display") == "none" )
@@ -333,8 +270,49 @@ jQuery(document).ready(function($) {
 		  	$(".contenedor-convencion").fadeOut('fast');
 		  	$(".contenedor-convencion").css('dsiplay','none');
 		  }
-		
-	});										
+	});	
+
+	/* Funciones TAB clima en vivo partII */
+	/* Se esconden todos las opciones por descarte y por ultimo se revela la que realmente
+	se quiere mostrar */
+
+	$(".item-clima a").click(function(e){
+		e.preventDefault();
+		var item = $(this).attr("href");
+
+		if( $("#"+item).css("display") == "none" )
+		{
+			$("#pronostico").hide('fast');
+			$("#vista-vivo").hide('fast');
+			$("#sensores").hide('fast');
+			$("#radar-meterologico").hide('fast');
+			$("#temperatura-actual").hide('fast');
+			$(".contenedor-convencion").css("display","none");
+
+			$("#"+item).show();
+		}
+	});
+
+
+	$(".thumb-camara").click(function(e){
+
+		e.preventDefault();
+		var item = $(this).attr("href");
+
+		if( $("#"+item).css("display") == "none" )
+		{
+			$("#vivo-camara1").hide('fast');
+			$("#vivo-camara2").hide('fast');
+			$("#vivo-camara3").hide('fast');
+			$("#vivo-camara4").hide('fast');
+
+			$(".contenedor-convencion").css('dsiplay','none');
+			$("#"+item).show('fast');
+
+		}	
+
+	});
+
 	/* Fin de la sección */
 	
 	/* Inicio: Sección Blog */
