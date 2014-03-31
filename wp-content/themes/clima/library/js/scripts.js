@@ -268,7 +268,7 @@ jQuery(document).ready(function($) {
 		  else
 		  {
 		  	$(".contenedor-convencion").fadeOut('fast');
-		  	$(".contenedor-convencion").css('dsiplay','none');
+		  	$(".contenedor-convencion").css('display','none');
 		  }
 	});	
 
@@ -306,7 +306,7 @@ jQuery(document).ready(function($) {
 			$("#vivo-camara3").hide('fast');
 			$("#vivo-camara4").hide('fast');
 
-			$(".contenedor-convencion").css('dsiplay','none');
+			$(".contenedor-convencion").css('display','none');
 			$("#"+item).show('fast');
 
 		}	
