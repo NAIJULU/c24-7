@@ -277,10 +277,9 @@ jQuery(document).ready(function($) {
 	se quiere mostrar */
 
 	$(".item-clima a").click(function(e){
-		e.preventDefault();
 		var item = $(this).attr("href");
 
-		if( $("#"+item).css("display") == "none" )
+		if( $(item).css("display") == "none" )
 		{
 			$("#pronostico").hide('fast');
 			$("#vista-vivo").hide('fast');
@@ -289,13 +288,12 @@ jQuery(document).ready(function($) {
 			$("#temperatura-actual").hide('fast');
 			$(".contenedor-convencion").css("display","none");
 
-			$("#"+item).show();
+			$(item).show();
 		}
 	});
 
 
 	$(".thumb-camara").click(function(e){
-
 		e.preventDefault();
 		var item = $(this).attr("href");
 
@@ -407,6 +405,25 @@ jQuery(document).ready(function($) {
 		}
 		$("#size option[value='"+valor+"']").attr("selected",true).change();
 	});
+
+/* URL MANAGER */
+
+	if( window.location.hash )
+	{
+		var itemHash = window.location.hash;
+
+		if( $(itemHash).css("display") == "none" )
+		{
+			$("#pronostico").hide('fast');
+			$("#vista-vivo").hide('fast');
+			$("#sensores").hide('fast');
+			$("#radar-meterologico").hide('fast');
+			$("#temperatura-actual").hide('fast');
+			$(".contenedor-convencion").css("display","none");
+
+			$(itemHash).show();
+		}
+	}
     /* Fin: Sección Blog */
 
 

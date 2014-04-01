@@ -27,11 +27,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
            
 	         <div class="menu-clima">
 	            <ul>
-	              <li class="item-clima"><a id="btnMostrarRadarMeteorologico" class="radar" href="radar-meterologico">Radar Meteorológico</a></li>
-	              <li class="item-clima"><a id="btnMostrarPronosticoTemperatura" class="pronostico" href="pronostico">Pronóstico - Temperatura actual, máxima y mínima</a></li>
-	              <li class="item-clima"><a id="btnMostrarVistaVivo" class="siata" href="vista-vivo">Vista en vivo del SIATA</a></li>
-	              <li class="item-clima"><a id="btnMostrarSensores" class="sensores" href="sensores">Red de sensores de nivel de quebradas</a></li>
-                <li class="item-clima"><a id="btnMostrarTemperaturaActual" class="sensores" href="temperatura-actual">Temperatura Actual</li>
+	              <li class="item-clima"><a id="btnMostrarRadarMeteorologico" class="radar" href="#radar-meterologico">Radar Meteorológico</a></li>
+	              <li class="item-clima"><a id="btnMostrarPronosticoTemperatura" class="pronostico" href="#pronostico">Pronóstico - Temperatura actual, máxima y mínima</a></li>
+	              <li class="item-clima"><a id="btnMostrarVistaVivo" class="siata" href="#vista-vivo">Vista en vivo del SIATA</a></li>
+	              <li class="item-clima"><a id="btnMostrarSensores" class="sensores" href="#sensores">Red de sensores de nivel de quebradas</a></li>
+                <li class="item-clima"><a id="btnMostrarTemperaturaActual" class="sensores" href="#temperatura-actual">Temperatura Actual</li>
 	            </ul>
             </div>
 
@@ -56,7 +56,8 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 </div>
               -->
 
-               <?php viewConvenciones("Este es un mapa climatologico que muestra en donde estan las mayores concentraciones de lluvia, ambar, queso rayado, se puede divisar los diferentes tipo de aguapanela") ?>
+               <?php viewConvenciones("orem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl."); ?>
 
                 <div id="contenedor-radar" class="fondo-contenido-1">
                   <div id="mapa"></div>
@@ -66,11 +67,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 
               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
 
-        Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
+            Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
 
-        Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
+            Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
 
-        Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+            Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
 
           <!--    <div class="convencionesPronostico" style="display:none"> 
                
@@ -107,10 +108,8 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               </div>
 
               <div id="vivo-camara2" class="container-vivo" style="display:none">
-                
-               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
 
-              Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
+               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
 
               Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
 
@@ -128,9 +127,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 
                <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
 
-              Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
-
-              Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
+              Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus
 
               Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
 
@@ -146,8 +143,6 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
 
               Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
-
-              Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
 
               Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
 
@@ -188,11 +183,17 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               </div>
             </div>
            
-            <div id="sensores" style="display:none"> <a class="convencion" href="#convencionesSensores">Ver convenciones</a>
-              <div class="convencionesSensores" style="display:none"> 
-                <!-- AQUÍ VAN LAS CONVENCIONES DE ESTE ITEM --> 
-              </div>
-              <h1>Sensores de Nivel</h1>
+            <div id="sensores" style="display:none" class="container-function-1">
+
+              <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+
+              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+
+
+              <div id="cont-sensores" >
+                <img src=<?php echo bloginfo('template_url')."/images/sensores.png";  ?> />
+              </div> 
+
             </div>
 
 

@@ -1503,11 +1503,20 @@ margin: 0px 20px 0px 20px;
 	cursor:pointer;
 }
 
+#radar-meterologico
+{
+	width: 74.359%;
+}
+
+#pronostico
+{
+	height: 70%;	
+}
 
 .container-function-1{
 	display: 	block;
     height: 	100%;
-    position: 	relative;
+    position: absolute;
 }
 
 .contenedor-convencion{
