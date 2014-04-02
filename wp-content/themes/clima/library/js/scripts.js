@@ -8,7 +8,8 @@
 *  Updates will be posted to this site.
 *********************************************************************/
 
-var html = "";
+var html  = "";
+var meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
 
 var twitterFetcher=function(){function x(e){return e.replace(/<b[^>]*>(.*?)<\/b>/gi,function(c,e){return e}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(e,c){for(var g=[],f=RegExp("(^| )"+c+"( |$)"),a=e.getElementsByTagName("*"),h=0,d=a.length;h<d;h++)f.test(a[h].className)&&g.push(a[h]);return g}var y="",l=20,s=!0,k=[],t=!1,q=!0,r=!0,u=null,v=!0,z=!0,w=null,A=!0;return{fetch:function(e,c,g,f,a,h,d,b,m,n){void 0===g&&(g=20);void 0===f&&(s=!0);void 0===a&&(a=
 !0);void 0===h&&(h=!0);void 0===d&&(d="default");void 0===b&&(b=!0);void 0===m&&(m=null);void 0===n&&(n=!0);t?k.push({id:e,domId:c,maxTweets:g,enableLinks:f,showUser:a,showTime:h,dateFunction:d,showRt:b,customCallback:m,showInteraction:n}):(t=!0,y=c,l=g,s=f,r=a,q=h,z=b,u=d,w=m,A=n,c=document.createElement("script"),c.type="text/javascript",c.src="//cdn.syndication.twimg.com/widgets/timelines/"+e+"?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random(),document.getElementsByTagName("head")[0].appendChild(c))},
@@ -425,6 +426,207 @@ jQuery(document).ready(function($) {
 		}
 	}
     /* Fin: Sección Blog */
+
+
+/* seccion Emisiones */
+
+	$("#m-left").click(function(e){
+
+		e.preventDefault();
+
+		var mes = parseInt( $("#month").val() );
+
+		if(mes == null)
+		{
+			throw "Mes null";
+			return  false;
+		}
+		else
+		{
+			if( (mes - 1) == 0 )
+			{
+				mes = 12;
+			}
+			else
+			{
+				mes = mes - 1;
+			}
+
+			$("#month").val(mes);
+			$("#label-mes").html(meses[mes-1]);
+
+		}
+
+	});
+
+
+	$("#m-right").click(function(e){
+
+		e.preventDefault();
+
+		var mes = parseInt( $("#month").val() );
+
+		if(mes == null)
+		{
+			throw "Mes null";
+			return  false;
+		}
+		else
+		{
+			if( (mes + 1) == 13 )
+			{
+				mes = 1;
+			}
+			else
+			{
+				mes = mes + 1;
+			}
+
+			$("#month").val(mes);
+			$("#label-mes").html(meses[mes-1]);
+
+		}
+
+	});
+
+
+	$("#d-left").click(function(e){
+
+		e.preventDefault();
+
+		var dia = parseInt( $("#day").val() );
+
+		if(dia == null)
+		{
+			throw "Dia null";
+			return  false;
+		}
+		else
+		{
+			if( (dia - 1) == 0 )
+			{
+				dia = 31;
+			}
+			else
+			{
+				dia = dia - 1;
+			}
+
+			$("#day").val(dia);
+			$("#label-day").html(dia);
+
+		}
+
+	});
+
+
+
+
+	$("#d-right").click(function(e){
+
+		e.preventDefault();
+
+		var dia = parseInt( $("#day").val() );
+
+		if(dia == null)
+		{
+			throw "Dia null";
+			return  false;
+		}
+		else
+		{
+			if( (dia + 1) == 32 )
+			{
+				dia = 1;
+			}
+			else
+			{
+				dia = dia + 1;
+			}
+
+
+			$("#day").val(dia);
+			$("#label-day").html(dia);
+
+		}
+
+	});
+
+
+
+	$("#y-left").click(function(e){
+
+		e.preventDefault();
+
+		var postYear = parseInt( $("#year").val() );
+
+		if(postYear == null)
+		{
+			throw "Año null";
+			return  false;
+		}
+		else
+		{
+
+			if( (postYear - 1) == 1990 )
+			{
+				var f = new Date();
+				var yActual = f.getFullYear();
+
+				postYear = yActual;
+			}
+			else
+			{
+				postYear = postYear - 1;
+			}
+
+console.log(postYear);
+
+			$("#year").val(postYear);
+			$("#label-year").html(postYear);
+
+		}
+
+	});
+
+
+
+	$("#y-right").click(function(e){
+
+		e.preventDefault();
+
+		var postYear = parseInt( $("#year").val() );
+		console.log(postYear);
+
+		if(postYear == null)
+		{
+			throw "Año null";
+			return  false;
+		}
+		else
+		{
+			var f = new Date();
+			var yActual = f.getFullYear();
+
+			if( (postYear + 1) == yActual + 1 )
+			{
+				postYear = 1991;
+			}
+			else
+			{
+
+				postYear = postYear + 1;
+			}
+
+			$("#year").val(postYear);
+			$("#label-year").html(postYear);
+
+		}
+
+	});
+
+
+/* fin seccion emisiones */
 
 
     /* Twitter Feed */

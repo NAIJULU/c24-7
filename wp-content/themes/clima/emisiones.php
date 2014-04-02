@@ -4,7 +4,7 @@ Template Name: Emisiones OK
 */
 ?>
 <?php get_header(); ?>
-			sfkjfjsffjl
+			
 			<div id="content" class="clearfix row-fluid">
 			
 				<div id="main" class="span12 clearfix" role="main">
@@ -22,12 +22,13 @@ Template Name: Emisiones OK
 							 </header> <!-- end article header -->
 							
                             	<div id="VideoEmision">
+                            		sizas sizas sizas
                                 	<!-- AQUÍ VA EL REPRODUCTOR DE LA ÚLTIMA EMISIÓN -->
                                 </div>	
                                                                
                                  <!-- Controles para búsqueda de emisiones -->
                                  <div id="controlesEmisiones">
-                                 	<h3>Buscar emisiones por fecha</h3>
+                                 	<h3>Buscar emisiones por fechadhsf</h3>
                                     <!-- Belmar, en este espacio puedes poner el componente para buscar las emisiones por fecha -->
                                  </div>
                                  
