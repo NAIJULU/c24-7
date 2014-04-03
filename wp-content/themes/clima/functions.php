@@ -855,7 +855,12 @@ $the_query = new WP_Query( 'paged=' . $paged );
 if ($the_query->have_posts())
 {
 
+
 while ($the_query->have_posts() ) : $the_query->the_post(); 
+
+
+// 2 -> categoria blogs
+if(in_category(2)) :
 
 $categoria    = get_the_category();
 $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
@@ -869,6 +874,7 @@ foreach (get_post_class(array('clearfix')) as $post_cass)
 {
   $pClass .= $post_cass." ";
 }
+
 
 
 $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
@@ -885,6 +891,7 @@ $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-ite
           </article>';
           
     $i++;
+    endif;
   endwhile;
 }
 

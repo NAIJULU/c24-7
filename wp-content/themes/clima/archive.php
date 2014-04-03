@@ -78,14 +78,16 @@ $blogId		= 2;
 			  <div id="main" class="span9 clearfix" role="main">
 				<div id="main-articulos">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<?php
-						/* Para sacar etiquetas HTML del contenido */
+					
+					<?php	if(in_category($blogId)) : ?>
+					<?php	
+					/* Para sacar etiquetas HTML del contenido */
 						$content = get_the_content();
 					?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-								<?php in_category($blogId); ?>
+						
 								<?php 
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
@@ -104,7 +106,7 @@ $blogId		= 2;
 								</div>	
 						</a>
 					</article>
-						
+					<?php endif; ?>
 					<?php $i++; endwhile; ?>									
 					
 					<?php else : ?>

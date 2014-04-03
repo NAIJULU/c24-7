@@ -98,7 +98,7 @@ endif;
 							<img src="<?php echo get_template_directory_uri().'/images/icon2-ult-emision_02.png' ?>" width="100" /> 
 						</div>
 						<div class="content-emision-tumb">
-							 <button class="btn-tumb">
+							 <button class="btn-tumb btn-primary">
 							  			<?php the_tags(''); ?>
 										<input type="hidden" class="emision-tumb-title" value ="<?php the_title() ?>" />
 										<input type="hidden" class="emision-tumb-content" value = '<?php echo get_the_content(); ?>' />
