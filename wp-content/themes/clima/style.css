@@ -1520,7 +1520,8 @@ margin: 0px 20px 0px 20px;
 
 #pronostico
 {
-	height: 70%;	
+	position: relative;
+	height:  100%;	
 }
 
 .container-function-1{
@@ -1550,5 +1551,16 @@ margin: 0px 20px 0px 20px;
 
 .fondo-contenido-1{
     z-index: 1;
+}
+
+.emision-tumb {
+  float: left;
+  width: 100px;
+}
+
+#ultima-emision
+{
+	width: 100%;
+	margin-top: 30px;
 }
 

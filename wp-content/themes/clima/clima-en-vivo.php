@@ -50,8 +50,9 @@ $manana = strtotime(date('Y-m-d').' +1 day');
             </div>
           </div>
           <div class="span9">
-            <div id="radar-meterologico" class="container-function-1"><!-- <a class="convencion" href="#convencionesRadar">Ver convenciones</a>
-                <div class="convencionesRadar" style="display:none"> 
+
+          <A NAME="radar-meterologico">  <div id="radar-meterologico" class="container-function-1"> </a>
+       <!--         <div class="convencionesRadar" style="display:none"> 
                   
                 </div>
               -->
@@ -63,7 +64,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                   <div id="mapa"></div>
                 </div>
             </div>
-            <div id="pronostico" style="display:none" class="container-function-1"> <!-- <a class="convencion" href="#convencionesPronostico">Ver convenciones</a> -->
+         <A NAME="pronostico">   <div id="pronostico" style="display:none" class="container-function-1"> </a>
 
               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
 
@@ -85,7 +86,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               </div>
             </div>
               
-            <div id="vista-vivo" style="display:none">
+           <A NAME="vista-vivo"> <div id="vista-vivo" style="display:none"> </a>
               <!--  <div class="convencionesVistaVivo" style="display:none"> 
                 </div>
               -->

@@ -580,8 +580,6 @@ jQuery(document).ready(function($) {
 				postYear = postYear - 1;
 			}
 
-console.log(postYear);
-
 			$("#year").val(postYear);
 			$("#label-year").html(postYear);
 
@@ -622,6 +620,17 @@ console.log(postYear);
 			$("#label-year").html(postYear);
 
 		}
+
+	});
+
+	$(".btn-tumb").click(function(e){
+		e.preventDefault();
+
+		var title 	= $(".emision-tumb-title", this).val();
+		var content = $(".emision-tumb-content", this).val();
+
+		$(".page-header h1").html(title);
+		$("#videoEmision").html(content);
 
 	});
 
