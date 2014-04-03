@@ -903,6 +903,29 @@ die();
 add_action('wp_ajax_nopriv_getBlog', 'loadBlogs');
 add_action('wp_ajax_getBlog', 'loadBlogs');
 
+
+function get_youtube_id($url)
+{
+
+  $url  =  explode("embed/", $url);
+  $url2 = explode('"',$url[1]);
+  $id   = $url2[0];
+
+  return $id;
+}
+
+function get_thumbnail_youtube($youtubeUrl, $quality = 'default')
+{
+  $videoId = get_youtube_id( $youtubeUrl );
+
+  return 'http://img.youtube.com/vi/' . $videoId . '/' . $quality . '.jpg';
+
+}
+
+
+
+
+
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
 

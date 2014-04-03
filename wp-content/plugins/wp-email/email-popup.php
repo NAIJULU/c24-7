@@ -45,7 +45,7 @@ add_filter('the_title', 'email_title');
 <body style="background-image:none !important;" onload="repositionPopup();">
 	<div id="wp-email-popup" class="row">
 		<?php email_form(true); ?>
-		<p style="text-align: center; padding-top: 20px;"><a href="#" onclick="window.close();"><?php _e('Close This Window', 'wp-email'); ?></a></p>
+		<p style="text-align: center; padding-top: 20px;"><a href="#" onclick="window.close();"><?php _e('Cerrar esta ventana', 'wp-email'); ?></a></p>
 		<?php wp_footer(); ?>
 	</div>
 </body>

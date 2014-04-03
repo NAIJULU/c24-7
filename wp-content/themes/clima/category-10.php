@@ -68,12 +68,12 @@ endif;
 						  <input type="hidden" name="year" id="year" value="<?php  echo date('Y'); ?>">
 						</div>
 
-						<input type="submit" class="btn btn-primary" value="Ver emisiones" />	
+						<input type="submit" id="ir-emisiones" class="btn btn-primary" value="Ver" />	
 			</form>
 
 
 <!-- Emisiones durante el dia -->
-	<div id="emisiones-todo-dia" style="display:inline;">
+	<div id="emisiones-todo-dia" style="display:inline;" class="row">
 <?php
 
 			if(isset($fechaPost)) :
@@ -92,10 +92,16 @@ endif;
 				if ($query->have_posts()) :
 	   				while ($query->have_posts() ) : $query->the_post();
 ?>
+<?php 
 
-					<span id="tumb-<?php the_ID(); ?>" class="emision-tumb">
+$content1 = get_the_content();
+$content1 = apply_filters('the_content', $content1); 
+
+?>
+
+					<div id="tumb-<?php the_ID(); ?>" class="emision-tumb span3">
 						<div class="img-emision-tumb">
-							<img src="<?php echo get_template_directory_uri().'/images/icon2-ult-emision_02.png' ?>" width="100" /> 
+							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>" width="222" /> 
 						</div>
 						<div class="content-emision-tumb">
 							 <button class="btn-tumb btn-primary">
@@ -105,7 +111,7 @@ endif;
 							 </button>
 							
 						</div>
-					</span>
+					</div>
 				
 <?php
 					   endwhile;
@@ -118,8 +124,8 @@ endif;
 		<div style="clear: both;"></div>
 
 		<?php  if( isset($_POST['year']) ): ?>
-					<div id="ultima-emision">
-						<a href="" class="btn btn-primary"> Ultima Emision </a>
+					<div id="ultima-emision" class="row">
+						<a href="" class="btn btn-primary span10"> Ultima Emision </a>
 					</div>	
 			<?php endif ?>
     
