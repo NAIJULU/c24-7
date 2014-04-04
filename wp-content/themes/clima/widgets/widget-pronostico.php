@@ -88,12 +88,16 @@
 	              <div class="span12 temp"> <span class="titulo2">Pronóstico Temperatura</span>
 	                <div class="row-fluid">
 	                  <div class="span6">
-	                    <div class="tempMaxgrados">Máxima</div>
-	                    <div class="numMaxgrados"> <?php echo get_option('tempMax'.$key); ?>° </div>
+	                  	<div class="row-fluid">
+		                    <div class="span8 tempMaxgrados">Máxima</div>
+		                    <div class="span4 numMaxgrados"> <?php echo get_option('tempMax'.$key); ?>° </div>
+		                </div>
 	                  </div>
 	                  <div class="span6">
-	                    <div class="tempMingrados">Mínima</div>
-	                    <div class="numMingrados"><?php echo get_option('tempMin'.$key) ?>° </div>
+	                  	<div class="row-fluid">
+	                    	<div class="span8 tempMingrados">Mínima</div>
+	                    	<div class="span4 numMingrados"><?php echo get_option('tempMin'.$key) ?>° </div>
+	                    </div>
 	                  </div>
 	                </div>
 	              </div>

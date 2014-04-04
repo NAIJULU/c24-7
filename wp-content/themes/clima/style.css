@@ -299,7 +299,7 @@ input, textarea, select, .uneditable-input {
 	margin-bottom: 0px;
 }
 #pronosticos #ciudades .titulo2 {
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(17,77,176,0.6);
 	display: block;
 	padding: 5px 0px;
 	margin: 0px 0px 10px 0px;
@@ -308,6 +308,7 @@ input, textarea, select, .uneditable-input {
 	font-size: 20px !important;
 	text-transform: uppercase;
 	border-radius: 3px;
+	color: #fff;
 }
 #pronosticos #ciudades .lluvias, #pronosticos #ciudades .temp {
 	background-color: rgba(255,255,255,0.3);
@@ -417,17 +418,14 @@ div.en-vivo .numMin {
 	text-transform: uppercase;
 	background-image: url(images/max.png);
 	background-repeat: no-repeat;
-	background-position: center -30px;
-	padding: 91px 0 0 0;
+	background-position: center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	padding: 80px 0 0 0;
 	text-align: center;
-	width: 128px;
-	display: inline-block;
-	margin-left: 17px;
-	float: left;
 }
 #pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados {
 	text-align: center;
-	width: 50px;
 	font-size: 30px;
 	font-weight: 900;
 	color: #114db0;
@@ -435,7 +433,7 @@ div.en-vivo .numMin {
 	padding: 7px;
 	border-radius: 3px;
 	display: inline-block;
-	margin: 30px 0 0 0;
+	margin: 30px 0 0 -10px;
 }
 #pronosticos #ciudades .numMin, #pronosticos #ciudades .numMax {
 	text-align: center;
