@@ -29,9 +29,11 @@ $meses 		= unserialize(C247_MESES);
 			<div id="content" class="clearfix row-fluid">
 <?php
 
-			if( isset($_POST['year']) )
+			if( isset($_POST['fecha']) )
 			{
-				$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '1' ,'date_query' => array(array('year'  => $_POST['year'] ,'month' => $_POST['month'] ,'day'   => $_POST['day'] ,),)  );
+				$fecha_e = explode("/", $_POST['fecha']);
+
+				$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '1' ,'date_query' => array(array('year'  => $fecha_e[2] ,'month' => $fecha_e[1] ,'day'   => $fecha_e[0] ,),)  );
 			}
 			else
 			{
@@ -91,7 +93,7 @@ endif;
 					-->
 
 						<div class="btn-group">
-						  <input type="text" id="fecha" class="datepicker" placeholder="[dia] / [mes] / [año]" >
+						  <input type="text" name="fecha" class="datepicker" placeholder="[dia] / [mes] / [año]" >
 						</div>
 
 					
@@ -106,9 +108,10 @@ endif;
 
 			if(isset($fechaPost)) :
 
-				if( isset($_POST['year']) )
+				if( isset($_POST['fecha']) )
 				{
-					$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'ASC','date_query' => array(array('year'  => $_POST['year'] ,'month' => $_POST['month'] ,'day'   => $_POST['day'] ,),)  );
+					$fecha_e = explode("/", $_POST['fecha']);
+					$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'ASC','date_query' => array(array('year'  => $fecha_e[2] ,'month' => $fecha_e[1] ,'day'   => $fecha_e[0] ,),)  );
 				}
 				else
 				{
@@ -156,7 +159,7 @@ $content1 = apply_filters('the_content', $content1);
 
 		<div style="clear: both;"></div>
 
-		<?php  if( isset($_POST['year']) ): ?>
+		<?php  if( isset($_POST['fecha']) ): ?>
 					<div id="ultima-emision" class="row">
 						<a href="" class="btn btn-primary span10"> Ultima Emision </a>
 					</div>	
