@@ -61,28 +61,28 @@
               <div class="span12"> <span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $this->hoy); ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
               <div class="span12 lluvias"> <span class="titulo2">Pronóstico Lluvia</span>
                 <div class="row-fluid">
-                  <div class="span4">
+                  <div class="span3">
                     
-                      <div class="night">Madrugada</div>
+                      <div class="pronostico-item">Madrugada</div>
                       <div class="numMax"><?php echo get_option('LluvMad'.$ciudad) ?></div>
                     
                   </div>
-                  <div class="span4">
+                  <div class="span3">
                     
-                      <div class="tempMax">Mañana</div>
+                      <div class="pronostico-item">Mañana</div>
                       <div class="numMax"><?php echo get_option('LluvMan'.$ciudad) ?></div>
                     
                   </div>
-                  <div class="span4">
+                  <div class="span3">
                     
-                      <div class="tempMin">Tarde</div>
-                      <div class="numMin"><?php echo get_option('LluvTar'.$ciudad) ?></div>
+                      <div class="pronostico-item">Tarde</div>
+                      <div class="numMax"><?php echo get_option('LluvTar'.$ciudad) ?></div>
                     
                   </div>
-                  <div class="span4">
+                  <div class="span3">
                     
-                      <div class="night">Noche</div>
-                      <div class="numMin"><?php echo get_option('LluvNoc'.$ciudad) ?></div>
+                      <div class="pronostico-item">Noche</div>
+                      <div class="numMax"><?php echo get_option('LluvNoc'.$ciudad) ?></div>
                     
                   </div>
                 </div>
@@ -92,12 +92,16 @@
               <div class="span12 temp"> <span class="titulo2">Pronóstico Temperatura</span>
                 <div class="row-fluid">
                   <div class="span6">
-                    <div class="tempMaxgrados">Máxima</div>
-                    <div class="numMaxgrados"> <?php echo get_option('tempMax'.$ciudad); ?>° </div>
+                    <div class="row-fluid">
+                      <div class="span8 tempMaxgrados">Máxima</div>
+                      <div class="span4 numMaxgrados"> <?php echo get_option('tempMax'.$ciudad); ?>° </div>
+                    </div>
                   </div>
                   <div class="span6">
-                    <div class="tempMingrados">Mínima</div>
-                    <div class="numMingrados"><?php echo get_option('tempMin'.$ciudad) ?>° </div>
+                    <div class="rowfluid">
+                      <div class="span8 tempMingrados">Mínima</div>
+                      <div class="span4 numMingrados"><?php echo get_option('tempMin'.$ciudad) ?>° </div>
+                    </div>
                   </div>
                 </div>
               </div>

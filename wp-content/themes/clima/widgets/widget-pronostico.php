@@ -50,34 +50,34 @@
 	    <div class="<?php if($i) echo 'active';$i=0?> item">
 	        <h2>Pronóstico de <?php echo $ciudad ?></h2>
 		        <div class="row-fluid">
-		          <div class="span6">
+		          <div class="span7">
 	    	        <div class="row-fluid clearfix">
 	        	      <div class="span12"> <span class="dia">Hoy</span> <span class="mes"><?php echo $this->meses[date('n')]; ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
 	              <div class="span12 lluvias"> <span class="titulo2">Pronóstico Lluvia</span>
 	                <div class="row-fluid">
-	               	  <div class="span4">
+	               	  <div class="span3">
 	                    
-	                      <div class="night">Madrugada</div>
+	                      <div class="pronostico-item">Madrugada</div>
 	                      <div class="numMax"><?php echo get_option('LluvMad'.$key) ?></div>
 	                    
 	                  </div>
 
-	                  <div class="span4">
+	                  <div class="span3">
 	                    
-	                      <div class="tempMax">Mañana</div>
+	                      <div class="pronostico-item">Mañana</div>
 	                      <div class="numMax"><?php echo get_option('LluvMan'.$key) ?></div>
 	                    
 	                  </div>
-	                  <div class="span4">
+	                  <div class="span3">
 	                    
-	                      <div class="tempMin">Tarde</div>
-	                      <div class="numMin"><?php echo get_option('LluvTar'.$key) ?></div>
+	                      <div class="pronostico-item">Tarde</div>
+	                      <div class="numMax"><?php echo get_option('LluvTar'.$key) ?></div>
 	                    
 	                  </div>
-	                  <div class="span4">
+	                  <div class="span3">
 	                    
-	                      <div class="night">Noche</div>
-	                      <div class="numMin"><?php echo get_option('LluvNoc'.$key) ?></div>
+	                      <div class="pronostico-item">Noche</div>
+	                      <div class="numMax"><?php echo get_option('LluvNoc'.$key) ?></div>
 	                    
 	                  </div>
 	                </div>
@@ -88,18 +88,26 @@
 	              <div class="span12 temp"> <span class="titulo2">Pronóstico Temperatura</span>
 	                <div class="row-fluid">
 	                  <div class="span6">
-	                    <div class="tempMaxgrados">Máxima</div>
-	                    <div class="numMaxgrados"> <?php echo get_option('tempMax'.$key); ?>° </div>
+	                  	<div class="row-fluid">
+		                    <div class="span8 tempMaxgrados">Máxima</div>
+		                    <div class="span4 numMaxgrados"> <?php echo get_option('tempMax'.$key); ?>° </div>
+		                </div>
 	                  </div>
 	                  <div class="span6">
-	                    <div class="tempMingrados">Mínima</div>
-	                    <div class="numMingrados"><?php echo get_option('tempMin'.$key) ?>° </div>
+	                  	<div class="row-fluid">
+	                    	<div class="span8 tempMingrados">Mínima</div>
+	                    	<div class="span4 numMingrados"><?php echo get_option('tempMin'.$key) ?>° </div>
+	                    </div>
 	                  </div>
 	                </div>
 	              </div>
 	            </div>
 	          </div>
-	          <div class="span6 mapa-ciudades"> <img src=<?php echo bloginfo('wpurl')."/wp-content/uploads/mapas/mapa_".ucfirst($key).".png"  ?> />   </div>
+	          <div class="span5 mapa-ciudades">
+	          	<figure>
+	          		<img src=<?php echo bloginfo('wpurl')."/wp-content/uploads/mapas/mapa_".ucfirst($key).".png"  ?> />   
+	          	</figure> 
+	          </div>
 	        </div>
 	      </div>
 	    <?php endforeach?>
