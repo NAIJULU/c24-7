@@ -355,18 +355,20 @@ input, textarea, select, .uneditable-input {
 	width: 130px;
 }
 
-#pronosticos #ciudades .night {
+#pronosticos #ciudades .pronostico-item {
 	background-image: url(images/night.png);
-	background-position: center -9px;
+	background-position: center;
 	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 	color: #114db0;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: bold;
 	height: 110px;
 	margin-left: 9px;
 	padding: 0 0 0 0;
 	text-align: center;
-	width: 130px;
+	/*width: 130px;*/
 }
 
 div.en-vivo .tempMax {
@@ -444,7 +446,7 @@ div.en-vivo .numMin {
 	background-color: rgba(255,255,255,0.5);
 	padding: 4px;
 	border-radius: 3px;
-	margin-left: 37px;
+	margin: 0 auto;
 }
 /*#pronosticos #ciudades .numMax {
 	text-align: center;
@@ -486,6 +488,11 @@ div.en-vivo .numMin {
 	height: 430px;
 	width: 430px;
 	
+}
+div .mapa-ciudades figure{
+	margin: 0px;
+	padding-top: 20%;
+	width: 100%;
 }
 .videoEmision {
 	background-color: #94c60d;
