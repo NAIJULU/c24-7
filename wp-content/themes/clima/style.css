@@ -340,8 +340,23 @@ input, textarea, select, .uneditable-input {
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
 #pronosticos #ciudades .tempMax {
 	background-image: url(images/max.png);
+	background-position: center -9px;
+	background-repeat: no-repeat;
+	color: #114db0;
+	font-size: 18px;
+	font-weight: bold;
+	height: 110px;
+	margin-left: 9px;
+	padding: 0 0 0 0;
+	text-align: center;
+	width: 130px;
+}
+
+#pronosticos #ciudades .night {
+	background-image: url(images/night.png);
 	background-position: center -9px;
 	background-repeat: no-repeat;
 	color: #114db0;
@@ -359,6 +374,13 @@ div.en-vivo .tempMax {
 	background-size: cover;
 	background-position: center 12px !important;
 }
+
+div.en-vivo .night {
+	width: 100% !important;
+	background-size: cover;
+	background-position: center 12px !important;
+}
+
 div.en-vivo .tempMin {
 	width: 100% !important;
 	background-size: cover;

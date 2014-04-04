@@ -55,6 +55,13 @@
 	        	      <div class="span12"> <span class="dia">Hoy</span> <span class="mes"><?php echo $this->meses[date('n')]; ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
 	              <div class="span12 lluvias"> <span class="titulo2">Pronóstico Lluvia</span>
 	                <div class="row-fluid">
+	               	  <div class="span4">
+	                    
+	                      <div class="night">Madrugada</div>
+	                      <div class="numMax"><?php echo get_option('LluvMad'.$key) ?></div>
+	                    
+	                  </div>
+
 	                  <div class="span4">
 	                    
 	                      <div class="tempMax">Mañana</div>
@@ -69,7 +76,7 @@
 	                  </div>
 	                  <div class="span4">
 	                    
-	                      <div class="tempMin">Noche</div>
+	                      <div class="night">Noche</div>
 	                      <div class="numMin"><?php echo get_option('LluvNoc'.$key) ?></div>
 	                    
 	                  </div>

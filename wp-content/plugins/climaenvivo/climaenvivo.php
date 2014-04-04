@@ -89,8 +89,8 @@ function registrar_opciones() {
 	register_setting( 'climaenvivo-opciones', 'LluvTarItagui' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocItagui' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxCaldas' );
-	register_setting( 'climaenvivo-opciones', 'tempMadCaldas' );
 	register_setting( 'climaenvivo-opciones', 'tempMinCaldas' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadCaldas' );
 	register_setting( 'climaenvivo-opciones', 'LluvManCaldas' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarCaldas' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocCaldas' );								
@@ -361,7 +361,7 @@ function pagina_configuracion(){
 			<h4>Pronóstico de Lluvias</h4>
 			<p>
 			<label for="LluvMadEnvigado">Madrugada: </label>
-			<select id="LluvMadEnvigado" class="span2" name="LluvManEnvigado">
+			<select id="LluvMadEnvigado" class="span2" name="LluvMadEnvigado">
 				<option<?php echo (get_option('LluvMadEnvigado') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
 				<option<?php echo (get_option('LluvMadEnvigado') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
 				<option<?php echo (get_option('LluvMadEnvigado') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>

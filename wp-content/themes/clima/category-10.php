@@ -105,7 +105,12 @@ $content1 = apply_filters('the_content', $content1);
 						</div>
 						<div class="content-emision-tumb">
 							 <button class="btn-tumb btn-primary">
-							  			<?php the_tags(''); ?>
+							  			<?php $posttags = get_the_tags();
+										if ($posttags) {
+										  foreach($posttags as $tag) {
+										    echo 'Emisión de la '.ucwords($tag->name); 
+										  }
+										} ?>
 										<input type="hidden" class="emision-tumb-title" value ="<?php the_title() ?>" />
 										<input type="hidden" class="emision-tumb-content" value = '<?php echo get_the_content(); ?>' />
 							 </button>
