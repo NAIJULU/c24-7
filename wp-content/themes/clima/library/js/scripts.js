@@ -635,6 +635,17 @@ jQuery(document).ready(function($) {
 	});
 
 
+	/* para insertar datepicker **/
+	if( $(".datepicker").length )
+	{
+		 $(".datepicker").datepicker({
+		        changeMonth: true,
+		        changeYear: true,
+		        dateFormat: 'dd/mm/yy'
+    	});
+	}
+
+
 /* fin seccion emisiones */
 
 

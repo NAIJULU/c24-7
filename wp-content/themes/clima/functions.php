@@ -658,10 +658,36 @@ if( !function_exists( "theme_js" ) ) {
       get_template_directory_uri() . '/library/js/modernizr.full.min.js', 
       array('jquery'), 
       '1.2' );
+
+      wp_register_script(  'jquery_ui', 
+      '/wp-includes/js/jquery/ui/jquery.ui.datepicker.min.js', 
+      array('jquery'), 
+      '1.2' );
+
+      wp_register_script(  'jquery_ui_core', 
+      '/wp-includes/js/jquery/ui/jquery.ui.core.min.js', 
+      array('jquery'), 
+      '1.2' );
+
+
+
+     wp_register_style( 'css_query_ui', '/wp-content/themes/clima/library/css/jquery-ui.min.css',  
+      '1.2' );
+
+
+     wp_register_style( 'css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.core.min.css', 
+      '1.2' );
+
+        wp_register_style( 'css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.datepicker.min.css', 
+      '1.2' );
+  
+  
+  
   
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('wpbs-scripts');
     wp_enqueue_script('modernizr');
+
     
   }
 }

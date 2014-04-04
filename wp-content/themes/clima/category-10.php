@@ -2,6 +2,26 @@
 /*
 Template Name: Historial
 */
+
+
+
+
+function theme_name_scripts() {
+	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
+	 wp_enqueue_script('jquery_ui');
+	 wp_enqueue_script('jquery_ui_core');
+	 wp_enqueue_style('css_query_ui');
+	 wp_enqueue_style('css_query_ui_core');
+	 wp_enqueue_style('css_query_ui_datepicker');
+
+
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+
+
+
+
 get_header(); 
 $meses 		= unserialize(C247_MESES);
 
@@ -49,6 +69,7 @@ endif;
 ?>
 			
 			<form id="form-fechas" method="POST" action="" >
+				<!--
 						<div class="btn-group">
 						  <button id="m-left" class="btn btn-primary"><i class="icon-chevron-left icon-white"></i></button>
 						  <label id="label-mes" class="btn btn-primary"><?php  echo $meses[date('n')]; ?></label>
@@ -67,6 +88,13 @@ endif;
 						  <button id="y-right" class="btn btn-primary"><i class="icon-chevron-right icon-white"></i></button>
 						  <input type="hidden" name="year" id="year" value="<?php  echo date('Y'); ?>">
 						</div>
+					-->
+
+						<div class="btn-group">
+						  <input type="text" id="fecha" class="datepicker" placeholder="[dia] / [mes] / [año]" >
+						</div>
+
+					
 
 						<input type="submit" id="ir-emisiones" class="btn btn-primary" value="Ver" />	
 			</form>
@@ -137,3 +165,4 @@ $content1 = apply_filters('the_content', $content1);
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>
+
