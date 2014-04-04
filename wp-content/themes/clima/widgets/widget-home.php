@@ -63,6 +63,12 @@
                 <div class="row-fluid">
                   <div class="span4">
                     
+                      <div class="tempMax">Madrugada</div>
+                      <div class="numMax"><?php echo get_option('LluvMad'.$ciudad) ?></div>
+                    
+                  </div>
+                  <div class="span4">
+                    
                       <div class="tempMax">Mañana</div>
                       <div class="numMax"><?php echo get_option('LluvMan'.$ciudad) ?></div>
                     

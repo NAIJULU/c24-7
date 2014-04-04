@@ -36,50 +36,60 @@ function registrar_opciones() {
 	//register our settings
 	register_setting( 'climaenvivo-opciones', 'tempMaxMedellin' );
 	register_setting( 'climaenvivo-opciones', 'tempMinMedellin' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadMedellin' );
 	register_setting( 'climaenvivo-opciones', 'LluvManMedellin' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarMedellin' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocMedellin' );	
 	register_setting( 'climaenvivo-opciones', 'tempMaxBarbosa' );
 	register_setting( 'climaenvivo-opciones', 'tempMinBarbosa' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadBarbosa' );
 	register_setting( 'climaenvivo-opciones', 'LluvManBarbosa' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarBarbosa' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocBarbosa' );	
 	register_setting( 'climaenvivo-opciones', 'tempMaxGirardota' );
 	register_setting( 'climaenvivo-opciones', 'tempMinGirardota' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadGirardota' );
 	register_setting( 'climaenvivo-opciones', 'LluvManGirardota' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarGirardota' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocGirardota' );	
 	register_setting( 'climaenvivo-opciones', 'tempMaxCopacabana' );
 	register_setting( 'climaenvivo-opciones', 'tempMinCopacabana' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadCopacabana' );
 	register_setting( 'climaenvivo-opciones', 'LluvManCopacabana' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarCopacabana' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocCopacabana' );	
 	register_setting( 'climaenvivo-opciones', 'tempMaxBello' );
 	register_setting( 'climaenvivo-opciones', 'tempMinBello' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadBello' );
 	register_setting( 'climaenvivo-opciones', 'LluvManBello' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarBello' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocBello' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxEnvigado' );
 	register_setting( 'climaenvivo-opciones', 'tempMinEnvigado' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadEnvigado' );
 	register_setting( 'climaenvivo-opciones', 'LluvManEnvigado' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarEnvigado' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocEnvigado' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxSabaneta' );
 	register_setting( 'climaenvivo-opciones', 'tempMinSabaneta' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadSabaneta' );
 	register_setting( 'climaenvivo-opciones', 'LluvManSabaneta' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarSabaneta' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocSabaneta' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxLaEstrella' );
 	register_setting( 'climaenvivo-opciones', 'tempMinLaEstrella' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadLaEstrella' );
 	register_setting( 'climaenvivo-opciones', 'LluvManLaEstrella' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarLaEstrella' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocLaEstrella' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxItagui' );
 	register_setting( 'climaenvivo-opciones', 'tempMinItagui' );
+	register_setting( 'climaenvivo-opciones', 'LluvMadItagui' );
 	register_setting( 'climaenvivo-opciones', 'LluvManItagui' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarItagui' );
 	register_setting( 'climaenvivo-opciones', 'LluvNocItagui' );
 	register_setting( 'climaenvivo-opciones', 'tempMaxCaldas' );
+	register_setting( 'climaenvivo-opciones', 'tempMadCaldas' );
 	register_setting( 'climaenvivo-opciones', 'tempMinCaldas' );
 	register_setting( 'climaenvivo-opciones', 'LluvManCaldas' );
 	register_setting( 'climaenvivo-opciones', 'LluvTarCaldas' );
@@ -108,6 +118,15 @@ function pagina_configuracion(){
 			<input id="tempMinMedellin" class="span1" name="tempMinMedellin" type="number" value="<?php echo get_option('tempMinMedellin'); ?>">
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
+
+			<p>
+			<label for="LluvMadMedellin">Madrugada: </label>
+			<select id="LluvMadMedellin" class="span2" name="LluvMadMedellin">
+				<option<?php echo (get_option('LluvMadMedellin') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadMedellin') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadMedellin') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
 			<p>
 			<label for="LluvManMedellin">Mañana: </label>
 			<select id="LluvManMedellin" class="span2" name="LluvManMedellin">
@@ -149,6 +168,14 @@ function pagina_configuracion(){
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
 			<p>
+			<label for="LluvMadBarbosa">Madrugada: </label>
+			<select id="LluvMadBarbosa" class="span2" name="LluvMadBarbosa">
+				<option<?php echo (get_option('LluvMadBarbosa') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadBarbosa') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadBarbosa') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
+			<p>
 			<label for="LluvManBarbosa">Mañana: </label>
 			<select id="LluvManBarbosa" class="span2" name="LluvManBarbosa">
 				<option<?php echo (get_option('LluvManBarbosa') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
@@ -188,6 +215,14 @@ function pagina_configuracion(){
 			<input id="tempMinGirardota" class="span1" name="tempMinGirardota" type="number" value="<?php echo get_option('tempMinGirardota'); ?>">
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
+			<p>
+			<label for="LluvMadGirardota">Madrugada: </label>
+			<select id="LluvMadGirardota" class="span2" name="LluvMadGirardota">
+				<option<?php echo (get_option('LluvMadGirardota') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadGirardota') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadGirardota') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
 			<p>
 			<label for="LluvManGirardota">Mañana: </label>
 			<select id="LluvManGirardota" class="span2" name="LluvManGirardota">
@@ -229,6 +264,14 @@ function pagina_configuracion(){
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
 			<p>
+			<label for="LluvMadCopacabana">Mañana: </label>
+			<select id="LluvMadCopacabana" class="span2" name="LluvMadCopacabana">
+				<option<?php echo (get_option('LluvMadCopacabana') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadCopacabana') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadCopacabana') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
+			<p>
 			<label for="LluvManCopacabana">Mañana: </label>
 			<select id="LluvManCopacabana" class="span2" name="LluvManCopacabana">
 				<option<?php echo (get_option('LluvManCopacabana') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
@@ -268,6 +311,14 @@ function pagina_configuracion(){
 			<input id="tempMinBello" class="span1" name="tempMinBello" type="number" value="<?php echo get_option('tempMinBello'); ?>">
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
+			<p>
+			<label for="LluvMadBello">Mañana: </label>
+			<select id="LluvMadBello" class="span2" name="LluvMadBello">
+				<option<?php echo (get_option('LluvMadBello') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadBello') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadBello') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
 			<p>
 			<label for="LluvManBello">Mañana: </label>
 			<select id="LluvManBello" class="span2" name="LluvManBello">
@@ -309,6 +360,14 @@ function pagina_configuracion(){
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
 			<p>
+			<label for="LluvMadEnvigado">Madrugada: </label>
+			<select id="LluvMadEnvigado" class="span2" name="LluvManEnvigado">
+				<option<?php echo (get_option('LluvMadEnvigado') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadEnvigado') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadEnvigado') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
+			<p>
 			<label for="LluvManEnvigado">Mañana: </label>
 			<select id="LluvManEnvigado" class="span2" name="LluvManEnvigado">
 				<option<?php echo (get_option('LluvManEnvigado') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
@@ -348,6 +407,14 @@ function pagina_configuracion(){
 			<input id="tempMinSabaneta" class="span1" name="tempMinSabaneta" type="number" value="<?php echo get_option('tempMinSabaneta'); ?>">
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
+			<p>
+			<label for="LluvMadSabaneta">Madrugada: </label>
+			<select id="LluvMadSabaneta" class="span2" name="LluvMadSabaneta">
+				<option<?php echo (get_option('LluvMadSabaneta') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadSabaneta') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadSabaneta') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
 			<p>
 			<label for="LluvManSabaneta">Mañana: </label>
 			<select id="LluvManSabaneta" class="span2" name="LluvManSabaneta">
@@ -389,6 +456,14 @@ function pagina_configuracion(){
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
 			<p>
+			<label for="LluvMadLaEstrella">Madrugada: </label>
+			<select id="LluvMadLaEstrella" class="span2" name="LluvMadLaEstrella">
+				<option<?php echo (get_option('LluvMadLaEstrella') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadLaEstrella') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadLaEstrella') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
+			<p>
 			<label for="LluvManLaEstrella">Mañana: </label>
 			<select id="LluvManLaEstrella" class="span2" name="LluvManLaEstrella">
 				<option<?php echo (get_option('LluvManLaEstrella') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
@@ -429,6 +504,14 @@ function pagina_configuracion(){
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
 			<p>
+			<label for="LluvMadItagui">Madrugada: </label>
+			<select id="LluvMadItagui" class="span2" name="LluvMadItagui">
+				<option<?php echo (get_option('LluvMadItagui') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadItagui') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadItagui') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
+			<p>
 			<label for="LluvManItagui">Mañana: </label>
 			<select id="LluvManItagui" class="span2" name="LluvManItagui">
 				<option<?php echo (get_option('LluvManItagui') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
@@ -468,6 +551,14 @@ function pagina_configuracion(){
 			<input id="tempMinCaldas" class="span1" name="tempMinCaldas" type="number" value="<?php echo get_option('tempMinCaldas'); ?>">
 			</p>
 			<h4>Pronóstico de Lluvias</h4>
+			<p>
+			<label for="LluvMadCaldas">Madrugada: </label>
+			<select id="LluvMadCaldas" class="span2" name="LluvMadCaldas">
+				<option<?php echo (get_option('LluvMadCaldas') === "Baja") ? ' selected="selected"' : '' ?>>Baja</option>
+				<option<?php echo (get_option('LluvMadCaldas') === "Media") ? ' selected="selected"' : '' ?>>Media</option>
+				<option<?php echo (get_option('LluvMadCaldas') === "Alta") ? ' selected="selected"' : '' ?>>Alta</option>
+			</select>
+			</p>
 			<p>
 			<label for="LluvManCaldas">Mañana: </label>
 			<select id="LluvManCaldas" class="span2" name="LluvManCaldas">
