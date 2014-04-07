@@ -1579,7 +1579,20 @@ margin: 0px 20px 0px 20px;
 .fondo-contenido-1{
     z-index: 1;
 }
+div.titulo-emisiones{
+	clear: both;
+}
+div.titulo-emisiones p{
+	color: #94B854;
+	text-transform: uppercase;
+	font-size: 2em;
+	padding: 1em 0;
+	font-weight: 700;
+	margin: 0px;
+}
+div.selector-fecha{
 
+}
 #ir-emisiones
 {
 	width:40px;

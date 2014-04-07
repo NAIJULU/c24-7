@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Historial
+Template Name: Historial-malo
 */
 get_header(); ?>
 			<div id="content" class="clearfix row-fluid">

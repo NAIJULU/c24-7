@@ -69,37 +69,17 @@ $meses 		= unserialize(C247_MESES);
 <?php 			
 endif;
 ?>
-			
-			<form id="form-fechas" method="POST" action="" >
-				<!--
-						<div class="btn-group">
-						  <button id="m-left" class="btn btn-primary"><i class="icon-chevron-left icon-white"></i></button>
-						  <label id="label-mes" class="btn btn-primary"><?php  echo $meses[date('n')]; ?></label>
-						  <button id="m-right" class="btn btn-primary"><i class="icon-chevron-right icon-white"></i></button>
-						  <input type="hidden" name="month" id="month" value="<?php  echo date('n'); ?>">
+			<div class="titulo-emisiones text-center">
+							<p>Buscar emisiones por fecha</p>
 						</div>
-						<div class="btn-group">
-						  <button id="d-left" class="btn btn-primary"><i class="icon-chevron-left icon-white"></i></button>
-						  <label id="label-day" class="btn btn-primary"><?php  echo date('j'); ?></label>
-						  <button id="d-right" class="btn btn-primary"><i class="icon-chevron-right icon-white"></i></button>
-						  <input type="hidden" name="day" id="day" value="<?php  echo date('j'); ?>">
-						</div>		
-						<div class="btn-group">
-						  <button id="y-left" class="btn btn-primary"><i class="icon-chevron-left icon-white"></i></button>
-						  <label id="label-year" class="btn btn-primary"><?php  echo date('Y'); ?></label>
-						  <button id="y-right" class="btn btn-primary"><i class="icon-chevron-right icon-white"></i></button>
-						  <input type="hidden" name="year" id="year" value="<?php  echo date('Y'); ?>">
-						</div>
-					-->
-
-						<div class="btn-group">
-						  <input type="text" name="fecha" class="datepicker" placeholder="[dia] / [mes] / [año]" >
-						</div>
-
-					
-
-						<input type="submit" id="ir-emisiones" class="btn btn-primary" value="Ver" />	
-			</form>
+			<div class="selector-fecha text-center">
+				<form id="form-fechas" method="POST" action="" >
+							<div class="btn-group">
+							  <input type="text" name="fecha" class="datepicker" placeholder="[dia] / [mes] / [año]" >
+							</div>
+							<input type="submit" id="ir-emisiones" class="btn btn-primary" value="Ver" />	
+				</form>
+			</div>
 
 
 <!-- Emisiones durante el dia -->
