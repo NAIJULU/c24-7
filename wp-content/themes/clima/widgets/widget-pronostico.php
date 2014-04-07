@@ -58,6 +58,7 @@
 	               	  <div class="span3">
 	                    
 	                      <div class="pronostico-item">Madrugada</div>
+	                      <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMad'.$key) )."%"; ?></div>
 	                      <div class="numMax"><?php echo get_option('LluvMad'.$key) ?></div>
 	                    
 	                  </div>
@@ -65,18 +66,20 @@
 	                  <div class="span3">
 	                    
 	                      <div class="pronostico-item">Mañana</div>
+	                      <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMan'.$key) )."%"; ?></div>
 	                      <div class="numMax"><?php echo get_option('LluvMan'.$key) ?></div>
-	                    
 	                  </div>
 	                  <div class="span3">
 	                    
 	                      <div class="pronostico-item">Tarde</div>
+	                      <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvTar'.$key) )."%"; ?></div>
 	                      <div class="numMax"><?php echo get_option('LluvTar'.$key) ?></div>
 	                    
 	                  </div>
 	                  <div class="span3">
 	                    
 	                      <div class="pronostico-item">Noche</div>
+	                      <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvNoc'.$key) )."%"; ?></div>
 	                      <div class="numMax"><?php echo get_option('LluvNoc'.$key) ?></div>
 	                    
 	                  </div>

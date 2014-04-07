@@ -678,7 +678,7 @@ if( !function_exists( "theme_js" ) ) {
      wp_register_style( 'css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.core.min.css', 
       '1.2' );
 
-        wp_register_style( 'css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.datepicker.min.css', 
+        wp_register_style( 'css_query_ui_datepicker', '/wp-content/themes/clima/library/css/jquery.ui.datepicker.min.css', 
       '1.2' );
   
   
@@ -949,7 +949,31 @@ function get_thumbnail_youtube($youtubeUrl, $quality = 'default')
 }
 
 
+function porcentajeEquivalente($probablidad)
+{
+    $porcentaje = null;
 
+    if(! empty($probablidad) )
+    {
+        $probablidad = strtolower($probablidad);
+
+        if($probablidad == "baja")
+        {
+            $porcentaje = 30;
+        }
+        else if ($probablidad == "media")
+        {
+            $porcentaje = 60;
+        }
+        else if($probablidad == "alta")
+        {
+            $porcentaje = 80;
+        }
+    }
+
+    return $porcentaje; 
+
+}
 
 
 include_once(TEMPLATEPATH.'/blogConfig.php');
