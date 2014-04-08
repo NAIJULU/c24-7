@@ -1,4 +1,3 @@
-<!-- convenciones -->
 <?php
 
 function viewConvenciones($convencion)
