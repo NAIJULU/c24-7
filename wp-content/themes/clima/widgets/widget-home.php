@@ -64,24 +64,28 @@
                   <div class="span3">
                     
                       <div class="pronostico-item">Madrugada</div>
+                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMad'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvMad'.$ciudad) ?></div>
                     
                   </div>
                   <div class="span3">
                     
                       <div class="pronostico-item">Mañana</div>
+                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMan'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvMan'.$ciudad) ?></div>
                     
                   </div>
                   <div class="span3">
                     
                       <div class="pronostico-item">Tarde</div>
+                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvTar'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvTar'.$ciudad) ?></div>
                     
                   </div>
                   <div class="span3">
                     
                       <div class="pronostico-item">Noche</div>
+                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvNoc'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvNoc'.$ciudad) ?></div>
                     
                   </div>
