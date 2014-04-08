@@ -75,7 +75,7 @@ endif;
 			<div class="selector-fecha text-center">
 				<form id="form-fechas" method="POST" action="" >
 							<div class="btn-group">
-							  <input type="text" name="fecha" class="datepicker" placeholder="[dia] / [mes] / [año]" >
+							  <input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
 							</div>
 							<input type="submit" id="ir-emisiones" class="btn btn-primary" value="Ver" />	
 				</form>
