@@ -1,4 +1,20 @@
 <?php
+function theme_name_scripts() {
+	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
+	 wp_enqueue_script('jquery_ui');
+	 wp_enqueue_script('jquery_ui_core');
+	 wp_enqueue_style('css_query_ui');
+	 wp_enqueue_style('css_query_ui_core');
+	 wp_enqueue_style('css_query_ui_datepicker');
+
+
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+
+
+
+
 // ID DE LOS ARTICULOS TIPO BLOG.
 $blogId		= 23;
 
@@ -49,12 +65,11 @@ $categories = get_categories( $args );
             <div class="span3">
             	<div class="menu-clima" id="menu-clima">
 					<?php
-
 						foreach ($categories as  $value) 
 						{
 					?>
 				            <label class="checkbox">
-								<input id="filtro" class="filtro" type="checkbox" data-filter= "<?php echo '.category-'.$value->term_id ?>" >
+								<input id="filtro" class="filtro" type="checkbox" data-filter= "<?php echo '.category-'.strtolower($value->slug) ?>" >
 									<?php echo $value->name ?>
 							</label>
 			
@@ -70,6 +85,16 @@ $categories = get_categories( $args );
 					<select id="size" name="filter by" class="isotopenav" style="display:none"></select> 
 				</div>
 
+				<div id="bar-fecha">
+					<div class="bar-fecha-control-1 span1">
+				  		<input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
+				  	</div>
+					<div class="bar-fecha-control-2 span1">
+				  		<a id="ir-fecha" href="#" title="Presione este boton en caso de que quiera buscar imagenes por fecha y filtrarlas.">Ir </a>
+				  		<a  href="" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Todos </a>
+				  	</div>
+				</div>
+
 			<?php get_sidebar();  ?>
 		</div>
 			
@@ -83,24 +108,26 @@ $categories = get_categories( $args );
 						$content = get_the_content();
 					?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-						
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb ">
+						<a href="<?php the_permalink() ?>" rel="bookmark" class="galeria-item" title="<?php the_title_attribute(); ?>">
 								<?php 
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 								 ?>
+
 								<?php $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; ?>
 								<?php $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; ?>
 
+								<!-- key isotope --><span class="categorias"><?php echo strtolower($categoria);  ?> <!-- end key isotope --></span>
+
 								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 								<div class="contenido">
-									<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
-										<h1><?php the_title(); ?></h1>
+									<header >
 										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+										<h1><?php the_title(); ?></h1>
 									</header>
-									<p><?php echo substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; ?>
-									<span>Leer Más +<span></p>
+									<p><?php echo $content ;  ?></p>
+
 								</div>	
 						</a>
 					</article>
@@ -124,7 +151,7 @@ $categories = get_categories( $args );
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 							<div class="row pagination">
 								<ul class="span12">
-									<li class="span10 more-post"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
+									<li class="span10 more-post-gallery"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
 									<li class="span2 subir"><a href="#" title="Inicio">&#9650;</a></li>
 								</ul>
 						</div>

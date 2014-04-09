@@ -790,3 +790,128 @@ function getBlog(event)
 			return false;
 		}
 }
+
+
+/* Paginador galerila */
+
+    $('.more-post-gallery a').on('click', getGallery);
+
+
+function getGallery(event)
+{
+		var pag = parseInt( jQuery("#pagina").attr('rel') );
+
+		if(pag >= 1)
+		{
+				pag = pag+1;
+
+				jQuery.ajax({
+					type: "GET",
+					url: "../wp-admin/admin-ajax.php",
+					data: {
+							'action' : 'getGallery', 'paged':pag
+						},
+				})
+				.done(function(data) {
+
+					if(data == "")
+					{
+						throw "No results";
+					}
+					else
+					{
+						/*
+							volvemos a recostruir el isotope para 
+							que me tome nuevos cambios
+						*/
+
+						var container = jQuery('#main-articulos');
+						container.append(data);
+						jQuery("#pagina").attr('rel',pag);
+						container.isotope('destroy');
+	
+						// initialize isotope
+						container.isotope({
+							animationOptions: {
+								itemSelector : '.categorias',
+								duration: 500000,
+								easing: 'linear',
+								queue: false
+
+							},
+							layoutMode: 'fitRows'
+						});
+					}
+					
+					jQuery(".filtro").removeAttr("checked");
+					
+				})
+				.fail(function() {
+					
+					throw "Error,no results";
+				});
+		}
+		else
+		{
+			return false;
+		}
+}
+
+	/* tarer galeria por fecha */
+   $('.bar-fecha-control-2 #ir-fecha').on('click', getGalleryPerDate);
+function getGalleryPerDate(event)
+{
+
+		var date = jQuery(".datepicker").val();
+
+		if( date.length )
+		{
+				jQuery.ajax({
+					type: "GET",
+					url: "../wp-admin/admin-ajax.php",
+					data: {
+							'action' : 'getGalleryPerDate', 'date' : date 
+						},
+				})
+				.done(function(data) {
+
+					if(data == "")
+					{
+						alert('No se encontraron resultados para esta fecha');
+						jQuery(".datepicker").val("");
+						throw "No results";
+						return false;
+					}
+					else
+					{
+						var container = jQuery('#main-articulos');
+						container.html(data);
+						container.isotope('destroy');
+						jQuery("#pagina").attr('rel',0);
+
+
+						container.isotope({
+							animationOptions: {
+								itemSelector : '.categorias',
+								duration: 500000,
+								easing: 'linear',
+								queue: false
+
+							},
+							layoutMode: 'fitRows'
+						});
+					}
+					
+					jQuery(".filtro").removeAttr("checked");
+					
+				})
+				.fail(function() {
+					
+					throw "Error,no results";
+				});
+		}
+		else
+		{
+			return false;
+		}
+}

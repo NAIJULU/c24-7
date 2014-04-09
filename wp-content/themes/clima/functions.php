@@ -930,6 +930,134 @@ add_action('wp_ajax_nopriv_getBlog', 'loadBlogs');
 add_action('wp_ajax_getBlog', 'loadBlogs');
 
 
+
+
+function loadGallery()
+{
+
+$paged   = ( isset($_GET['paged']) ) ? $_GET['paged'] : 1;
+$content = "";
+$i = 0;
+$the_query = new WP_Query( 'paged=' . $paged ); 
+
+if ($the_query->have_posts())
+{
+
+
+while ($the_query->have_posts() ) : $the_query->the_post(); 
+
+
+  // 2 -> categoria blogs
+  if(in_category(23)) :
+
+      $categoria    = get_the_category();
+      $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
+
+      $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') );
+      $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
+
+      $contenuto = get_the_content();
+
+      $pClass = "";
+
+      foreach (get_post_class(array('clearfix')) as $post_cass) 
+      {
+        $pClass .= $post_cass." ";
+      }
+
+
+      $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+                <a href="'.get_permalink().'" rel="bookmark" class="galeria-item" title="'.the_title('','',false).'">
+                      <span class="categorias">'.strtolower($categoria).'</span>
+                      <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+                      <div class="contenido"><header >
+                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
+                        <h1>'.the_title('','',false).'</h1>
+                      </header>
+                      <p>'.$contenut.'</p></div>
+                  </a>
+                </article>';
+              
+        $i++;
+        endif;
+endwhile;
+}
+
+echo $content;
+die();
+}
+
+
+add_action('wp_ajax_nopriv_getGallery', 'loadGallery');
+add_action('wp_ajax_getGallery', 'loadGallery');
+
+
+function loadGalleryPerDate()
+{
+
+$date   = explode("/", $_GET['date']);
+$content = "";
+$i = 0;
+
+$args = array('cat'=>'23', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' ,'date_query' => array(array('year'  => $date[2] ,'month' => $date[1] ,'day'   => $date[0] ,),)  );
+$the_query = new WP_Query($args); 
+
+if ($the_query->have_posts())
+{
+
+
+while ($the_query->have_posts() ) : $the_query->the_post(); 
+
+
+  // 2 -> categoria blogs
+  if(in_category(23)) :
+
+      $categoria    = get_the_category();
+      $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
+
+      $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') );
+      $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
+
+      $contenuto = get_the_content();
+
+      $pClass = "";
+
+      foreach (get_post_class(array('clearfix')) as $post_cass) 
+      {
+        $pClass .= $post_cass." ";
+      }
+
+
+      $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+                <a href="'.get_permalink().'" rel="bookmark" class="galeria-item" title="'.the_title('','',false).'">
+                      <span class="categorias">'.strtolower($categoria).'</span>
+                      <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+                      <div class="contenido"><header >
+                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
+                        <h1>'.the_title('','',false).'</h1>
+                      </header>
+                      <p>'.$contenut.'</p></div>
+                  </a>
+                </article>';
+              
+        $i++;
+        endif;
+endwhile;
+}
+
+echo $content;
+die();
+}
+
+
+add_action('wp_ajax_nopriv_getGalleryPerDate', 'loadGalleryPerDate');
+add_action('wp_ajax_getGalleryPerDate', 'loadGalleryPerDate');
+
+
+
+
+
+
 function get_youtube_id($url)
 {
 
