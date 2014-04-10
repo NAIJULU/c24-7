@@ -1650,3 +1650,32 @@ div.selector-fecha{
 {
 	width: 150px;
 }
+
+.fancybox-custom-head
+{
+	width: 80%;
+	height: 40px;
+	color: #F9F9F9;
+	font-weight: bold;
+}
+
+.fancybox-custom-head-izq
+{
+   	padding-left: 10px;
+    padding-right: 5px;
+    width: 57%;
+    height: 100%;
+	float: left;
+
+	background-color: #A4CE3A;
+}
+
+.fancybox-custom-head-der
+{
+ 	padding-left: 10px;
+    padding-right: 4px;
+    width: 37%;
+    height: 100%;
+	float: right;
+	background-color: #3C6291;
+}

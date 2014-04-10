@@ -1,4 +1,6 @@
 <?php
+
+
 function theme_name_scripts() {
 	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
 	 wp_enqueue_script('jquery_ui');
@@ -7,11 +9,20 @@ function theme_name_scripts() {
 	 wp_enqueue_style('css_query_ui_core');
 	 wp_enqueue_style('css_query_ui_datepicker');
 
+	 // jquery fancyBox
+	 wp_enqueue_script('jquery_mousewheel');
+	 wp_enqueue_script('fancybox');
+	 wp_enqueue_script('fancybox_buttons');
+	 wp_enqueue_script('fancybox_pack');
+	 wp_enqueue_script('fancybox_media');
+
+	 wp_enqueue_style('css_fancybox');
+	 wp_enqueue_style('css_fancybox_buttons');
+	 wp_enqueue_style('css_fancybox_thumbs');
 
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
-
 
 
 
@@ -28,6 +39,15 @@ $categories = get_categories( $args );
 
 ?>
 <?php get_header(); ?>
+
+<!--
+<div>
+	<a class="fancybox" rel="group" href="../wp-content/uploads/2014/04/bliss.jpg" title="no me importa..com"><img src="../wp-content/uploads/2014/04/bliss.jpg" alt="" /><h1>titulo de la vuelta</h1></a>
+	<a class="fancybox" rel="group" href="../wp-content/uploads/2014/04/paisajesHD.jpg" title="no me importa..com"><img src="../wp-content/uploads/2014/04/paisajesHD.jpg" alt="" /></a>
+	<a class="fancybox" rel="group" href="../wp-content/uploads/2014/04/leprosy-death_halifaxcollect.net_2-990x1024.jpg" title="no me importa..com"><img src="../wp-content/uploads/2014/04/leprosy-death_halifaxcollect.net_2-990x1024.jpg" alt="" /></a>
+</div>
+-->
+
             <div class="clearfix row-fluid">
 					<div class="blog-title page-header span12">
 								<?php if (is_category()) { ?>
@@ -105,22 +125,26 @@ $categories = get_categories( $args );
 					<?php	if(in_category($blogId)) : ?>
 					<?php	
 					/* Para sacar etiquetas HTML del contenido */
-						$content = get_the_content();
+						$content 		= get_the_content();
+
+						$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
+						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+
+					//	$url 			= wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; 
+					//	$url    		= (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; 				
+						$categoria 		= get_the_category();
+						$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
+								
 					?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb ">
-						<a href="<?php the_permalink() ?>" rel="bookmark" class="galeria-item" title="<?php the_title_attribute(); ?>">
-								<?php 
-									$categoria 		= get_the_category();
-									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
-								 ?>
-
-								<?php $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; ?>
-								<?php $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; ?>
+						<a href="<?php echo $post_thumbnail_url  ?>" rel="bookmark" class="galeria-item fancybox" title="<?php the_title_attribute(); ?>" 
+							caption="<?php echo $content ;  ?>" datePub="<?php echo get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y') ?>" 
+							cat="<?php echo ucwords( strtolower($categoria) ) ;  ?>" >
 
 								<!-- key isotope --><span class="categorias"><?php echo strtolower($categoria);  ?> <!-- end key isotope --></span>
 
-								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
+								<figure><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>"  class="thumb" /></figure>
 								<div class="contenido">
 									<header >
 										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>

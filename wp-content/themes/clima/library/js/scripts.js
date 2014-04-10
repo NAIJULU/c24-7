@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
 	  //$(this).attr('checked','checked');
 
 	  $container.isotope({ filter: selector });
-
+console.log(notIsotopeActive());
 	  return;
 	});	 	
 
@@ -309,6 +309,8 @@ jQuery(document).ready(function($) {
 			$("#"+item).show('fast');
 
 		}	
+
+
 
 	});
 
@@ -652,6 +654,58 @@ jQuery(document).ready(function($) {
     	});
 	}
 
+	/* Fancy box */
+	if( $(".fancybox").length )
+	{
+
+		 $(".isotope-item:not(.isotope-hidden) .fancybox")
+		 .fancybox({
+
+		      afterLoad   : function() {
+
+			      	var title1 			= $(this.element).attr('title');
+			      	var cat 			= $(this.element).attr('cat');
+			      	var caption 		= $(this.element).attr('caption');
+			      	var tweeterFancy 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
+			      	var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+			      	var pinterestFancy 	= '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(document.location.href)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+this.href)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
+
+					this.title      = '<div class="fancybox-custom-footer"><div class="fancybox-custom-footer-izq"><strong>categoria :</strong> '+cat+'<p>'+$(this.element).attr('datePub')+'</p></div>'+
+									  '<div class="fancybox-custom-footer-der">'+tweeterFancy+facebookFancy+pinterestFancy+'</div></div>';
+
+		        	this.outer.prepend( '<div class="fancybox-custom-head"><div class="fancybox-custom-head-izq">'+title1+'</div>'+
+		        						'<div class="fancybox-custom-head-der">'+caption+'</div></div><div style="clear: both;"></div>' );
+		   		 },
+
+		   	 afterShow: function() {
+            		// Render tweet button
+            		twttr.widgets.load();
+        		},
+
+				tpl: { 
+						wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"> <div class="fancybox-inner"></div></div></div></div>',
+						image    : '<img class="fancybox-image" src="{href}" alt="" />',
+						iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0"' + ($.browser.msie ? ' allowtransparency="true"' : '') + '></iframe>',
+						error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
+						closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+						next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+						prev     : '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+				},
+
+
+		    	helpers : {
+		    		title : {
+		    			type : 'inside'
+		    		}
+		    	}
+
+
+		});
+			
+	}
+	
+	
+
 
 /* fin seccion emisiones */
 
@@ -725,6 +779,12 @@ function handleTweets(tweets){
     	Funcion para paginar y filtrar resultados de los blogs
     */
     $('.more-post a').on('click', getBlog);
+    /* Paginador galerila */
+
+    $('.more-post-gallery a').on('click', getGallery);
+
+    	/* tarer galeria por fecha */
+   $('.bar-fecha-control-2 #ir-fecha').on('click', getGalleryPerDate);
  
 
 });
@@ -792,9 +852,7 @@ function getBlog(event)
 }
 
 
-/* Paginador galerila */
 
-    $('.more-post-gallery a').on('click', getGallery);
 
 
 function getGallery(event)
@@ -857,8 +915,7 @@ function getGallery(event)
 		}
 }
 
-	/* tarer galeria por fecha */
-   $('.bar-fecha-control-2 #ir-fecha').on('click', getGalleryPerDate);
+
 function getGalleryPerDate(event)
 {
 
@@ -914,4 +971,17 @@ function getGalleryPerDate(event)
 		{
 			return false;
 		}
+}
+
+
+function notIsotopeActive()
+{
+	items 	= new Array();
+
+	jQuery( "#main-articulos .isotope-item:not(.isotope-hidden)" ).each(function(index){
+
+			items[index]  =   jQuery('.fancybox', this ).attr('href');
+	});
+
+	return items;
 }
