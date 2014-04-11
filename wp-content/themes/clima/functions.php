@@ -661,15 +661,15 @@ if( !function_exists( "theme_js" ) ) {
 
     wp_register_script('jquery_mousewheel', '/wp-includes/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js', array('jquery'), '1.2' );
     wp_register_script('fancybox', '/wp-includes/js/fancybox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
-    wp_register_script('fancybox-buttons', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-buttons.js', array('jquery'), '1.0.5' );
-    wp_register_script('jquery.fancybox.pack', '/wp-includes/js/fancybox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
-    wp_register_script('jquery.fancybox-media', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-media.js', array('jquery'), '1.0.6' );
+    wp_register_script('fancybox_buttons', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-buttons.js', array('jquery'), '1.0.5' );
+    wp_register_script('fancybox_pack', '/wp-includes/js/fancybox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
+    wp_register_script('fancybox_media', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-media.js', array('jquery'), '1.0.6' );
 
     wp_register_style('css_fancybox', '/wp-includes/js/fancybox/source/jquery.fancybox.css', '2.1.5' );
-    wp_register_style('css_fancybox-buttons', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
-    wp_register_style('css_fancybox-thumbs', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
+    wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
+    wp_register_style('css_fancybox_thumbs', '/wp-includes/js/fancybox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
   
-  
+
     //default
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('wpbs-scripts');
@@ -896,7 +896,7 @@ $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-ite
                 <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
                 <div class="contenido"><header ><span class="categorias">'.$categoria.'</span>
                   <h1>'.the_title('','',false).'</h1>
-                  <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
+                  <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time>
                 </header>
                 <p>'.substr(wp_filter_nohtml_kses( $contenuto ), 0,80).'...'.'
                 <span>Leer Más +<span></p></div>
@@ -940,8 +940,9 @@ while ($the_query->have_posts() ) : $the_query->the_post();
       $categoria    = get_the_category();
       $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
-      $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') );
-      $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
+      $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
+      $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+
 
       $contenuto = get_the_content();
 
@@ -954,14 +955,15 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 
 
       $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
-                <a href="'.get_permalink().'" rel="bookmark" class="galeria-item" title="'.the_title('','',false).'">
+                <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
+                caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
                       <span class="categorias">'.strtolower($categoria).'</span>
-                      <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+                      <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
                       <div class="contenido"><header >
-                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
+                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>
                         <h1>'.the_title('','',false).'</h1>
                       </header>
-                      <p>'.$contenut.'</p></div>
+                      <p>'.$contenuto.'</p></div>
                   </a>
                 </article>';
               
@@ -1003,8 +1005,9 @@ while ($the_query->have_posts() ) : $the_query->the_post();
       $categoria    = get_the_category();
       $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
-      $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') );
-      $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
+      $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
+      $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+
 
       $contenuto = get_the_content();
 
@@ -1017,14 +1020,15 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 
 
       $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
-                <a href="'.get_permalink().'" rel="bookmark" class="galeria-item" title="'.the_title('','',false).'">
+                <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
+                caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
                       <span class="categorias">'.strtolower($categoria).'</span>
-                      <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+                      <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
                       <div class="contenido"><header >
                         <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
                         <h1>'.the_title('','',false).'</h1>
                       </header>
-                      <p>'.$contenut.'</p></div>
+                      <p>'.$contenuto.'</p></div>
                   </a>
                 </article>';
               

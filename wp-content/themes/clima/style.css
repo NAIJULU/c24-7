@@ -1031,6 +1031,7 @@ height: 100%;
 #main-articulos article a .contenido{
 	position: absolute;
 	bottom: -75px;
+	width: 100%;
 	transition:all 1s ease;         
 	-o-transition:all 1s ease;
 	-moz-transition:all 1s ease;         
@@ -1628,6 +1629,7 @@ div.selector-fecha{
 	top:10px;
 	right: 0;
 	text-align: right;
+	padding-right: 11px;
 	background-color: #A5CE39;
 	color: #FFFFFF !important;
 }
@@ -1653,7 +1655,7 @@ div.selector-fecha{
 
 .fancybox-custom-head
 {
-	width: 80%;
+	width: 90%;
 	height: 40px;
 	color: #F9F9F9;
 	font-weight: bold;
@@ -1661,9 +1663,9 @@ div.selector-fecha{
 
 .fancybox-custom-head-izq
 {
-   	padding-left: 10px;
+  	padding-left: 10px;
     padding-right: 5px;
-    width: 57%;
+    width: 56%;
     height: 100%;
 	float: left;
 
@@ -1672,10 +1674,32 @@ div.selector-fecha{
 
 .fancybox-custom-head-der
 {
- 	padding-left: 10px;
-    padding-right: 4px;
+	padding-left: 15px;
+    padding-right: 5px;
     width: 37%;
     height: 100%;
 	float: right;
 	background-color: #3C6291;
+}
+
+.fancybox-custom-footer
+{
+	width: 90%;
+	height: 40px;
+}
+
+.fancybox-custom-footer-izq
+{
+    width: 50%;
+    height: 100%;
+    margin-right: 2px; 
+	float: left;
+}
+
+.fancybox-custom-footer-der
+{
+    width: 45%;
+    height: 100%;
+    margin-right: 2px; 
+	float: right;
 }
