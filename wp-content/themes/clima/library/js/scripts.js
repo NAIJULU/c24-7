@@ -556,8 +556,6 @@ console.log(notIsotopeActive());
 
 	});
 
-
-
 	$("#y-left").click(function(e){
 
 		e.preventDefault();
@@ -590,8 +588,6 @@ console.log(notIsotopeActive());
 		}
 
 	});
-
-
 
 	$("#y-right").click(function(e){
 
@@ -637,7 +633,6 @@ console.log(notIsotopeActive());
 		$("#videoEmision").html(content);
 
 	});
-
 
 	/* para insertar datepicker **/
 	if( $(".datepicker").length )
@@ -700,21 +695,34 @@ console.log(notIsotopeActive());
 		    			type : 'inside'
 		    		}
 		    	},
-
-
 			 minWidth:  600,
     		 minHeight: 300,
-    		 maxHeight: 600,
-
-
-		});
-			
+    		 maxHeight: 600
+		});	
 	}
-	
-	
-
-
 /* fin seccion emisiones */
+/* Boletin de suscripciones  */
+
+
+if( $("#mc_signup").length > 0 )
+{
+	$("#term").change(function(){
+		
+		if( $("#term").attr('checked') )
+		{
+			$("#mc_signup_submit").removeAttr("disabled");
+
+		}
+		else
+		{
+			$("#mc_signup_submit").attr("disabled","disabled");
+		}
+		
+	}).change();
+	
+}
+
+
 
 
     /* Twitter Feed */

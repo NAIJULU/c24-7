@@ -205,7 +205,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus... "); ?>
 
               <div id="temperatura" >
-                <img src=<?php echo bloginfo('template_url')."/images/tempactual.png";  ?> />
+                <img src="http://www.areadigital.gov.co/ftpclima/tempamva.jpg" />
               </div> 
 
          </div>

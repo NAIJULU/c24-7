@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Displays a MailChimp Signup Form
  **/
@@ -65,6 +66,8 @@ function mailchimpSF_signup_form($args = array()) {
 	}
 	.mc_merge_var {
 		margin-bottom: 1.0em;
+		background-color: #63A328;
+		color: #FFFFFF;
 	}
 	.mc_var_label,
 	.mc_interest_label {
@@ -75,7 +78,7 @@ function mailchimpSF_signup_form($args = array()) {
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		width: 100%;
+		width: 70%;
 	}
 	.mc_input.mc_phone {
 		width: auto;
@@ -104,10 +107,7 @@ function mailchimpSF_signup_form($args = array()) {
 	.mc_interest input {
 		margin-bottom: 0.4em;
 	}
-	#mc_signup_submit {
-		margin-top: 1.5em;
-		width: 80%;
-	}
+
 	#mc_unsub_link a {
 		font-size: 0.75em;
 	}
@@ -129,8 +129,10 @@ function mailchimpSF_signup_form($args = array()) {
 	}
 </style>
 
-<div id="mc_signup">
-	<form method="post" action="#mc_signup" id="mc_signup_form">
+
+<div id="mc_signup" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	
+	<form method="post" class="modal-dialog modal-sm" action="#mc_signup" id="mc_signup_form">
 		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
 		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
 		<?php wp_nonce_field('mc_submit_signup_form', '_mc_submit_signup_form_nonce', false); ?>
@@ -145,7 +147,7 @@ function mailchimpSF_signup_form($args = array()) {
 	} 
 	?>
 	
-	<div class="mc_form_inside">
+	<div class="mc_form_inside modal-content">
 		
 		<div class="updated" id="mc_message">
 			<?php echo mailchimpSF_global_msg(); ?>
@@ -195,9 +197,12 @@ function mailchimpSF_signup_form($args = array()) {
 						if ($ig['form_field'] != 'hidden') {
 						?>				
 							<div class="mc_interests_header">
-								<?php echo esc_html($ig['name']); ?>
+								<?php //echo  esc_html($ig['name']); ?>
+								
 							</div><!-- /mc_interests_header -->
 							<div class="mc_interest">
+								
+							   <p>2. SELECCIONA LA INFORMACI&Oacute;N QUE DESEAS RECIBIR</p>
 						<?php
 						}
 						else {
@@ -239,9 +244,16 @@ function mailchimpSF_signup_form($args = array()) {
 		}
 
 		?>
+		
+		<div id="acepto-terminos">
+			 <ul>
+			        <li><input type="checkbox" name="term" id="term" >Acepto los terminos y condiciones del servicio</li>
+		     </ul>
+		</div>
 
-		<div class="mc_signup_submit">
-			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="<?php echo esc_attr($submit_text); ?>" class="button" />
+		<div class="mc_signup_submit modal-footer">
+			<input type="submit" name="mc_signup_submit" class="btn btn-primary" id="mc_signup_submit" value="<?php echo esc_attr($submit_text); ?>" class="button" />
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		</div><!-- /mc_signup_submit -->
 	
 	
@@ -698,7 +710,7 @@ function mailchimp_country_list() {
 function mailchimp_get_kitchen_sink_fields() {
 	$fields = array(
 		0 => array (
-			'name' => 'Email Address', 'req' => true, 'field_type' => 'email', 'public' => true, 'show' => true, 'order' => '1', 'default' => NULL, 'helptext' => NULL, 'size' => '25', 'tag' => 'EMAIL', 'id' => 0,
+			'name' => '1. Ingresa tu Email', 'req' => true, 'field_type' => 'email', 'public' => true, 'show' => true, 'order' => '1', 'default' => NULL, 'helptext' => NULL, 'size' => '25', 'tag' => 'EMAIL', 'id' => 0,
 		),
 		1 => array (
 			'name' => 'First Name', 'req' => true, 'field_type' => 'text', 'public' => true, 'show' => true, 'order' => '2', 'default' => '', 'helptext' => '', 'size' => '25', 'tag' => 'FNAME', 'id' => 1,

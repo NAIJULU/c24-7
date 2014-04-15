@@ -207,7 +207,7 @@ function mailchimpSF_main_css() {
 		margin-bottom: 1.0em;
 	}
 	.mc_success_msg {
-		color: green;
+		color: #FFFFFF;
 		margin-bottom: 1.0em;
 	}
 	.mc_merge_var{
@@ -219,7 +219,7 @@ function mailchimpSF_main_css() {
 if (get_option('mc_custom_style')=='on'){
 	?>
 	#mc_signup_form {
-		padding:5px;
+		padding: 25px;
 		border-width: <?php echo get_option('mc_form_border_width'); ?>px;
 		border-style: <?php echo (get_option('mc_form_border_width')==0) ? 'none' : 'solid'; ?>;
 		border-color: #<?php echo get_option('mc_form_border_color'); ?>;
