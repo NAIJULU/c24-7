@@ -57,8 +57,15 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 </div>
               -->
 
-               <?php viewConvenciones("orem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
-              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl."); ?>
+               <?php viewConvenciones("Un radar meteorológico permite conocer los sectores donde ocurren o han ocurrido precipitaciones en las últimas horas. En este caso, el radar presenta imágenes de las
+
+últimas 6 horas y la imagen actual. ¿Cómo funciona? Un radar es un sensor remoto, que emite una señal de microondas que llega hasta las nubes y se refleja en las gotas de agua. La cantidad y el tamaño de las gotas de agua presentes 
+
+en las nubes se registra en la imagen y se denomina “reflectividad”. El radar meteorológico, ubicado en Santa  Elena, que sirve para el monitoreo del Valle de Aburrá, permite conocer la localización y movimiento de las lluvias, el lugar y hora  donde ocurren en la subregión.
+
+¿Cómo interpretar los colores de la imagen del radar?
+
+En la escala de colores, el azul y verde  representan baja reflectividad, lo que se interpreta como baja intensidad de  precipitaciones. Los colores cálidos, como el amarillo, naranja y rojo indican lluvias de  moderada a alta intensidad. El magenta indica lluvias muy intensas, que incluso pueden traer  granizo."); ?>
 
                 <div id="contenedor-radar" class="fondo-contenido-1">
                   <div id="mapa"></div>
@@ -66,15 +73,12 @@ $manana = strtotime(date('Y-m-d').' +1 day');
             </div>
          <A NAME="pronostico">   <div id="pronostico" style="display:none" class="container-function-1"> </a>
 
-              <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+              <?php viewConvenciones("Pronóstico del estado del tiempo que presenta el SIATA, en términos de probabilidad de  que se presenten precipitaciones, para los municipios del Valle de Aburrá. 
 
-            Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
-
-            Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
-
-            Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+					Esta información se actualiza permanentemente con ayuda de las redes de  monitoreo en tiempo real. ¿Cómo interpretar la probabilidad de lluvias? Probabilidad baja de lluvias: Inferior al 30% de  ue ocurran precipitaciones.  Probabilidad media de lluvias: 40% a 60% de  probabilidad de que ocurran precipitaciones.  Probabilidad alta de lluvias: Probabilidad  mayor al 60% de que ocurran precipitaciones."); ?>
 
           <!--    <div class="convencionesPronostico" style="display:none"> 
+          
                
                   </div> -->
 				      <div id="pronosticos" class="carousel slide"> 
@@ -93,13 +97,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
           
               <div id="vivo-camara1" class="container-vivo">
 
-                  <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+                  <?php viewConvenciones("La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá. Desde la Torre SIATA, ubicada en el sector 
 
-              Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
+					Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá.
 
-              Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
-
-              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+					Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín."); ?>
 
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_86_TORRESIATA_nororiente.jpg" alt="Torre SIATA Nororiente"/> </div>
                 <div class="description">
@@ -110,11 +112,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 
               <div id="vivo-camara2" class="container-vivo" style="display:none">
 
-               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+               <?php viewConvenciones("La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá. Desde la Torre SIATA, ubicada en el sector 
 
-              Sed a lacus mollis, molestie dolor at, posuere enim. Pellentesque consequat in metus eget lobortis. Cras a venenatis urna, ut vulputate mauris. Nunc tristique massa a sem tincidunt, et dignissim nulla rutrum. Duis at nunc euismod, varius leo sed, malesuada nisi. Phasellus ultrices ipsum massa, feugiat euismod leo placerat eu. Sed tristique rhoncus mattis.
+					Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá.
 
-              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+					Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín."); ?>
               
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_82_TORRESIATA_suroriente.jpg" alt="Torre SIATA Suroriente"/> </div>
                 <div class="description">
@@ -126,11 +128,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               <div id="vivo-camara3" class="container-vivo" style="display:none">
 
 
-               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+               <?php viewConvenciones("La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá. Desde la Torre SIATA, ubicada en el sector 
 
-              Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus
+					Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá.
 
-              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+					Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín."); ?>
 
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_81_TORRESIATA_oriente.jpg" alt="Torre SIATA Oriente"/> </div>
                 <div class="description">
@@ -141,11 +143,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               <div id="vivo-camara4" class="container-vivo" style="display:none">
 
 
-               <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+               <?php viewConvenciones("La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá. Desde la Torre SIATA, ubicada en el sector 
 
-              Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus.
+					Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá.
 
-              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+					Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín."); ?>
 
                 <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_89_TORRESIATA_occidente.jpg" alt="Torre SIATA Occidente"/> </div>
                 <div class="description">
@@ -186,9 +188,13 @@ $manana = strtotime(date('Y-m-d').' +1 day');
            
             <div id="sensores" style="display:none" class="container-function-1">
 
-              <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
+              <?php viewConvenciones("El monitoreo de los ríos y quebradas en el Valle de Aburrá se realiza gracias a las estaciones de nivel del SIATA. A través de  esta herramienta se puede conocer cuál es el
 
-              Nullam hendrerit tortor vel faucibus accumsan. Etiam porttitor dolor ac tortor bibendum sagittis. Nam enim tellus, facilisis sed tristique ac, eleifend varius tortor. In hac habitasse platea dictumst. Sed pellentesque nulla quis enim sagittis, id ultrices dui mollis. Integer ultrices nisi eu diam congue, dictum ultricies augue commodo. Ut malesuada iaculis dui ac lobortis. Quisque vitae eros posuere, gravida neque vel, hendrerit tortor. Maecenas fringilla faucibus dui. Nam consectetur quam id metus fermentum eleifend. Duis vel feugiat mi. Donec eu justo nisl. "); ?>
+					nivel y porcentaje de la canalización que está siendo ocupada por agua. La canalización es la parte que se encuentra en cemento y representa el 100 % de  capacidad en zonas canalizadas. 
+
+					Se recomienda la observación y vigilancia por parte de los habitantes que habitan los sectores cercanos a las estaciones de las quebradas en monitoreo y avisar oportunamente a las autoridades en la línea 
+
+					de emergencia 123, cualquier obstrucción en el cauce o eventualidad en el nivel de las quebradas."); ?>
 
 
               <div id="cont-sensores" >
@@ -200,9 +206,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 
           <div id="temperatura-actual" style="display:none" class="container-function-1"> 
 
-              <?php viewConvenciones(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed justo et dui lacinia tristique pellentesque vitae diam. Nullam malesuada leo at adipiscing porta. Suspendisse nec mauris felis. Sed adipiscing suscipit nibh sed blandit. Nulla aliquam cursus quam, eu dictum justo tincidunt ac. Integer varius lorem magna, ut fermentum odio pellentesque a. Nulla sed aliquam diam. Nullam aliquet libero semper magna aliquet sodales. Nullam vel bibendum neque, nec porta ligula.
-
-                Phasellus rhoncus accumsan enim, sed dictum orci convallis vitae. Vestibulum et congue arcu. Phasellus at tellus sed mauris lobortis consequat. Etiam quis rhoncus magna. Donec fermentum imperdiet velit ut sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla orci elit, lobortis sit amet ornare id, rutrum non enim. Quisque quis dui vel neque aliquet imperdiet. Integer consequat, velit ut molestie interdum, arcu turpis laoreet magna, vitae tincidunt est ipsum facilisis orci. Nulla facilisi. Nulla facilisi. Aliquam erat volutpat. Aenean ipsum magna, tincidunt in sodales et, auctor ac risus... "); ?>
+              <?php viewConvenciones("Registro actual de los valores de temperatura de las estaciones meteorológicas del SIATA, ubicadas en diferentes sectores de los municipios del Valle de Aburrá."); ?>
 
               <div id="temperatura" >
                 <img src="http://www.areadigital.gov.co/ftpclima/tempamva.jpg" />
