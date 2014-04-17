@@ -76,14 +76,15 @@ endif;
 				<form id="form-fechas" method="POST" action="" >
 							<div class="btn-group">
 							  <input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
+							  <input type="submit" id="ir-emisiones" class="btn btn-primary btn-ver" value="Ver" />
 							</div>
-							<input type="submit" id="ir-emisiones" class="btn btn-primary" value="Ver" />	
+								
 				</form>
 			</div>
 
 
 <!-- Emisiones durante el dia -->
-	<div id="emisiones-todo-dia" style="display:inline;" class="row">
+	<div id="emisiones-todo-dia" class="row-fluid">
 <?php
 
 			if(isset($fechaPost)) :
@@ -110,14 +111,14 @@ $content1 = apply_filters('the_content', $content1);
 
 ?>
 
-					<a id="tumb-<?php the_ID(); ?>" href="#" class="btn-tumb emision-tumb span3">
+					<a id="tumb-<?php the_ID(); ?>" href="#" class="btn-tumb emision-tumb span4">
 						<div class="img-emision-tumb">
-							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>" width="222" /> 
+							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>"/> 
 						</div>
 						<input type="hidden" class="emision-tumb-title" value ="<?php the_title() ?>" />
 						<input type="hidden" class="emision-tumb-content" value = '<?php echo get_the_content(); ?>' />
 
-							 <div class="btn-primary">
+							 <div class="emision-titulo">
 							  			<?php $posttags = get_the_tags();
 										if ($posttags) {
 										  foreach($posttags as $tag) {
@@ -139,8 +140,8 @@ $content1 = apply_filters('the_content', $content1);
 		<div style="clear: both;"></div>
 
 		<?php  if( isset($_POST['fecha']) ): ?>
-					<div id="ultima-emision" class="row">
-						<a href="" class="btn btn-primary span10"> Ultima Emision </a>
+					<div id="ultima-emision" class="row-fluid">
+						<a href="" class="span12"> Ver <strong>última Emision</strong> </a>
 					</div>	
 			<?php endif ?>
     
