@@ -1591,30 +1591,85 @@ div.titulo-emisiones p{
 	font-weight: 700;
 	margin: 0px;
 }
-div.selector-fecha{
-
+div.selector-fecha form div.btn-group>input{
+	-webkit-border-radius: 4px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius: 4px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-radius: 4px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	font-size: 18px;
+	padding: 15px;
+}
+div.selector-fecha form div.btn-group > input.btn-ver{
+	-webkit-border-radius: 4px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius: 4px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-radius: 4px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	margin-top: -10px;
 }
 #ir-emisiones
 {
-	width:40px;
-	height:30px;
+	/*width:40px;
+	height:30px;*/
 }
-
+#emisiones-todo-dia a{
+	height: 100%;
+}
+#emisiones-todo-dia a:hover {
+	text-decoration: none;
+}
+#emisiones-todo-dia a:hover .emision-titulo{
+	background: #80aa0a;
+	text-decoration: none;
+}
+div.img-emision-tumb img{
+	margin: 0 auto;
+	display: block;
+	width: 90%;
+}
 .emision-tumb {
   float: left;
-  width: 100%
+  width: 100%;
   height: 100%;
-  margin-top: 30px;
-  margin-bottom: 100px;
+}
+div.emision-titulo{
+	padding: 10px 10px 10px 60px;
+	background: #94C60D;
+	color: #fff;
+	box-sizing: border-box;
+	margin: 5px auto 0 auto;
+	width: 90%;
+	text-transform: uppercase;
 }
 
 #ultima-emision
 {
 	width: 100%;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
-
-
+#ultima-emision a{
+	background: #5E8DD1;
+	color: #fff;
+	padding: 15px;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+#ultima-emision a:hover{
+	background: #4774b2;
+	color: #fff;
+	text-decoration: none;
+}
 .btn-tumb
 {
 	width: 100%;
