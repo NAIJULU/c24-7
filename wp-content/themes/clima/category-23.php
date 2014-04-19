@@ -128,7 +128,7 @@ $categories = get_categories( $args );
 						$content 		= get_the_content();
 
 						$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
-						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
 
 					//	$url 			= wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; 
 					//	$url    		= (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; 				

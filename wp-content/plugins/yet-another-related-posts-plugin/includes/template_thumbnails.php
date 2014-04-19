@@ -27,7 +27,10 @@ if (have_posts()) {
 	$output .= '<div class="yarpp-thumbnails-horizontal">' . "\n";
 	while (have_posts()) {
 		the_post();
-
+		
+		$categoria 		= get_the_category();
+		$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
+									
 		$output .= "<a class='yarpp-thumbnail' href='" . get_permalink() . "' title='" . the_title_attribute('echo=0') . "'>" . "\n";
 
 		$post_thumbnail_html = '';
@@ -42,7 +45,9 @@ if (have_posts()) {
 		else
 			$output .= '<span class="yarpp-thumbnail-default"><img src="' . esc_url($thumbnails_default) . '"/></span>';
 
-		$output .= '<span class="yarpp-thumbnail-title">' . get_the_title() . '</span>';
+		$output .= '<div class="yarpp-thumbnail-info"><div class="yarpp-thumbnail-title">' . get_the_title().'</div>';
+		$output .= '<div class="yarpp-thumbnail-cat">' . $categoria . '</div></div>';
+		
 		$output .= '</a>' . "\n";
 
 	}

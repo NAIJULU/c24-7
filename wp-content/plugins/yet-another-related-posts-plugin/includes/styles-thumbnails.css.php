@@ -34,7 +34,7 @@ header('Content-Type: text/css');
 	display: block;
 }
 .yarpp-thumbnails-horizontal .yarpp-thumbnail-title {
-	font-size: 1em;
+	font-size: 12px;
 	max-height: 2.8em;
 	line-height: 1.4em;
 	margin: <?php echo $extra_margin; ?>px;
@@ -43,6 +43,20 @@ header('Content-Type: text/css');
 	text-decoration: inherit;
 	overflow: hidden;
 }
+
+
+.yarpp-thumbnail-info{
+	
+	position: relative;
+	bottom: 40px;
+	font-size: 12px;
+	background: rgba(0, 0, 0, 0.78);
+	color: #FFFFFF;
+	width: 120px;
+	margin: 5px;
+	line-height: 14px;
+	
+} 
 
 .yarpp-thumbnail-default {
 	overflow: hidden;
