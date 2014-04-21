@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Clima a fondo2
+Template Name: Clima a fondo OK
 */
 ?>
 <?php get_header(); ?>
