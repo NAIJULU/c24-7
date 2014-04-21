@@ -119,6 +119,7 @@ $categories = get_categories( $args );
 		</div>
 			
 			  <div id="main" class="span9 clearfix" role="main">
+			  	<div class="layout-load span12" ></div>
 				<div id="main-articulos">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

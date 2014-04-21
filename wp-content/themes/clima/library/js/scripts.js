@@ -839,6 +839,10 @@ function getBlog(event)
 		{
 				pag = pag+1;
 
+				jQuery("#main-articulos").fadeOut();
+				jQuery(".layout-load").css('display','block');
+				//jQuery(".layout-load").fadeIn();
+
 				jQuery.ajax({
 					type: "GET",
 					url: "../wp-admin/admin-ajax.php",
@@ -858,6 +862,10 @@ function getBlog(event)
 							volvemos a recostruir el isotope para 
 							que me tome nuevos cambios
 						*/
+
+						jQuery("#main-articulos").css('display','block');
+						jQuery(".layout-load").css('display','none');
+
 
 						var container = jQuery('#main-articulos');
 						container.append(data);
@@ -886,6 +894,7 @@ function getBlog(event)
 					
 					throw "Error,no results";
 				});
+
 		}
 		else
 		{
@@ -904,6 +913,9 @@ function getGallery(event)
 		if(pag >= 1)
 		{
 				pag = pag+1;
+
+				jQuery("#main-articulos").fadeOut();
+				jQuery(".layout-load").css('display','block');
 
 				jQuery.ajax({
 					type: "GET",
@@ -924,6 +936,9 @@ function getGallery(event)
 							volvemos a recostruir el isotope para 
 							que me tome nuevos cambios
 						*/
+						jQuery("#main-articulos").css('display','block');
+						jQuery(".layout-load").css('display','none');
+
 
 						var container = jQuery('#main-articulos');
 						container.append(data);
@@ -965,6 +980,9 @@ function getGalleryPerDate(event)
 
 		if( date.length )
 		{
+				jQuery("#main-articulos").fadeOut();
+				jQuery(".layout-load").css('display','block');
+
 				jQuery.ajax({
 					type: "GET",
 					url: "../wp-admin/admin-ajax.php",
@@ -983,6 +1001,11 @@ function getGalleryPerDate(event)
 					}
 					else
 					{
+
+						jQuery("#main-articulos").css('display','block');
+						jQuery(".layout-load").css('display','none');
+
+
 						var container = jQuery('#main-articulos');
 						container.html(data);
 						container.isotope('destroy');

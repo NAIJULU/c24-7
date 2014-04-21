@@ -34,6 +34,10 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 <li class="item-clima"><a id="btnMostrarTemperaturaActual" class="sensores" href="#temperatura-actual">Temperatura Actual</li>
 	            </ul>
             </div>
+            
+               <!-- suscripciones -->
+              <?php get_sidebar();  ?>
+
 
             <!-- Últimas fotos -->
             
@@ -42,12 +46,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               <!-- INSERTAR AQUÍ EL WIDGET PARA LAS ÚLTIMAS FOTOS SUBIDAS POR LOS USUARIOS --> 
             </div>
             
-            <!-- Suscripción -->
-            <div id="suscripcion">
-            	<img src="/c24-7/wp-content/themes/clima/images/rss-ico.png" class="icono-sus"></img>
-            	<p>Suscríbete a nuestro <strong>pronóstico diario</strong></p>
-             	<input class="suscribete" /><a href="#" class="enviar-suscripcion"><i class="icon-play icon-white"></i></a>
-            </div>
+
           </div>
           <div class="span9">
 
