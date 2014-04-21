@@ -279,7 +279,7 @@ console.log(notIsotopeActive());
 	/* Se esconden todos las opciones por descarte y por ultimo se revela la que realmente
 	se quiere mostrar */
 
-	$(".item-clima a").click(function(e){
+	$("#clima-vivo a").click(function(e){
 		var item = $(this).attr("href");
 
 		if( $(item).css("display") == "none" )
@@ -317,7 +317,34 @@ console.log(notIsotopeActive());
 	});
 
 	/* Fin de la sección */
-	
+
+/**
+clima a fondo
+**/
+		$("#clima-fondo a").click(function(e){
+		var item = $(this).attr("href");
+
+		if( $(item).css("display") == "none" )
+		{
+			$("#visible").hide('fast');
+			$("#vapor").hide('fast');
+
+
+		 if( $(".contenedor-convencion").css("display") != "none" )
+		  {
+			$(".contenedor-convencion").fadeOut('fast');
+		  	$(".contenedor-convencion").css('display','none');
+		  }
+
+			$(item).show();
+		}
+	});
+
+	/**
+	*fin clima a fondo
+	**/
+
+
 	/* Inicio: Sección Blog */
 	$(".filtro").change(function(){
 		if($("#medio-ambiente").is(':checked')){

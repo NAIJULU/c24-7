@@ -1764,3 +1764,8 @@ div.emision-titulo{
 	margin-top: 30px;
 	
 }
+
+.ui-datepicker-year
+{
+	display: inline !important;
+}
