@@ -137,7 +137,7 @@ $categories = get_categories( $args );
 								
 					?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb ">
+					<article class="articulo-galeria" id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb ">
 						<a href="<?php echo $post_thumbnail_url  ?>" rel="bookmark" class="galeria-item fancybox" title="<?php the_title_attribute(); ?>" 
 							caption="<?php echo $content ;  ?>" datePub="<?php echo get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y') ?>" 
 							cat="<?php echo ucwords( strtolower($categoria) ) ;  ?>" >
@@ -147,8 +147,8 @@ $categories = get_categories( $args );
 								<figure><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>"  class="thumb" /></figure>
 								<div class="contenido">
 									<header >
-										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 										<h1><?php the_title(); ?></h1>
+										<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 									</header>
 									<p><?php echo $content ;  ?></p>
 

@@ -104,6 +104,9 @@ body.admin-bar .navbar-fixed-top {
 #inner-header {
 	width: 100%;
 }
+footer.footer-general{
+	margin-top: 30px;
+}
 input, textarea, select, .uneditable-input {
 	margin-bottom: 0;
 }
@@ -1710,7 +1713,7 @@ div.emision-titulo{
 
 .fancybox-custom-head
 {
-	width: 90%;
+	width: 100%;
 	height: 40px;
 	color: #F9F9F9;
 	font-weight: bold;
@@ -1718,29 +1721,32 @@ div.emision-titulo{
 
 .fancybox-custom-head-izq
 {
-  	padding-left: 10px;
-    padding-right: 5px;
-    width: 56%;
+  	padding: 10px;
+    width: 70%;
     height: 100%;
 	float: left;
-
 	background-color: #A4CE3A;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .fancybox-custom-head-der
 {
-	padding-left: 15px;
-    padding-right: 5px;
-    width: 37%;
+	padding: 10px;
+    width: 30%;
     height: 100%;
 	float: right;
 	background-color: #3C6291;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .fancybox-custom-footer
 {
-	width: 90%;
-	height: 40px;
+	width: 100%;
+	height: 46px;
 }
 
 .fancybox-custom-footer-izq
@@ -1749,8 +1755,13 @@ div.emision-titulo{
     height: 100%;
     margin-right: 2px; 
 	float: left;
+	padding: 0px 5px 15px 15px;
+	color: #888888;
+	font-size: 1.4em;
 }
-
+.fancybox-custom-footer-izq p{
+	font-size: 0.7em;
+}
 .fancybox-custom-footer-der
 {
     width: 45%;
@@ -1763,4 +1774,28 @@ div.emision-titulo{
 {
 	margin-top: 30px;
 	
+}
+/*Galería*/
+#main-articulos article.articulo-galeria{
+	height: 170px;
+}
+#main-articulos article.articulo-galeria a .contenido{
+	bottom: -60px;
+	transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#main-articulos article.articulo-galeria a:hover .contenido{
+	bottom: -9px;
+}
+.fancybox-skin{
+	padding: 0 !important;
+}
+.fancybox-inner{
+	padding: 15px !important;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100% !important;
 }
