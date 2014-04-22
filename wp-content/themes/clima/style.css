@@ -1777,18 +1777,18 @@ div.emision-titulo{
 }
 
 /*Galería*/
-#main-articulos article.articulo-galeria{
-	height: 170px;
+div.main-galeria > article{
+	height: 170px !important;
 }
-#main-articulos article.articulo-galeria a .contenido{
-	bottom: -60px;
+div.main-galeria > article a .contenido{
+	bottom: -60px !important;
 	transition: all 1s ease;
 	-o-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 }
-#main-articulos article.articulo-galeria a:hover .contenido{
-	bottom: -9px;
+div.main-galeria > article a:hover .contenido{
+	bottom: -9px !important;
 }
 .fancybox-skin{
 	padding: 0 !important;
