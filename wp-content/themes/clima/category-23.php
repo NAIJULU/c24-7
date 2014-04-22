@@ -39,8 +39,6 @@ $categories = get_categories( $args );
 if( isset($_GET['id']) )
 {
 
-echo 'sizas.com';
-
 }
 
 
@@ -134,7 +132,7 @@ echo 'sizas.com';
 					  <div class="bounce3"></div>
 					</div>
 		  		</div>
-				<div id="main-articulos">
+				<div id="main-articulos" class="main-galeria">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
 					<?php	if(in_category($blogId)) : ?>
