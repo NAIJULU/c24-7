@@ -35,13 +35,6 @@ $args = array(
   );
 
 $categories = get_categories( $args );
-
-if( isset($_GET['id']) )
-{
-
-}
-
-
 ?>
 <?php get_header(); ?>
 
@@ -132,6 +125,16 @@ if( isset($_GET['id']) )
 					  <div class="bounce3"></div>
 					</div>
 		  		</div>
+		  		<?php
+						if( isset($_GET['id']) )
+						{
+								if( getElementGallery($_GET['id']) != null )
+								{
+									echo getElementGallery($_GET['id']);	
+								}
+						} 
+
+				?>
 				<div id="main-articulos" class="main-galeria">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

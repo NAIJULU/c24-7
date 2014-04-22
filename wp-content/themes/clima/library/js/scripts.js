@@ -690,9 +690,15 @@ clima a fondo
 			      	var title1 			= $(this.element).attr('title');
 			      	var cat 			= $(this.element).attr('cat');
 			      	var caption 		= $(this.element).attr('caption');
-			      	var tweeterFancy 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
-			      	var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
-			      	var pinterestFancy 	= '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(document.location.href)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+this.href)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
+
+			   		var id 				= $(this.element).parent().attr('id').split("-");
+			        var href            = this.href.split('c24-7/');
+			      	var pathImage	    = href[0]+'c24-7/galeria/?id='+id[1];
+
+
+			      	var tweeterFancy 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + pathImage + '">Tweet</a> ';
+			      	var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + pathImage + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+			      	var pinterestFancy 	= '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(pathImage)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+pathImage)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
 
 					this.title      = '<div class="fancybox-custom-footer"><div class="fancybox-custom-footer-izq">Categoria :<strong> '+cat+'</strong><p>'+$(this.element).attr('datePub')+'</p></div>'+
 									  '<div class="fancybox-custom-footer-der">'+tweeterFancy+facebookFancy+pinterestFancy+'</div></div>';
@@ -727,6 +733,18 @@ clima a fondo
     		 maxHeight: 600
 		});	
 	}
+
+	if( $("#post-get").length )
+	{
+		var heightAct = jQuery('#main').scrollTop();
+		var bodyAnimate = jQuery("body, html");
+		bodyAnimate.animate({scrollTop:heightAct+300}, 'fast');
+
+
+		$("#post-get article .fancybox").trigger("click");
+	}
+
+
 /* fin seccion emisiones */
 /* Boletin de suscripciones  */
 
