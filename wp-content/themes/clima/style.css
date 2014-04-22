@@ -933,6 +933,13 @@ text-transform: uppercase;
 .rw-ui-container{
 	float: left;
 }
+
+
+#main .pagination
+{
+	margin: 40px 0;
+}
+
 div.pagination.articulos-antysig{
 	margin-top: 55px;
 }
@@ -943,6 +950,7 @@ div.pagination.articulos-antysig{
 	display: block;
 	
 	}
+
 .pagination ul.more-post{
 	margin-left: 10px;
 }
@@ -1792,20 +1800,44 @@ div.emision-titulo{
 	box-sizing: border-box;
 	width: 100% !important;
 }
-/*Cargador - Loader*/
-.spinner {
-  margin: 100px auto 0;
-  width: 70px;
-  text-align: center;
+
+.ui-datepicker-year
+{
+	display: inline !important;
 }
 
-.spinner > div {
+#main
+{
+	position: relative;
+}
+
+#main .layout-load
+{
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.03);
+	display: none;
+	height: 93%;
+	width: 100%;
+	top:0;
+	left:0; 
+	z-index: 2;
+}
+
+/*Cargador - Loader*/
+.layout-load .spinner {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 70px;
+}
+
+.layout-load .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333;
+  background-color: #333 !important;
 
   border-radius: 100%;
-  display: inline-block;
+  display: inline-block !important;
   -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
   animation: bouncedelay 1.4s infinite ease-in-out;
   /* Prevent first frame from flickering when animation starts */
@@ -1813,12 +1845,12 @@ div.emision-titulo{
   animation-fill-mode: both;
 }
 
-.spinner .bounce1 {
+.layout-load .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
-.spinner .bounce2 {
+.layout-load .spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
@@ -1838,15 +1870,4 @@ div.emision-titulo{
   }
 }
 
-.ui-datepicker-year
-{
-	display: inline !important;
-}
-
-#main .layout-load
-{
-	height: 600px;
-	background-color: black;
-	display: none;
-}
 

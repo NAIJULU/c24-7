@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 	  //$(this).attr('checked','checked');
 
 	  $container.isotope({ filter: selector });
-console.log(notIsotopeActive());
+	  
 	  return;
 	});	 	
 
@@ -839,7 +839,6 @@ function getBlog(event)
 		{
 				pag = pag+1;
 
-				jQuery("#main-articulos").fadeOut();
 				jQuery(".layout-load").css('display','block');
 				//jQuery(".layout-load").fadeIn();
 
@@ -862,9 +861,11 @@ function getBlog(event)
 							volvemos a recostruir el isotope para 
 							que me tome nuevos cambios
 						*/
-
-						jQuery("#main-articulos").css('display','block');
 						jQuery(".layout-load").css('display','none');
+
+						// Posicion pagina final Actual.
+
+						var heightAct = jQuery(document).height();
 
 
 						var container = jQuery('#main-articulos');
@@ -872,9 +873,7 @@ function getBlog(event)
 					//	jQuery($container).isotope( 'reLayout');
 						jQuery("#pagina").attr('rel',pag);
 						container.isotope('destroy');
-						//container.isotope( 'reLayout');
-	
-						// initialize isotope
+
 						container.isotope({
 							animationOptions: {
 								itemSelector : '.categorias',
@@ -888,16 +887,21 @@ function getBlog(event)
 					}
 					
 					jQuery(".filtro").removeAttr("checked");
+
+					//posicionar en donde iba.
+
+					jQuery('html, body').animate({scrollTop: heightAct},'fast');
 					
 				})
 				.fail(function() {
-					
+					jQuery(".layout-load").css('display','none');
 					throw "Error,no results";
 				});
 
 		}
 		else
 		{
+			jQuery(".layout-load").css('display','none');
 			return false;
 		}
 }
@@ -914,8 +918,10 @@ function getGallery(event)
 		{
 				pag = pag+1;
 
-				jQuery("#main-articulos").fadeOut();
 				jQuery(".layout-load").css('display','block');
+				// Posicion pagina final Actual.
+
+				var heightAct = jQuery(document).height();
 
 				jQuery.ajax({
 					type: "GET",
@@ -936,7 +942,6 @@ function getGallery(event)
 							volvemos a recostruir el isotope para 
 							que me tome nuevos cambios
 						*/
-						jQuery("#main-articulos").css('display','block');
 						jQuery(".layout-load").css('display','none');
 
 
@@ -959,15 +964,19 @@ function getGallery(event)
 					}
 					
 					jQuery(".filtro").removeAttr("checked");
+						//posicionar en donde iba.
+
+					jQuery('html, body').animate({scrollTop: heightAct},'fast');
 					
 				})
 				.fail(function() {
-					
+					jQuery(".layout-load").css('display','none');
 					throw "Error,no results";
 				});
 		}
 		else
 		{
+			jQuery(".layout-load").css('display','none');
 			return false;
 		}
 }
@@ -976,12 +985,16 @@ function getGallery(event)
 function getGalleryPerDate(event)
 {
 
+		
 		var date = jQuery(".datepicker").val();
 
 		if( date.length )
 		{
-				jQuery("#main-articulos").fadeOut();
 				jQuery(".layout-load").css('display','block');
+						// Posicion pagina final Actual.
+
+				var heightAct = jQuery(document).height();
+
 
 				jQuery.ajax({
 					type: "GET",
@@ -1002,7 +1015,6 @@ function getGalleryPerDate(event)
 					else
 					{
 
-						jQuery("#main-articulos").css('display','block');
 						jQuery(".layout-load").css('display','none');
 
 
@@ -1025,16 +1037,21 @@ function getGalleryPerDate(event)
 					}
 					
 					jQuery(".filtro").removeAttr("checked");
+
+					jQuery('html, body').animate({scrollTop: heightAct},'fast');
 					
 				})
 				.fail(function() {
 					
 					throw "Error,no results";
+					jQuery(".layout-load").css('display','none');
 				});
 		}
 		else
 		{
+			jQuery(".layout-load").css('display','none');
 			return false;
+
 		}
 }
 

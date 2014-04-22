@@ -77,7 +77,14 @@ $blogId		= 2;
 			
 			  <div id="main" class="span9 clearfix" role="main">
 
-			  	<div class="layout-load span12" ></div>
+			  	<div class="layout-load span12" >
+			  		
+					<div class="spinner">
+					  <div class="bounce1"></div>
+					  <div class="bounce2"></div>
+					  <div class="bounce3"></div>
+					</div>
+		  		</div>
 				<div id="main-articulos">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
