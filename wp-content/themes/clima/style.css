@@ -1871,5 +1871,82 @@ div.main-galeria > article a:hover .contenido{
     -webkit-transform: scale(1.0);
   }
 }
-
+/*Estilos de Suscripción*/
+.widget_mailchimpsf_widget button.btn-primary{
+	background: #8FB625;
+	padding: 10px 5px 10px 25px;
+	color: #fff;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	margin-top: 15px;
+	text-shadow: none;
+}
+#mc_signup{
+	background: #8FB625;
+	padding: 15px 0;
+	text-align: center;
+}
+#mc_signup #mc_subheader{
+	font-size: 1em;
+	font-weight: bold;
+	color: #fff;
+}
+#mc_signup .mc_merge_var{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+}
+#mc_signup .mc_merge_var label{
+	display: none;
+}
+#mc_signup .mc_merge_var input{
+	height: 40px;
+	margin-bottom: 0px;
+}
+#mc_signup .mc_interest{
+	text-align: left;
+	padding: 0 15px;
+	color: #fff;
+}
+#mc_signup .mc_interest p{
+	font-weight: bold;
+}
+#mc_signup .mc_interest input{
+	margin-left: 20px;
+	display: inline-block;
+}
+#mc_signup #acepto-terminos{
+	color: #FFF;
+}
+#mc_signup #acepto-terminos ul li input{
+	display: inline-block;
+	margin: 0 5px 2px 0;
+}
+#mc_signup .mc_signup_submit{
+	background: none;
+	border: none;
+	text-align: center;
+	box-shadow: none;
+	padding-bottom: 0px;
+}
+#mc_signup .mc_signup_submit input.btn-primary{
+	background: #63A328;
+	border-radius: 0;
+	border: none;
+	text-transform: uppercase;
+	padding: 5px 15px;
+	text-shadow: none;
+}
+#mc_signup .mc_signup_submit input.btn-primary:hover{
+	background: #5A8E20;
+}
+#mc_signup form{
+	margin-bottom: 0px
+}
+#post-get{
+	display: none;
 
