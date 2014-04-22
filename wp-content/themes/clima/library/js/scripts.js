@@ -279,7 +279,7 @@ console.log(notIsotopeActive());
 	/* Se esconden todos las opciones por descarte y por ultimo se revela la que realmente
 	se quiere mostrar */
 
-	$(".item-clima a").click(function(e){
+	$("#clima-vivo a").click(function(e){
 		var item = $(this).attr("href");
 
 		if( $(item).css("display") == "none" )
@@ -317,7 +317,34 @@ console.log(notIsotopeActive());
 	});
 
 	/* Fin de la sección */
-	
+
+/**
+clima a fondo
+**/
+		$("#clima-fondo a").click(function(e){
+		var item = $(this).attr("href");
+
+		if( $(item).css("display") == "none" )
+		{
+			$("#visible").hide('fast');
+			$("#vapor").hide('fast');
+
+
+		 if( $(".contenedor-convencion").css("display") != "none" )
+		  {
+			$(".contenedor-convencion").fadeOut('fast');
+		  	$(".contenedor-convencion").css('display','none');
+		  }
+
+			$(item).show();
+		}
+	});
+
+	/**
+	*fin clima a fondo
+	**/
+
+
 	/* Inicio: Sección Blog */
 	$(".filtro").change(function(){
 		if($("#medio-ambiente").is(':checked')){
@@ -667,7 +694,7 @@ console.log(notIsotopeActive());
 			      	var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
 			      	var pinterestFancy 	= '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(document.location.href)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+this.href)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
 
-					this.title      = '<div class="fancybox-custom-footer"><div class="fancybox-custom-footer-izq"><strong>categoria :</strong> '+cat+'<p>'+$(this.element).attr('datePub')+'</p></div>'+
+					this.title      = '<div class="fancybox-custom-footer"><div class="fancybox-custom-footer-izq">Categoria :<strong> '+cat+'</strong><p>'+$(this.element).attr('datePub')+'</p></div>'+
 									  '<div class="fancybox-custom-footer-der">'+tweeterFancy+facebookFancy+pinterestFancy+'</div></div>';
 
 		        	this.outer.prepend( '<div class="fancybox-custom-head"><div class="fancybox-custom-head-izq">'+title1+'</div>'+
@@ -812,6 +839,10 @@ function getBlog(event)
 		{
 				pag = pag+1;
 
+				jQuery("#main-articulos").fadeOut();
+				jQuery(".layout-load").css('display','block');
+				//jQuery(".layout-load").fadeIn();
+
 				jQuery.ajax({
 					type: "GET",
 					url: "../wp-admin/admin-ajax.php",
@@ -831,6 +862,10 @@ function getBlog(event)
 							volvemos a recostruir el isotope para 
 							que me tome nuevos cambios
 						*/
+
+						jQuery("#main-articulos").css('display','block');
+						jQuery(".layout-load").css('display','none');
+
 
 						var container = jQuery('#main-articulos');
 						container.append(data);
@@ -859,6 +894,7 @@ function getBlog(event)
 					
 					throw "Error,no results";
 				});
+
 		}
 		else
 		{
@@ -877,6 +913,9 @@ function getGallery(event)
 		if(pag >= 1)
 		{
 				pag = pag+1;
+
+				jQuery("#main-articulos").fadeOut();
+				jQuery(".layout-load").css('display','block');
 
 				jQuery.ajax({
 					type: "GET",
@@ -897,6 +936,9 @@ function getGallery(event)
 							volvemos a recostruir el isotope para 
 							que me tome nuevos cambios
 						*/
+						jQuery("#main-articulos").css('display','block');
+						jQuery(".layout-load").css('display','none');
+
 
 						var container = jQuery('#main-articulos');
 						container.append(data);
@@ -938,6 +980,9 @@ function getGalleryPerDate(event)
 
 		if( date.length )
 		{
+				jQuery("#main-articulos").fadeOut();
+				jQuery(".layout-load").css('display','block');
+
 				jQuery.ajax({
 					type: "GET",
 					url: "../wp-admin/admin-ajax.php",
@@ -956,6 +1001,11 @@ function getGalleryPerDate(event)
 					}
 					else
 					{
+
+						jQuery("#main-articulos").css('display','block');
+						jQuery(".layout-load").css('display','none');
+
+
 						var container = jQuery('#main-articulos');
 						container.html(data);
 						container.isotope('destroy');

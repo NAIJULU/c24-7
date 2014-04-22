@@ -996,14 +996,8 @@ border-radius: 4px;
 {	display: block;
 	position: relative;
 	z-index: 0;
-	/*margin: 7px;
-<<<<<<< HEAD
-	height: 237px;
-	width: 237px;*/
-=======
 	height: 237px;*/
 	width: 237px;
->>>>>>> FETCH_HEAD
 	color:white;
 	margin-right: 10px;
 	overflow: hidden;
@@ -1775,6 +1769,7 @@ div.emision-titulo{
 	margin-top: 30px;
 	
 }
+
 /*Galería*/
 #main-articulos article.articulo-galeria{
 	height: 170px;
@@ -1844,3 +1839,16 @@ div.emision-titulo{
     -webkit-transform: scale(1.0);
   }
 }
+
+.ui-datepicker-year
+{
+	display: inline !important;
+}
+
+#main .layout-load
+{
+	height: 600px;
+	background-color: black;
+	display: none;
+}
+

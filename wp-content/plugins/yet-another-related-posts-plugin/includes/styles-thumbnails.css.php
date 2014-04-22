@@ -19,15 +19,15 @@ header('Content-Type: text/css');
 }
 .yarpp-thumbnails-horizontal .yarpp-thumbnail {
 	border: 1px solid rgba(127,127,127,0.1);
-	width: <?php echo $width_with_margins; ?>px;
-	height: <?php echo $height_with_text; ?>px;
+	width: 211px;
+	height: 220px;
 	margin: <?php echo $margin; ?>px;
 	margin-left: 0px;
 	vertical-align: top;
 }
 .yarpp-thumbnail > img, .yarpp-thumbnail-default {
-	width: <?php echo $width; ?>px;
-	height: <?php echo $height; ?>px;
+	width: 211px;
+	height: 200px;
 	margin: <?php echo $margin; ?>px;
 }
 .yarpp-thumbnails-horizontal .yarpp-thumbnail > img, .yarpp-thumbnails-horizontal .yarpp-thumbnail-default {
@@ -39,7 +39,7 @@ header('Content-Type: text/css');
 	line-height: 1.4em;
 	margin: <?php echo $extra_margin; ?>px;
 	margin-top: 0px;
-	width: <?php echo $width; ?>px;
+	width: 200px;
 	text-decoration: inherit;
 	overflow: hidden;
 }
@@ -52,7 +52,7 @@ header('Content-Type: text/css');
 	font-size: 12px;
 	background: rgba(0, 0, 0, 0.78);
 	color: #FFFFFF;
-	width: 120px;
+	width: 210px;
 	margin: 5px;
 	line-height: 14px;
 	
@@ -62,6 +62,6 @@ header('Content-Type: text/css');
 	overflow: hidden;
 }
 .yarpp-thumbnail-default > img {
-	min-height: <?php echo $height; ?>px;
-	min-width: <?php echo $width; ?>px;
+	min-height: 220px;
+	min-width: 210px;
 }
