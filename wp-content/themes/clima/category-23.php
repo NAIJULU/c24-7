@@ -36,6 +36,13 @@ $args = array(
 
 $categories = get_categories( $args );
 
+if( isset($_GET['id']) )
+{
+
+echo 'sizas.com';
+
+}
+
 
 ?>
 <?php get_header(); ?>

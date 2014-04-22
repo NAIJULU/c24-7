@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 	  //$(this).attr('checked','checked');
 
 	  $container.isotope({ filter: selector });
-	  
+
 	  return;
 	});	 	
 
@@ -970,15 +970,18 @@ function getGallery(event)
 					
 				})
 				.fail(function() {
-					jQuery(".layout-load").css('display','none');
+
+					//jQuery(".layout-load").css('display','none');
+
 					throw "Error,no results";
 				});
 		}
 		else
 		{
-			jQuery(".layout-load").css('display','none');
 			return false;
 		}
+
+		jQuery(".layout-load").css('display','none');
 }
 
 
