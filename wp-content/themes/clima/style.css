@@ -1800,7 +1800,9 @@ div.main-galeria > article a:hover .contenido{
 	box-sizing: border-box;
 	width: 100% !important;
 }
-
+#post-get {
+	display: none;
+}
 .ui-datepicker-year
 {
 	display: inline !important;
