@@ -767,6 +767,19 @@ if( $("#mc_signup").length > 0 )
 	
 }
 
+/* Solucion efecto de joder el menu principal */
+
+ if( $("#mc_signup").length > 0  )
+ {
+ 	$("#mc_signup").css('display','none');	
+ }
+
+ $("#btn-suscripcion").click(function(){
+
+ 	$("#mc_signup").css('display','inline');	
+
+ });
+
 
 
 

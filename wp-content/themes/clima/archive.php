@@ -92,19 +92,18 @@ $blogId		= 2;
 					<?php	
 					/* Para sacar etiquetas HTML del contenido */
 						$content = get_the_content();
+
+						$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
+						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
 					?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-						
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">					
 								<?php 
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
-								 ?>
-								<?php $url = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; ?>
-								<?php $url = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; ?>
-
-								<figure><img src="<?php echo $url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
+								?>
+								<figure><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 								<div class="contenido">
 									<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
 										<h1><?php the_title(); ?></h1>

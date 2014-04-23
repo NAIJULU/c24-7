@@ -14,7 +14,10 @@
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
-							<div class ="span14"><?php the_post_thumbnail( 'wpbs-featured' ); ?></div>
+							
+							<!-- deje la linea de la imagen destacada por que aja uno no sabe -->
+							<!--<div class ="span14"><?php //the_post_thumbnail( 'wpbs-featured' ); ?></div> -->
+
 							<div class="clearfix row-fluid" id="titulo-int-blog">
 								<div class="titulo-entrada span10">
 									<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
