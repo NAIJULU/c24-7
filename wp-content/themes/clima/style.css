@@ -1007,7 +1007,7 @@ border-radius: 4px;
 	color:white;
 	margin-right: 10px;
 	overflow: hidden;
-
+	height: 100%
 
 }
 #main-articulos article .categorias
@@ -1974,4 +1974,18 @@ div.selector-fecha form div.btn-group > input.btn-ver{
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
 	margin-top: -10px;
+}
+.contenedor-video{
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+.contenedor-video iframe, .contenedor-video object, .contenedor-video embed, .contenedor-video video{
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
