@@ -438,8 +438,20 @@ clima a fondo
 		$("#size option[value='"+valor+"']").attr("selected",true).change();
 	});
 
-/* URL MANAGER */
+/* Blogs videos adaptables */
+	if( $("#main").length > 0 && $("p iframe").length > 0 && $(".contenedor-video").length == 0 )
+	{
+    	if( $("p iframe").length )
+		{
+			$("p iframe").parent().append('<div class="contenedor-video"></div>');
+			$("p iframe").appendTo(".contenedor-video");
+		}
+	
+	}
 
+
+
+/* URL MANAGER */
 	if( window.location.hash )
 	{
 		var itemHash = window.location.hash;
@@ -551,8 +563,6 @@ clima a fondo
 	});
 
 
-
-
 	$("#d-right").click(function(e){
 
 		e.preventDefault();
@@ -657,7 +667,7 @@ clima a fondo
 		var content = $(".emision-tumb-content", this).val();
 
 		$(".page-header h1").html(title);
-		$("#videoEmision").html(content);
+		$(".contenedor-video").html(content);
 
 	});
 
@@ -678,10 +688,21 @@ clima a fondo
     	});
 	}
 
+/* Emisiones videos adaptables */
+	if( $("#videoEmision").length > 0 && $(".contenedor-video").length == 0 )
+	{
+    	if( $("#videoEmision iframe").length )
+		{
+			$("#videoEmision").append('<div class="contenedor-video"></div>');
+			$("#videoEmision iframe").appendTo(".contenedor-video");
+		}
+	
+	}
+
+
 	/* Fancy box */
 	if( $(".fancybox").length )
 	{
-
 		 $(".isotope-item:not(.isotope-hidden) .fancybox")
 		 .fancybox({
 
@@ -747,8 +768,6 @@ clima a fondo
 
 /* fin seccion emisiones */
 /* Boletin de suscripciones  */
-
-
 if( $("#mc_signup").length > 0 )
 {
 	$("#term").change(function(){
@@ -768,7 +787,6 @@ if( $("#mc_signup").length > 0 )
 }
 
 /* Solucion efecto de joder el menu principal */
-
  if( $("#mc_signup").length > 0  )
  {
  	$("#mc_signup").css('display','none');	
