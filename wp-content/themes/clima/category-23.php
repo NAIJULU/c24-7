@@ -160,7 +160,7 @@ $categories = get_categories( $args );
 
 								<!-- key isotope --><span class="categorias"><?php echo strtolower($categoria);  ?> <!-- end key isotope --></span>
 
-								<figure><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>"  class="thumb" /></figure>
+								<figure class="img-galeria"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>"  class="thumb" /></figure>
 								<div class="contenido">
 									<header >
 										<h1><?php the_title(); ?></h1>

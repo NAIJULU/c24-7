@@ -103,7 +103,7 @@ $blogId		= 2;
 									$categoria 		= get_the_category();
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 								?>
-								<figure><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
+								<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 								<div class="contenido">
 									<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
 										<h1><?php the_title(); ?></h1>

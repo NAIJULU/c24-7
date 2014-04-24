@@ -733,7 +733,10 @@ div[id*='attachment_'] {
 #main .hero-unit img {
 	margin-bottom: 1em;
 }
-#main article img {
+#main article figure.img-post img {
+	height: 100%;
+	width: auto;
+	max-width: none;
 	/*height: 250px;
 width: 250px;*/
 }
