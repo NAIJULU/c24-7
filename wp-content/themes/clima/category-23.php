@@ -104,13 +104,14 @@ $categories = get_categories( $args );
 				</div>
 
 				<div id="bar-fecha">
-					<div class="bar-fecha-control-1 span1">
+					<div class="bar-fecha-control-1">
 				  		<input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
 				  	</div>
-					<div class="bar-fecha-control-2 span1">
-				  		<a id="ir-fecha" href="#" title="Presione este boton en caso de que quiera buscar imagenes por fecha y filtrarlas.">Ir </a>
-				  		<a  href="" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Todos </a>
+					<div class="bar-fecha-control-2">
+				  		<a class="btn-ir" id="ir-fecha" href="#" title="Presione este boton en caso de que quiera buscar imagenes por fecha y filtrarlas.">Ir </a>
 				  	</div>
+				 	<a class="btn-todas" href="#" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Todos </a>
+
 				</div>
 
 			<?php get_sidebar();  ?>
