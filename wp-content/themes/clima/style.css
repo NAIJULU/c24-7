@@ -1576,7 +1576,6 @@ margin: 0px 20px 0px 20px;
 	background-color: #000000;
 	opacity:0.8;
 	filter:alpha(opacity=90); /* For IE8 and earlier */
-	height: 		100%;
 	width: 			100%;
 	position: 		absolute;
 	z-index: 		2;
@@ -1587,7 +1586,7 @@ margin: 0px 20px 0px 20px;
 
 	color:#F2F2F2;
 	font-size: 14px;
-	margin: 10% 10% 10% 10%;
+	margin: 8%;
 
 }
 
