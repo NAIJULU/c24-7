@@ -925,6 +925,14 @@ text-decoration: none;
 text-transform: uppercase;
 
 }
+.menu-clima p, #bar-fecha p{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.menu-clima p.texto-filtro{
+	margin-left: -18px;
+}
 #sidebar1 ul
 
 {
@@ -1696,10 +1704,11 @@ div.emision-titulo{
 }
 #bar-fecha{
 	margin-top: 15px;
+	margin-left: -18px;
 }
 #bar-fecha .bar-fecha-control-1
 {
-	width: 160px;
+	width: 145px;
 	float: left;
 }
 
@@ -1712,7 +1721,7 @@ div.emision-titulo{
 
 #bar-fecha .bar-fecha-control-1 input
 {
-	width: 183px;
+	width: 170px;
 }
 #bar-fecha .bar-fecha-control-1 input.datepicker{
 	-webkit-border-radius: 4px;

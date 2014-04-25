@@ -80,8 +80,9 @@ $categories = get_categories( $args );
              </div>
 
 			<div id="content" class="clearfix row-fluid">
-            <div class="span3">
+            <div class="span3 side-bar">
             	<div class="menu-clima" id="menu-clima">
+            		<p class="texto-filtro">Filtra las imágenes por categoría</p>
 					<?php
 						foreach ($categories as  $value) 
 						{
@@ -101,19 +102,17 @@ $categories = get_categories( $args );
 					</label>
 
 					<select id="size" name="filter by" class="isotopenav" style="display:none"></select> 
-				</div>
-
-				<div id="bar-fecha">
-					<div class="bar-fecha-control-1">
-				  		<input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
-				  	</div>
+					<div id="bar-fecha">
+						<p>Filtra las imágenes por fecha de publicación</p>
+						<div class="bar-fecha-control-1">
+					  		<input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
+					  	</div>
 					<div class="bar-fecha-control-2">
 				  		<a class="btn-ir" id="ir-fecha" href="#" title="Presione este boton en caso de que quiera buscar imagenes por fecha y filtrarlas.">Ir </a>
 				  	</div>
 				 	<a class="btn-todas" href="#" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Todos </a>
-
 				</div>
-
+				</div>
 			<?php get_sidebar();  ?>
 		</div>
 			
