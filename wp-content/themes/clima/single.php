@@ -59,8 +59,8 @@
 								<div class="row-fluid">
 									<div class="pagination articulos-antysig">
 										<ul class="clearfix">
-											<li class="art-anterior span6"><?php previous_post_link('%link', 'Artículo anterior'); ?></li>
-											<li class="art-siguiente span6"><?php next_post_link('%link', 'Artículo siguiente'); ?></li>
+											<li class="art-anterior span6"><?php previous_post_link('%link', 'Articulo Anterior', TRUE, '2'); ?></li>
+											<li class="art-siguiente span6"><?php next_post_link('%link', 'Articulo Siguiente', TRUE, '2'); ?></li>
 										<ul>	
 									</div>
 									<?php //wp_link_pages(); ?>
