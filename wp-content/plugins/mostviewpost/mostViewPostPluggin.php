@@ -85,7 +85,8 @@ function countArticle($post, $category )
 if($post)
 {
 
-  $option =  ( !empty(get_option( 'optionPost' )) ) ? get_option('optionPost') : 0;
+  $option = get_option('optionPost' );
+  $option =  ( !empty($option) ) ? $option : 0;
 
 	foreach ($category as $key => $value) 
 	{
