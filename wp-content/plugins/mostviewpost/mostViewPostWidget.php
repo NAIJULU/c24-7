@@ -65,7 +65,8 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 
       $contenuto = get_the_content();
 
-  if( !empty( get_post_meta( get_the_ID(), 'count_view', true) ) )
+      $optionPost = get_post_meta( get_the_ID(), 'count_view', true);
+  if( !empty( $optionPost ) )
 	{
 	   $post_array['count'][] = get_post_meta( get_the_ID(), 'count_view', true);
 
