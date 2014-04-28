@@ -72,6 +72,8 @@ function getCategorias($default)
   
   }
 
+  
+
   return $options;
 
 }
@@ -82,9 +84,12 @@ function countArticle($post, $category )
 
 if($post)
 {
+
+  $option =  ( !empty(get_option( 'optionPost' )) ) ? get_option('optionPost') : 0;
+
 	foreach ($category as $key => $value) 
 	{
-		if($value->cat_ID == get_option('optionPost') )
+		if($value->cat_ID == $option )
 		{
 			if( empty( get_post_meta( $post, 'count_view', true) ) )
 			{

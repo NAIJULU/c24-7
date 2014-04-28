@@ -28,10 +28,11 @@
  
 function mostrarArticulos($args, $instance)
  {
+
 extract($args);																					
 /* Se muestra el título del widget */
 echo $before_widget;
-$optionPost = get_option( 'optionPost' );
+$optionPost = ( !empty(get_option( 'optionPost' )) ) ? get_option('optionPost') : 1;
 $num_per = ( !empty(get_option('option_num') ) ) ? get_option('option_num') : 1;
 
 $post_array = null;
