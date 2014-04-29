@@ -10,7 +10,7 @@
   
 	  function widget( $args, $instance )
 	  {
-		  $this->mostrarArticulos($args, $instance);
+		  $this->mostrarArticulosRel($args, $instance);
 	  }
   
 	  function update( $new_instance, $old_instance )
@@ -26,9 +26,8 @@
 	<?php 
 	}
  
-function mostrarArticulos($args, $instance)
+function mostrarArticulosRel($args, $instance)
  {
-
 	extract($args);																					
 	/* Se muestra el título del widget */
 	echo $before_widget;
@@ -41,29 +40,25 @@ function mostrarArticulos($args, $instance)
 
 	?>
 
+	<script>(function(d, s, id) {
+  		var js, fjs = d.getElementsByTagName(s)[0];
+  		if (d.getElementById(id)) return;
+  		js = d.createElement(s); js.id = id;
+  		js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=150278208448155";
+  		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+	</script>
+
 	<div class="enc-widget">
-		<h2>Más Votados.</h2>
+		<h2>Más Comentados.</h2>
 	</div>
 
 	<?php
 
-		global $wpdb;
-
-		$result = $wpdb->get_results ( "
-		    SELECT * 
-		    FROM  $wpdb->posts
-		        WHERE post_type = 'page'
-		" );
-
-		foreach ( $result as $page )
-		{
-		   echo $page->ID.'<br/>';
-		   echo $page->post_title.'<br/>';
-		}
-
-
 	$args = array('cat'=>$optionPost, 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' );
 	$the_query = new WP_Query($args); 
+
 
 
 	if ($the_query->have_posts())
@@ -81,24 +76,21 @@ function mostrarArticulos($args, $instance)
 
 	      $contenuto = get_the_content();
 
-	  if( !empty( get_post_meta( get_the_ID(), 'count_view', true) ) )
-		{
-		   $post_array['count'][] = get_post_meta( get_the_ID(), 'count_view', true);
-
-		   $post_array['post'][] = '<article id="most-"'.get_the_ID().' class="most-widget" >'.
+		  $post_array['post'][] = '<article id="most-'.get_the_ID().'" class="most-widget" >'.
 		    	  						'<a href="'.get_permalink( get_the_ID() ).'" >'.
 		      							'<figure> <img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>'.
-		      							'<div class="contenido">'.
+		      							'<div class="contenido">'.'<fb:comments-count expr:href='.get_permalink( get_the_ID() ).' ></fb:comments-count>'.
 			      						'<header><span class="categorias">'.strtolower($categoria).'</span></header>'.
 			      						'<p>'.substr(wp_filter_nohtml_kses( the_title('','',false) ), 0,80).'...'.'</p>'.
 		      							'</div></a></article>';
-	     }
+
+
 	        endif;
 	endwhile;
 	}
 
 	//ordenar por votos
-	array_multisort($post_array['count'], SORT_DESC,$post_array['post']);
+	//array_multisort($post_array['count'], SORT_DESC,$post_array['post']);
 
 	for($i=0; $i < $num_per; $i++)
 	{

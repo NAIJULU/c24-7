@@ -32,12 +32,13 @@ function mostrarArticulos($args, $instance)
 extract($args);																					
 /* Se muestra el título del widget */
 echo $before_widget;
+
 $optionPost = get_option( 'optionPost' );
 $num_per = get_option('option_num');
 $optionPost = ( !empty($optionPost) ) ? $optionPost : 1;
 $num_per = ( !empty($num_per) ) ? $num_per : 1;
 
-$post_array = null;
+$post_array = array();
 
 ?>
 
@@ -65,12 +66,14 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 
       $contenuto = get_the_content();
 
-      $optionPost = get_post_meta( get_the_ID(), 'count_view', true);
+      $coutPost = get_post_meta( get_the_ID(), 'count_view', true);
+
+
   if( !empty( $optionPost ) )
 	{
-	   $post_array['count'][] = get_post_meta( get_the_ID(), 'count_view', true);
+	   $post_array['count'][] = $coutPost;
 
-	   $post_array['post'][] = '<article id="most-"'.get_the_ID().' class="most-widget" >'.
+	   $post_array['post'][] = '<article id="most-'.get_the_ID().'" class="most-widget" >'.
 	    	  						'<a href="'.get_permalink( get_the_ID() ).'" >'.
 	      							'<figure> <img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>'.
 	      							'<div class="contenido">'.
@@ -83,7 +86,10 @@ endwhile;
 }
 
 //ordenar por votos
-array_multisort($post_array['count'], SORT_DESC,$post_array['post']);
+if( count($post_array) > 0)
+{
+	array_multisort($post_array['count'], SORT_DESC,$post_array['post']);
+}
 
 for($i=0; $i < $num_per; $i++)
 {

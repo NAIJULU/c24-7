@@ -57,7 +57,6 @@ function commentsfacebook() {
   $app_language = get_option('app_language');
   $app_post = get_option('app_post');
   
-  
   ?>
   
   <div id="fb-root"></div>
@@ -70,8 +69,9 @@ function commentsfacebook() {
 	}(document, 'script', 'facebook-jssdk'));</script>
 	
    <div style="margin-top: 30px;"><h3 class="titulo-fb"><?php echo $web_app_title ?></h3></div>
-             
-   <center><div class="fb-comments" data-href="<?php the_permalink() ?>" data-num-posts="<?php echo $app_post ?>" data-width="<?php echo $app_width ?>"></div></center>
+
+   <center><div class="fb-comments" data-href="<?php the_permalink() ?>" data-num-posts="<?php echo $app_post ?>" data-width="<?php echo $app_width ?>"> 
+    </div></center>
     
   <?php
 

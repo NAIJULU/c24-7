@@ -876,6 +876,12 @@ function handleTweets(tweets){
 
     	/* tarer galeria por fecha */
    $('.bar-fecha-control-2 #ir-fecha').on('click', getGalleryPerDate);
+
+   /* funcion para comentarios de facebook */
+     $("#u_0_2").submit(function(e) {
+     			e.preventDefault();
+     		alert('sizas');
+     });
  
 
 });
@@ -1118,4 +1124,12 @@ function notIsotopeActive()
 	});
 
 	return items;
+}
+
+
+/* Commentarios de facebook acciones */
+function conteoComentarios(e)
+{
+	e.preventDefault();
+	alert('sizas');
 }
