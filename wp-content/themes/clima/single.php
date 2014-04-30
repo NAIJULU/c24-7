@@ -79,8 +79,8 @@
 						</footer> --><!-- end article footer -->
 					
 					</article> <!-- end article -->
-					
-					<?php comments_template('',true); ?>
+					   <?php comments_template(); ?>
+					<?php //comments_template('',true); ?>
 					
 					<?php endwhile; ?>			
 						
