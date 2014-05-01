@@ -34,9 +34,9 @@ function viewPostAdmin()
 function creaWidgetView()
 {
 	 include_once(WP_PLUGIN_DIR.'/mostviewpost/mostViewPostWidget.php');
-   include_once(WP_PLUGIN_DIR.'/mostviewpost/mostRelatedPostWidget.php');
+   include_once(WP_PLUGIN_DIR.'/mostviewpost/mostCommentPostWidget.php');
 	 register_widget( 'mostViewPostWidget' );
-   register_widget( 'mostRelatedPostWidget' );
+   register_widget( 'mostCommentPostWidget' );
 }
 
 function getCategorias($default)

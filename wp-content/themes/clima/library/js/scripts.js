@@ -878,11 +878,7 @@ function handleTweets(tweets){
    $('.bar-fecha-control-2 #ir-fecha').on('click', getGalleryPerDate);
 
    /* funcion para comentarios de facebook */
-     $("#u_0_2").submit(function(e) {
-     			e.preventDefault();
-     		alert('sizas');
-     });
- 
+
 
 });
 
@@ -1033,10 +1029,11 @@ function getGallery(event)
 		}
 		else
 		{
+			jQuery(".layout-load").css('display','none');
 			return false;
 		}
 
-		jQuery(".layout-load").css('display','none');
+		
 }
 
 

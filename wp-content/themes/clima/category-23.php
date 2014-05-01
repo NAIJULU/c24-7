@@ -117,8 +117,8 @@ $categories = get_categories( $args );
 		</div>
 			
 			  <div id="main" class="span9 clearfix" role="main">
+			  	
 			  	<div class="layout-load span12" >
-			  		
 					<div class="spinner">
 					  <div class="bounce1"></div>
 					  <div class="bounce2"></div>
