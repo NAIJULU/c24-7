@@ -132,6 +132,19 @@ you like. Enjoy!
         'after_title' => '</h3>',
   ));  
 
+
+// Registrando posición para el widget en la página principal
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'Widget Gallery',
+        'id'=>'home_gallery',
+        'before_widget' => '<div class="widget-gallery">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+  ));
+
+
 // Registrando posición para el widget de las fotos de usuario en el home
  if ( function_exists('register_sidebar') )
        register_sidebar(array(
@@ -669,6 +682,9 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
     wp_register_style('css_fancybox_thumbs', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
   
+	//Jcarousel
+   wp_register_script('jcarousel', get_template_directory_uri() . '/library/js/jquery.jcarousel.min.js', array('jquery'), '3.1' );
+   wp_register_style('css_jcarousel', get_template_directory_uri() . '/library/css/jcarousel.basic.css', '3.1' );
 
     //default
     wp_enqueue_script('bootstrap');
@@ -851,6 +867,7 @@ function creaWidgets()
  register_widget( 'WidgetPronosticoHome' );
  register_widget( 'WidgetPronostico');
  register_widget( 'WidgetUltimaEmision' );
+ register_widget( 'widgetGaleria' );
 }
 
 add_action( 'widgets_init', 'creaWidgets' );
@@ -1162,7 +1179,7 @@ include_once(TEMPLATEPATH.'/viewConvenciones.php');
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 include_once(TEMPLATEPATH.'/widgets/widget-pronostico.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
-
+include_once(TEMPLATEPATH.'/widgets/widget-galeria.php');
 
 
 
