@@ -205,7 +205,7 @@ input, textarea, select, .uneditable-input {
 }
 /* post styling */
 
-#mapa {
+#mapa, #mapa-pluviometrico {
 	height: 350px !important;
 	width: 100% !important;
 }
@@ -1555,7 +1555,7 @@ margin: 0px 20px 0px 20px;
 	cursor:pointer;
 }
 
-#radar-meterologico
+#radar-meterologico,  #reporte-estaciones
 {
 	width: 74.359%;
 }

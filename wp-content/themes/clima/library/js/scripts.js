@@ -263,6 +263,7 @@ jQuery(document).ready(function($) {
 	});
 
 
+
 	$(".convencion").click(function(e){
 		if( $(".contenedor-convencion").css("display") == "none" )
 		  {
@@ -328,6 +329,7 @@ clima a fondo
 		{
 			$("#visible").hide('fast');
 			$("#vapor").hide('fast');
+			$("#reporte-estaciones").hide('fast');
 
 
 		 if( $(".contenedor-convencion").css("display") != "none" )
@@ -339,6 +341,26 @@ clima a fondo
 			$(item).show();
 		}
 	});
+
+
+
+	$("#btnMostrarMapaPluviometrico").click(function(e){
+		e.preventDefault();
+		$("#visible").fadeOut();
+		$("#vapor").fadeOut();
+		$("#reporte-estaciones").fadeIn(1000);
+
+		var medellin = new google.maps.LatLng(6.244316, -75.539932);
+		var mapOptions = {
+			zoom: 12,
+			center: medellin,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("mapa-pluviometrico"), mapOptions);		
+		//var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
+		//georssLayer.setMap(map);
+	});
+
 
 	/**
 	*fin clima a fondo

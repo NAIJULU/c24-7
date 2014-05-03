@@ -26,6 +26,7 @@ Template Name: Clima a fondo OK
               <ul>
                 <li class="item-clima"><a id="btnMostrarVisible" class="visible" href="#visible">Imagen de lo visible</a></li>
                 <li class="item-clima"><a id="btnMostrarVapor" class="vapor" href="#vapor">Vapor de agua</a></li>
+                <li class="item-clima"><a id="btnMostrarMapaPluviometrico" class="reporte-estaciones" href="#reporte-estaciones">Reporte extendido Estaciones Pluviometricas.</a></li>
               </ul>
             </div>
 
@@ -66,6 +67,25 @@ Template Name: Clima a fondo OK
                 <img src="http://www.areadigital.gov.co/ftpclima/antioquiava4h.gif" />
               </div> 
 
+            </div>
+
+
+            <div id="reporte-estaciones" style="display:none" class="container-function-1"> </a>
+
+
+               <?php viewConvenciones("Un radar meteorológico permite conocer los sectores donde ocurren o han ocurrido precipitaciones en las últimas horas. En este caso, el radar presenta imágenes de las
+
+                últimas 6 horas y la imagen actual. ¿Cómo funciona? Un radar es un sensor remoto, que emite una señal de microondas que llega hasta las nubes y se refleja en las gotas de agua. La cantidad y el tamaño de las gotas de agua presentes 
+
+                en las nubes se registra en la imagen y se denomina “reflectividad”. El radar meteorológico, ubicado en Santa  Elena, que sirve para el monitoreo del Valle de Aburrá, permite conocer la localización y movimiento de las lluvias, el lugar y hora  donde ocurren en la subregión.
+
+                ¿Cómo interpretar los colores de la imagen del radar?
+
+                En la escala de colores, el azul y verde  representan baja reflectividad, lo que se interpreta como baja intensidad de  precipitaciones. Los colores cálidos, como el amarillo, naranja y rojo indican lluvias de  moderada a alta intensidad. El magenta indica lluvias muy intensas, que incluso pueden traer  granizo."); ?>
+
+                <div id="contenedor-radar" class="fondo-contenido-1">
+                  <div id="mapa-pluviometrico"></div>
+                </div>
             </div>
 
 
