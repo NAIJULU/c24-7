@@ -80,7 +80,9 @@ Template Name: Clima a fondo OK
                 Recomendaciones por intensidad: El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia cuando los registros superan los umbrales de intensidad para periodos de 10 minutos superiores a 20mm/h, 50 mm/h o 100 mm/h."); ?>
 
                 <div id="contenedor-radar" class="fondo-contenido-1">
-                  <div id="mapa-pluviometrico"></div>
+                  <div id="mapa-pluviometrico">
+                    <?php if(function_exists('cargarCsvPluviometricas')) { cargarCsvPluviometricas(); } ?>
+                  </div>
                 </div>
             </div>
 

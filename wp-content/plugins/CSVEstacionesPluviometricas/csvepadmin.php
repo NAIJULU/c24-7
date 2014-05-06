@@ -75,35 +75,12 @@ function readCsv()
 
 	}
 
+   saveLog('carga manual por administrador', $msg);
    return $msg; 
 
 }
 
-function saveInfo($csv)
-{
-	global $wpdb;
 
-	try {
-			foreach ($csv as $key => $value) 
-			{
-				$data['fecha_reporte']  	= date('Y/m/d');
-				$data['intensidad_30m'] 	= $value[8].' '.$value[25] ;
-				$data['precipitacion_1h'] 	= $value[10].' '.$value[27] ;
-				$data['precipitacion_3h'] 	= $value[11].' '.$value[28] ;
-
-
-				$wpdb->update('c247_csv_pluviometricas', $data , array('id_estacion' => $value[0]) );
-			}
-
-
-	} catch (Exception $e) {
-
-	     echo  "Error al intentar insertar el CSV.";
-	}
-
-
-
-}
 
 
 ?>

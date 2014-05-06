@@ -30,53 +30,101 @@ function csvepadmin()
 {
 	include(WP_PLUGIN_DIR.'/CSVEstacionesPluviometricas/csvepadmin.php');  
 }
-/*
-function creaWidgetView()
+
+
+function cargarCsvPluviometricas()
 {
-	 include_once(WP_PLUGIN_DIR.'/mostviewpost/mostViewPostWidget.php');
-   include_once(WP_PLUGIN_DIR.'/mostviewpost/mostCommentPostWidget.php');
-	 register_widget( 'mostViewPostWidget' );
-   register_widget( 'mostCommentPostWidget' );
-}
-*/
+  $msg = "";
 
-/* CountArticle
- Poner despues del LOOP de la categoria de articulo deseado esta linea.
- <?php if( function_exists('countArticle') ){ countArticle( $post->ID,get_the_category() ); } ?> */
- /*
-function countArticle($post, $category )
+        try {
+
+            $path = "http://www.siata.gov.co/TM45/LinkSiataTM_Pluviometricas.csv";
+            $i = 0;
+            $file = file_get_contents($path, true);
+            $lineas = explode("\n", $file);
+
+            foreach ($lineas as $linea)
+            {
+              if(!empty($linea))
+              {
+
+                  $linea  = explode(',', $linea);
+          
+                  foreach ($linea as $campo)
+                  {
+                      $csv[$i][] = trim($campo);  
+                  }
+                  $i = $i + 1;
+                  
+              }
+            }
+
+          
+            if(empty($csv))
+            {
+              $msg = "Error en el archivo CSV, verifique que el archivo tenga el formato correcto.";
+              throw new Exception($msg, 1);
+            }
+            else
+            {
+              saveInfo($csv);
+              $msg = "Archivo CSV cargado con exito. ";
+            }
+
+          } catch (Exception $e) 
+          {
+            $msg = "Error al intentar leer el archivo CSV.";
+          }
+
+
+          saveLog('carga automatica',$msg);
+}
+
+
+
+
+
+
+function saveInfo($csv)
 {
+  global $wpdb;
 
-if($post)
+  try {
+      foreach ($csv as $key => $value) 
+      {
+        $data['fecha_reporte']    = date('Y/m/d h:i:s A');
+        $data['intensidad_30m']   = $value[8].' '.$value[25] ;
+        $data['precipitacion_1h']   = $value[10].' '.$value[27] ;
+        $data['precipitacion_3h']   = $value[11].' '.$value[28] ;
+
+
+        $wpdb->update('c247_csv_pluviometricas', $data , array('id_estacion' => $value[0]) );
+      }
+
+
+  } catch (Exception $e) {
+
+       echo  "Error al intentar insertar el CSV.";
+  }
+
+
+}
+
+
+function saveLog($evento,$msg)
 {
+global $wpdb;
 
-  $option = get_option('optionPost' );
-  $option =  ( !empty($option) ) ? $option : 0;
+  $data = array();
+  $data['evento'] = $evento;
+  $data['msg']    = $msg;
+  $data['fecha']  = date('Y/m/d h:i:s A');
 
-	foreach ($category as $key => $value) 
-	{
-		if($value->cat_ID == $option )
-		{
-      $getCountView = get_post_meta( $post, 'count_view', true);
 
-			if( empty( $getCountView ) )
-			{
-				add_post_meta( $post,'count_view', 1 );
-			}
-			else
-			{	
-				 $contActual = get_post_meta( $post , 'count_view', true);
-				 update_post_meta( $post, 'count_view', $contActual + 1);
-			}
-		}
-	}
+
+  $wpdb->insert( 'c247_log_cargas', $data );
 
 }
-
-
-}
-
-*/
 
 
 
