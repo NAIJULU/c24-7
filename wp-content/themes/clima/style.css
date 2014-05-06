@@ -205,8 +205,14 @@ input, textarea, select, .uneditable-input {
 }
 /* post styling */
 
-#mapa, #mapa-pluviometrico {
+#mapa  {
 	height: 350px !important;
+	width: 100% !important;
+}
+
+#mapa-pluviometrico
+{
+	height: 500px !important;
 	width: 100% !important;
 }
 #mapa img {

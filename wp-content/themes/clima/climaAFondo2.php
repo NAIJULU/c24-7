@@ -73,15 +73,11 @@ Template Name: Clima a fondo OK
             <div id="reporte-estaciones" style="display:none" class="container-function-1"> </a>
 
 
-               <?php viewConvenciones("Un radar meteorológico permite conocer los sectores donde ocurren o han ocurrido precipitaciones en las últimas horas. En este caso, el radar presenta imágenes de las
-
-                últimas 6 horas y la imagen actual. ¿Cómo funciona? Un radar es un sensor remoto, que emite una señal de microondas que llega hasta las nubes y se refleja en las gotas de agua. La cantidad y el tamaño de las gotas de agua presentes 
-
-                en las nubes se registra en la imagen y se denomina “reflectividad”. El radar meteorológico, ubicado en Santa  Elena, que sirve para el monitoreo del Valle de Aburrá, permite conocer la localización y movimiento de las lluvias, el lugar y hora  donde ocurren en la subregión.
-
-                ¿Cómo interpretar los colores de la imagen del radar?
-
-                En la escala de colores, el azul y verde  representan baja reflectividad, lo que se interpreta como baja intensidad de  precipitaciones. Los colores cálidos, como el amarillo, naranja y rojo indican lluvias de  moderada a alta intensidad. El magenta indica lluvias muy intensas, que incluso pueden traer  granizo."); ?>
+               <?php viewConvenciones("Las estaciones pluviométricas del SIATA ubicadas en 
+                diferentes sectores de los municipios del Valle de Aburrá registran minuto  a minuto las lluvias, es decir, la cantidad de agua que se ha recogido y procesado en una estación pluviométrica, en un periodo de 
+                tiempo determinado. Recomendación de monitoreo por acumulado: 
+                El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia para las cuencas hidrográficas que tengan acumulados superiores a 15 mm en un periodo de 3 horas de lluvia. El siguiente umbral es de 30 y 40 mm de acumulado.
+                Recomendaciones por intensidad: El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia cuando los registros superan los umbrales de intensidad para periodos de 10 minutos superiores a 20mm/h, 50 mm/h o 100 mm/h."); ?>
 
                 <div id="contenedor-radar" class="fondo-contenido-1">
                   <div id="mapa-pluviometrico"></div>

@@ -2,12 +2,13 @@
 
 $ultimaActualizacion = get_option('_csv_es_fecha');
 
-readCsv();
+$msg = readCsv();
 $csv = array();
 
 function readCsv()
 {
 
+	$msg = "";
 
 	if( isset($_FILES['archivo_usuario']) )
 	{
@@ -44,31 +45,37 @@ function readCsv()
 					
 						if(empty($csv))
 						{
-							throw new Exception("Error en el archivo CSV, verifique que el archivo tenga el formato correcto.", 1);
+							$msg = "Error en el archivo CSV, verifique que el archivo tenga el formato correcto.";
+							throw new Exception($msg, 1);
 						}
 						else
 						{
 							saveInfo($csv);
+							$msg = "Archivo CSV cargado con exito. ";
 						}
 
 					} catch (Exception $e) 
 					{
-						echo "Error al intentar leer el archivo CSV.";
+						$msg = "Error al intentar leer el archivo CSV.";
 					}
 
 			}
 			else
 			{
-				echo "extencion incorrecta.";
+				$msg =  "extencion incorrecta.";
 			}
 
 		}
 		else
 		{
-			echo "el archivo supera el maximo tamaño permitido.";
+			$msg =  "el archivo supera el maximo tamaño permitido.";
 		}
 
+
+
 	}
+
+   return $msg; 
 
 }
 
@@ -91,7 +98,7 @@ function saveInfo($csv)
 
 	} catch (Exception $e) {
 
-	echo "Error al intentar insertar el CSV.";
+	     echo  "Error al intentar insertar el CSV.";
 	}
 
 
@@ -105,6 +112,7 @@ function saveInfo($csv)
 	<div class="view-post-admin-form">
 		<form id="form" enctype="multipart/form-data" action="" method="post" class="form-inline">
 			<header>
+				<?php if(!empty($msg)) echo $msg ;?>
 				<h1>Cargas de CSV para estaciones pluviometricas.</h1>
 				<label><?php echo $ultimaActualizacion ?></label> 
 			</header>

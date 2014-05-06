@@ -1180,8 +1180,24 @@ function getMarkersEstaciones()
 
   if(count($datos_estaciones) > 0)
   {
+    foreach ($datos_estaciones as $key => $est) {
 
-    echo json_encode($datos_estaciones);
+      $result[$key]['id_estacion']        = ( $est->id_estacion != null ) ? $est->id_estacion : "0";
+      $result[$key]['direccion']          = ( $est->direccion != null )? $est->direccion : "0";
+      $result[$key]['barrio']             = ( $est->barrio != null) ? $est->barrio : "0" ;
+      $result[$key]['municipio']          = ( $est->municipio != null) ? $est->municipio : "0";
+      $result[$key]['nombre']             = ( $est->nombre != null ) ? $est->nombre : "0";
+      $result[$key]['intensidad_30m']     = ( $est->intensidad_30m != null ) ? $est->intensidad_30m : "0";
+      $result[$key]['precipitacion_1h']   = ( $est->precipitacion_1h != null ) ? $est->precipitacion_1h : "0";
+      $result[$key]['precipitacion_3h']   = ( $est->precipitacion_3h != null ) ? $est->precipitacion_3h : "0";
+      $result[$key]['imagen']             = ( $est->imagen != null ) ? $est->imagen : "0";
+      $result[$key]['latitud']            = ( $est->latitud != null) ? $est->latitud : "0";
+      $result[$key]['longitud']           = ( $est->longitud != null) ? $est->longitud : "0" ;
+      $result[$key]['fecha_reporte']      = ( $est->fecha_reporte != null) ? $est->fecha_reporte : "0";
+
+    }
+    echo json_encode($result);
+    exit;
   }
   else
   {

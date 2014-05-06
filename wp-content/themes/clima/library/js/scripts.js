@@ -10,6 +10,7 @@
 
 var html  = "";
 var meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+var imagesUrl = window.location.origin+'/c24-7/wp-content/themes/clima/images/';
 
 var twitterFetcher=function(){function x(e){return e.replace(/<b[^>]*>(.*?)<\/b>/gi,function(c,e){return e}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(e,c){for(var g=[],f=RegExp("(^| )"+c+"( |$)"),a=e.getElementsByTagName("*"),h=0,d=a.length;h<d;h++)f.test(a[h].className)&&g.push(a[h]);return g}var y="",l=20,s=!0,k=[],t=!1,q=!0,r=!0,u=null,v=!0,z=!0,w=null,A=!0;return{fetch:function(e,c,g,f,a,h,d,b,m,n){void 0===g&&(g=20);void 0===f&&(s=!0);void 0===a&&(a=
 !0);void 0===h&&(h=!0);void 0===d&&(d="default");void 0===b&&(b=!0);void 0===m&&(m=null);void 0===n&&(n=!0);t?k.push({id:e,domId:c,maxTweets:g,enableLinks:f,showUser:a,showTime:h,dateFunction:d,showRt:b,customCallback:m,showInteraction:n}):(t=!0,y=c,l=g,s=f,r=a,q=h,z=b,u=d,w=m,A=n,c=document.createElement("script"),c.type="text/javascript",c.src="//cdn.syndication.twimg.com/widgets/timelines/"+e+"?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random(),document.getElementsByTagName("head")[0].appendChild(c))},
@@ -372,9 +373,9 @@ clima a fondo
 
 	function setGoogleMarkersEstaciones(map)
 	{
-
 			$.ajax({
 					type: "GET",
+					dataType: "JSON", 
 					url: "../wp-admin/admin-ajax.php",
 					data: {
 							'action' : 'setGoogleMarkersEstaciones'
@@ -382,34 +383,57 @@ clima a fondo
 				})
 				.done(function(data) {
 
-					//var markers = Array();
-
-					//markers = Array('santo tomas','6.229747','-75.578959','icon1','<span>info.com</span>');
 					var icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/map-orange.png",
         			new google.maps.Size(20, 30) );
-					//var myLatLng = 	new google.maps.LatLng(6.229747, -75.578959);
-					data = JSON.parse(data);
-					console.log(data);
+
+        			var infoG = false; 
 
 					$.each(data, function(i, estacion) {
-/*
-					markers[0] = new google.maps.Marker({
-			            position: myLatLng,
-			            map: map,
-			            icon: icon1,
-			            title: markers[0]
-			        });
 
-					var myLatLng = 	new google.maps.LatLng(estacion.latitud, estacion.longitud);
-					
-					marker = new google.maps.Marker({
-			            position: myLatLng,
-			            map: map,
-			            icon: icon1,
-			            title: estacion.nombre
-			       });
-				*/	
-			});
+						   var myLatLng 	= 	new google.maps.LatLng(estacion.latitud, estacion.longitud);
+						   var contenido  	= '<article class="mark-estaciones">'+
+							 				  '<h1>'+estacion.nombre+'</h1>'+
+											'<div class="fotografia">'+
+												'<img src="'+imagesUrl+'pluviometricas/'+estacion.imagen+'">'+
+											'</div>'+
+											'<div class="informacion">'+
+												'<span class="info-texto"> Intensidad de Lluvia en '+
+												'los últimos: </span>'+
+												'<table>'+
+													'<tr class= "info-tabla">'+
+													'<td class="info-td">30 min :</td>'+
+													'<td class="info-td2">'+estacion.intensidad_30m+'</td>'+
+													'</tr>'+
+													'<tr class= "info-tabla">'+
+													'<td class="info-td">1 hora :</td>'+
+													'<td class="info-td2">'+estacion.precipitacion_1h+'</td>'+
+													'</tr>'+
+													'<tr class= "info-tabla">'+
+													'<td class="info-td">3 horas :</td>'+
+													'<td class="info-td2">'+estacion.precipitacion_3h+'</td>'+
+													'</tr>'+
+												'</table>'+
+												'<div class="info-compartir"></div>'+
+											'</div>'+
+										'</article>';
+
+							var marker = new google.maps.Marker({
+					            position: myLatLng,
+					            map: map,
+					            icon: icon1,
+					            title: estacion.nombre
+					       });
+
+							var infowindow = new google.maps.InfoWindow({
+								maxWidth: 200,
+    							content: contenido
+							});
+
+							 google.maps.event.addListener(marker, 'click', function() {
+							    infowindow.open(map,marker);
+							  });
+
+				});
 
 
 				})
