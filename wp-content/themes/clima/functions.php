@@ -1171,6 +1171,30 @@ function porcentajeEquivalente($probablidad)
 }
 
 
+function getMarkersEstaciones()
+{
+  global $wpdb;
+  $datos_estaciones = array();
+  $result = array();
+  $datos_estaciones = $wpdb->get_results("SELECT * FROM c247_csv_pluviometricas WHERE latitud is not null AND longitud is not null ;");
+
+  if(count($datos_estaciones) > 0)
+  {
+
+    echo json_encode($datos_estaciones);
+  }
+  else
+  {
+    echo 'no results';
+  }
+
+}
+
+add_action('wp_ajax_nopriv_setGoogleMarkersEstaciones', 'getMarkersEstaciones');
+add_action('wp_ajax_setGoogleMarkersEstaciones', 'getMarkersEstaciones');
+
+
+
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
 

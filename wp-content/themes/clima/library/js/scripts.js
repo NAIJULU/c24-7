@@ -350,16 +350,76 @@ clima a fondo
 		$("#vapor").fadeOut();
 		$("#reporte-estaciones").fadeIn(1000);
 
+
+		setGoogleMapsEstaciones();
+
+	});
+
+	function setGoogleMapsEstaciones()
+	{
 		var medellin = new google.maps.LatLng(6.244316, -75.539932);
 		var mapOptions = {
 			zoom: 12,
 			center: medellin,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
-		var map = new google.maps.Map(document.getElementById("mapa-pluviometrico"), mapOptions);		
+		var map = new google.maps.Map(document.getElementById("mapa-pluviometrico"), mapOptions);
+		setGoogleMarkersEstaciones(map);		
 		//var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
 		//georssLayer.setMap(map);
-	});
+	}
+
+
+	function setGoogleMarkersEstaciones(map)
+	{
+
+			$.ajax({
+					type: "GET",
+					url: "../wp-admin/admin-ajax.php",
+					data: {
+							'action' : 'setGoogleMarkersEstaciones'
+						},
+				})
+				.done(function(data) {
+
+					//var markers = Array();
+
+					//markers = Array('santo tomas','6.229747','-75.578959','icon1','<span>info.com</span>');
+					var icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/map-orange.png",
+        			new google.maps.Size(20, 30) );
+					//var myLatLng = 	new google.maps.LatLng(6.229747, -75.578959);
+					data = JSON.parse(data);
+					console.log(data);
+
+					$.each(data, function(i, estacion) {
+/*
+					markers[0] = new google.maps.Marker({
+			            position: myLatLng,
+			            map: map,
+			            icon: icon1,
+			            title: markers[0]
+			        });
+
+					var myLatLng = 	new google.maps.LatLng(estacion.latitud, estacion.longitud);
+					
+					marker = new google.maps.Marker({
+			            position: myLatLng,
+			            map: map,
+			            icon: icon1,
+			            title: estacion.nombre
+			       });
+				*/	
+			});
+
+
+				})
+				.fail(function() {
+					
+					throw "Error,no results";
+				});
+
+
+	}
 
 
 	/**
@@ -1131,6 +1191,8 @@ function getGalleryPerDate(event)
 
 		}
 }
+
+
 
 
 function notIsotopeActive()

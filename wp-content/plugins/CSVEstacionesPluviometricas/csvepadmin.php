@@ -34,7 +34,7 @@ function readCsv()
 					
 									foreach ($linea as $campo)
 									{
-											$csv[$i][] = $campo;	
+											$csv[$i][] = trim($campo);	
 									}
 									$i = $i + 1;
 									
@@ -48,9 +48,7 @@ function readCsv()
 						}
 						else
 						{
-							echo '<pre>';
-							var_dump($csv);
-							echo '</pre>';
+							saveInfo($csv);
 						}
 
 					} catch (Exception $e) 
@@ -74,22 +72,29 @@ function readCsv()
 
 }
 
-function saveInfo()
+function saveInfo($csv)
 {
+	global $wpdb;
 
-	if( isset($_POST[$opt_name]) )
-	{
-		if(isset($_POST['option_num'] ))
-		{
-			$ultimaActualizacion = date('d/m/Y');
-			$dato30m  	= $_POST['dato30m'];
-			$dato1h   	= $_POST['dato1h'];
-			$dato3h 	= $_POST['dato3h'];
-			update_option( '_csv_es_dato30m', $dato30m );		
-			update_option( '_csv_es_dato1h', $dato1h );		
-			update_option( '_csv_es_dato3h', $dato3h );		
-		}
+	try {
+			foreach ($csv as $key => $value) 
+			{
+				$data['fecha_reporte']  	= date('Y/m/d');
+				$data['intensidad_30m'] 	= $value[8].' '.$value[25] ;
+				$data['precipitacion_1h'] 	= $value[10].' '.$value[27] ;
+				$data['precipitacion_3h'] 	= $value[11].' '.$value[28] ;
+
+
+				$wpdb->update('c247_csv_pluviometricas', $data , array('id_estacion' => $value[0]) );
+			}
+
+
+	} catch (Exception $e) {
+
+	echo "Error al intentar insertar el CSV.";
 	}
+
+
 
 }
 
