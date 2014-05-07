@@ -1209,7 +1209,20 @@ function getMarkersEstaciones()
 add_action('wp_ajax_nopriv_setGoogleMarkersEstaciones', 'getMarkersEstaciones');
 add_action('wp_ajax_setGoogleMarkersEstaciones', 'getMarkersEstaciones');
 
+function saveLog($evento,$msg)
+{
+global $wpdb;
 
+  $data = array();
+  $data['evento'] = $evento;
+  $data['msg']    = $msg;
+  $data['fecha']  = date('Y/m/d h:i:s A');
+
+
+
+  $wpdb->insert( 'c247_log_cargas', $data );
+
+}
 
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
