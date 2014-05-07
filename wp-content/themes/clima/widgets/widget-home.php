@@ -116,7 +116,7 @@
       </div>
     <?php endforeach?>
     </div>
-    <ol class="ciudades">
+    <ul class="ciudades">
       <li data-target="#pronosticos" data-slide-to="0" class="active">Medellín</li>
       <li data-target="#pronosticos" data-slide-to="1">Barbosa</li>
       <li data-target="#pronosticos" data-slide-to="2">Girardota</li>
@@ -127,7 +127,7 @@
       <li data-target="#pronosticos" data-slide-to="7">La Estrella</li>
       <li data-target="#pronosticos" data-slide-to="8">Itagüi</li>
       <li data-target="#pronosticos" data-slide-to="9">Caldas</li>
-    </ol>
+    </ul>
   </div>
   <div id="radar">
     <div id="contenedor-radar">

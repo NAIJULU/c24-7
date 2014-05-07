@@ -24,6 +24,7 @@
 				<h1>sizas</h1>
 			</div>
 	<?php 
+
 	}
  
 function mostrarArticulos($args, $instance)
@@ -41,9 +42,8 @@ $num_per = ( !empty($num_per) ) ? $num_per : 1;
 $post_array = array();
 
 ?>
-
-<div class="enc-widget">
-	<h2>Más vistos</h2>
+<div class="enc-widget-view">
+<h2>Más vistos</h2>
 </div>
 
 <?php

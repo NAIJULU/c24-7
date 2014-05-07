@@ -282,6 +282,7 @@ jQuery(document).ready(function($) {
 	se quiere mostrar */
 
 	$("#clima-vivo a").click(function(e){
+		e.preventDefault();
 		var item = $(this).attr("href");
 
 		if( $(item).css("display") == "none" )
