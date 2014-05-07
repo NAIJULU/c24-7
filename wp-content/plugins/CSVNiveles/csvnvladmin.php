@@ -1,11 +1,9 @@
 <?php
 
-$ultimaActualizacion = get_option('_csv_es_fecha');
-
-$msg = readCsv();
+$msg = readCsvNvl();
 $csv = array();
 
-function readCsv()
+function readCsvNvl()
 {
 
 	$msg = "";
@@ -50,7 +48,7 @@ function readCsv()
 						}
 						else
 						{
-							saveInfo($csv);
+							saveInfoNvl($csv);
 							$msg = "Archivo CSV cargado con exito. ";
 						}
 
@@ -90,8 +88,7 @@ function readCsv()
 		<form id="form" enctype="multipart/form-data" action="" method="post" class="form-inline">
 			<header>
 				<?php if(!empty($msg)) echo $msg ;?>
-				<h1>Cargas de CSV para estaciones pluviometricas.</h1>
-				<label><?php echo $ultimaActualizacion ?></label> 
+				<h1>Cargas de CSV para Niveles de quebradas.</h1>
 			</header>
 			<section>
 				<article>

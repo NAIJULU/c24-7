@@ -1,6 +1,5 @@
 <?php
 
-$ultimaActualizacion = get_option('_csv_es_fecha');
 
 $msg = readCsv();
 $csv = array();

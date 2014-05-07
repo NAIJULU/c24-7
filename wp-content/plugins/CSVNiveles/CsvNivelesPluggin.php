@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: CSV Estaciones Pluviometricas.
+Plugin Name: CSV Niveles de Quebradas.
 Plugin URI: http://wordpress.org
 Description: Permite cargar e interpretar los datos del CSV para ser mostrados de manera grafica en la pagina.
 Version: 1.0
@@ -23,7 +23,7 @@ add_action( 'admin_menu', 'admin_csv_niveles' );
 
 function admin_csv_niveles()
 {
-	add_options_page( 'CSV Niveles Quebradas', 'CSV Niveles Quebradas', 'manage_options', 'csvesplumenu', 'csvnvladmin' );
+	add_options_page( 'CSV Niveles Quebradas', 'CSV Niveles Quebradas', 'manage_options', 'csvnvlmenu', 'csvnvladmin' );
 }
 
 function csvnvladmin()
@@ -38,7 +38,7 @@ function cargarCsvNiveles()
 
         try {
 
-            $path = "http://www.siata.gov.co/TM45/LinkSiataTM_Pluviometricas.csv";
+            $path = "http://www.siata.gov.co/TM45/LinkSiataTM.csv";
             $i = 0;
             $file = file_get_contents($path, true);
             $lineas = explode("\n", $file);
@@ -67,7 +67,7 @@ function cargarCsvNiveles()
             }
             else
             {
-              saveInfo($csv);
+              saveInfoNvl($csv);
               $msg = "Archivo CSV cargado con exito. ";
             }
 
@@ -77,7 +77,7 @@ function cargarCsvNiveles()
           }
 
 
-          saveLog('carga automatica',$msg);
+          saveLog('carga automatica niveles de quebradas',$msg);
 }
 
 
@@ -86,16 +86,17 @@ function saveInfoNvl($csv)
 {
   global $wpdb;
 
+
+  $cut_csv = array_slice($csv,28);
+
   try {
-      foreach ($csv as $key => $value) 
+      foreach ($cut_csv as $key => $value) 
       {
         $data['fecha_reporte']    = date('Y/m/d h:i:s A');
-        $data['intensidad_30m']   = $value[8].' '.$value[25] ;
-        $data['precipitacion_1h']   = $value[10].' '.$value[27] ;
-        $data['precipitacion_3h']   = $value[11].' '.$value[28] ;
+        $data['nivel']   = $value[15].' '.$value[31] ;
+        $data['porcentaje']   = $value[16].' '.$value[32] ;
 
-
-        $wpdb->update('c247_csv_pluviometricas', $data , array('id_estacion' => $value[0]) );
+        $wpdb->update('c247_csv_niveles', $data , array('codigo' => $value[0]) );
       }
 
 
