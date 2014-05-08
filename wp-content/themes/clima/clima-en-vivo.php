@@ -124,9 +124,19 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                
                 <div id="sensores" style="display:none" class="container-function-1">
                   <?php viewConvenciones("El monitoreo de los ríos y quebradas en el Valle de Aburrá se realiza gracias a las estaciones de nivel del SIATA. A través de  esta herramienta se puede conocer cuál es el nivel y porcentaje de la canalización que está siendo ocupada por agua. La canalización es la parte que se encuentra en cemento y representa el 100 % de  capacidad en zonas canalizadas.  Se recomienda la observación y vigilancia por parte de los habitantes que habitan los sectores cercanos a las estaciones de las quebradas en monitoreo y avisar oportunamente a las autoridades en la línea  de emergencia 123, cualquier obstrucción en el cauce o eventualidad en el nivel de las quebradas."); ?>
-                  <div id="cont-sensores" >
-                  <!--  <img src=<?php echo bloginfo('template_url')."/images/sensores.png";  ?> />  -->
-                  </div> 
+
+                  <div id="cont-sensores">
+
+                    <div id="body-cuenca"  class="span6">
+                      <div id="body-fill">
+                        <img  id="cuenca-sup" src="<?php echo bloginfo('wpurl').'/wp-content/themes/clima/images/sup.png' ?>" />
+                      </div>
+                      <div id="body-cuenca-img">
+                          <img  id="cuenca-sup" src="<?php echo bloginfo('wpurl').'/wp-content/themes/clima/images/fill.png' ?>" />
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               <div id="temperatura-actual" style="display:none" class="container-function-1"> 
                   <?php viewConvenciones("Registro actual de los valores de temperatura de las estaciones meteorológicas del SIATA, ubicadas en diferentes sectores de los municipios del Valle de Aburrá."); ?>
