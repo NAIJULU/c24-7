@@ -1584,7 +1584,7 @@ margin: 0px 20px 0px 20px;
 	filter:alpha(opacity=90); /* For IE8 and earlier */
 	width: 			100%;
 	position: 		absolute;
-	z-index: 		2;
+	z-index: 		10;
 	display: 		none;
 }
 
@@ -1946,6 +1946,7 @@ div.main-galeria > article a:hover .contenido{
 	margin-top: 15px;
 	text-shadow: none;
 }
+
 #mc_signup{
 	background: #8FB625;
 	padding: 15px 0;
@@ -2048,34 +2049,122 @@ div.main-galeria > article a:hover .contenido{
 	position: relative;
 	background-color: #0387A5;
 	height: 350px;
+	padding: 5px;
 }
 
 #cont-sensores #body-cuenca #body-cuenca-img
 {
   position: relative;
-  z-index: 99;
+  z-index: 2;
   height: 100%;
 }
 
 #cont-sensores #body-cuenca #body-cuenca-img img
 {
-   height: 350px;
+   height: 340px;
 }
 
 #cont-sensores #body-cuenca #body-fill
 {
-   position: absolute;
-   z-index: 1;
-   bottom: 10%;
-   width: 100%;
-   height: 50px;
-   background-color: black;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 95%;
+	height: 50px;
+	background: #b1dff6; /* Old browsers */
+	background: -moz-linear-gradient(top, #b1dff6 13%, #0098cc 89%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,#b1dff6), color-stop(89%,#0098cc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b1dff6 13%,#0098cc 89%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #b1dff6 13%,#0098cc 89%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #b1dff6 13%,#0098cc 89%); /* IE10+ */
+	background: linear-gradient(to bottom, #b1dff6 13%,#0098cc 89%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1dff6', endColorstr='#0098cc',GradientType=0 ); /* IE6-9 */
 }
 
 #cont-sensores #body-cuenca #body-fill #cuenca-sup
 {
    position: relative;
-   bottom: 70%;
+   top: -50px;
    z-index: 1;
    width: 100%;
+   height: 52px;
+}
+
+
+#cont-sensores #body-cuenca #body-cuenca-izq
+{
+   background-color: #0387A5;
+   bottom: 31%;
+   height: 75px;
+   left: 7%;
+   position: relative;
+   width: 80px;
+   z-index: 3;
+   font-size: 40px;
+   color:#FFFFFF;
+   line-height: 31px;
+   text-align: center;
+}
+
+
+#cont-sensores #body-cuenca #body-cuenca-der
+{
+	background-color: #0387A5;
+    bottom: 53%;
+    height: 75px;
+    left:   72%;
+    position: relative;
+    width: 80px;
+    z-index: 3;
+    color:#FFFFFF;
+    font-size: 30px;
+   	color:#FFFFFF;
+   	line-height: 31px;
+   	text-align: center;
+
+}
+
+
+
+
+#cuenca-info #cuenca-info-sup 
+{
+	height: 150px;
+	margin-top: 2px;
+	background-color: #E9F1FC;
+	margin-bottom: 9px;
+	color: #013C49;
+}
+
+#cuenca-info #cuenca-info-inf #cuenca-info-s
+{
+	margin-bottom: 9px;
+}
+#cuenca-info #cuenca-info-photo 
+{
+	height: 150px;
+	margin-top: 1px;
+	background-color: #E9F1FC;
+	margin-bottom: 9px;
+}
+
+#cuenca-info-sup h3
+{
+	font-size: 14px;
+}
+
+#cuenca-info-sup p
+{
+	line-height: 3px;
+}
+
+#cuenca-info-sup #info-dir
+{
+	line-height: 18px;
+}
+
+#cuenca-info #cuenca-info-photo img
+{
+	width: 100% !important;
+	height: 100% !important;
 }

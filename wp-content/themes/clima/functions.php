@@ -1224,6 +1224,38 @@ global $wpdb;
 
 }
 
+
+function getInfoCuenca()
+{
+  global $wpdb;
+
+  $cuenca = $wpdb->get_results("SELECT * FROM c247_csv_niveles n WHERE codigo = ".$_GET['codigo']." ;");
+
+  echo json_encode($cuenca);
+  exit;
+
+}
+add_action('wp_ajax_nopriv_showInfoCuenca', 'getInfoCuenca');
+add_action('wp_ajax_showInfoCuenca', 'getInfoCuenca');
+
+
+function getCuencas()
+{
+  global $wpdb;
+
+  $datos_estaciones = $wpdb->get_results("SELECT codigo,nombre FROM c247_csv_niveles WHERE nombre is not null ;");
+  $result = "";
+
+  foreach ($datos_estaciones as $key => $cuenca) 
+  {
+
+    $result .= '<option value="'.$cuenca->codigo.'">'.$cuenca->codigo." -  ".$cuenca->nombre.'</option>';
+    
+  }
+  return $result;
+
+}
+
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
 

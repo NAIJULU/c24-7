@@ -124,17 +124,41 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                
                 <div id="sensores" style="display:none" class="container-function-1">
                   <?php viewConvenciones("El monitoreo de los ríos y quebradas en el Valle de Aburrá se realiza gracias a las estaciones de nivel del SIATA. A través de  esta herramienta se puede conocer cuál es el nivel y porcentaje de la canalización que está siendo ocupada por agua. La canalización es la parte que se encuentra en cemento y representa el 100 % de  capacidad en zonas canalizadas.  Se recomienda la observación y vigilancia por parte de los habitantes que habitan los sectores cercanos a las estaciones de las quebradas en monitoreo y avisar oportunamente a las autoridades en la línea  de emergencia 123, cualquier obstrucción en el cauce o eventualidad en el nivel de las quebradas."); ?>
-
+                  <?php $cuencasList = getCuencas(); ?>
                   <div id="cont-sensores">
 
-                    <div id="body-cuenca"  class="span6">
+                    <div id="body-cuenca"  class="span7">
                       <div id="body-fill">
                         <img  id="cuenca-sup" src="<?php echo bloginfo('wpurl').'/wp-content/themes/clima/images/sup.png' ?>" />
                       </div>
                       <div id="body-cuenca-img">
-                          <img  id="cuenca-sup" src="<?php echo bloginfo('wpurl').'/wp-content/themes/clima/images/fill.png' ?>" />
+                          <img  id="cuenca-inf" src="<?php echo bloginfo('wpurl').'/wp-content/themes/clima/images/fill.png' ?>" />
+                      </div>
+                       <div id="body-cuenca-izq">
+                          
+                      </div>
+                      <div id="body-cuenca-der">
+                          
                       </div>
                     </div>
+                    
+                    <div id="cuenca-info" class="span4">
+                      <div id="cuenca-info-inf" class="form-horizontal">
+                          <div id="cuenca-info-s"class="control-group">
+                              <select id="s_cuenca" placeholder="Seleccione Quebrada">
+                                <option selected></option>
+                                <?php echo $cuencasList ?>
+                             </select>
+                          </div>
+                          <div id="cuenca-info-sup" class="control-group">
+                              
+                          </div>
+                          <div id="cuenca-info-photo" class="control-group">
+                              
+                          </div>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>

@@ -319,12 +319,100 @@ jQuery(document).ready(function($) {
 
 	});
 
+
+	$("#s_cuenca").change(function(e){
+		var codigoCuenca = $("#s_cuenca").val();
+
+		if( codigoCuenca )
+		{
+			showInfoCuenca(codigoCuenca);
+		}
+		else
+		{
+			throw "seleccione algun valor.";
+		}
+
+	});
+
+
+
+function showInfoCuenca(codigo)
+{
+	$.ajax({
+		type: "GET",
+		dataType: "JSON",
+		url: "../wp-admin/admin-ajax.php",
+		data: {
+			'action' : 'showInfoCuenca',
+			'codigo' : codigo
+		},
+	})
+	.done(function(data) {
+
+
+	$.each(data, function(i, estacion) {
+
+		if( estacion.nombre != null)
+		{
+			$("#cuenca-info-sup").html('<h3>'+estacion.codigo+" - "+estacion.nombre+'</h3>');
+		}
+
+		if( estacion.ciudad != null)
+		{
+			$("#cuenca-info-sup").append('<p>Ciudad :'+estacion.ciudad+'</p>');
+		}
+
+		if( estacion.barrio != null)
+		{
+			$("#cuenca-info-sup").append('<p>Barrio :'+estacion.barrio+'</p>');	
+		}
+
+		if( estacion.direccion != null )
+		{
+			$("#cuenca-info-sup").append('<p id="info-dir">Direccion :'+estacion.direccion+'</p>');	
+		}
+
+		if( estacion.imagen != null )
+		{
+			$("#cuenca-info-photo").html('<img src="'+imagesUrl+'niveles/'+estacion.imagen+'">');
+		}
+
+
+		if( estacion.nivel != null )
+		{
+			$("#body-cuenca-izq").html('<span>'+estacion.nivel+'</span>');
+		}
+
+
+		if( estacion.porcentaje != null )
+		{
+			$("#body-cuenca-der").html('<span>'+estacion.porcentaje+'</span>');
+
+			var por = estacion.porcentaje.split('%');
+			var totalPorcentaje = parseInt(por[0]) + 15;
+			$("#body-fill").animate({ height: totalPorcentaje+"%" }, 1000 );
+		}
+
+
+
+
+	});
+
+	})
+	.fail(function() {
+		throw "Error,no results";
+	});
+}
+
+
+
+
 	/* Fin de la sección */
 
 /**
 clima a fondo
 **/
-		$("#clima-fondo a").click(function(e){
+ $("#clima-fondo a").click(function(e){
 		var item = $(this).attr("href");
 
 		if( $(item).css("display") == "none" )
