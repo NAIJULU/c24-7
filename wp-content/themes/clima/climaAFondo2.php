@@ -32,30 +32,24 @@ Template Name: Clima a fondo OK
 
                <!-- suscripciones -->
 
-                <?php get_sidebar();  ?>
+                <?php //get_sidebar();  ?>
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_gallery') ) : ?>
+                <?php endif; ?>
 
 
             <!-- Últimas fotos -->
             
-            <div id="ultimasFotos">
-              <h2>Últimas fotos</h2>
-              <!-- INSERTAR AQUÍ EL WIDGET PARA LAS ÚLTIMAS FOTOS SUBIDAS POR LOS USUARIOS --> 
-            </div>
             
-          </div>
+          
           <div class="span9">
+            <div id="visible" style="display:none" class="container-function-1"> 
 
-          
-          <div id="visible" style="display:none" class="container-function-1"> 
+                <?php viewConvenciones("A partir del espectro visible del satélite GOES se obtiene imágenes de la tierra y las nubes a través del reflejo de la luz solar. Por lo tanto, esta visión sólo es útil durante las horas diurnas.  Las nubes son registradas en color blanco o  gris claro y la tierra y el agua se presentan en colores oscuros."); ?>
 
-              <?php viewConvenciones("A partir del espectro visible del satélite GOES se obtiene imágenes de la tierra y las nubes a través del reflejo de la luz solar. Por lo tanto, esta visión sólo es útil durante las horas diurnas.  Las nubes son registradas en color blanco o  gris claro y la tierra y el agua se presentan en colores oscuros."); ?>
-
-              <div id="cont-visible" >
-                <img src="http://www.areadigital.gov.co/ftpclima/sateliteinfrarrojo.gif" />
-              </div> 
-         </div>
-
-          
+                <div id="cont-visible" >
+                  <img src="http://www.areadigital.gov.co/ftpclima/sateliteinfrarrojo.gif" />
+                </div> 
+            </div>
             <div id="vapor" style="display:none" class="container-function-1">
 
               <?php viewConvenciones("El espectro de vapor de agua del satélite GOES permite identificar dónde se están formando sistemas convectivos y su desplazamiento o advección. Gracias a esta visión, se tiene un conocimiento previo de la magnitud que puede alcanzar un fenómeno
@@ -90,6 +84,7 @@ Template Name: Clima a fondo OK
           </div>
         </div>
         <?php //the_content(); ?>
+        </div>
       </section>
       <!-- end article section -->
       

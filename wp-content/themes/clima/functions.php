@@ -681,10 +681,6 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_style('css_fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.css', '2.1.5' );
     wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
     wp_register_style('css_fancybox_thumbs', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
-  
-	//Jcarousel
-   wp_register_script('jcarousel', get_template_directory_uri() . '/library/js/jquery.jcarousel.min.js', array('jquery'), '3.1' );
-   wp_register_style('css_jcarousel', get_template_directory_uri() . '/library/css/jcarousel.basic.css', '3.1' );
 
     //default
     wp_enqueue_script('bootstrap');
