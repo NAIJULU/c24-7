@@ -9,6 +9,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 
 <div id="content" class="clearfix row-fluid">
   <div id="main" class="span12 clearfix" role="main">
+    <?php if(function_exists('cargarCsvNiveles')) { cargarCsvNiveles(); } ?>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 	     <header>
@@ -125,6 +126,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                 <div id="sensores" style="display:none" class="container-function-1">
                   <?php viewConvenciones("El monitoreo de los ríos y quebradas en el Valle de Aburrá se realiza gracias a las estaciones de nivel del SIATA. A través de  esta herramienta se puede conocer cuál es el nivel y porcentaje de la canalización que está siendo ocupada por agua. La canalización es la parte que se encuentra en cemento y representa el 100 % de  capacidad en zonas canalizadas.  Se recomienda la observación y vigilancia por parte de los habitantes que habitan los sectores cercanos a las estaciones de las quebradas en monitoreo y avisar oportunamente a las autoridades en la línea  de emergencia 123, cualquier obstrucción en el cauce o eventualidad en el nivel de las quebradas."); ?>
                   <?php $cuencasList = getCuencas(); ?>
+                
                   <div id="cont-sensores">
 
                     <div id="body-cuenca"  class="span7">

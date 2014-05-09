@@ -36,10 +36,12 @@ function cargarCsvNiveles()
 {
   $msg = "";
 
+
         try {
 
             $path = "http://www.siata.gov.co/TM45/LinkSiataTM.csv";
             $i = 0;
+            $csv = array();
             $file = file_get_contents($path, true);
             $lineas = explode("\n", $file);
 
@@ -47,7 +49,6 @@ function cargarCsvNiveles()
             {
               if(!empty($linea))
               {
-
                   $linea  = explode(',', $linea);
           
                   foreach ($linea as $campo)
@@ -55,7 +56,6 @@ function cargarCsvNiveles()
                       $csv[$i][] = trim($campo);  
                   }
                   $i = $i + 1;
-                  
               }
             }
 
@@ -67,12 +67,14 @@ function cargarCsvNiveles()
             }
             else
             {
+
               saveInfoNvl($csv);
               $msg = "Archivo CSV cargado con exito. ";
             }
 
           } catch (Exception $e) 
           {
+
             $msg = "Error al intentar leer el archivo CSV.";
           }
 
@@ -90,6 +92,7 @@ function saveInfoNvl($csv)
   $cut_csv = array_slice($csv,28);
 
   try {
+    
       foreach ($cut_csv as $key => $value) 
       {
         $data['fecha_reporte']    = date('Y/m/d h:i:s A');

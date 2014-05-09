@@ -19,11 +19,7 @@
 	  }
 
 	 function form( $instance ) {
-	?>
-			<div>
-				<h1>sizas</h1>
-			</div>
-	<?php 
+
 	}
  
 function mostrarArticulosRel($args, $instance)
@@ -38,11 +34,12 @@ function mostrarArticulosRel($args, $instance)
 	$optionPost = ( !empty($optionPost) ) ? $optionPost : 1;
 	$num_per = ( !empty($num_per) ) ? $num_per : 1;
 
-	$post_array = null;
+	$post_array = array();
+
 	?>
 
 
-	<div class="enc-widget">
+	<div class="enc-widget-cmm">
 		<h2>Más Comentados.</h2>
 	</div>
 
@@ -50,8 +47,7 @@ function mostrarArticulosRel($args, $instance)
 
 	$args = array('cat'=>$optionPost, 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' );
 	$the_query = new WP_Query($args); 
-
-
+	$cont_coment = $wpdb->get_results("SELECT c.comment_post_ID, COUNT(*) as count FROM c247_comments c GROUP BY comment_post_ID ORDER BY count DESC LIMIT ".$num_per." ;");
 
 	if ($the_query->have_posts())
 	{
@@ -60,14 +56,12 @@ function mostrarArticulosRel($args, $instance)
 
 	  if(in_category($optionPost)) :
 
-		$cont_coment = $wpdb->get_results("SELECT c.comment_post_ID, COUNT(*) as count FROM c247_comments c GROUP BY comment_post_ID ORDER BY count DESC LIMIT ".$num_per." ;");
-
 		foreach ($cont_coment as $key => $value) 
 		{
 
 			if(get_the_ID() == $value->comment_post_ID)
 			{
-	      	  $categoria    = get_the_category();
+	    	  $categoria    = get_the_category();
 	      	  $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
 		      $post_thumbnail_id   = get_post_thumbnail_id(get_the_ID(), 'full');
@@ -75,13 +69,12 @@ function mostrarArticulosRel($args, $instance)
 
 		      $contenuto = get_the_content();
 
-			  $post_array['post'][] = '<article id="most-'.get_the_ID().'" class="most-widget" >'.
-			    	  						'<a href="'.get_permalink( get_the_ID() ).'" >'.
-			      							'<figure> <img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>'.
-			      							'<div class="contenido"><header><span class="categorias">'.strtolower($categoria).'</span></header>'.
-				      						'<p>'.substr(wp_filter_nohtml_kses( the_title('','',false) ), 0,80).'...'.'</p>'.
-			      							'</div></a></article>';
-
+			  $post_array['post'][] = 	'<article id="most-'.get_the_ID().'" class="most-widget" >'.
+			    	  					'<a href="'.get_permalink( get_the_ID() ).'" >'.
+			      						'<figure> <img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>'.
+			      						'<div class="contenido"><header><span class="categorias">'.strtolower($categoria).'</span></header>'.
+				      					'<p>'.substr(wp_filter_nohtml_kses( the_title('','',false) ), 0,80).'...'.'</p>'.
+			      						'</div></a></article>';
 			}
 
 		}
@@ -95,7 +88,11 @@ function mostrarArticulosRel($args, $instance)
 
 	for($i=0; $i < $num_per; $i++)
 	{
-		echo $post_array['post'][$i];
+		if( isset($post_array['post'][$i]) )
+		{
+			echo $post_array['post'][$i];
+		}
+		
 	}
 
 	  echo $after_widget;

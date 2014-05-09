@@ -2071,6 +2071,7 @@ div.main-galeria > article a:hover .contenido{
 	bottom: 0;
 	width: 95%;
 	height: 50px;
+	overflow: inherit !important;
 	background: #b1dff6; /* Old browsers */
 	background: -moz-linear-gradient(top, #b1dff6 13%, #0098cc 89%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,#b1dff6), color-stop(89%,#0098cc)); /* Chrome,Safari4+ */
