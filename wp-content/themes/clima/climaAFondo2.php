@@ -89,7 +89,7 @@ Template Name: Clima a fondo OK
 
           </div>
         </div>
-        <?php the_content(); ?>
+        <?php //the_content(); ?>
       </section>
       <!-- end article section -->
       

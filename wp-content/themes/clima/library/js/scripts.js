@@ -469,13 +469,37 @@ clima a fondo
 						},
 				})
 				.done(function(data) {
-
-					var icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/map-orange.png",
-        			new google.maps.Size(20, 30) );
-
+					var icon1 = null;
         			var infoG = false; 
 
 					$.each(data, function(i, estacion) {
+
+						  var intensidad_auxiliar = estacion.intensidad_30m.split('m') ;
+						  var intensidad_auxiliar2 = parseInt(intensidad_auxiliar[0]);
+
+						  if( intensidad_auxiliar2 < 1)
+						  {
+						  		icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/sun.png",
+        						new google.maps.Size(48, 48) );
+						  		
+						  }
+						  else
+						  {
+						  	 if( intensidad_auxiliar2 >= 1 )
+						  	 {
+						  	 	icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/rain.png",
+        						new google.maps.Size(48, 48) );
+						  	 }
+						  	 else
+						  	 {
+								icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/map-orange.png",
+        							new google.maps.Size(20, 30) );	  	 	
+						  	 }
+
+						  }
+								
+
+
 
 						   var myLatLng 	= 	new google.maps.LatLng(estacion.latitud, estacion.longitud);
 						   var contenido  	= '<article class="mark-estaciones">'+
