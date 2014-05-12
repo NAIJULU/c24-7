@@ -1882,7 +1882,7 @@ div.main-galeria > article a:hover .contenido{
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.03);
 	display: none;
-	height: 93%;
+	height: 100%;
 	width: 100%;
 	top:0;
 	left:0; 

@@ -35,8 +35,10 @@ function creaWidgetView()
 {
 	 include_once(WP_PLUGIN_DIR.'/mostviewpost/mostViewPostWidget.php');
    include_once(WP_PLUGIN_DIR.'/mostviewpost/mostCommentPostWidget.php');
+   include_once(WP_PLUGIN_DIR.'/mostviewpost/mostRatingPostWidget.php');
 	 register_widget( 'mostViewPostWidget' );
    register_widget( 'mostCommentPostWidget' );
+   register_widget( 'mostRatingPostWidget' );
 }
 
 function getCategorias($default)

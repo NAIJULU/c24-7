@@ -55,6 +55,9 @@
 										<?php if(function_exists('email_link')){ email_link(); } ?>
 									</span>
 								</div>
+								<?php if(function_exists('ec_stars_rating')) {
+								    ec_stars_rating(); 
+								} ?>
 
 								<div class="row-fluid">
 									<div class="pagination articulos-antysig">
