@@ -2050,6 +2050,10 @@ div.main-galeria > article a:hover .contenido{
 	width: 100%;
 	height: 450px;
 	background-color: #CCE1FC;
+	overflow: auto;
+	padding: 5px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 #body-cuenca
@@ -2109,10 +2113,13 @@ div.main-galeria > article a:hover .contenido{
    position: relative;
    width: 80px;
    z-index: 3;
-   font-size: 40px;
+   font-size: 31px;
    color:#FFFFFF;
-   line-height: 31px;
+   line-height: 24px;
    text-align: center;
+   padding: 14px;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
 }
 
 
@@ -2126,15 +2133,30 @@ div.main-galeria > article a:hover .contenido{
     width: 80px;
     z-index: 3;
     color:#FFFFFF;
-    font-size: 30px;
+    font-size: 31px;
    	color:#FFFFFF;
    	line-height: 31px;
    	text-align: center;
-
+   	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 23px 0 0 0;
+}
+#cuenca-info{
+	margin: 10px 0 0 8px;
+}
+#cuenca-info-sup {
+	padding: 12px;
+}
+#cuenca-info-sup h3 {
+	margin: 0 0 20px 0;
+	line-height: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.3em;
 }
 #cuenca-info #cuenca-info-sup 
 {
-	height: 150px;
+	height: auto;
 	margin-top: 2px;
 	background-color: #E9F1FC;
 	margin-bottom: 9px;
@@ -2145,12 +2167,19 @@ div.main-galeria > article a:hover .contenido{
 {
 	margin-bottom: 9px;
 }
+#cuenca-info-s select {
+	width: 100%
+}
+#cuenca-info-photo {
+	text-align: center;
+}
 #cuenca-info #cuenca-info-photo 
 {
 	height: 150px;
 	margin-top: 1px;
 	background-color: #E9F1FC;
 	margin-bottom: 9px;
+	
 }
 
 #cuenca-info-sup h3
@@ -2160,7 +2189,8 @@ div.main-galeria > article a:hover .contenido{
 
 #cuenca-info-sup p
 {
-	line-height: 3px;
+	line-height: 15px;
+	margin-bottom: 2px;
 }
 
 #cuenca-info-sup #info-dir
@@ -2170,7 +2200,6 @@ div.main-galeria > article a:hover .contenido{
 
 #cuenca-info #cuenca-info-photo img
 {
-	width: 100% !important;
 	height: 100% !important;
 }
 
@@ -2222,4 +2251,5 @@ article.mark-estaciones .informacion table tr{
 article.mark-estaciones .informacion table td.info-td2{
 	padding-left: 30px;
 }
+/*NIveles de quebradas*/
 
