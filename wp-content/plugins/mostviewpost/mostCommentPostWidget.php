@@ -73,7 +73,8 @@ function mostrarArticulosRel($args, $instance)
 			    	  					'<a href="'.get_permalink( get_the_ID() ).'" >'.
 			      						'<figure> <img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>'.
 			      						'<div class="contenido"><header><span class="categorias">'.strtolower($categoria).'</span></header>'.
-				      					'<p>'.substr(wp_filter_nohtml_kses( the_title('','',false) ), 0,80).'...'.'</p>'.
+							      		'<time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>'.
+		      							'<p>'.the_title('','',false).'</p>'.
 			      						'</div></a></article>';
 			}
 

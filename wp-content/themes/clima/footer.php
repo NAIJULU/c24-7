@@ -6,7 +6,7 @@
                   	<ul class="menuInstitucional">
                     	<li class="InstitucionalBtn"><a href="/c24-7/institucional">INSTITUCIONAL</a></li>
                         <li class="MapaBtn"><a href="#">MAPA DEL SITIO</a></li>
-                        <li class="FAQBtn"><a href="#">FAQ</a></li>
+                        <li class="FAQBtn"><a href="/c24-7/faq">FAQ</a></li>
                         <li class="GlosarioBtn"><a href="#">GLOSARIO</a></li>
                         <li class="SuscripcionBtn"><a href="#">SUSCRIPCIÓN</a></li>
                     </ul>
@@ -40,4 +40,8 @@
                             js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=1416538475270198&version=v2.0";
                             fjs.parentNode.insertBefore(js, fjs);
                           }(document, 'script', 'facebook-jssdk'));</script>
+
+                          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
 </html>
