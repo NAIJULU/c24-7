@@ -77,9 +77,9 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 	    	  						'<a href="'.get_permalink( get_the_ID() ).'" >'.
 	      							'<figure> <img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>'.
 	      							'<div class="contenido">'.
-		      						'<header><span class="categorias">'.strtolower($categoria).'</span></header>'.
+		      						'<span class="categorias">'.strtolower($categoria).'</span>'.
+		      						'<h1>'.the_title('','',false).'</h1>'.
 		      						'<time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>'.
-		      						'<p>'.the_title('','',false).'</p>'.
 	      							'</div></a></article>';
      }
         endif;
