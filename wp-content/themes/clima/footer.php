@@ -4,7 +4,7 @@
 		         
 		          <div id="widget-footer" class="clearfix row-fluid">
                   	<ul class="menuInstitucional">
-                    	<li class="InstitucionalBtn"><a href="#">INSTITUCIONAL</a></li>
+                    	<li class="InstitucionalBtn"><a href="/c24-7/institucional">INSTITUCIONAL</a></li>
                         <li class="MapaBtn"><a href="#">MAPA DEL SITIO</a></li>
                         <li class="FAQBtn"><a href="#">FAQ</a></li>
                         <li class="GlosarioBtn"><a href="#">GLOSARIO</a></li>

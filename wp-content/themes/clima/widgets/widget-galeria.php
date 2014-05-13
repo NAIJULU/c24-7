@@ -34,7 +34,7 @@ function mostrarArticulos($args, $instance)
 
 ?>
 
-<	<div class="enc-widget">
+	<div class="enc-widget">
 		<h2>Ultimas Fotos</h2>
 	</div>
 

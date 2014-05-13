@@ -134,34 +134,10 @@
       <div id="mapa"> </div>
     </div>
   </div>
-  <div id="temperaturas" class="carousel slide"> 
-    <!-- Carousel items -->
-    <div id="ciudades" class="carousel-inner">
-      <div class="active item"><img src="http://www.areadigital.gov.co/ftpclima/TemperaturaAMVA.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticonorte.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticomedellin.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticosur.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/TemperaturaAMVA.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticonorte.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticomedellin.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticosur.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticonorte.png"/></div>
-      <div class="item"><img src="http://www.areadigital.gov.co/ftpclima/pronosticonorte.png"/></div>
-    </div>
-    <ol class="ciudades">
-      <li data-target="#temperaturas" data-slide-to="0" class="active">Medellín</li>
-      <li data-target="#temperaturas" data-slide-to="1">Barbosa</li>
-      <li data-target="#temperaturas" data-slide-to="2">Girardota</li>
-      <li data-target="#temperaturas" data-slide-to="3">Copacabana</li>
-      <li data-target="#temperaturas" data-slide-to="4">Bello</li>
-      <li data-target="#temperaturas" data-slide-to="5">Envigado</li>
-      <li data-target="#temperaturas" data-slide-to="6">Sabaneta</li>
-      <li data-target="#temperaturas" data-slide-to="7">La Estrella</li>
-      <li data-target="#temperaturas" data-slide-to="8">Itagüi</li>
-      <li data-target="#temperaturas" data-slide-to="9">Caldas</li>
-    </ol>
+  <div id="temperaturas" class="carousel slide, row-fluid">    
+       <img src="http://www.areadigital.gov.co/ftpclima/tempamva.jpg" />
   </div>
-</div>
+
 <?php 
 		  echo $after_widget;
 	  }

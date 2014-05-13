@@ -6,50 +6,95 @@
 			
 			<div id="content" class="clearfix row-fluid">
 			
-				<div id="main" class="span12 clearfix" role="main">
+				<div id="main" class="clearfix" role="main">
                 	<div class="clearfix">
-                		<div class="videoEmision">
-							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('ultimaemision_widget') ) : ?>
+                		<div class="videoEmision span8">
+                			<div class="contenedor-ultima-emision" >
+                				<h3 class="titulo-widget-ultima-emision" >Última Emisión</h3>
+                			
+                			<div class="video-ultima-emision">
+                				<?php
+                					$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '1' );
 
-							<?php endif; ?>                			
+                					$query = new WP_Query( $args );
+
+									if ($query->have_posts()) :
+								   	while ($query->have_posts() ) : $query->the_post();	
+	
+											echo get_the_content();
+
+								   endwhile;	
+								   endif;
+                				?>
+                			</div>
+                			<div class="emision">
+                				<span class="emision-title">
+                					Clima 24/7 – <?php echo the_title(); ?>
+                				</span>
+                				<span>
+                					<a class="btnHistorial" href="emisiones">Ver Historial</a>
+                				</span>          			
+                			</div>
                 		</div>
-                        <div class="fotosUsuarios">
-							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('fotousuarioshome_widget') ) : ?>
+                	</div>	
+
+                        <div class="fotosUsuarios span4">
+							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_gallery') ) : ?>
 
 							<?php endif; ?>                           	
                         </div>
                     </div>
                     
                 </div>
-                    
-             
+
 					<div class="row-fluid">
                     
                     <div class="galeriaHome span12">
-                   	 	<h2>Artículos destacados</h2>
-                        
-                        <div class="prev1"></div>
-                        
-                        <div class="span3">
-                        	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
-                           	<h3>LAS MANZANAS YA NO SABEN IGUAL POR EL CAMBIO CLIMÁTICO</h3>
-                            <p>Según la Organización Nacional de Agricultura y de investigación alimentaria en Japón (NARO), el sabor y la textura de esta fruta han cambiado en los últimos 40 años.</p>
-                        </div>
-                        
-                        <div class="span3">
-                        	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
-                            <h3>LAS PLANTAS AYUDAN A PREDECIR EL CAMBIO CLIMÁTICO</h3>
-                           <p> El reloj biológico de las plantas, también conocido como reloj circadiano, puede ayudar a predecir los cambios que se van a presentar con el clima.</p>
-                        </div>
-                        
-                        <div class="span3">
-                        	<img src="<?php bloginfo('template_directory'); ?>/images/imagenGenerica.jpg" />
-                            <h3>Con 100 toneladas quedó la playa de Acapulco después de "Manuel"</h3>
-                            <p>Centenares de toneladas de basura en las playas de Acapulco han sido el resultado de la tormenta tropical Manuel, que afectó la costa oeste de México en los últimos días.</p>
-                        </div>
-                        
-                        <div class="next1"></div>
-                    </div>
+                   	 	<h2>Últimos Articulos</h2>
+                   	 </div>
+                   	 	   <?php
+                					$args = array('cat'=>'2', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '4' );
+                					$query = new WP_Query( $args );
+
+					?>
+						<div id="main" class="span14 clearfix" role="main">
+							<div id="main-articulos">
+					<?php
+								if ($query->have_posts()) :
+								  	while ($query->have_posts() ) : $query->the_post();	
+											if(in_category(2)) : ?>
+												<?php	
+													/* Para sacar etiquetas HTML del contenido */
+													$content = get_the_content();
+
+													$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
+													$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
+												?>
+
+												<article id="post-<?php the_ID(); ?>"  class="blog-thumb">
+													<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">					
+															<?php 
+																$categoria 		= get_the_category();
+																$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
+															?>
+														<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
+															<div class="contenido">
+															<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
+																<h1><?php the_title(); ?></h1>
+																	<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+															</header>
+															<p><?php echo substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; ?>
+																<span>Leer Más +<span></p>
+															</div>	
+															</a>
+												</article>
+											<?php endif; ?>
+									<?php $i++; endwhile; ?>									
+								<?php endif; ?>
+							</div>
+                   		</div>
+
+                  </div> 
                         
 					
                     <?php if(!is_home()): ?>

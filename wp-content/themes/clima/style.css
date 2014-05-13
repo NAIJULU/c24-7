@@ -491,6 +491,15 @@ div.en-vivo .numMin {
 	color: ##114db0;
 	background-color: #84C0FD;
 }
+
+
+#temperaturas img
+{
+	width: 100% !important;
+}
+
+
+
 .mapa-ciudades {
 	height: 430px;
 	width: 430px;
@@ -569,9 +578,8 @@ div .mapa-ciudades figure{
 }
 #main article {
 	position: relative;
-
-	
 }
+
 #main article footer {
 	border-top: none;
 	margin-top: 0;
@@ -1374,7 +1382,7 @@ h3.titulo-widget-ultima-emision:before {
 	display: inline-block;
 	margin: 0 15px 0 35px;
 }
-.contenedor-ultima-emision .emision {
+.contenedor-ultima-emision .emision .emision-title{
 	padding-top: 15px;
 	color: #FFF;
 	text-transform: uppercase;
@@ -1383,7 +1391,7 @@ h3.titulo-widget-ultima-emision:before {
 	background-repeat: no-repeat;
 	background-position: 30px 7px;
 }
-.contenedor-ultima-emision .btnHistorial {
+.contenedor-ultima-emision span .btnHistorial {
 	float: right;
 	color: #FFF;
 	text-decoration: none;
@@ -2169,3 +2177,17 @@ div.main-galeria > article a:hover .contenido{
 	width: 100% !important;
 	height: 100% !important;
 }
+
+** FIX for Bootstrap and Google Maps Info window styes problem **/
+img[src*="gstatic.com/"], img[src*="googleapis.com/"] {
+max-width: none;
+}
+
+#mapa-pluviometrico img { 
+  max-width: none;
+}
+
+#mapa-pluviometrico label { 
+  width: auto; 
+  display:inline; 
+} 
