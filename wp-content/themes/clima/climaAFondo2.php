@@ -17,7 +17,7 @@ Template Name: Clima a fondo OK
        </header>
       <!-- end article header -->
   
-      <section class="post_content">
+      <section id="clima-fondo" class="post_content">
         <div class="row-fluid clearfix">
           <div class="span3"> 
             <!-- menu Clima en vivo -->
@@ -65,8 +65,6 @@ Template Name: Clima a fondo OK
 
 
             <div id="reporte-estaciones" style="display:none" class="container-function-1"> </a>
-
-
                <?php viewConvenciones("Las estaciones pluviométricas del SIATA ubicadas en 
                 diferentes sectores de los municipios del Valle de Aburrá registran minuto  a minuto las lluvias, es decir, la cantidad de agua que se ha recogido y procesado en una estación pluviométrica, en un periodo de 
                 tiempo determinado. Recomendación de monitoreo por acumulado: 

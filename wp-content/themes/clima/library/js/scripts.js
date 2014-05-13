@@ -413,6 +413,7 @@ clima a fondo
 **/
  $("#clima-fondo a").click(function(e){
 		var item = $(this).attr("href");
+		var id 	 = $(this).attr("id");
 
 		if( $(item).css("display") == "none" )
 		{
@@ -428,21 +429,42 @@ clima a fondo
 		  }
 
 			$(item).show();
+
+			if(id == "btnMostrarMapaPluviometrico")
+			{
+				setGoogleMapsEstaciones();
+			}
 		}
 	});
 
 
 
-	$("#btnMostrarMapaPluviometrico").click(function(e){
-		e.preventDefault();
-		$("#visible").fadeOut();
-		$("#vapor").fadeOut();
-		$("#reporte-estaciones").fadeIn(1000);
+/* URL MANAGER CLIMA A FONDO */
+if( $("#clima-fondo").length > 0)
+{
 
+  if( window.location.hash )
+	{
+		var itemHash = window.location.hash;
 
-		setGoogleMapsEstaciones();
+		if( $(itemHash).css("display") == "none" )
+		{
+			$("#visible").hide('fast');
+			$("#vapor").hide('fast');
+			$("#reporte-estaciones").hide('fast');
+			$(".contenedor-convencion").css("display","none");
 
-	});
+			$(itemHash).show();
+
+			if( $(itemHash) == "#reporte-estaciones" )
+			{
+				setGoogleMapsEstaciones();
+			}
+		}
+	}
+
+}
+
 
 	function setGoogleMapsEstaciones()
 	{
@@ -484,7 +506,6 @@ clima a fondo
 						  {
 						  		icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/sun.png",
         						new google.maps.Size(48, 48) );
-						  		
 						  }
 						  else
 						  {
@@ -544,11 +565,24 @@ clima a fondo
 
 							if(hashMarker.length > 1)
 							{
-								if( hashMarker[1] == estacion.id_estacion )
+								hashMarker2 = hashMarker[1].split['#'];
+								if( hashMarker2.length > 1)
 								{
-									//map.setCenter(marker.getPosition());
-                					infowindow.open(map, marker);
+								   if( hashMarker2[0] == estacion.id_estacion )
+									{
+										map.setCenter(marker.getPosition());
+	                					infowindow.open(map, marker);
+									}
 								}
+								else
+								{
+									if( hashMarker[1] == estacion.id_estacion )
+									{
+										map.setCenter(marker.getPosition());
+	                					infowindow.open(map, marker);
+									}	
+								}
+								
 							}
 
 							 google.maps.event.addListener(marker, 'click', function() {
@@ -679,7 +713,9 @@ clima a fondo
 
 
 
-/* URL MANAGER */
+/* URL MANAGER clima en vivo */
+if( $("#clima-vivo").length > 0)
+{
 	if( window.location.hash )
 	{
 		var itemHash = window.location.hash;
@@ -696,6 +732,7 @@ clima a fondo
 			$(itemHash).show();
 		}
 	}
+}
     /* Fin: Sección Blog */
 
 

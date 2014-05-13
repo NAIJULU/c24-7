@@ -21,7 +21,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 	     </header>
       <!-- end article header -->
   
-      <section class="post_content">
+      <section id="clima-vivo" class="post_content">
         <div class="row-fluid clearfix">
           <div class="span3"> 
             <!-- menu Clima en vivo -->
