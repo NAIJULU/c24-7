@@ -1309,6 +1309,39 @@ text-decoration:none;
 	white-space: pre;
 	text-transform: uppercase;
 }
+/*Estilos de los widgets del blog*/
+#mostcommentpostwidget-2 article{
+	height: 250px;
+}
+#mostcommentpostwidget-2 article a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+#mostcommentpostwidget-2 article a figure{
+	display: block;
+	height: 100%;
+	margin: 0;
+}
+#mostcommentpostwidget-2 article a figure img{
+	height: 100%;
+}
+#mostcommentpostwidget-2 article a .contenido{
+	position: absolute;
+	bottom: -75px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.78);
+	transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#mostcommentpostwidget-2 article a .contenido header{
+	background-color: rgba(0, 0, 0, 0.78);
+	padding: 6px;
+	z-index: 20;
+}
+
 /* change default form padding for search */
 
 .widget_search form {
