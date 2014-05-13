@@ -160,8 +160,8 @@ you like. Enjoy!
   // Registrando posición para el widget de las fotos de usuario en el home
  if ( function_exists('register_sidebar') )
        register_sidebar(array(
-        'name'=>'Widget Convencion',
-        'id'=>'fotousuarioshome_widget',
+        'name'=>'Widget suscripcion',
+        'id'=>'suscrib',
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '',
