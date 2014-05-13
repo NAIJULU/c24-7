@@ -74,6 +74,7 @@ Template Name: Clima a fondo OK
                 <div id="contenedor-radar" class="fondo-contenido-1">
                   <div id="mapa-pluviometrico">
                     <?php if(function_exists('cargarCsvPluviometricas')) { cargarCsvPluviometricas(); } ?>
+                  
                   </div>
                 </div>
             </div>
@@ -117,5 +118,12 @@ Template Name: Clima a fondo OK
   <!-- end #main -->
 </div>
 <!-- end #content -->
-
+                          <div id="fb-root"></div>
+                          <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=1416538475270198&version=v2.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                          }(document, 'script', 'facebook-jssdk'));</script>
 <?php get_footer(); ?>
