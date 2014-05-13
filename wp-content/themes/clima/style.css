@@ -2124,10 +2124,6 @@ div.main-galeria > article a:hover .contenido{
    	text-align: center;
 
 }
-
-
-
-
 #cuenca-info #cuenca-info-sup 
 {
 	height: 150px;
@@ -2168,4 +2164,38 @@ div.main-galeria > article a:hover .contenido{
 {
 	width: 100% !important;
 	height: 100% !important;
+}
+/*Estaciones pluviométricas*/
+article.mark-estaciones h1{
+	display: block;
+	font-size: 1.5em;
+	padding: 0.1em 0.5em;
+	background: #a5ce39;
+	color: #fff;
+	font-weight: 700
+}
+article.mark-estaciones .fotografia {
+	margin: 0;
+}
+article.mark-estaciones .fotografia img{
+	width: 100%;
+}
+article.mark-estaciones .informacion span{
+	color: #1357bd;
+	font-size: 1.6em;
+	display: block;
+	margin-bottom: 20px;
+	line-height: 1.3em;
+}
+article.mark-estaciones .informacion table tr{
+	padding: 0.5em 1em 0.5em 1.5em;
+	color: #fff;
+	background: #a5ce39  url(images/reloj-icon.png) no-repeat center left;
+	display: block;
+	margin-bottom: 5px;
+	font-size: 1.5em;
+
+}
+article.mark-estaciones .informacion table td.info-td2{
+	padding-left: 30px;
 }

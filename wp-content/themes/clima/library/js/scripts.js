@@ -502,26 +502,26 @@ clima a fondo
 
 
 						   var myLatLng 	= 	new google.maps.LatLng(estacion.latitud, estacion.longitud);
-						   var contenido  	= '<article class="mark-estaciones">'+
+						   var contenido  	= '<article class="mark-estaciones row-fluid">'+
 							 				  '<h1>'+estacion.nombre+'</h1>'+
-											'<div class="fotografia">'+
+											'<div class="fotografia span6">'+
 												'<img src="'+imagesUrl+'pluviometricas/'+estacion.imagen+'">'+
 											'</div>'+
-											'<div class="informacion">'+
+											'<div class="informacion span6">'+
 												'<span class="info-texto"> Intensidad de Lluvia en '+
 												'los últimos: </span>'+
 												'<table>'+
 													'<tr class= "info-tabla">'+
-													'<td class="info-td">30 min :</td>'+
-													'<td class="info-td2">'+estacion.intensidad_30m+'</td>'+
+													'<td class="info-td">30 min: </td>'+
+													'<td align="center" class="info-td2">'+estacion.intensidad_30m+'</td>'+
 													'</tr>'+
 													'<tr class= "info-tabla">'+
-													'<td class="info-td">1 hora :</td>'+
-													'<td class="info-td2">'+estacion.precipitacion_1h+'</td>'+
+													'<td class="info-td">1 hora: </td>'+
+													'<td align="center" class="info-td2">'+estacion.precipitacion_1h+'</td>'+
 													'</tr>'+
 													'<tr class= "info-tabla">'+
-													'<td class="info-td">3 horas :</td>'+
-													'<td class="info-td2">'+estacion.precipitacion_3h+'</td>'+
+													'<td class="info-td">3 horas: </td>'+
+													'<td align="center" class="info-td2">'+estacion.precipitacion_3h+'</td>'+
 													'</tr>'+
 												'</table>'+
 												'<div class="info-compartir"></div>'+
@@ -536,7 +536,7 @@ clima a fondo
 					       });
 
 							var infowindow = new google.maps.InfoWindow({
-								maxWidth: 200,
+								maxWidth: 500,
     							content: contenido
 							});
 
