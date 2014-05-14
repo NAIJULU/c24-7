@@ -52,7 +52,7 @@ $meses 		= unserialize(C247_MESES);
 					<div class="page-header">
 					  	<h1><?php the_title(); ?></h1>
 					</div>					
-					<div class="span12" id="videoEmision">
+					<div id="videoEmision">
 						<?php echo get_the_content(); ?>
 					</div>
 				</div>
