@@ -42,7 +42,7 @@ Template Name: Clima a fondo OK
             
           
           <div class="span9">
-            <div id="visible" style="display:none" class="container-function-1"> 
+            <div id="visible" class="container-function-1"> 
 
                 <?php viewConvenciones("A partir del espectro visible del satélite GOES se obtiene imágenes de la tierra y las nubes a través del reflejo de la luz solar. Por lo tanto, esta visión sólo es útil durante las horas diurnas.  Las nubes son registradas en color blanco o  gris claro y la tierra y el agua se presentan en colores oscuros."); ?>
 
