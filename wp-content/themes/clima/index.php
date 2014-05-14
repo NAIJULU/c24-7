@@ -8,7 +8,7 @@
 			
 				<div id="main" class="clearfix" role="main">
                 	<div class="clearfix">
-                		<div class="videoEmision span8">
+                		<div class="videoEmision span7">
                 			<div class="contenedor-ultima-emision" >
                 				<h3 class="titulo-widget-ultima-emision" >Última Emisión</h3>
                 			
@@ -38,7 +38,7 @@
                 		</div>
                 	</div>	
 
-                        <div class="fotosUsuarios span4">
+                        <div class="fotosUsuarios span5">
 							<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home_gallery') ) : ?>
 
 							<?php endif; ?>                           	

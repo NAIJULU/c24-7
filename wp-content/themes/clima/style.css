@@ -1421,7 +1421,7 @@ blockquote.pull-left {
 .video-ultima-emision {
 	text-align: center;
 	padding: 0 25px;
-	height: 245px;
+	height: 330px;
 }
 .video-ultima-emision iframe {
 	position: relative;
@@ -1433,6 +1433,9 @@ blockquote.pull-left {
 .contenedor-ultima-emision {
 	text-transform: uppercase;
 	padding: 0px 0px 10px 0px;
+}
+.contenedor-ultima-emision .emision{
+	margin: 15px 0 0 0;
 }
 h3.titulo-widget-ultima-emision {
 	color: #FFF;
@@ -1454,10 +1457,10 @@ h3.titulo-widget-ultima-emision:before {
 	padding-top: 15px;
 	color: #FFF;
 	text-transform: uppercase;
-	padding-left: 71px;
+	padding-left: 50px;
 	background-image: url(images/icon2-ult-emision_02.png);
 	background-repeat: no-repeat;
-	background-position: 30px 7px;
+	background-position: 15px 7px;
 }
 .contenedor-ultima-emision span .btnHistorial {
 	float: right;
@@ -1470,6 +1473,47 @@ h3.titulo-widget-ultima-emision:before {
 }
 .contenedor-ultima-emision .btnHistorial:hover {
 	text-shadow: white 0 0 5px;
+}
+/*Widget galería*/
+.fotosUsuarios{
+	padding: 0 20px;
+}
+.widget-gallery  h2{
+	color: #fff;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: right;
+	background: url(images/icon-gallery.png) no-repeat center left;
+}
+.widget-gallery h2:before{
+	content: " ";
+	height: 6px;
+	width: 30%;
+	border-top: solid 1px #fff;
+	display: inline-block;
+	margin: 0 15px 0 35px;
+}
+#widget-gallery{
+	width: 90%;
+	margin: 0 auto 20px auto;
+}
+a.left.carousel-control{
+	background: url(images/arrow-left.png) no-repeat center;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	left: -40px;
+	border: none;
+}
+a.right.carousel-control{
+	background: url(images/arrow-right.png) no-repeat center;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	right: -40px;
+	border: none;
 }
  @media only screen and (min-width: 768px) {
 .carousel-caption p {
