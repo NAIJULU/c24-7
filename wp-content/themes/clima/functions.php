@@ -136,24 +136,24 @@ you like. Enjoy!
 // Registrando posición para el widget en la página principal
  if ( function_exists('register_sidebar') )
        register_sidebar(array(
-        'name'=>'Widget Gallery',
+        'name'=>'Widget Home Gallery',
         'id'=>'home_gallery',
-        'before_widget' => '<div class="widget-gallery">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
   ));
 
 
 // Registrando posición para el widget de las fotos de usuario en el home
  if ( function_exists('register_sidebar') )
        register_sidebar(array(
-        'name'=>'Widget Fotos de Usuarios (Home)',
-        'id'=>'fotousuarioshome_widget',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => '',
+        'name'=>'Widget Gallery',
+        'id'=>'widget_gallery',
+        'before_widget' => '<div class="widget-home-gallery">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
   ));
 
 
@@ -864,6 +864,7 @@ function creaWidgets()
  register_widget( 'WidgetPronostico');
  register_widget( 'WidgetUltimaEmision' );
  register_widget( 'widgetGaleria' );
+ register_widget( 'widgetGaleriaHome' );
 }
 
 add_action( 'widgets_init', 'creaWidgets' );
@@ -1260,7 +1261,8 @@ include_once(TEMPLATEPATH.'/viewConvenciones.php');
 include_once(TEMPLATEPATH.'/widgets/widget-home.php');
 include_once(TEMPLATEPATH.'/widgets/widget-pronostico.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
-include_once(TEMPLATEPATH.'/widgets/widget-galeria.php');
+include_once(TEMPLATEPATH.'/widgets/widget-gallery.php');
+include_once(TEMPLATEPATH.'/widgets/widget-gallery-home.php');
 
 
 
