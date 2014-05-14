@@ -58,7 +58,7 @@
 
 					?>
 						<div id="main" class="clearfix" role="main">
-							<div id="main-articulos" class="row-fluid">
+							<div id="ultimos-articulos" class="row-fluid">
 					<?php
 								if ($query->have_posts()) :
 								  	while ($query->have_posts() ) : $query->the_post();	
