@@ -194,7 +194,7 @@ function bones_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget span11 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h4 class="widgettitle">',
       'after_title' => '</h4>',
@@ -686,6 +686,25 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('wpbs-scripts');
     wp_enqueue_script('modernizr');
+
+
+  //wp_enqueue_style( 'style-name', get_stylesheet_uri() );
+   wp_enqueue_script('jquery_ui');
+   wp_enqueue_script('jquery_ui_core');
+   wp_enqueue_style('css_query_ui');
+   wp_enqueue_style('css_query_ui_core');
+   wp_enqueue_style('css_query_ui_datepicker');
+
+   // jquery fancyBox
+   wp_enqueue_script('jquery_mousewheel');
+   wp_enqueue_script('fancybox');
+   wp_enqueue_script('fancybox_buttons');
+   wp_enqueue_script('fancybox_pack');
+   wp_enqueue_script('fancybox_media');
+
+   wp_enqueue_style('css_fancybox');
+   wp_enqueue_style('css_fancybox_buttons');
+   wp_enqueue_style('css_fancybox_thumbs');
 
     
   }

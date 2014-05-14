@@ -1,6 +1,6 @@
 <?php
 
-
+/*
 function theme_name_scripts() {
 	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
 	 wp_enqueue_script('jquery_ui');
@@ -24,7 +24,7 @@ function theme_name_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
-
+*/
 
 // ID DE LOS ARTICULOS TIPO BLOG.
 $blogId		= 23;
