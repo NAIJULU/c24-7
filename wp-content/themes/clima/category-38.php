@@ -34,6 +34,12 @@ Template Name: Glosario
                             <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse">
                               <div class="panel-body">
                                 <?php echo get_the_content(); ?>
+                                <span class="social-button">
+                                    <div class="fb-share-button" data-href="'http://localhost/c24-7/faq/'" data-width="500" data-type="button"></div>
+                                </span>
+                                <span class="social-button">
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://concursomedellin2018.com/c24-7/" data-count="none">Tweet</a>
+                                </span>
                               </div>
                             </div>
                           </div>
