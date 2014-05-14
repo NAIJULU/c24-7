@@ -1025,8 +1025,8 @@ border-radius: 4px;
 	margin-bottom: 10px;
 }
 
-#main-articulos article a
-{	display: block;
+#main-articulos article a, #ultimos-articulos article a{
+	display: block;
 	position: relative;
 	z-index: 0;
 	color:white;
@@ -1035,28 +1035,32 @@ border-radius: 4px;
 	height: 100%
 
 }
-#main-articulos article .categorias
+#main-articulos article .categorias, #ultimos-articulos article .categorias
 {text-transform: uppercase;
 	font-size: 12px;
 	color: #bcbcbc;
 }
 
-
-
 #main-articulos article a:hover
 
 {color:#ECECEC;
 text-decoration: none;}
-
-#main-articulos article a figure {
+#ultimos-articulos article{
+	height: 250px;
+}
+#main-articulos article a figure, #ultimos-articulos article a figure {
 display:block;
 margin: 0px;
 overflow: hidden;
 width: 100%;
 height: 100%;
-
 }
-#main-articulos article a .contenido{
+#ultimos-articulos article a figure img{
+	height: 100%;
+	width: auto;
+	max-width: none;
+}
+#main-articulos article a .contenido, #ultimos-articulos article a .contenido{
 	position: absolute;
 	bottom: -75px;
 	width: 100%;
@@ -1065,7 +1069,7 @@ height: 100%;
 	-moz-transition:all 1s ease;         
 	-webkit-transition:all 1s ease;
 }
-#main-articulos article a:hover .contenido{
+#main-articulos article a:hover .contenido,  #ultimos-articulos article a:hover .contenido{
 	bottom: -11px;
 }
 #main-articulos article a p span
@@ -1079,7 +1083,7 @@ text-align: right;
 
 }
 
-#main-articulos article a  header, #main-articulos article a p
+#main-articulos article a  header, #main-articulos article a p, #ultimos-articulos article a header, #ultimos-articulos article a p
 {background-color:rgba(0, 0, 0, 0.78);
 	padding: 6px;
 	z-index: 20;
@@ -1091,7 +1095,7 @@ text-align: right;
 }
 
 
-#main-articulos article a  header h1
+#main-articulos article a  header h1, #ultimos-articulos article a header h1
 {text-transform:uppercase;
 	font-weight: bold;
 	font-size: 14px;
@@ -1099,13 +1103,13 @@ text-align: right;
 	margin-bottom: 0px;
 	margin-top: 0px;}
 
-	#main-articulos article a  header time
+	#main-articulos article a  header time, #ultimos-articulos article a header time
 {font-size: 12px;
 color: #bcbcbc;}
 
 
 
-#main-articulos article a  p
+#main-articulos article a  p, #ultimos-articulos article a p
 {
 line-height: 15px;
 
