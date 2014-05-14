@@ -1211,6 +1211,9 @@ ol.commentlist #respond {
 	padding: 5px 10px;
 }
 /*Artículos relacionados*/
+.widget_yarpp_widget{
+	clear: both;
+}
 .yarpp-related-widget h3{
 	background: #0B3C89;
 	font-size: 1.3em;
