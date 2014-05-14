@@ -1211,6 +1211,17 @@ ol.commentlist #respond {
 	padding: 5px 10px;
 }
 /*Artículos relacionados*/
+.yarpp-related-widget h3{
+	background: #0B3C89;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0 0 0 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 .yarpp-thumbnails-horizontal .yarpp-thumbnail-info .yarpp-thumbnail-title{
 	text-transform: uppercase;
 	font-weight: bold;
@@ -1223,6 +1234,9 @@ ol.commentlist #respond {
 }
 a.yarpp-thumbnail{
 	position: relative;
+}
+.yarpp-thumbnail > img{
+	height: 100% !important;
 }
 .yarpp-thumbnail .yarpp-thumbnail-default {
 	height: 220px;
@@ -2093,7 +2107,7 @@ div.main-galeria > article a:hover .contenido{
 #main .layout-load
 {
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.03);
+	background-color: rgba(0, 0, 0, 0.6);
 	display: none;
 	height: 100%;
 	width: 100%;
@@ -2105,15 +2119,15 @@ div.main-galeria > article a:hover .contenido{
 /*Cargador - Loader*/
 .layout-load .spinner {
   position: absolute;
-  bottom: 0px;
   left: 50%;
   width: 70px;
+  top: 300px
 }
 
 .layout-load .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333 !important;
+  background-color: #fff !important;
 
   border-radius: 100%;
   display: inline-block !important;
