@@ -57,8 +57,8 @@
                 					$query = new WP_Query( $args );
 
 					?>
-						<div id="main" class="span14 clearfix" role="main">
-							<div id="main-articulos">
+						<div id="main" class="clearfix" role="main">
+							<div id="main-articulos" class="row-fluid">
 					<?php
 								if ($query->have_posts()) :
 								  	while ($query->have_posts() ) : $query->the_post();	
@@ -71,7 +71,7 @@
 													$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
 												?>
 
-												<article id="post-<?php the_ID(); ?>"  class="blog-thumb">
+												<article id="post-<?php the_ID(); ?>"  class="blog-thumb span3">
 													<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">					
 															<?php 
 																$categoria 		= get_the_category();
