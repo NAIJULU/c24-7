@@ -1421,7 +1421,7 @@ blockquote.pull-left {
 .video-ultima-emision {
 	text-align: center;
 	padding: 0 25px;
-	height: 330px;
+	height: 300px;
 }
 .video-ultima-emision iframe {
 	position: relative;
@@ -1478,14 +1478,14 @@ h3.titulo-widget-ultima-emision:before {
 .fotosUsuarios{
 	padding: 0 20px;
 }
-.widget-gallery  h2{
+.widget-home-gallery-contenedor  h3{
 	color: #fff;
 	font-size: 24px;
 	text-transform: uppercase;
 	text-align: right;
 	background: url(images/icon-gallery.png) no-repeat center left;
 }
-.widget-gallery h2:before{
+.widget-home-gallery-contenedor h3:before{
 	content: " ";
 	height: 6px;
 	width: 30%;
@@ -1493,7 +1493,18 @@ h3.titulo-widget-ultima-emision:before {
 	display: inline-block;
 	margin: 0 15px 0 35px;
 }
-#widget-gallery{
+.widget-home-gallery-head{
+	width: 90%;
+	margin: 28px auto 0 auto;
+}
+.widget-home-gallery-head .widget-home-gallery-head-title{
+	color: #fff;
+}
+.widget-home-gallery-head .widget-home-gallery-head-date{
+	text-align: center;
+	color: #fff;
+}
+#widget-gallery-home{
 	width: 90%;
 	margin: 0 auto 20px auto;
 }
@@ -1514,6 +1525,18 @@ a.right.carousel-control{
 	-o-border-radius: 0;
 	right: -40px;
 	border: none;
+}
+.widget-home-gallery-footer{
+	width: 90%;
+	margin: 0 auto 10px auto;
+	text-align: right;
+	overflow: auto;
+}
+.widget-home-gallery-footer span{
+	color: #FFF;
+}
+.widget-home-gallery-footer span a:hover{
+	color: #FFF;
 }
 /*Preguntas frecuentes - FAQ*/
 .panel-default{

@@ -33,7 +33,7 @@ function mostrarArticulos($args, $instance)
 ?>
 
 	<div class="widget-home-gallery-contenedor">
-		<h3 class="titulo-widget-ultima-emision">ÚLTIMAS FOTOS</h3>
+		<h3>ÚLTIMAS FOTOS</h3>
 	<?php
 	$args = array('cat'=>'23', 'orderby' => 'date', 'order' => 'DESC' );
 	$the_query = new WP_Query($args);
@@ -59,11 +59,11 @@ function mostrarArticulos($args, $instance)
 	}
 
 	?>
-		<div class="widget-home-gallery-head">
-			<span class="widget-home-gallery-head-title">
+		<div class="widget-home-gallery-head row-fluid">
+			<span class="widget-home-gallery-head-title span6">
 				<?php echo the_title('','',false); ?>
 			</span>
-			<span class="widget-home-gallery-head-date">
+			<span class="widget-home-gallery-head-date span6">
 				<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 			</span>
 		</div>
@@ -83,8 +83,7 @@ function mostrarArticulos($args, $instance)
 
 	    </div>
 	    <div class="widget-home-gallery-footer">
-	    	<span class="gfooter-span1"> Foto subida Por :</span>
-	    	<span class="gfooter-span2" > <?php echo $contenido ?> </span>
+	    	<span class="gfooter-span1"> Foto enviada por: <a href="#" target="_blank"><?php echo $contenido ?></a></span>
 	    </div>
 	</div>	
 	<?php
