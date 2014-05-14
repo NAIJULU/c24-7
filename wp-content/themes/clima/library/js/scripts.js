@@ -1052,6 +1052,63 @@ if( $("#clima-vivo").length > 0)
 		});	
 	}
 
+
+		/* Fancy box */
+	if( $(".fancybox-single").length )
+	{
+		 $(".fancybox-single")
+		 .fancybox({
+
+		      afterLoad   : function() {
+
+			      	var title1 			= $(this.element).attr('title');
+			      	var cat 			= $(this.element).attr('cat');
+			      	var caption 		= $(this.element).attr('caption');
+
+			   		var id 				= $(this.element).attr('id');
+			        var href            = this.href.split('c24-7/');
+			      	var pathImage	    = href[0]+'c24-7/galeria/?id='+id[1];
+
+
+			      	var tweeterFancy 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + pathImage + '">Tweet</a> ';
+			      	var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + pathImage + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+			      	var pinterestFancy 	= '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(pathImage)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+pathImage)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
+
+					this.title      = '<div class="fancybox-custom-footer"><div class="fancybox-custom-footer-izq">Categoria :<strong> '+cat+'</strong><p>'+$(this.element).attr('datePub')+'</p></div>'+
+									  '<div class="fancybox-custom-footer-der">'+tweeterFancy+facebookFancy+pinterestFancy+'</div></div>';
+
+		        	this.outer.prepend( '<div class="fancybox-custom-head"><div class="fancybox-custom-head-izq">'+title1+'</div>'+
+		        						'<div class="fancybox-custom-head-der">'+caption+'</div></div><div style="clear: both;"></div>' );
+		   		 },
+
+		   	 afterShow: function() {
+            		// Render tweet button
+            		twttr.widgets.load();
+        		},
+
+				tpl: { 
+						wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"> <div class="fancybox-inner"></div></div></div></div>',
+						image    : '<img class="fancybox-image" src="{href}" alt="" />',
+						iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0"' + ($.browser.msie ? ' allowtransparency="true"' : '') + '></iframe>',
+						error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
+						closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
+						next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+						prev     : '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+				},
+
+
+		    	helpers : {
+		    		title : {
+		    			type : 'inside'
+		    		}
+		    	},
+			 minWidth:  600,
+    		 minHeight: 300,
+    		 maxHeight: 600
+		});	
+	}
+
+
 	if( $("#post-get").length )
 	{
 		var heightAct = jQuery('#main').scrollTop();
