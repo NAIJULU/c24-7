@@ -57,11 +57,11 @@ function mostrarArticulos($args, $instance)
 		$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 							
 		$item = ($active) ? "item" : "item active";
-		$galerias			= $galerias .'<a id="'.get_the_ID().'" href="'.$post_thumbnail_url.'"'. 
-							  'class="fancibox-single" title="'.the_title('','',false).'" '.
+		$galerias			= $galerias .'<div class="'.$item.'"><a id="'.get_the_ID().'" href="'.$post_thumbnail_url.'"'. 
+							  'class="fancybox-single" title="'.the_title('','',false).'" '.
 							  'caption="'.get_the_content().'" datePub="'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'" '.
 							  'cat="'.ucwords( strtolower($categoria) ).'" >'.
-							  '<img alt="sizas" class="thumb" src="'.$post_thumbnail_url.'"  ></a>';
+							  '<img alt="sizas" class="thumb" src="'.$post_thumbnail_url.'"  ></a></div>';
 		$active = true;									
 	   
 	        endif;
@@ -69,12 +69,20 @@ function mostrarArticulos($args, $instance)
 	}
 
 	?>
-	    <div id="widget-gallery" >
-			<div class="widget-gallery-content">
-				   <?php echo $galerias; ?>	  	    
+	    <div id="widget-gallery" class="carousel slide" data-ride="carousel" >
+
+			<div class="carousel-inner">
+				   <?php echo $galerias; ?>	
 			 </div>
-	    </div>
-	</div>	
+	
+			<!-- Controls -->
+			<a class="left carousel-control" href="#widget-gallery" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#widget-gallery" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>	
 	<?php
 
 	  echo $after_widget;
