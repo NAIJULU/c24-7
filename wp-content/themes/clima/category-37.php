@@ -3,7 +3,14 @@
 Template Name: Faq
 */
 ?>
-<?php get_header(); ?>
+<?php 
+
+get_header(); 
+
+$id_faq           = ( !empty($_GET['id']) ) ? $_GET['id'] : '';
+$typeCollapse = '';
+
+?>
 
     <div id="content" class="clearfix row-fluid">
         <div id="main" class="span12 clearfix" role="main">
@@ -21,6 +28,18 @@ Template Name: Faq
 
                             if ($query->have_posts()) :
                                 while ($query->have_posts() ) : $query->the_post();
+
+
+                              if ($id_faq == $post->ID )
+                              {
+                                $typeCollapse = 'in';
+                              }
+                              else
+                              {
+                                $typeCollapse  = '';
+                              }
+
+                              $url_faq = get_bloginfo( 'url' ).'faq/?id='.$post->ID;
                           ?>
                          <div class="panel-group" id="accordion">
                           <div class="panel panel-default">
@@ -31,14 +50,14 @@ Template Name: Faq
                                 </a>
                               </h4>
                             </div>
-                            <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse">
+                            <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse <?php echo $typeCollapse ?> ">
                               <div class="panel-body">
                                 <?php echo get_the_content(); ?>
                               <span class="social-button">
-                                    <div class="fb-share-button" data-href="'http://localhost/c24-7/faq/'" data-width="500" data-type="button"></div>
+                                    <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
                               </span>
                                 <span class="social-button">
-                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://concursomedellin2018.com/c24-7/" data-count="none">Tweet</a>
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_faq ?>" data-count="none">Tweet</a>
                                 </span>
                               </div>
                             </div>

@@ -148,7 +148,6 @@ $manana = strtotime(date('Y-m-d').' +1 day');
                       <div id="cuenca-info-inf" class="form-horizontal">
                           <div id="cuenca-info-s"class="control-group">
                               <select id="s_cuenca" placeholder="Seleccione Quebrada">
-                                <option selected></option>
                                 <?php echo $cuencasList ?>
                              </select>
                           </div>

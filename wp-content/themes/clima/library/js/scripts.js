@@ -332,7 +332,7 @@ jQuery(document).ready(function($) {
 			throw "seleccione algun valor.";
 		}
 
-	});
+	}).change();
 
 
 

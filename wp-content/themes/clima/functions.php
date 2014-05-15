@@ -1261,11 +1261,13 @@ function getCuencas()
 
   $datos_estaciones = $wpdb->get_results("SELECT codigo,nombre FROM c247_csv_niveles WHERE nombre is not null ;");
   $result = "";
+  $seleccionado = "selected";
 
   foreach ($datos_estaciones as $key => $cuenca) 
   {
 
-    $result .= '<option value="'.$cuenca->codigo.'">'.$cuenca->codigo." -  ".$cuenca->nombre.'</option>';
+    $result .= '<option value="'.$cuenca->codigo.' " '.$seleccionado.' >'.$cuenca->codigo." -  ".$cuenca->nombre.'</option>';
+    $seleccionado = '';
     
   }
   return $result;

@@ -21,21 +21,21 @@ Template Name: Clima a fondo OK
         <div class="row-fluid clearfix">
           <div class="span3"> 
             <!-- menu Clima en vivo -->
-           
-           <div id="clima-fondo" class="menu-clima">
-              <ul>
-                <li class="item-clima"><a id="btnMostrarVisible" class="visible" href="#visible">Imagen de lo visible</a></li>
-                <li class="item-clima"><a id="btnMostrarVapor" class="vapor" href="#vapor">Vapor de agua</a></li>
-                <li class="item-clima"><a id="btnMostrarMapaPluviometrico" class="reporte-estaciones" href="#reporte-estaciones">Reporte extendido Estaciones Pluviometricas.</a></li>
-              </ul>
-            </div>
+             
+             <div id="clima-fondo" class="menu-clima">
+                <ul>
+                  <li class="item-clima"><a id="btnMostrarVisible" class="visible" href="#visible">Imagen de lo visible</a></li>
+                  <li class="item-clima"><a id="btnMostrarVapor" class="vapor" href="#vapor">Vapor de agua</a></li>
+                  <li class="item-clima"><a id="btnMostrarMapaPluviometrico" class="reporte-estaciones" href="#reporte-estaciones">Reporte extendido Estaciones Pluviometricas.</a></li>
+                </ul>
+              </div>
 
                <!-- suscripciones -->
 
                 <?php //get_sidebar();  ?>
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('widget_gallery') ) : ?>
                 <?php endif; ?>
-
+           </div>     
 
             <!-- Últimas fotos -->
             
@@ -83,7 +83,7 @@ Template Name: Clima a fondo OK
           </div>
         </div>
         <?php //the_content(); ?>
-        </div>
+        
       </section>
       <!-- end article section -->
       

@@ -25,12 +25,11 @@
 function mostrarArticulos($args, $instance)
  {
 
-	extract($args);																					
+	extract($args);		
+																				
 	/* Se muestra el título del widget */
 	echo $before_widget;
 	$galerias = '';
-
-	add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
 ?>
 
@@ -74,7 +73,6 @@ function mostrarArticulos($args, $instance)
 			<div class="carousel-inner">
 				   <?php echo $galerias; ?>	
 			 </div>
-	
 			<!-- Controls -->
 			<a class="left carousel-control" href="#widget-gallery" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left"></span>
