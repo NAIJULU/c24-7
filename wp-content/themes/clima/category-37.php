@@ -53,12 +53,14 @@ $typeCollapse = '';
                             <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse <?php echo $typeCollapse ?> ">
                               <div class="panel-body">
                                 <?php echo get_the_content(); ?>
-                              <span class="social-button">
-                                    <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
-                              </span>
+                              <div id="share">
                                 <span class="social-button">
-                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_faq ?>" data-count="none">Tweet</a>
+                                      <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
                                 </span>
+                                  <span class="social-button">
+                                      <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_faq ?>" data-count="none">Tweet</a>
+                                  </span>
+                                </div>  
                               </div>
                             </div>
                           </div>

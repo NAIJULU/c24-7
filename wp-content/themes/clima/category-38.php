@@ -22,7 +22,7 @@ $typeCollapse          = '';
                             </div>
                          </div>
                          <?php
-                            $args = array('cat'=>'38', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' ); 
+                            $args = array('cat'=>'38', 'orderby' => 'title', 'order' => 'ASC', 'posts_per_page' => '-1' ); 
                             $query = new WP_Query( $args );
 
                             if ($query->have_posts()) :
@@ -47,19 +47,21 @@ $typeCollapse          = '';
                             <div class="panel-heading">
                               <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $post->ID ?>" >
-                                  <?php the_title(); ?>
+                                  <?php echo ucwords(the_title('','',false)); ?>
                                 </a>
                               </h4>
                             </div>
                             <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse <?php echo $typeCollapse ?>">
                               <div class="panel-body">
                                 <?php echo get_the_content(); ?>
-                                <span class="social-button">
-                                    <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
-                                </span>
-                                <span class="social-button">
-                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_faq ?>" data-count="none">Tweet</a>
-                                </span>
+                                <div id="share">
+                                    <span class="social-button">
+                                        <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
+                                    </span>
+                                    <span class="social-button">
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_faq ?>" data-count="none">Tweet</a>
+                                    </span>
+                                 </div>   
                               </div>
                             </div>
                           </div>

@@ -42,7 +42,7 @@ Template Name: Clima a fondo OK
             
           
           <div class="span9">
-            <div id="visible" class="container-function-1"> 
+            <div id="visible" style="display:none" class="container-function-1"> 
 
                 <?php viewConvenciones("A partir del espectro visible del satélite GOES se obtiene imágenes de la tierra y las nubes a través del reflejo de la luz solar. Por lo tanto, esta visión sólo es útil durante las horas diurnas.  Las nubes son registradas en color blanco o  gris claro y la tierra y el agua se presentan en colores oscuros."); ?>
 
@@ -64,7 +64,7 @@ Template Name: Clima a fondo OK
             </div>
 
 
-            <div id="reporte-estaciones" style="display:none" class="container-function-1"> </a>
+            <div id="reporte-estaciones" class="container-function-1"> </a>
                <?php viewConvenciones("Las estaciones pluviométricas del SIATA ubicadas en 
                 diferentes sectores de los municipios del Valle de Aburrá registran minuto  a minuto las lluvias, es decir, la cantidad de agua que se ha recogido y procesado en una estación pluviométrica, en un periodo de 
                 tiempo determinado. Recomendación de monitoreo por acumulado: 
@@ -87,11 +87,12 @@ Template Name: Clima a fondo OK
       </section>
       <!-- end article section -->
       
-      <footer>
+    <!--  <footer>
         <p class="clearfix">
           <?php the_tags('<span class="tags">' . __("Tags","bonestheme") . ': ', ', ', '</span>'); ?>
         </p>
       </footer>
+    -->
       <!-- end article footer --> 
       
     </article>

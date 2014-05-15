@@ -411,6 +411,7 @@ function showInfoCuenca(codigo)
 clima a fondo
 **/
  $("#clima-fondo a").click(function(e){
+
 		var item = $(this).attr("href");
 		var id 	 = $(this).attr("id");
 
@@ -419,7 +420,6 @@ clima a fondo
 			$("#visible").hide('fast');
 			$("#vapor").hide('fast');
 			$("#reporte-estaciones").hide('fast');
-
 
 		 if( $(".contenedor-convencion").css("display") != "none" )
 		  {
@@ -466,6 +466,8 @@ if( $("#clima-fondo").length > 0)
 		}
 
 	}
+
+	setGoogleMapsEstaciones();
 
 }
 
@@ -533,7 +535,7 @@ if( $("#clima-fondo").length > 0)
 			      	var pathMarket	      = hrefMaket[0]+'c24-7/clima-a-fondo-2/?'+estacion.id_estacion+'#reporte-estaciones';
 
 
-			      	var tweeterMarket 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://concursomedellin2018.com/c24-7/clima-a-fondo-2/#vapor" data-count="none">Tweet</a>';
+			      	var tweeterMarket 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-url="'+pathMarket+'" data-count="none">Tweet</a>';
 			      	var facebookMarket 	= '<div class="fb-share-button" data-href="'+pathMarket+'" data-width="500" data-type="button"></div>';
 			      //	var pinterestMarket = '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(pathMarket)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+pathImage)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
 
@@ -577,6 +579,35 @@ if( $("#clima-fondo").length > 0)
     							content: contenido
 							});
 
+						google.maps.event.addListener(infowindow, 'domready', function () {
+
+							twttr.widgets.load();
+							FB.XFBML.parse();
+
+	   					/*		 ! function (d, s, id) {
+	        					var js, fjs = d.getElementsByTagName(s)[0];
+	        					if (!d.getElementById(id)) {
+	            					js = d.createElement(s);
+	            					js.id = id;
+	            					js.src = "//platform.twitter.com/widgets.js";
+	            					fjs.parentNode.insertBefore(js, fjs);
+	       							 }
+	    							}(document, "script", "twitter-widgets");
+
+
+
+			    				! function(d, s, id) {
+		                            var js, fjs = d.getElementsByTagName(s)[0];
+		                            if (d.getElementById(id)) return;
+		                            js = d.createElement(s); js.id = id;
+		                            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=1416538475270198&version=v2.0";
+		                            fjs.parentNode.insertBefore(js, fjs);
+		                          }(document, 'script', 'facebook-jssdk'); */
+
+	    					});
+
+
+
 							hashMarker = hashMarker.split("?");
 
 							if( hashMarker.length > 1)
@@ -602,22 +633,8 @@ if( $("#clima-fondo").length > 0)
 								
 							}
 
-							google.maps.event.addListener(infowindow, 'domready', function () {
-
-	   							 ! function (d, s, id) {
-	        					var js, fjs = d.getElementsByTagName(s)[0];
-	        					if (!d.getElementById(id)) {
-	            					js = d.createElement(s);
-	            					js.id = id;
-	            					js.src = "//platform.twitter.com/widgets.js";
-	            					fjs.parentNode.insertBefore(js, fjs);
-	       							 }
-	    							}(document, "script", "twitter-widgets");
-
-	    					});
 
 							 google.maps.event.addListener(marker, 'click', function() {
-							 	twttr.widgets.load();
 							    infowindow.open(map,marker);
 							  });
 
@@ -1394,7 +1411,6 @@ function getGallery(event)
 function getGalleryPerDate(event)
 {
 
-		
 		var date = jQuery(".datepicker").val();
 
 		if( date.length )
@@ -1418,6 +1434,7 @@ function getGalleryPerDate(event)
 					{
 						alert('No se encontraron resultados para esta fecha');
 						jQuery(".datepicker").val("");
+						jQuery(".layout-load").css('display','none');
 						throw "No results";
 						return false;
 					}
@@ -1447,7 +1464,7 @@ function getGalleryPerDate(event)
 					
 					jQuery(".filtro").removeAttr("checked");
 
-					jQuery('html, body').animate({scrollTop: heightAct},'fast');
+					//jQuery('html, body').animate({scrollTop: heightAct},'fast');
 					
 				})
 				.fail(function() {
