@@ -23,7 +23,7 @@ $typeCollapse = '';
                             </div>
                          </div>
                          <?php
-                            $args = array('cat'=>'37', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' ); 
+                            $args = array('cat'=>'48', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' ); 
                             $query = new WP_Query( $args );
 
                             if ($query->have_posts()) :

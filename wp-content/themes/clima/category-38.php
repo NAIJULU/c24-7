@@ -38,7 +38,7 @@ $typeCollapse          = '';
                                 $typeCollapse  = '';
                               }
 
-                              $url_glosario = get_bloginfo( 'url' ).'faq/?id='.$post->ID;
+                              $url_glosario = get_bloginfo( 'url' ).'/glosario/?id='.$post->ID;
 
 
                           ?>
@@ -56,10 +56,10 @@ $typeCollapse          = '';
                                 <?php echo get_the_content(); ?>
                                 <div id="share">
                                     <span class="social-button">
-                                        <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
+                                        <div class="fb-share-button" data-href="<?php echo $url_glosario ?>" data-width="500" data-type="button"></div>
                                     </span>
                                     <span class="social-button">
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_faq ?>" data-count="none">Tweet</a>
+                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_glosario ?>" data-count="none">Tweet</a>
                                     </span>
                                  </div>   
                               </div>
