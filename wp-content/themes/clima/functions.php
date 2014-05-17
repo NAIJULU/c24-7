@@ -191,6 +191,17 @@ function bones_register_sidebars() {
     	'after_title' => '</h4>',
     ));
     
+     // Registrando posición para el widget de las fotos de usuario en el home
+ if ( function_exists('register_sidebar') )
+       register_sidebar(array(
+        'name'=>'sliderbar derecha',
+        'id'=>'slidebar_derecha',
+    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    	'after_widget' => '</div>',
+        'before_title' => '',
+        'after_title' => '',
+  )); 
+    
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
@@ -884,6 +895,8 @@ function creaWidgets()
  register_widget( 'WidgetUltimaEmision' );
  register_widget( 'widgetGaleria' );
  register_widget( 'widgetGaleriaHome' );
+ register_widget( 'widgetMinUltimaEmision' );
+ register_widget( 'widgetUltimosArticulos' );
 }
 
 add_action( 'widgets_init', 'creaWidgets' );
@@ -1284,6 +1297,8 @@ include_once(TEMPLATEPATH.'/widgets/widget-pronostico.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultima-emision.php');
 include_once(TEMPLATEPATH.'/widgets/widget-gallery.php');
 include_once(TEMPLATEPATH.'/widgets/widget-gallery-home.php');
+include_once(TEMPLATEPATH.'/widgets/widget-mini-ultima-emision.php');
+include_once(TEMPLATEPATH.'/widgets/widget-ultimos-articulos.php');
 
 
 
