@@ -1106,6 +1106,7 @@ function getBlog(event)
 
 			if(data == "")
 			{
+				jQuery(".layout-load").css('display','none');
 				throw "No results";
 			}
 			else
@@ -1158,6 +1159,7 @@ function getGallery(event)
 		.done(function(data) {
 			if(data == "")
 			{
+				jQuery(".layout-load").css('display','none');
 				throw "No results";
 			}
 			else
@@ -1183,6 +1185,7 @@ function getGallery(event)
 
 		})
 		.fail(function() {
+			jQuery(".layout-load").css('display','none');
 			throw "Error,no results";
 		});
 	}
@@ -1201,6 +1204,8 @@ function getGalleryPerDate(event)
 	if( date.length )
 	{
 		jQuery(".layout-load").css('display','block');
+		jQuery(".layout-load .spinner").css('top','300px');
+		jQuery(".layout-load .spinner div").css('background-color','#fff');
 		var heightAct = jQuery(document).height();
 		jQuery.ajax({
 				type: "GET",

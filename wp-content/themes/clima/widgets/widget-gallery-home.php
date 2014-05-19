@@ -47,26 +47,33 @@ function mostrarArticulos($args, $instance)
 
 	  if(in_category(23)) :
 
+		$contenido = get_the_content();		
 		$post_thumbnail_id	= get_post_thumbnail_id(get_the_ID(), 'full');
 		$post_thumbnail_url	= (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
 		$item = ($active) ? "item" : "item active";
-		$galerias			= $galerias .'<div id="gal-'.get_the_ID().'" class="'.$item.'"><img alt="sizas" class="thumb" src="'.$post_thumbnail_url.'"  ></div>';
+		$galerias			= 	$galerias .'<div id="gal-'.get_the_ID().'" class="'.$item.'">'.
+								'<div class="widget-home-gallery-head row-fluid">'.
+								'<span class="widget-home-gallery-head-title span6">'.the_title('','',false).'</span>'.
+								'<span class="widget-home-gallery-head-date span6"><time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time></span>'.
+								'<img class="thumb" src="'.$post_thumbnail_url.'"  ></div>'.
+								'<div class="widget-home-gallery-footer"><span class="gfooter-span1"> Foto enviada por: <a href="#" target="_blank">'.$contenido.'</a></span> </div></div>';
 		$active = true;
-		$contenido = get_the_content();									
+							
 	   
 	        endif;
 	endwhile;
 	}
 
 	?>
-		<div class="widget-home-gallery-head row-fluid">
+		<!-- <div class="widget-home-gallery-head row-fluid">
 			<span class="widget-home-gallery-head-title span6">
 				<?php echo the_title('','',false); ?>
 			</span>
 			<span class="widget-home-gallery-head-date span6">
 				<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 			</span>
-		</div>
+		
+		</div> -->
 	    <div id="widget-gallery-home" class="carousel slide" data-ride="carousel">
 					    	<!-- Wrapper for slides -->
 			<div class="carousel-inner">
@@ -82,9 +89,10 @@ function mostrarArticulos($args, $instance)
 			</a>
 
 	    </div>
-	    <div class="widget-home-gallery-footer">
+	<!--    <div class="widget-home-gallery-footer">
 	    	<span class="gfooter-span1"> Foto enviada por: <a href="#" target="_blank"><?php echo $contenido ?></a></span>
 	    </div>
+	  -->  
 	</div>	
 	<?php
 

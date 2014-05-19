@@ -974,7 +974,12 @@ div.pagination.articulos-antysig{
 	
 	display: block;
 	
-	}
+}
+
+#clima-fondo .span9
+{
+	height: 600px;
+}
 
 .pagination ul.more-post{
 	margin-left: 10px;
@@ -2124,13 +2129,13 @@ div.main-galeria > article a:hover .contenido{
   position: absolute;
   left: 50%;
   width: 70px;
-  top: 300px
+  top: 100%;
 }
 
 .layout-load .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #fff !important;
+  background-color: #333333 ;
 
   border-radius: 100%;
   display: inline-block !important;
