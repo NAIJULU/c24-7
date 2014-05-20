@@ -30,9 +30,8 @@
 
 	?>
 
-		<div class="galeriaHome span12">
+		<div class=" pan12">
 			<h2>Últimos Articulos</h2>
-		</div>
         <?php
            $args = array('cat'=>'2', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '4' );
            $query = new WP_Query( $args );
@@ -58,12 +57,12 @@
 											?>
 										<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 											<div class="contenido">
-											<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
-												<h1><?php the_title(); ?></h1>
-													<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
-											</header>
-											<p><?php echo substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; ?>
-												<span>Leer Más +<span></p>
+												<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
+													<h1><?php the_title(); ?></h1>
+														<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
+												</header>
+												<p><?php echo substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; ?>
+													<span>Leer Más +<span></p>
 											</div>	
 									</a>
 								</article>

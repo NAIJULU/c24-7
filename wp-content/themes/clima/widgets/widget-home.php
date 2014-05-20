@@ -47,7 +47,7 @@
 		'Bello' => 'Bello',
 		'Envigado' => 'Envigado',
 		'Sabaneta' => 'Sabaneta',
-		'La Estrella' => 'LaEstrella',
+		'La Estrella' => 'Laestrella',
 		'Itagüí' => 'Itagui',
 		'Caldas' => 'Caldas',
 		

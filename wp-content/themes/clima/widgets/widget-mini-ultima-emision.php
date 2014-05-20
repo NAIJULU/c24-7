@@ -31,7 +31,7 @@
 
 	?>
 
-		<div class="widget-ultima-emision">
+		<div class="widget-ultima-emision" href="/c24-7/emisiones">
 			<h3>ÚLTIMA EMISION</h3>
 		<?php
 		$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '1' );	
@@ -49,11 +49,11 @@
 											
 			?>
 			<div id="mini-<?php the_ID(); ?>" class="span12 clearfix">					
-				<div id="videoMinEmision">
+				<a href="/c24-7/emisiones" id="videoMinEmision">
 					<div class="img-min-tumb">
-						<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>"/> 
+							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>" />
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>	
 			<?php
