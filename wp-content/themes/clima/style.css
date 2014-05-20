@@ -947,13 +947,12 @@ text-transform: uppercase;
 .menu-clima p.texto-filtro{
 	margin-left: -18px;
 }
-#sidebar1 ul
 
+#sidebar1 ul
 {
-	
 	list-style:none;
 	margin-left:0.4em;
-	}
+}
 
 .rw-ui-container{
 	float: left;

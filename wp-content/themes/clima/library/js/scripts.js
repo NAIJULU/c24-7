@@ -259,7 +259,8 @@ jQuery(document).ready(function($) {
 	se quiere mostrar */
 	$("#clima-vivo a").click(function(e){
 		e.preventDefault();
-		var item = $(this).attr("href");
+		var item = 	$(this).attr("href");
+		var id 	 = 	$(this).attr("id");
 		if( $(item).css("display") == "none" )
 		{
 			$("#pronostico").hide('fast');
@@ -268,6 +269,8 @@ jQuery(document).ready(function($) {
 			$("#radar-meterologico").hide('fast');
 			$("#temperatura-actual").hide('fast');
 			$(".contenedor-convencion").css("display","none");
+			$("#clima-vivo .item-clima a").css("background-color","");
+			$(".item-clima "+"#"+id).css("background-color","rgba(255,255,255,0.3)");
 			$(item).show();
 		}
 	});
@@ -377,6 +380,9 @@ jQuery(document).ready(function($) {
 				$(".contenedor-convencion").css('display','none');
 			}
 
+			$("#clima-fondo .item-clima a").css("background-color","");
+			$(".item-clima "+"#"+id).css("background-color","rgba(255,255,255,0.3)");
+
 			$(item).show();
 
 			if(id == "btnMostrarMapaPluviometrico")
@@ -404,10 +410,6 @@ jQuery(document).ready(function($) {
 				if( itemHash == "#reporte-estaciones" )
 				{
 					setGoogleMapsEstaciones();
-				}
-				else
-				{
-					console.log( itemHash );		
 				}
 			}
 		}
