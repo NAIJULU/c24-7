@@ -60,7 +60,7 @@ $typeCollapse          = '';
                 </span>
                 <span class="social-button">
                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_glosario ?>" 
-                  data-text="clima 24 /7 | Glosario :<?php echo the_title('','',false); ?>" data-count="none">Tweet</a>
+                  data-text="<?php echo the_title('','',false); ?> | GLOSARIO"   data-via="Clima24_7" data-count="none">Tweet</a>
                 </span>
                </div>   
               </div>

@@ -47,7 +47,7 @@ function mostrarArticulosValorados($args, $instance)
 
 	$args = array('cat'=>$optionPost, 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' );
 	$the_query = new WP_Query($args); 
-	$cont_coment = $wpdb->get_results(" SELECT post_id, MAX( CAST(meta_value AS SIGNED) ) as meta_value FROM c247_postmeta WHERE meta_key = 'ec_stars_rating' ;");
+	$cont_coment = $wpdb->get_results("SELECT post_id, CAST(meta_value AS SIGNED) as meta_value2 FROM c247_postmeta WHERE meta_key = 'ec_stars_rating' ORDER BY meta_value2 DESC LIMIT 1;");
 
 	if ($the_query->have_posts())
 	{

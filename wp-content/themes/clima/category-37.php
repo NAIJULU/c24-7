@@ -40,6 +40,7 @@ $typeCollapse = '';
 
 					$url_faq = get_bloginfo( 'url' ).'/faq/?id='.$post->ID;
 				?>
+				<meta property="og:title"           content="Chocolate Pecan Pie" /> 
 				<div class="panel-group" id="accordion">
 					<div class="panel panel-default">
 						<div class="panel-heading">

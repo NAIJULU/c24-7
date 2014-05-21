@@ -41,25 +41,35 @@ $typeCollapse = '';
 
           $url_faq = get_bloginfo( 'url' ).'/faq/?id='.$post->ID;
         ?>
+       
         <div class="panel-group" id="accordion">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $post->ID ?>" >
-                  <?php the_title(); ?>
+                  <?php echo the_title('','',false); ?>
                 </a>
               </h4>
             </div>
-            <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse <?php echo $typeCollapse ?> ">
+            <div id="collapse-<?php echo $post->ID ?>" class="panel-collapse collapse <?php echo $typeCollapse ?> "> 
               <div class="panel-body">
                 <?php echo get_the_content(); ?>
                 <div id="share">
                   <span class="social-button">
-                    <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
+                   <div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
+                  </span>
+                  <span class="social-button">
+           <!--        <a title="Share this article/post/whatever on Facebook" 
+                      href="http://www.facebook.com/sharer.php?s=100&p[url]='<?php //echo $url_faq ?>'&p[title]=si que gonorerea&p[summary]=peor de gonorrrea&p[images][0]=url_imagen" 
+                      target="_blank">
+                    <img src="your/path/to/facebook-icon.png" 
+                    alt="Share on Facebook" />
+                  </a> --> 
+              <!--  <a href="<?php //echo 'http://www.facebook.com/sharer.php?u='.$url_faq.'&t=sizas ' ?>" >sadd</a>  -->
                   </span>
                   <span class="social-button">
                     <a href="https://twitter.com/share" class="twitter-share-button" 
-                    data-url="<?php echo $url_faq ?>" data-text="clima 24 /7 | FAQ <?php echo the_title('','',false); ?>" data-count="none">Tweet</a>
+                    data-url="<?php echo $url_faq ?>" data-text="<?php echo the_title('','',false); ?> | FAQ"   data-via="Clima24_7" data-count="none">Tweet</a>
                   </span>
                 </div>  
               </div>
