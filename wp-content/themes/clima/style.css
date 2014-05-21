@@ -1799,7 +1799,7 @@ div.selector-fecha form div.btn-group > input.btn-ver{
 	text-decoration: none;
 }
 #emisiones-todo-dia a:hover .emision-titulo{
-	background: #80aa0a;
+	background-color: #80aa0a;
 	text-decoration: none;
 }
 div.img-emision-tumb img{
@@ -1813,15 +1813,29 @@ div.img-emision-tumb img{
   height: 100%;
 }
 div.emision-titulo{
-	padding: 10px 10px 10px 60px;
-	background: #94C60D;
+	padding: 10px 10px 10px 70px;
+	background-color: #94C60D;
 	color: #fff;
 	box-sizing: border-box;
 	margin: 5px auto 0 auto;
 	width: 90%;
 	text-transform: uppercase;
 }
-
+a.emision-tumb-1 div.emision-titulo{
+	background-image: url(images/iconos-emisiones.png);
+	background-position: 0px -24px;
+	background-repeat: no-repeat;
+}
+a.emision-tumb-2 div.emision-titulo{
+	background-image: url(images/iconos-emisiones.png);
+	background-position: 0px -115px;
+	background-repeat: no-repeat;
+}
+a.emision-tumb-3 div.emision-titulo{
+	background-image: url(images/iconos-emisiones.png);
+	background-position: 0px -205px;
+	background-repeat: no-repeat;
+}
 #ultima-emision
 {
 	width: 100%;
@@ -1837,7 +1851,7 @@ div.emision-titulo{
 	text-transform: uppercase;
 }
 #ultima-emision a:hover{
-	background: #4774b2;
+	background-color: #4774b2;
 	color: #fff;
 	text-decoration: none;
 }
