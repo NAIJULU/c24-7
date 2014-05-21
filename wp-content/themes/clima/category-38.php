@@ -12,7 +12,7 @@ $typeCollapse          = '';
  ?>
     <div id="content" class="clearfix row-fluid">
         <div id="main" class="span12 clearfix">
-			<div id="main-content" class="span8">
+			<div id="main-content" class="span9">
 					<section class="post_content">
 					  <div class="row-fluid clearfix">
 					   <div class="span12">
@@ -83,7 +83,7 @@ $typeCollapse          = '';
 			?>
 			  </section>
 			</div>
-				<div id="slidebar-der" class="span4">
+				<div id="slidebar-der" class="span3">
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('slidebar_derecha') ) : ?>
 					<?php endif; ?>
 				</div> 

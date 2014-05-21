@@ -30,7 +30,7 @@
 
 	?>
 
-		<div class=" pan12">
+		<div>
 			<h2>Últimos Articulos</h2>
         <?php
            $args = array('cat'=>'2', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '4' );
@@ -49,7 +49,7 @@
 									$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
 									$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
 								?>
-								<article id="post-<?php the_ID(); ?>"  class="blog-thumb span8">
+								<article id="post-<?php the_ID(); ?>"  class="blog-thumb">
 									<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">					
 											<?php 
 												$categoria 		= get_the_category();
