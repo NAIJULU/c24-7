@@ -2141,6 +2141,11 @@ div.main-galeria > article a:hover .contenido{
   bottom: 50px;
 }
 
+.spinner2 {
+  top: 300px !important;
+  bottom: none !important;
+}
+
 .layout-load .spinner > div {
   width: 18px;
   height: 18px;

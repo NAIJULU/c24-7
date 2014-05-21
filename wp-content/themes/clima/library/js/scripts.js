@@ -1207,8 +1207,7 @@ function getGalleryPerDate(event)
 	if( date.length )
 	{
 		jQuery(".layout-load").css('display','block');
-		jQuery(".layout-load .spinner").css('top','300px');
-		jQuery(".layout-load .spinner div").css('background-color','#fff');
+		jQuery(".layout-load .spinner").addClass('spinner2');
 		var heightAct = jQuery(document).height();
 		jQuery.ajax({
 				type: "GET",
@@ -1221,6 +1220,7 @@ function getGalleryPerDate(event)
 				alert('No se encontraron resultados para esta fecha');
 				jQuery(".datepicker").val("");
 				jQuery(".layout-load").css('display','none');
+				jQuery(".layout-load .spinner").removeClass('spinner2');
 				throw "No results";
 				return false;
 			}
@@ -1228,6 +1228,7 @@ function getGalleryPerDate(event)
 			{
 
 				jQuery(".layout-load").css('display','none');
+				jQuery(".layout-load .spinner").removeClass('spinner2');
 				var container = jQuery('#main-articulos');
 				container.html(data);
 				container.isotope('destroy');
@@ -1249,11 +1250,13 @@ function getGalleryPerDate(event)
 		.fail(function() {
 			throw "Error,no results";
 			jQuery(".layout-load").css('display','none');
+			jQuery(".layout-load .spinner").removeClass('spinner2');
 		});
 	}
 	else
 	{
 		jQuery(".layout-load").css('display','none');
+		jQuery(".layout-load .spinner").removeClass('spinner2');
 		return false;
 	}
 }
