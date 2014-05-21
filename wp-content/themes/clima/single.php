@@ -50,7 +50,7 @@
 								
 								<?php the_content(); ?>
 								
-								<div>
+								<div class="enviar-por-correo">
 									<span class="span6 enviar-correo">
 										<?php if(function_exists('email_link')){ email_link(); } ?>
 									</span>
