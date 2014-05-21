@@ -20,9 +20,9 @@
 
 	 function form( $instance ) {
 	?>
-			<div>
+		<!--	<div>
 				<h1>sizas</h1>
-			</div>
+			</div> -->
 	<?php 
 
 	}

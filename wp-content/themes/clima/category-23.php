@@ -113,7 +113,8 @@ $categories = get_categories( $args );
 				 	<a class="btn-todas" href="#" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Borrar el filtro de fechas</a>
 				</div>
 				</div>
-			<?php get_sidebar();  ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mix-galeria') ) : ?>
+			<?php endif; ?>
 		</div>
 			
 			  <div id="main" class="span9 clearfix" role="main">

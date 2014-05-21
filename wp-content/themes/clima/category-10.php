@@ -100,7 +100,7 @@ endif;
 				}
 
 				$query = new WP_Query( $args );
-
+				$i = 1 ;
 				if ($query->have_posts()) :
 	   				while ($query->have_posts() ) : $query->the_post();
 ?>
@@ -111,7 +111,7 @@ $content1 = apply_filters('the_content', $content1);
 
 ?>
 
-					<a id="tumb-<?php the_ID(); ?>" href="#" class="btn-tumb emision-tumb span4">
+					<a id="tumb-<?php the_ID(); ?>" href="#" class="btn-tumb emision-tumb-<?php echo $i ?> span4">
 						<div class="img-emision-tumb">
 							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>"/> 
 						</div>
@@ -125,11 +125,10 @@ $content1 = apply_filters('the_content', $content1);
 										    echo 'Emisión de la '.ucwords($tag->name); 
 										  }
 										} ?>
-
 							</div>
 					</a>
-				
 <?php
+						$i = $i + 1;
 					   endwhile;
 				 endif;
 			endif;
