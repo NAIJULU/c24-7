@@ -2100,7 +2100,7 @@ div.main-galeria > article a:hover .contenido{
 }
 /*Estilos de Suscripción*/
 .widget_mailchimpsf_widget button.btn-primary{
-	background: #8FB625;
+	background: #A5CE39;
 	padding: 10px 5px 10px 25px;
 	color: #fff;
 	width: 100%;
@@ -2108,7 +2108,13 @@ div.main-galeria > article a:hover .contenido{
 	border-radius: 0;
 	margin-top: 15px;
 	text-shadow: none;
+	background-image: url(images/mail-icon.png) left;
+	background-repeat: no-repeat;
 }
+.widget_mailchimpsf_widget button:hover.btn-primary{
+	background: #8FB625;		
+}
+
 
 #mc_signup{
 	background: #8FB625;
