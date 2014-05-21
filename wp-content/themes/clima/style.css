@@ -948,8 +948,7 @@ text-transform: uppercase;
 	margin-left: -18px;
 }
 
-.menu-clima .item-clima #btnMostrarRadarMeteorologico, 
-.menu-clima .item-clima #btnMostrarMapaPluviometrico
+.menu-activo
 {
 	background-color: rgba(255,255,255,0.3);
 }

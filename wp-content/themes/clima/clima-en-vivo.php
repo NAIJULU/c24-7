@@ -28,7 +28,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 
 	         <div id="clima-vivo" class="menu-clima">
 	            <ul>
-	              <li class="item-clima"><a id="btnMostrarRadarMeteorologico" class="radar" href="#radar-meterologico">Radar Meteorológico</a></li>
+	              <li class="item-clima"><a id="btnMostrarRadarMeteorologico" class="radar menu-activo" href="#radar-meterologico">Radar Meteorológico</a></li>
 	              <li class="item-clima"><a id="btnMostrarPronosticoTemperatura" class="pronostico" href="#pronostico">Pronóstico - Temperatura actual, máxima y mínima</a></li>
 	              <li class="item-clima"><a id="btnMostrarVistaVivo" class="siata" href="#vista-vivo">Vista en vivo del SIATA</a></li>
 	              <li class="item-clima"><a id="btnMostrarSensores" class="sensores" href="#sensores">Red de sensores de nivel de quebradas</a></li>
