@@ -72,7 +72,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 .gallery-caption {
 }
 /* layout */
-
+html, body{
+	height: 100%;
+}
 body {
 	padding-top: 0;
 	background-image: url(images/background.jpg);
@@ -2641,6 +2643,18 @@ section .menu-clima ul li a.vapor{
 	#inner-footer #widget-footer .menuInstitucional li{
 		display: block;
 		text-align: left;
+	}
+	#radar-meterologico, #reporte-estaciones{
+		width: 100%;
+	}
+	.container-function-1{
+		position: initial;
+	}
+	section .menu-clima ul li a.pronostico{
+		background-position: 4px -50px;
+	}
+	section .menu-clima ul li a.temperatura{
+		background-position: 4px -203px;
 	}
 }
  @media only screen and (min-width: 980px) {

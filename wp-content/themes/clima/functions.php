@@ -150,7 +150,7 @@ you like. Enjoy!
        register_sidebar(array(
         'name'=>'Widget Gallery',
         'id'=>'widget_gallery',
-        'before_widget' => '<div class="widget-home-gallery">',
+        'before_widget' => '<div class="widget-home-gallery hidden-phone">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
