@@ -58,31 +58,31 @@
         <div class="row-fluid">
           <div class="span6">
             <div class="row-fluid clearfix">
-              <div class="span12"> <span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $this->hoy); ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
+              <div class="span12 texto-centro"> <span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $this->hoy); ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
               <div class="span12 lluvias"> <span class="titulo2">Pronóstico Lluvia</span>
                 <div class="row-fluid">
-                  <div class="span3">
+                  <div class="span3 item-left">
                     
                       <div class="pronostico-item">Madrugada</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMad'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvMad'.$ciudad) ?></div>
                     
                   </div>
-                  <div class="span3">
+                  <div class="span3 item-right">
                     
                       <div class="pronostico-item">Mañana</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMan'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvMan'.$ciudad) ?></div>
                     
                   </div>
-                  <div class="span3">
+                  <div class="span3 item-left">
                     
                       <div class="pronostico-item">Tarde</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvTar'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvTar'.$ciudad) ?></div>
                     
                   </div>
-                  <div class="span3">
+                  <div class="span3 item-right">
                     
                       <div class="pronostico-item">Noche</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvNoc'.$ciudad) )."%"; ?></div>
@@ -95,13 +95,13 @@
             <div class="row-fluid">
               <div class="span12 temp"> <span class="titulo2">Pronóstico Temperatura</span>
                 <div class="row-fluid">
-                  <div class="span6">
+                  <div class="span6 item-left">
                     <div class="row-fluid">
                       <div class="span8 tempMaxgrados">Máxima</div>
                       <div class="span4 numMaxgrados"> <?php echo get_option('tempMax'.$ciudad); ?>° </div>
                     </div>
                   </div>
-                  <div class="span6">
+                  <div class="span6 item-right">
                     <div class="rowfluid">
                       <div class="span8 tempMingrados">Mínima</div>
                       <div class="span4 numMingrados"><?php echo get_option('tempMin'.$ciudad) ?>° </div>
@@ -111,7 +111,7 @@
               </div>
             </div>
           </div>
-          <div class="span6 mapa-ciudades"> <img src="wp-content/uploads/mapas/mapa_<?php echo ucfirst($ciudad)?>.png" />   </div>
+          <div class="span6 mapa-ciudades hidden-phone"> <img src="wp-content/uploads/mapas/mapa_<?php echo ucfirst($ciudad)?>.png" />   </div>
         </div>
       </div>
     <?php endforeach?>

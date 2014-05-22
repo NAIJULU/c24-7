@@ -2472,8 +2472,80 @@ section .menu-clima ul li a.visible{
 section .menu-clima ul li a.vapor{
 	background-image:url("images/iconos-clima-a-fondo.png");background-position:5px -203px;background-repeat:no-repeat
 }
+#inner-footer {
+	padding: 0;
+	background-color: #185b9f;
+	height: 122px;
+	border-top: 6px solid #3c87d2;
+}
+#inner-footer #widget-footer {
+	max-width: 970px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 40px;
+}
+#inner-footer #widget-footer .menuInstitucional {
+	text-align: center;
+}
+#inner-footer #widget-footer .menuInstitucional li {
+	display: inline-block;
+	color: #FFF;
+	margin-left: 30px;
+}
+#inner-footer #widget-footer .menuInstitucional li a {
+	color: #FFF;
+	text-decoration: none;
+}
+#inner-footer #widget-footer .menuInstitucional li a:hover {
+	color: #7cbeff;
+	text-decoration: none;
+}
+.InstitucionalBtn {
+	background-image: url(images/icon_1.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.MapaBtn {
+	background-image: url(images/icon_2.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.FAQBtn {
+	background-image: url(images/icon_3.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.GlosarioBtn {
+	background-image: url(images/icon_4.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
+.SuscripcionBtn {
+	background-image: url(images/icon_5.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 36px;
+	padding-left: 40px;
+	padding-top: 16px;
+}
 
  @media only screen and (max-width: 768px) {
+ 	.texto-centro{
+ 		text-align: center;
+ 	}
  	.hidden-768{
  		display: none !important;
  	}
@@ -2492,6 +2564,10 @@ section .menu-clima ul li a.vapor{
 	.otros-logos{
 		text-align: center;
 	}
+	.otros-logos a.logo-tm, .otros-logos a.logo-al, .otros-logos a.logo-am{
+		width: 31%;
+		display: inline-block;
+	}
 	.navbar{
 		margin-bottom: 15px;
 	}
@@ -2499,6 +2575,72 @@ section .menu-clima ul li a.vapor{
 		background: none;
 		color: #fff;
 		text-shadow: initial;
+	}
+	.item-left{
+		width: 50% !important;
+		float: left !important;
+		margin-bottom: 20px !important;
+	}
+	.item-right{
+		width: 50% !important;
+		float: right !important;
+		margin-bottom: 20px !important;
+	}
+	#pronosticos #ciudades h2{
+		font-size: 20px;
+	}
+	#pronosticos #ciudades .pronostico-item {
+		font-size: 20px;
+	}
+	#pronosticos #ciudades .dia, #pronosticos #ciudades .mes, #pronosticos #ciudades .dias{
+		font-size: 20px;
+	}
+	h3.titulo-widget-ultima-emision:before{
+		display: none;
+	}
+	.contenedor-ultima-emision .emision{
+		margin: 5px 0 0 0;
+	}
+	.contenedor-ultima-emision .emision .emision-title {
+		text-align: center;
+		display: block;
+		width: 80%;
+	}
+	.contenedor-ultima-emision span .btnHistorial{
+		float: inherit;
+		text-align: center;
+		display: block;
+		width: 35%;
+		margin: 21px auto 0 auto;
+	}
+	.widget-home-gallery-contenedor h3:before{
+		display: none;
+	}
+	.widget-home-gallery-head{
+		margin: 5px auto 0 auto;
+	}
+	.widget-home-gallery-head .widget-home-gallery-head-date{
+		margin-top: 13px;
+	}
+	.widget-home-gallery-footer{
+		margin: 10px auto 0px auto;
+	}
+	#ultimos-articulos article{
+		margin-bottom: 20px;
+	}
+	#inner-footer{
+		height: auto;
+	}
+	#inner-footer #widget-footer{
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		padding-top: 20px;
+	}
+	#inner-footer #widget-footer .menuInstitucional li{
+		display: block;
+		text-align: left;
 	}
 }
  @media only screen and (min-width: 980px) {
