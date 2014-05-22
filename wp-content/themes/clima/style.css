@@ -2656,6 +2656,25 @@ section .menu-clima ul li a.vapor{
 	section .menu-clima ul li a.temperatura{
 		background-position: 4px -203px;
 	}
+	#cont-sensores{
+		padding: 56px 15px 15px 15px;
+		position: relative;
+	}
+	#cuenca-info #cuenca-info-inf #cuenca-info-s{
+		position: absolute;
+		top: 15px;
+		width: 94%;
+		left: 15px;
+	}
+	#cuenca-info{
+		margin: 10px 0 0 0px;
+	}
+	section .menu-clima ul li a.reporte-estaciones{
+		background-position: 5px -23px;
+	}
+	#clima-fondo .span9{
+		height: auto;
+	}
 }
  @media only screen and (min-width: 980px) {
 body {
