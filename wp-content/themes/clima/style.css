@@ -2473,10 +2473,33 @@ section .menu-clima ul li a.vapor{
 	background-image:url("images/iconos-clima-a-fondo.png");background-position:5px -203px;background-repeat:no-repeat
 }
 
- @media only screen and (min-width: 768px) {
-.carousel-caption p {
-	display: block;
-}
+ @media only screen and (max-width: 768px) {
+ 	.hidden-768{
+ 		display: none !important;
+ 	}
+	.carousel-caption p {
+		display: block;
+	}
+	#logos{
+		height: auto;
+	}
+	#logos .logo-clima a {
+		width: 100%;
+	}
+	#logos .logo-clima a img{
+		width: 100%;
+	}
+	.otros-logos{
+		text-align: center;
+	}
+	.navbar{
+		margin-bottom: 15px;
+	}
+	.navbar .brand{
+		background: none;
+		color: #fff;
+		text-shadow: initial;
+	}
 }
  @media only screen and (min-width: 980px) {
 body {
