@@ -50,15 +50,15 @@
             	
                 <div id="logos">
                 	<div class="row">
-                        <div class="span4">
+                        <div class="span4 logo-clima">
                         	<a href="<?php echo home_url() ?>">
                             	<img src="<?php bloginfo('template_directory'); ?>/images/logoClima.png" />
                             </a>
                         </div>
-                    	<div class="offset2 span4">
-                         <a href="http://www.telemedellin.tv/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoTM.png" /></a>
-                         <a href="http://www.medellin.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/logoAlcaldia.png" /></a>
-                        	<a href="http://www.areadigital.gov.co/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/LogoArea.png" /></a>
+                    	<div class="offset2 span4 otros-logos">
+                         <a href="http://www.telemedellin.tv/" target="_blank" class="logo-tm"><img src="<?php bloginfo('template_directory'); ?>/images/logoTM.png" /></a>
+                         <a href="http://www.medellin.gov.co/" target="_blank" class="logo-al"><img src="<?php bloginfo('template_directory'); ?>/images/logoAlcaldia.png" /></a>
+                         <a href="http://www.areadigital.gov.co/" target="_blank" class="logo-am"><img src="<?php bloginfo('template_directory'); ?>/images/LogoArea.png" /></a>
                            
                             
                         </div>
@@ -72,7 +72,8 @@
 						<div class="container-fluid nav-container">
 							
                             <nav role="navigation">
-								<a class="brand" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"></a>
+								<a class="brand hidden-phone" id="logo" title="<?php echo get_bloginfo('description'); ?>" ></a>
+								<a data-toggle="collapse" data-target=".nav-collapse" class="brand visible-phone" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">Menú</a>
 								
 								<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							        <span class="icon-bar"></span>
@@ -96,7 +97,7 @@
 					</div> <!-- end .navbar-inner -->
 				</div> <!-- end .navbar -->
                 
-                <div class="recomendaciones-tw">                
+                <div class="recomendaciones-tw hidden-phone">                
                 	<div class="cont-recomendaciones-tw"> 
                 		<a href="https://twitter.com/Clima24_7" target="_blank" class="link-twitter">RECOMENDACIONES</a>
                 		<div class="marquee-twitter" style="width: 700px; overflow: hidden;"></div>
