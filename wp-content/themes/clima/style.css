@@ -997,7 +997,7 @@ header div.imprimir a img{
   margin-bottom: 15px;
 }
 div span.enviar-correo a{
-	color: #939393
+	color: #fff
 }
 div span.enviar-correo {
 	float: right !important;
@@ -2780,6 +2780,29 @@ section .menu-clima ul li a.vapor{
 		font-weight: 600;
 		width: 50%;
 		font-size: 1em;
+	}
+	/*Artículo del blog*/
+	#titulo-int-blog .titulo-entrada{
+		width: 78%;
+		float: left;
+	}
+	#titulo-int-blog .meta-titulo{
+		width: 20%;
+		float: right;
+	}
+	.aumentar-content{
+		clear: both;
+	}
+	.pagination li.art-anterior {
+		width: 48%;
+		float: left;
+	}
+	.pagination li.art-siguiente{
+		width: 48%;
+		float: right;
+	}
+	.pagination a {
+		width: 100%;
 	}
 }
  @media only screen and (min-width: 980px) {

@@ -27,13 +27,13 @@
 
 								<span class="meta-titulo span2">  <p style="font-size: 45px;margin-top:10px;"><?php echo get_the_date('d'); ?><p>  <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate> <?php the_date('F'); ?>  </span>
 							</div>
-							<div class="row-fluid">
+							<div class="row-fluid aumentar-content">
 								<div class="span6">
 										<!-- Boton aumentar letra -->
 										<p class="aumentar-letra pull-left">TAMAÑO DE LETRA</p>
 										<?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
 								</div>	
-								<div class="span6 text-right imprimir">	
+								<div class="span6 text-right imprimir hidden-phone">	
 										<!-- Boton imprimir articulo -->
 										<?php if(function_exists('wp_print')) { print_link(); } ?>
 								</div>	 
