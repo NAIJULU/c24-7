@@ -80,6 +80,7 @@ body {
 	background-image: url(images/background.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-attachment: fixed;
 	/*background-attachment: 	fixed;*/
 }
 
@@ -2674,6 +2675,42 @@ section .menu-clima ul li a.vapor{
 	}
 	#clima-fondo .span9{
 		height: auto;
+	}
+	/*Formulario de contacto*/
+	.formulario-contacto p{
+		font-size: 2em;
+		display: block;
+		padding: 12px;
+		color: #fff;
+	}
+	.formulario-contacto p span{
+		display: block;
+		margin: 20px 0px 0px;
+	}
+	.formulario-contacto p span input{
+		width: 100%;
+		font-size: 1em;
+		height: auto;
+	}
+	.formulario-contacto p span textarea{
+		width: 100%;
+		font-size: 0.8em;
+	}
+	.formulario-contacto p input.wpcf7-submit{
+		border: none;
+		background: #A5CE39;
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-o-border-radius: 0px;
+		-mi-border-radius: 0px;
+		padding: 15px;
+		display: block;
+		margin: 0 auto;
+		color: #fff;
+		font-weight: 600;
+		width: 50%;
+		font-size: 1em;
 	}
 }
  @media only screen and (min-width: 980px) {
