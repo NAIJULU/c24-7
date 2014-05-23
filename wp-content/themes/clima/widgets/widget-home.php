@@ -53,38 +53,52 @@
 		
 	);
 	foreach($ciudades as $nombre => $ciudad):?>
+
+    <?php 
+        $madrugada    = get_option('LluvMad'.$ciudad);
+        $mañana       = get_option('LluvMan'.$ciudad);
+        $tarde        = get_option('LluvTar'.$ciudad); 
+        $noche        = get_option('LluvNoc'.$ciudad); 
+
+        $classMadrugada   = strtolower($madrugada).'-noche';
+        $classMañana      = strtolower($mañana).'-dia';
+        $classTarde       = strtolower($tarde).'-dia';
+        $classNoche       = strtolower($noche).'-noche';
+        
+    ?>
+
     <div class="<?php if($i) echo 'active';$i=0?> item">
         <h2>Pronóstico de <?php echo $nombre?></h2>
         <div class="row-fluid">
           <div class="span6">
             <div class="row-fluid clearfix">
-              <div class="span12 texto-centro"> <span class="dia">Hoy</span> <span class="mes"><?php echo strftime("%B", $this->hoy); ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
+              <div class="span12 texto-centro"><span class="dia">Hoy</span><span class="mes"><?php echo strftime("%B", $this->hoy); ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
               <div class="span12 lluvias"> <span class="titulo2">Pronóstico Lluvia</span>
                 <div class="row-fluid">
                   <div class="span3 item-left">
-                    
-                      <div class="pronostico-item">Madrugada</div>
+
+                      <div class="pronostico-item <?php echo $classMadrugada ?> ">Madrugada</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMad'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvMad'.$ciudad) ?></div>
                     
                   </div>
                   <div class="span3 item-right">
                     
-                      <div class="pronostico-item">Mañana</div>
+                      <div class="pronostico-item <?php echo $classMañana ?> ">Mañana</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMan'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvMan'.$ciudad) ?></div>
                     
                   </div>
                   <div class="span3 item-left">
                     
-                      <div class="pronostico-item">Tarde</div>
+                      <div class="pronostico-item <?php echo $classTarde ?> ">Tarde</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvTar'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvTar'.$ciudad) ?></div>
                     
                   </div>
                   <div class="span3 item-right">
                     
-                      <div class="pronostico-item">Noche</div>
+                      <div class="pronostico-item <?php echo $classNoche ?>">Noche</div>
                        <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvNoc'.$ciudad) )."%"; ?></div>
                       <div class="numMax"><?php echo get_option('LluvNoc'.$ciudad) ?></div>
                     

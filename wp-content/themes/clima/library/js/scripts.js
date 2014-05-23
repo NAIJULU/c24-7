@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
 			easing: 'linear',
 			queue: false
 		},
-		layoutMode: 'fitRows'
+		layoutMode: 'cellsByRow'
 	});
 
 	// filter items when filter link is clicked
