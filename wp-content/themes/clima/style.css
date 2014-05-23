@@ -497,13 +497,42 @@ div.en-vivo .numMin {
 	font-size: 18px;
 	font-weight: bold;
 	text-transform: uppercase;
-	background-image: url(images/max.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: contain;
-	background-size: contain;
 	padding: 80px 0 0 0;
 	text-align: center;
+}
+.term-azul
+{
+    background-image: url(images/t-azul.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.term-verde
+{
+    background-image: url(images/t-verde.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.term-amarillo
+{
+    background-image: url(images/t-amarillo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.term-naranja
+{
+    background-image: url(images/t-naranja.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.term-rojo
+{
+    background-image: url(images/t-rojo.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados {
 	text-align: center;
@@ -2803,6 +2832,9 @@ section .menu-clima ul li a.vapor{
 	}
 	.pagination a {
 		width: 100%;
+	}
+	#main-articulos article {
+		width: 230px;
 	}
 }
  @media only screen and (min-width: 980px) {
