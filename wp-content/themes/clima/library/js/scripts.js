@@ -1127,7 +1127,7 @@ function getBlog(event)
 						easing: 'linear',
 						queue: false
 					},
-					layoutMode: 'fitRows'
+					layoutMode: 'cellsByRow'
 				});
 			}
 			jQuery(".filtro").removeAttr("checked");
@@ -1179,7 +1179,7 @@ function getGallery(event)
 						easing: 'linear',
 						queue: false
 					},
-					layoutMode: 'fitRows'
+					layoutMode: 'cellsByRow'
 				});
 			}
 					
@@ -1241,7 +1241,7 @@ function getGalleryPerDate(event)
 						queue: false
 
 					},
-					layoutMode: 'fitRows'
+					layoutMode: 'cellsByRow'
 				});
 			}
 
