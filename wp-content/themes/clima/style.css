@@ -369,11 +369,6 @@ input, textarea, select, .uneditable-input {
 }
 
 #pronosticos #ciudades .pronostico-item {
-	background-image: url(images/night.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
 	color: #114db0;
 	font-size: 14px;
 	font-weight: bold;
@@ -382,6 +377,80 @@ input, textarea, select, .uneditable-input {
 	padding: 0 0 0 0;
 	text-align: center;
 	/*width: 130px;*/
+}
+
+.baja-noche, .baja-madrugada{
+	background-image: url(images/BAJANOCHE.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.media-noche, .media-madrugada {
+	background-image: url(images/MEDIANOCHE.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.alta-noche, .alta-madrugada
+{
+	background-image: url(images/ALTANOCHE.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.baja-dia{
+	background-image: url(images/BAJADIA.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.media-dia{
+	background-image: url(images/MEDIA.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.alta-dia{
+	background-image: url(images/MEDIAALTADIA.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.baja-noche
+{
+	background-image: url(images/BAJANOCHE.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.media-noche{
+	background-image: url(images/MEDIANOCHE.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.alta-noche{
+	background-image: url(images/ALTANOCHE.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 div.en-vivo .tempMax {
