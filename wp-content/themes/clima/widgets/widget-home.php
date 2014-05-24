@@ -58,12 +58,93 @@
         $madrugada    = get_option('LluvMad'.$ciudad);
         $mañana       = get_option('LluvMan'.$ciudad);
         $tarde        = get_option('LluvTar'.$ciudad); 
-        $noche        = get_option('LluvNoc'.$ciudad); 
+        $noche        = get_option('LluvNoc'.$ciudad);
+        //Temperaturas
+        $minima       = get_option('tempMin'.$ciudad);
+        $maxima       = get_option('tempMax'.$ciudad);
+
+        $classMinima  = '';
+        $classMaxima  = '';
 
         $classMadrugada   = strtolower($madrugada).'-noche';
         $classMañana      = strtolower($mañana).'-dia';
         $classTarde       = strtolower($tarde).'-dia';
         $classNoche       = strtolower($noche).'-noche';
+
+        if( $maxima > 0 && $maxima <= 15 )
+        {
+            $classMaxima = 'term-azul';
+        }
+        else
+        {
+          if( $maxima > 15 && $maxima <= 22 )
+          {
+            $classMaxima = 'term-verde';
+          }
+          else
+          {
+            if( $maxima > 22 &&  $maxima <= 29 )
+            {
+              $classMaxima = 'term-amarillo';
+            }
+            else
+            {
+              if( $maxima > 29 && $maxima <= 37)
+              {
+                $classMaxima = 'term-naranja';
+              }
+              else
+              {
+                if( $maxima > 37 )
+                {
+                  $classMaxima = "term-rojo";
+                }
+                else
+                {
+                  $classMaxima = 'term-azul';
+                }
+              }
+            }
+          }
+        }
+
+
+        if( $minima > 0 && $minima <= 15 )
+        {
+            $classMinima = 'term-azul';
+        }
+        else
+          {
+            if( $minima > 15 && $minima <= 22 )
+            {
+              $classMinima = 'term-verde';
+            }
+            else
+            {
+              if( $minima > 22 &&  $minma <= 29 )
+              {
+                $classMinima = 'term-amarillo';
+              }
+              else
+              {
+                if( $minima > 29 && $minima <= 37)
+                {
+                  $classMinima = 'term-naranja';
+                }
+                else
+                {
+                  if( $minima > 37 )
+                  {
+                    $classMinima = "term-rojo";
+                  }
+                  else
+                  {
+                       $classMinima = 'term-azul';
+                  }
+                }
+              }
+            }
+          }
         
     ?>
 
@@ -111,14 +192,14 @@
                 <div class="row-fluid">
                   <div class="span6 item-left">
                     <div class="row-fluid">
-                      <div class="span8 tempMaxgrados">Máxima</div>
-                      <div class="span4 numMaxgrados"> <?php echo get_option('tempMax'.$ciudad); ?>° </div>
+                      <div class="span8 tempMaxgrados <?php echo $classMaxima ?> ">Máxima</div>
+                      <div class="span4 numMaxgrados"> <?php echo $maxima; ?>° </div>
                     </div>
                   </div>
                   <div class="span6 item-right">
                     <div class="rowfluid">
-                      <div class="span8 tempMingrados">Mínima</div>
-                      <div class="span4 numMingrados"><?php echo get_option('tempMin'.$ciudad) ?>° </div>
+                      <div class="span8 tempMingrados <?php echo $classMinima ?>">Mínima</div>
+                      <div class="span4 numMingrados"><?php echo $minima ?>° </div>
                     </div>
                   </div>
                 </div>

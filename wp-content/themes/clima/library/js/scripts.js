@@ -286,6 +286,8 @@ jQuery(document).ready(function($) {
 			$("#vivo-camara2").hide('fast');
 			$("#vivo-camara3").hide('fast');
 			$("#vivo-camara4").hide('fast');
+			$("#vivo-camara5").hide('fast');
+			$("#vivo-camara6").hide('fast');
 			$(".contenedor-convencion").css('display', 'none');
 			$("#"+item).show('fast');
 		}
