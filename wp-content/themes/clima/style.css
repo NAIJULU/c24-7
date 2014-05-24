@@ -2671,6 +2671,7 @@ section .menu-clima ul li a.vapor{
 	}
 	.navbar{
 		margin-bottom: 15px;
+		clear: both;
 	}
 	.navbar .brand{
 		background: none;
@@ -2835,6 +2836,32 @@ section .menu-clima ul li a.vapor{
 	}
 	#main-articulos article {
 		width: 230px;
+	}
+	#bar-fecha .bar-fecha-control-2{
+		padding: 0px 10px;
+		margin-left: 160px;
+		float: initial;
+	}
+}
+@media only screen and (min-width: 768px){
+	.navbar{
+		clear: both;
+	}
+	#logos{
+		height: auto;
+	}
+	#logos .logo-clima a {
+		width: 100%;
+	}
+	#logos .logo-clima a img{
+		width: 100%;
+	}
+	.otros-logos{
+		text-align: center;
+	}
+	.otros-logos a.logo-tm, .otros-logos a.logo-al, .otros-logos a.logo-am{
+		width: 31%;
+		display: inline-block;
 	}
 }
  @media only screen and (min-width: 980px) {

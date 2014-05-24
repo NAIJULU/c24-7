@@ -173,7 +173,7 @@ you like. Enjoy!
        register_sidebar(array(
         'name'=>'Widget Mix Galeria',
         'id'=>'mix-galeria',
-        'before_widget' => '<div id="mostviewpostwidget-2" class="sidebar1 widget widget_mostviewpostwidget">',
+        'before_widget' => '<div id="mostviewpostwidget-2" class="sidebar1 widget widget_mostviewpostwidget hidden-phone">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',
         'after_title' => '</h3>',
