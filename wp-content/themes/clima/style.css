@@ -2689,6 +2689,16 @@ section .menu-clima ul li a.vapor{
 		color: #fff;
 		text-shadow: initial;
 	}
+	.nav-collapse ul.nav{
+		width: 100%;
+	}
+	.nav-collapse .nav > li{
+		width: 100%;
+	}
+	.navbar .nav > li > a{
+		padding: 20px 0;
+		font-weight: 700;
+	}
 	.item-left{
 		width: 50% !important;
 		float: left !important;
@@ -2859,6 +2869,9 @@ section .menu-clima ul li a.vapor{
 		clear: both;
 	}
 	.nav-collapse{
+		overflow: visible;
+	}
+	.nav-collapse, .nav-collapse.collapse{
 		overflow: visible;
 	}
 	.nav-collapse .nav{
