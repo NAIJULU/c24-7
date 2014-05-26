@@ -394,16 +394,16 @@ input, textarea, select, .uneditable-input {
 	background-image: url(images/BAJANOCHE.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .media-noche, .media-madrugada {
 	background-image: url(images/MEDIANOCHE.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .alta-noche, .alta-madrugada
@@ -411,32 +411,32 @@ input, textarea, select, .uneditable-input {
 	background-image: url(images/ALTANOCHE.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .baja-dia{
 	background-image: url(images/BAJADIA.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .media-dia{
 	background-image: url(images/MEDIA.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .alta-dia{
 	background-image: url(images/MEDIAALTADIA.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .baja-noche
@@ -444,24 +444,24 @@ input, textarea, select, .uneditable-input {
 	background-image: url(images/BAJANOCHE.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .media-noche{
 	background-image: url(images/MEDIANOCHE.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 .alta-noche{
 	background-image: url(images/ALTANOCHE.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
 }
 
 div.en-vivo .tempMax {
@@ -516,6 +516,8 @@ div.en-vivo .numMin {
     background-image: url(images/t-azul.png);
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 
 .term-verde
@@ -523,6 +525,8 @@ div.en-vivo .numMin {
     background-image: url(images/t-verde.png);
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 
 .term-amarillo
@@ -530,6 +534,8 @@ div.en-vivo .numMin {
     background-image: url(images/t-amarillo.png);
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 
 .term-naranja
@@ -537,6 +543,8 @@ div.en-vivo .numMin {
     background-image: url(images/t-naranja.png);
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 
 .term-rojo
@@ -544,6 +552,8 @@ div.en-vivo .numMin {
     background-image: url(images/t-rojo.png);
     background-repeat: no-repeat;
     background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
 }
 #pronosticos #ciudades .numMaxgrados, #pronosticos #ciudades .numMingrados {
 	text-align: center;
