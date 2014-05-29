@@ -173,7 +173,7 @@ $categories = get_categories( $args );
 						</a>
 					</article>
 					<?php endif; ?>
-					<?php $i++; endwhile; ?>									
+					<?php endwhile; ?>									
 					
 					<?php else : ?>
 					

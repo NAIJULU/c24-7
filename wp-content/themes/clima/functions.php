@@ -99,148 +99,148 @@ you like. Enjoy!
 /************* ACTIVE SIDEBARS ********************/
 
 // Registrando posición para el widget en la página principal
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget Home',
-        'id'=>'home_widget',
-        'before_widget' => '<div class="widget-home">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget Home',
+  'id'=>'home_widget',
+  'before_widget' => '<div class="widget-home">',
+  'after_widget' => '</div>',
+  'before_title' => '<h3 class="widgettitle">',
+  'after_title' => '</h3>',
   ));
 
 // Registrando posición para el widget de pronosticos
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget Pronostico',
-        'id'=>'pronostico-widget',
-        'before_widget' => '<div class="widget-pronostico">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget Pronostico',
+  'id'=>'pronostico-widget',
+  'before_widget' => '<div class="widget-pronostico">',
+  'after_widget' => '</div>',
+  'before_title' => '<h3 class="widgettitle">',
+  'after_title' => '</h3>',
   ));
 
 
 // Registrando posición para el widget de la última emisión
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget Última Emisión',
-        'id'=>'ultimaemision_widget',
-        'before_widget' => '<div class="contenedor-ultima-emision">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="titulo-widget-ultima-emision">',
-        'after_title' => '</h3>',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget Última Emisión',
+  'id'=>'ultimaemision_widget',
+  'before_widget' => '<div class="contenedor-ultima-emision">',
+  'after_widget' => '</div>',
+  'before_title' => '<h3 class="titulo-widget-ultima-emision">',
+  'after_title' => '</h3>',
   ));  
 
 
 // Registrando posición para el widget en la página principal
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget Home Gallery',
-        'id'=>'home_gallery',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => '',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget Home Gallery',
+  'id'=>'home_gallery',
+  'before_widget' => '',
+  'after_widget' => '',
+  'before_title' => '',
+  'after_title' => '',
   ));
 
 
 // Registrando posición para el widget de las fotos de usuario en el home
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget Gallery',
-        'id'=>'widget_gallery',
-        'before_widget' => '<div class="widget-home-gallery hidden-phone">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget Gallery',
+  'id'=>'widget_gallery',
+  'before_widget' => '<div class="widget-home-gallery hidden-phone">',
+  'after_widget' => '</div>',
+  'before_title' => '<h3 class="widgettitle">',
+  'after_title' => '</h3>',
   ));
 
 
   // Registrando posición para el widget de las fotos de usuario en el home
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget suscripcion',
-        'id'=>'suscrib',
-        'before_widget' => '',
-        'after_widget' => '',
-        'before_title' => '',
-        'after_title' => '',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget suscripcion',
+  'id'=>'suscrib',
+  'before_widget' => '',
+  'after_widget' => '',
+  'before_title' => '',
+  'after_title' => '',
   ));  
 
     // Registrando posición para el widget de las fotos de usuario en el home
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'Widget Mix Galeria',
-        'id'=>'mix-galeria',
-        'before_widget' => '<div id="mostviewpostwidget-2" class="sidebar1 widget widget_mostviewpostwidget hidden-phone">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
+if ( function_exists('register_sidebar') )
+ register_sidebar(array(
+  'name'=>'Widget Mix Galeria',
+  'id'=>'mix-galeria',
+  'before_widget' => '<div id="mostviewpostwidget-2" class="sidebar1 widget widget_mostviewpostwidget hidden-phone">',
+  'after_widget' => '</div>',
+  'before_title' => '<h3 class="widgettitle">',
+  'after_title' => '</h3>',
   ));          
-       
+
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
-    register_sidebar(array(
-    	'id' => 'sidebar1',
-    	'name' => 'Main Sidebar',
-    	'description' => 'Used on every page BUT the homepage page template.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
-    register_sidebar(array(
-    	'id' => 'sidebar2',
-    	'name' => 'Homepage Sidebar',
-    	'description' => 'Used only on the homepage page template.',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-    	'before_title' => '<h4 class="widgettitle">',
-    	'after_title' => '</h4>',
-    ));
-    
+  register_sidebar(array(
+   'id' => 'sidebar1',
+   'name' => 'Main Sidebar',
+   'description' => 'Used on every page BUT the homepage page template.',
+   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+   'after_widget' => '</div>',
+   'before_title' => '<h4 class="widgettitle">',
+   'after_title' => '</h4>',
+   ));
+  
+  register_sidebar(array(
+   'id' => 'sidebar2',
+   'name' => 'Homepage Sidebar',
+   'description' => 'Used only on the homepage page template.',
+   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+   'after_widget' => '</div>',
+   'before_title' => '<h4 class="widgettitle">',
+   'after_title' => '</h4>',
+   ));
+  
      // Registrando posición para el widget de las fotos de usuario en el home
- if ( function_exists('register_sidebar') )
-       register_sidebar(array(
-        'name'=>'sliderbar derecha',
-        'id'=>'slidebar_derecha',
-    	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</div>',
-        'before_title' => '',
-        'after_title' => '',
-  )); 
-    
-    register_sidebar(array(
-      'id' => 'footer1',
-      'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));
+  if ( function_exists('register_sidebar') )
+   register_sidebar(array(
+    'name'=>'sliderbar derecha',
+    'id'=>'slidebar_derecha',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '',
+    'after_title' => '',
+    )); 
+ 
+ register_sidebar(array(
+  'id' => 'footer1',
+  'name' => 'Footer 1',
+  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h4 class="widgettitle">',
+  'after_title' => '</h4>',
+  ));
 
-    register_sidebar(array(
-      'id' => 'footer2',
-      'name' => 'Footer 2',
-      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));
+ register_sidebar(array(
+  'id' => 'footer2',
+  'name' => 'Footer 2',
+  'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h4 class="widgettitle">',
+  'after_title' => '</h4>',
+  ));
 
-    register_sidebar(array(
-      'id' => 'footer3',
-      'name' => 'Footer 3',
-      'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
-    ));
-    
-    
+ register_sidebar(array(
+  'id' => 'footer3',
+  'name' => 'Footer 3',
+  'before_widget' => '<div id="%1$s" class="widget span4 %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h4 class="widgettitle">',
+  'after_title' => '</h4>',
+  ));
+ 
+ 
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 
@@ -258,44 +258,44 @@ function bones_register_sidebars() {
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
-		
+
 // Comment Layout
 function bones_comments($comment, $args, $depth) {
-   $GLOBALS['comment'] = $comment; ?>
-	<li <?php comment_class(); ?>>
-		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
-			<div class="comment-author vcard row-fluid clearfix">
-				<div class="avatar span3">
-					<?php echo get_avatar( $comment, $size='75' ); ?>
-				</div>
-				<div class="span9 comment-text">
-					<?php printf('<h4>%s</h4>', get_comment_author_link()) ?>
-					<?php edit_comment_link(__('Edit','bonestheme'),'<span class="edit-comment btn btn-small btn-info"><i class="icon-white icon-pencil"></i>','</span>') ?>
-                    
-                    <?php if ($comment->comment_approved == '0') : ?>
-       					<div class="alert-message success">
-          				<p><?php _e('Your comment is awaiting moderation.','bonestheme') ?></p>
-          				</div>
-					<?php endif; ?>
-                    
-                    <?php comment_text() ?>
-                    
-                    <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
-                    
-					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-                </div>
-			</div>
-		</article>
-    <!-- </li> is added by wordpress automatically -->
+ $GLOBALS['comment'] = $comment; ?>
+ <li <?php comment_class(); ?>>
+  <article id="comment-<?php comment_ID(); ?>" class="clearfix">
+   <div class="comment-author vcard row-fluid clearfix">
+    <div class="avatar span3">
+     <?php echo get_avatar( $comment, $size='75' ); ?>
+   </div>
+   <div class="span9 comment-text">
+     <?php printf('<h4>%s</h4>', get_comment_author_link()) ?>
+     <?php edit_comment_link(__('Edit','bonestheme'),'<span class="edit-comment btn btn-small btn-info"><i class="icon-white icon-pencil"></i>','</span>') ?>
+     
+     <?php if ($comment->comment_approved == '0') : ?>
+     <div class="alert-message success">
+      <p><?php _e('Your comment is awaiting moderation.','bonestheme') ?></p>
+    </div>
+  <?php endif; ?>
+  
+  <?php comment_text() ?>
+  
+  <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time('F jS, Y'); ?> </a></time>
+  
+  <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+</div>
+</div>
+</article>
+<!-- </li> is added by wordpress automatically -->
 <?php
 } // don't remove this bracket!
 
 // Display trackbacks/pings callback function
 function list_pings($comment, $args, $depth) {
-       $GLOBALS['comment'] = $comment;
-?>
-        <li id="comment-<?php comment_ID(); ?>"><i class="icon icon-share-alt"></i>&nbsp;<?php comment_author_link(); ?>
-<?php 
+ $GLOBALS['comment'] = $comment;
+ ?>
+ <li id="comment-<?php comment_ID(); ?>"><i class="icon icon-share-alt"></i>&nbsp;<?php comment_author_link(); ?>
+  <?php 
 
 }
 
@@ -304,11 +304,11 @@ add_filter('get_comments_number', 'comment_count', 0);
 function comment_count( $count ) {
 	if ( ! is_admin() ) {
 		global $id;
-	    $comments_by_type = separate_comments(get_comments('status=approve&post_id=' . $id));
-	    return count($comments_by_type['comment']);
-	} else {
-	    return $count;
-	}
+   $comments_by_type = separate_comments(get_comments('status=approve&post_id=' . $id));
+   return count($comments_by_type['comment']);
+ } else {
+   return $count;
+ }
 }
 
 /************* SEARCH FORM LAYOUT *****************/
@@ -352,17 +352,17 @@ function my_widget_tag_cloud_args( $args ) {
 
 // filter tag cloud output so that it can be styled by CSS
 function add_tag_class( $taglinks ) {
-    $tags = explode('</a>', $taglinks);
-    $regex = "#(.*tag-link[-])(.*)(' title.*)#e";
-    $term_slug = "(get_tag($2) ? get_tag($2)->slug : get_category($2)->slug)";
+  $tags = explode('</a>', $taglinks);
+  $regex = "#(.*tag-link[-])(.*)(' title.*)#e";
+  $term_slug = "(get_tag($2) ? get_tag($2)->slug : get_category($2)->slug)";
 
-        foreach( $tags as $tag ) {
-        	$tagn[] = preg_replace($regex, "('$1$2 label tag-'.$term_slug.'$3')", $tag );
-        }
+  foreach( $tags as $tag ) {
+   $tagn[] = preg_replace($regex, "('$1$2 label tag-'.$term_slug.'$3')", $tag );
+ }
 
-    $taglinks = implode('</a>', $tagn);
+ $taglinks = implode('</a>', $tagn);
 
-    return $taglinks;
+ return $taglinks;
 }
 
 add_action( 'wp_tag_cloud', 'add_tag_class' );
@@ -395,8 +395,8 @@ add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
 
 function remove_thumbnail_dimensions( $html ) {
-    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-    return $html;
+  $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+  return $html;
 }
 
 // Add the Meta Box to the homepage template
@@ -409,14 +409,14 @@ function add_homepage_meta_box() {
 	$template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 
 	if ( $template_file == 'page-homepage.php' ){
-	    add_meta_box(  
+   add_meta_box(  
 	        'homepage_meta_box', // $id  
 	        'Optional Homepage Tagline', // $title  
 	        'show_homepage_meta_box', // $callback  
 	        'page', // $page  
 	        'normal', // $context  
 	        'high'); // $priority  
-    }
+ }
 }
 
 add_action( 'add_meta_boxes', 'add_homepage_meta_box' );
@@ -424,13 +424,13 @@ add_action( 'add_meta_boxes', 'add_homepage_meta_box' );
 // Field Array  
 $prefix = 'custom_';  
 $custom_meta_fields = array(  
-    array(  
-        'label'=> 'Homepage tagline area',  
-        'desc'  => 'Displayed underneath page title. Only used on homepage template. HTML can be used.',  
-        'id'    => $prefix.'tagline',  
-        'type'  => 'textarea' 
+  array(  
+    'label'=> 'Homepage tagline area',  
+    'desc'  => 'Displayed underneath page title. Only used on homepage template. HTML can be used.',  
+    'id'    => $prefix.'tagline',  
+    'type'  => 'textarea' 
     )  
-);  
+  );  
 
 // The Homepage Meta Box Callback  
 function show_homepage_meta_box() {  
@@ -438,31 +438,31 @@ function show_homepage_meta_box() {
 
   // Use nonce for verification
   wp_nonce_field( basename( __FILE__ ), 'wpbs_nonce' );
-    
+  
   // Begin the field table and loop
   echo '<table class="form-table">';
 
   foreach ( $custom_meta_fields as $field ) {
       // get value of this field if it exists for this post  
-      $meta = get_post_meta($post->ID, $field['id'], true);  
+    $meta = get_post_meta($post->ID, $field['id'], true);  
       // begin a table row with  
-      echo '<tr> 
-              <th><label for="'.$field['id'].'">'.$field['label'].'</label></th> 
-              <td>';  
-              switch($field['type']) {  
+    echo '<tr> 
+    <th><label for="'.$field['id'].'">'.$field['label'].'</label></th> 
+    <td>';  
+    switch($field['type']) {  
                   // text  
-                  case 'text':  
-                      echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="60" /> 
-                          <br /><span class="description">'.$field['desc'].'</span>';  
-                  break;
-                  
+      case 'text':  
+      echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="60" /> 
+      <br /><span class="description">'.$field['desc'].'</span>';  
+      break;
+      
                   // textarea  
-                  case 'textarea':  
-                      echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="80" rows="4">'.$meta.'</textarea> 
-                          <br /><span class="description">'.$field['desc'].'</span>';  
-                  break;  
+      case 'textarea':  
+      echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="80" rows="4">'.$meta.'</textarea> 
+      <br /><span class="description">'.$field['desc'].'</span>';  
+      break;  
               } //end switch  
-      echo '</td></tr>';  
+              echo '</td></tr>';  
   } // end foreach  
   echo '</table>'; // end table  
 }  
@@ -470,199 +470,234 @@ function show_homepage_meta_box() {
 // Save the Data  
 function save_homepage_meta( $post_id ) {  
 
-    global $custom_meta_fields;  
+  global $custom_meta_fields;  
   
     // verify nonce  
-    if ( !isset( $_POST['wpbs_nonce'] ) || !wp_verify_nonce($_POST['wpbs_nonce'], basename(__FILE__)) )  
-        return $post_id;
+  if ( !isset( $_POST['wpbs_nonce'] ) || !wp_verify_nonce($_POST['wpbs_nonce'], basename(__FILE__)) )  
+    return $post_id;
 
     // check autosave
-    if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
-        return $post_id;
+  if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
+    return $post_id;
 
     // check permissions
-    if ( 'page' == $_POST['post_type'] ) {
-        if ( !current_user_can( 'edit_page', $post_id ) )
-            return $post_id;
-        } elseif ( !current_user_can( 'edit_post', $post_id ) ) {
-            return $post_id;
-    }
+  if ( 'page' == $_POST['post_type'] ) {
+    if ( !current_user_can( 'edit_page', $post_id ) )
+      return $post_id;
+  } elseif ( !current_user_can( 'edit_post', $post_id ) ) {
+    return $post_id;
+  }
   
     // loop through fields and save the data  
-    foreach ( $custom_meta_fields as $field ) {
-        $old = get_post_meta( $post_id, $field['id'], true );
-        $new = $_POST[$field['id']];
+  foreach ( $custom_meta_fields as $field ) {
+    $old = get_post_meta( $post_id, $field['id'], true );
+    $new = $_POST[$field['id']];
 
-        if ($new && $new != $old) {
-            update_post_meta( $post_id, $field['id'], $new );
-        } elseif ( '' == $new && $old ) {
-            delete_post_meta( $post_id, $field['id'], $old );
-        }
+    if ($new && $new != $old) {
+      update_post_meta( $post_id, $field['id'], $new );
+    } elseif ( '' == $new && $old ) {
+      delete_post_meta( $post_id, $field['id'], $old );
+    }
     } // end foreach
-}
-add_action( 'save_post', 'save_homepage_meta' );
+  }
+  add_action( 'save_post', 'save_homepage_meta' );
 
 // Add thumbnail class to thumbnail links
-function add_class_attachment_link( $html ) {
+  function add_class_attachment_link( $html ) {
     $postid = get_the_ID();
     $html = str_replace( '<a','<a class="thumbnail"',$html );
     return $html;
-}
-add_filter( 'wp_get_attachment_link', 'add_class_attachment_link', 10, 1 );
+  }
+  add_filter( 'wp_get_attachment_link', 'add_class_attachment_link', 10, 1 );
 
 // Add lead class to first paragraph
-function first_paragraph( $content ){
+  function first_paragraph( $content ){
     global $post;
 
     // if we're on the homepage, don't add the lead class to the first paragraph of text
     if( is_page_template( 'page-homepage.php' ) )
-        return $content;
+      return $content;
     else
-        return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
-}
-add_filter( 'the_content', 'first_paragraph' );
+      return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
+  }
+  add_filter( 'the_content', 'first_paragraph' );
 
 // Menu output mods
-/* Bootstrap_Walker for Wordpress 
-     * Author: George Huger, Illuminati Karate, Inc 
-     * More Info: http://illuminatikarate.com/blog/bootstrap-walker-for-wordpress 
-     * 
-     * Formats a Wordpress menu to be used as a Bootstrap dropdown menu (http://getbootstrap.com). 
-     * 
-     * Specifically, it makes these changes to the normal Wordpress menu output to support Bootstrap: 
-     * 
-     *        - adds a 'dropdown' class to level-0 <li>'s which contain a dropdown 
-     *         - adds a 'dropdown-submenu' class to level-1 <li>'s which contain a dropdown 
-     *         - adds the 'dropdown-menu' class to level-1 and level-2 <ul>'s 
-     * 
-     * Supports menus up to 3 levels deep. 
-     *  
-     */ 
-    class Bootstrap_Walker extends Walker_Nav_Menu 
-    {     
- 
-        /* Start of the <ul> 
-         * 
-         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu".  
-         *                   So basically add one to what you'd expect it to be 
-         */         
-        function start_lvl(&$output, $depth) 
-        {
-            $tabs = str_repeat("\t", $depth); 
-            // If we are about to start the first submenu, we need to give it a dropdown-menu class 
-            if ($depth == 0 || $depth == 1) { //really, level-1 or level-2, because $depth is misleading here (see note above) 
-                $output .= "\n{$tabs}<ul class=\"dropdown-menu\">\n"; 
-            } else { 
-                $output .= "\n{$tabs}<ul>\n"; 
-            } 
-            return;
-        } 
- 
-        /* End of the <ul> 
-         * 
-         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu".  
-         *                   So basically add one to what you'd expect it to be 
-         */         
-        function end_lvl(&$output, $depth)  
-        {
-            if ($depth == 0) { // This is actually the end of the level-1 submenu ($depth is misleading here too!) 
- 
-                // we don't have anything special for Bootstrap, so we'll just leave an HTML comment for now 
-                $output .= '<!--.dropdown-->'; 
-            } 
-            $tabs = str_repeat("\t", $depth); 
-            $output .= "\n{$tabs}</ul>\n"; 
-            return; 
+/**
+ * Class Name: wp_bootstrap_navwalker
+ * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
+ * Description: A custom WordPress nav walker class to implement the Twitter Bootstrap 2.3.2 navigation style in a custom theme using the WordPress built in menu manager.
+ * Version: 1.4.4
+ * Author: Edward McIntyre - @twittem
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ */
+
+class Bootstrap_Walker extends Walker_Nav_Menu {
+  
+  /**
+   * @see Walker::start_lvl()
+   * @since 3.0.0
+   *
+   * @param string $output Passed by reference. Used to append additional content.
+   * @param int $depth Depth of page. Used for padding.
+   */
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+    $indent = str_repeat("\t", $depth);
+    $output .= "\n$indent<ul class=\" dropdown-menu\">\n";
+  }
+
+  /**
+   * @see Walker::start_el()
+   * @since 3.0.0
+   *
+   * @param string $output Passed by reference. Used to append additional content.
+   * @param object $item Menu item data object.
+   * @param int $depth Depth of menu item. Used for padding.
+   * @param int $current_page Menu item ID.
+   * @param object $args
+   */
+
+  function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+    $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
+    /**
+     * Dividers & Headers
+       * ==================
+     * Determine whether the item is a Divider, Header, or regular menu item.
+     * To prevent errors we use the strcasecmp() function to so a comparison
+     * that is not case sensitive. The strcasecmp() function returns a 0 if 
+     * the strings are equal.
+     */
+    if (strcasecmp($item->title, 'divider') == 0) {
+      // Item is a Divider
+      $output .= $indent . '<li class="divider">';
+    } else if (strcasecmp($item->title, 'divider-vertical') == 0) {
+      // Item is a Vertical Divider
+      $output .= $indent . '<li class="divider-vertical">';
+    } else if (strcasecmp($item->title, 'nav-header') == 0) {
+      // Item is a Header
+      $output .= $indent . '<li class="nav-header">' . esc_attr( $item->attr_title );
+    } else {
+
+      $class_names = $value = '';
+
+      $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+      $classes[] = 'menu-item-' . $item->ID;
+
+      $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+      
+      //If item has_children add dropdown class to li
+      if($args->has_children) {
+        $class_names .= ' dropdown';
+      }
+
+      $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+      $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+      $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+      $output .= $indent . '<li' . $id . $value . $class_names .'>';
+
+      $atts = array();
+      $atts['title']  = ! empty( $item->title )      ? $item->title      : '';
+      $atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+      $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+
+      //If item has_children add atts to a
+      if($args->has_children) {
+        $atts['href']       = '#';
+        $atts['class']      = 'dropdown-toggle';
+      } else {
+        $atts['href'] = ! empty( $item->url ) ? $item->url : '';
+      }
+
+      $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
+
+      $attributes = '';
+      foreach ( $atts as $attr => $value ) {
+        if ( ! empty( $value ) ) {
+          $value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+          $attributes .= ' ' . $attr . '="' . $value . '"';
         }
- 
-        /* Output the <li> and the containing <a> 
-         * Note: $depth is "correct" at this level 
-         */         
-        function start_el(&$output, $item, $depth, $args)  
-        {    
-            global $wp_query; 
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : ''; 
-            $class_names = $value = ''; 
-            $classes = empty( $item->classes ) ? array() : (array) $item->classes; 
- 
-            /* If this item has a dropdown menu, add the 'dropdown' class for Bootstrap */ 
-            if ($item->hasChildren) { 
-                $classes[] = 'dropdown'; 
-                // level-1 menus also need the 'dropdown-submenu' class 
-                if($depth == 1) { 
-                    $classes[] = 'dropdown-submenu'; 
-                } 
-            } 
- 
-            /* This is the stock Wordpress code that builds the <li> with all of its attributes */ 
-            $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ); 
-            $class_names = ' class="' . esc_attr( $class_names ) . '"'; 
-            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';             
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : ''; 
-            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : ''; 
-            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : ''; 
-            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : ''; 
-            $item_output = $args->before; 
- 
-            /* If this item has a dropdown menu, make clicking on this link toggle it */ 
-            if ($item->hasChildren && $depth == 0) { 
-                $item_output .= '<a'. $attributes .' class="dropdown-toggle" data-toggle="dropdown">'; 
-            } else { 
-                $item_output .= '<a'. $attributes .'>'; 
-            } 
- 
-            $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after; 
- 
-            /* Output the actual caret for the user to click on to toggle the menu */             
-            if ($item->hasChildren && $depth == 0) { 
-                $item_output .= '<b class="caret"></b></a>'; 
-            } else { 
-                $item_output .= '</a>'; 
-            } 
- 
-            $item_output .= $args->after; 
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args ); 
-            return; 
-        }
- 
-        /* Close the <li> 
-         * Note: the <a> is already closed 
-         * Note 2: $depth is "correct" at this level 
-         */         
-        function end_el (&$output, $item, $depth, $args)
-        {
-            $output .= '</li>'; 
+      }
+
+      $item_output = $args->before;
+    
+      /*
+       * Glyphicons
+       * ===========
+       * Since the the menu item is NOT a Divider or Header we check the see
+       * if there is a value in the attr_title property. If the attr_title
+       * property is NOT null we apply it as the class name for the glyphicon.
+       */
+
+      if(! empty( $item->attr_title )){
+        $item_output .= '<a'. $attributes .'><i class="' . esc_attr( $item->attr_title ) . '"></i>&nbsp;';
+      } else {
+        $item_output .= '<a'. $attributes .'>';
+      }
+      
+      $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+      $item_output .= ($args->has_children) ? ' <span class="caret"></span></a>' : '</a>';
+      $item_output .= $args->after;
+
+      $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+    }
+  }
+
+  /**
+   * Traverse elements to create list from elements.
+   *
+   * Display one element if the element doesn't have any children otherwise,
+   * display the element and its children. Will only traverse up to the max
+   * depth and no ignore elements under that depth. 
+   *
+   * This method shouldn't be called directly, use the walk() method instead.
+   *
+   * @see Walker::start_el()
+   * @since 2.5.0
+   *
+   * @param object $element Data object
+   * @param array $children_elements List of elements to continue traversing.
+   * @param int $max_depth Max depth to traverse.
+   * @param int $depth Depth of current element.
+   * @param array $args
+   * @param string $output Passed by reference. Used to append additional content.
+   * @return null Null on failure with no changes to parameters.
+   */
+
+  function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+        if ( !$element ) {
             return;
-        } 
- 
-        /* Add a 'hasChildren' property to the item 
-         * Code from: http://wordpress.org/support/topic/how-do-i-know-if-a-menu-item-has-children-or-is-a-leaf#post-3139633  
-         */ 
-        function display_element ($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) 
-        { 
-            // check whether this item has children, and set $item->hasChildren accordingly 
-            $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]); 
- 
-            // continue with normal behavior 
-            return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output); 
-        }         
-    } 
-add_editor_style('editor-style.css');
+        }
+
+        $id_field = $this->db_fields['id'];
+
+        //display this element
+        if ( is_object( $args[0] ) ) {
+           $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
+        }
+
+        parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+    }
+} 
+      add_editor_style('editor-style.css');
 
 // Add Twitter Bootstrap's standard 'active' class name to the active nav link item
-add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
+      add_filter('nav_menu_css_class', 'add_active_class', 10, 2 );
 
-function add_active_class($classes, $item) {
-	if( $item->menu_item_parent == 0 && in_array('current-menu-item', $classes) ) {
-    $classes[] = "active";
-	}
-  
-  return $classes;
-}
+      function add_active_class($classes, $item) {
+       if( $item->menu_item_parent == 0 && in_array('current-menu-item', $classes) ) {
+        $classes[] = "active";
+      }
+      
+      return $classes;
+    }
 
 // enqueue styles
-if( !function_exists("theme_styles") ) {  
-    function theme_styles() { 
+    if( !function_exists("theme_styles") ) {  
+      function theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
         wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/css/bootstrap.css', array(), '1.0', 'all' );
         wp_register_style( 'bootstrap-responsive', get_template_directory_uri() . '/library/css/responsive.css', array(), '1.0', 'all' );
@@ -671,72 +706,72 @@ if( !function_exists("theme_styles") ) {
         wp_enqueue_style( 'bootstrap' );
         wp_enqueue_style( 'bootstrap-responsive' );
         wp_enqueue_style( 'wp-bootstrap');
+      }
     }
-}
-add_action( 'wp_enqueue_scripts', 'theme_styles' );
+    add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 // enqueue javascript
-if( !function_exists( "theme_js" ) ) {  
-  function theme_js(){
-  
-    wp_register_script('bootstrap', get_template_directory_uri() . '/library/js/bootstrap.min.js', array('jquery'), '1.2' );
-    wp_register_script('wpbs-scripts',get_template_directory_uri() . '/library/js/scripts.js', array('jquery'),'1.2' );
-    wp_register_script('modernizr',get_template_directory_uri() . '/library/js/modernizr.full.min.js',array('jquery'),'1.2' );
+    if( !function_exists( "theme_js" ) ) {  
+      function theme_js(){
+        
+        wp_register_script('bootstrap', get_template_directory_uri() . '/library/js/bootstrap.min.js', array('jquery'), '1.2' );
+        wp_register_script('wpbs-scripts',get_template_directory_uri() . '/library/js/scripts.js', array('jquery'),'1.2' );
+        wp_register_script('modernizr',get_template_directory_uri() . '/library/js/modernizr.full.min.js',array('jquery'),'1.2' );
 
     // JQUERY UI
 
-    wp_register_script('jquery_ui','/wp-includes/js/jquery/ui/jquery.ui.datepicker.min.js', array('jquery'),'1.2' );
-    wp_register_script('jquery_ui_core', '/wp-includes/js/jquery/ui/jquery.ui.core.min.js', array('jquery'), '1.2' );
+        wp_register_script('jquery_ui','/wp-includes/js/jquery/ui/jquery.ui.datepicker.min.js', array('jquery'),'1.2' );
+        wp_register_script('jquery_ui_core', '/wp-includes/js/jquery/ui/jquery.ui.core.min.js', array('jquery'), '1.2' );
 
-    wp_register_style('css_query_ui', '/wp-content/themes/clima/library/css/jquery-ui.min.css', '1.2' );
-    wp_register_style('css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.core.min.css', '1.2' );
-    wp_register_style('css_query_ui_datepicker', '/wp-content/themes/clima/library/css/jquery.ui.datepicker.min.css', '1.2' );
+        wp_register_style('css_query_ui', '/wp-content/themes/clima/library/css/jquery-ui.min.css', '1.2' );
+        wp_register_style('css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.core.min.css', '1.2' );
+        wp_register_style('css_query_ui_datepicker', '/wp-content/themes/clima/library/css/jquery.ui.datepicker.min.css', '1.2' );
 
     // fancyBox 
 
-    wp_register_script('jquery_mousewheel', '/wp-includes/js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js', array('jquery'), '1.2' );
-    wp_register_script('fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
-    wp_register_script('fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.js', array('jquery'), '1.0.5' );
-    wp_register_script('fancybox_pack', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
-    wp_register_script('fancybox_media', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-media.js', array('jquery'), '1.0.6' );
+        wp_register_script('jquery_mousewheel', '/wp-includes/js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js', array('jquery'), '1.2' );
+        wp_register_script('fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
+        wp_register_script('fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.js', array('jquery'), '1.0.5' );
+        wp_register_script('fancybox_pack', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
+        wp_register_script('fancybox_media', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-media.js', array('jquery'), '1.0.6' );
 
-    wp_register_style('css_fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.css', '2.1.5' );
-    wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
-    wp_register_style('css_fancybox_thumbs', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
+        wp_register_style('css_fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.css', '2.1.5' );
+        wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
+        wp_register_style('css_fancybox_thumbs', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
 
     //default
-    wp_enqueue_script('bootstrap');
-    wp_enqueue_script('wpbs-scripts');
-    wp_enqueue_script('modernizr');
+        wp_enqueue_script('bootstrap');
+        wp_enqueue_script('wpbs-scripts');
+        wp_enqueue_script('modernizr');
 
 
   //wp_enqueue_style( 'style-name', get_stylesheet_uri() );
-   wp_enqueue_script('jquery_ui');
-   wp_enqueue_script('jquery_ui_core');
-   wp_enqueue_style('css_query_ui');
-   wp_enqueue_style('css_query_ui_core');
-   wp_enqueue_style('css_query_ui_datepicker');
+        wp_enqueue_script('jquery_ui');
+        wp_enqueue_script('jquery_ui_core');
+        wp_enqueue_style('css_query_ui');
+        wp_enqueue_style('css_query_ui_core');
+        wp_enqueue_style('css_query_ui_datepicker');
 
    // jquery fancyBox
-   wp_enqueue_script('jquery_mousewheel');
-   wp_enqueue_script('fancybox');
-   wp_enqueue_script('fancybox_buttons');
-   wp_enqueue_script('fancybox_pack');
-   wp_enqueue_script('fancybox_media');
+        wp_enqueue_script('jquery_mousewheel');
+        wp_enqueue_script('fancybox');
+        wp_enqueue_script('fancybox_buttons');
+        wp_enqueue_script('fancybox_pack');
+        wp_enqueue_script('fancybox_media');
 
-   wp_enqueue_style('css_fancybox');
-   wp_enqueue_style('css_fancybox_buttons');
-   wp_enqueue_style('css_fancybox_thumbs');
+        wp_enqueue_style('css_fancybox');
+        wp_enqueue_style('css_fancybox_buttons');
+        wp_enqueue_style('css_fancybox_thumbs');
 
-    
-  }
-}
-add_action( 'wp_enqueue_scripts', 'theme_js' );
+        
+      }
+    }
+    add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 // Get theme options
-function get_wpbs_theme_options(){
-  $theme_options_styles = '';
-    
+    function get_wpbs_theme_options(){
+      $theme_options_styles = '';
+      
       $heading_typography = of_get_option( 'heading_typography' );
       if ( $heading_typography['face'] != 'Default' ) {
         $theme_options_styles .= '
@@ -791,111 +826,111 @@ function get_wpbs_theme_options(){
           padding-top: 0;
         }
         #content {
-          padding-top: 27px;
-        }
-        ' 
-        ;
+        padding-top: 27px;
       }
-      
-      $topbar_bg_color = of_get_option( 'top_nav_bg_color' );
-      $use_gradient = of_get_option( 'showhidden_gradient' );
-
-      if ( $topbar_bg_color && !$use_gradient ) {
-        $theme_options_styles .= '
-        .navbar-inner, .navbar .fill { 
-          background-color: '. $topbar_bg_color . ';
-          background-image: none;
-        }' . $topbar_bg_color;
-      }
-      
-      if ( $use_gradient ) {
-        $topbar_bottom_gradient_color = of_get_option( 'top_nav_bottom_gradient_color' );
-      
-        $theme_options_styles .= '
-        .navbar-inner, .navbar .fill {
-          background-image: -khtml-gradient(linear, left top, left bottom, from(' . $topbar_bg_color . '), to('. $topbar_bottom_gradient_color . '));
-          background-image: -moz-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
-          background-image: -ms-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, ' . $topbar_bg_color . '), color-stop(100%, '. $topbar_bottom_gradient_color . '));
-          background-image: -webkit-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . '2);
-          background-image: -o-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
-          background-image: linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\'' . $topbar_bg_color . '\', endColorstr=\''. $topbar_bottom_gradient_color . '2\', GradientType=0);
-        }';
-      }
-      else{
-      } 
-      
-      $topbar_link_color = of_get_option( 'top_nav_link_color' );
-      if ( $topbar_link_color ) {
-        $theme_options_styles .= '
-        .navbar .nav li a { 
-          color: '. $topbar_link_color . ';
-        }';
-      }
-      
-      $topbar_link_hover_color = of_get_option( 'top_nav_link_hover_color' );
-      if ( $topbar_link_hover_color ) {
-        $theme_options_styles .= '
-        .navbar .nav li a:hover { 
-          color: '. $topbar_link_hover_color . ';
-        }';
-      }
-      
-      $topbar_dropdown_hover_bg_color = of_get_option( 'top_nav_dropdown_hover_bg' );
-      if ( $topbar_dropdown_hover_bg_color ) {
-        $theme_options_styles .= '
-          .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
-            background-color: ' . $topbar_dropdown_hover_bg_color . ';
-          }
-        ';
-      }
-      
-      $topbar_dropdown_item_color = of_get_option( 'top_nav_dropdown_item' );
-      if ( $topbar_dropdown_item_color ){
-        $theme_options_styles .= '
-          .dropdown-menu a{
-            color: ' . $topbar_dropdown_item_color . ' !important;
-          }
-        ';
-      }
-      
-      $hero_unit_bg_color = of_get_option( 'hero_unit_bg_color' );
-      if ( $hero_unit_bg_color ) {
-        $theme_options_styles .= '
-        .hero-unit { 
-          background-color: '. $hero_unit_bg_color . ';
-        }';
-      }
-      
-      $suppress_comments_message = of_get_option( 'suppress_comments_message' );
-      if ( $suppress_comments_message ){
-        $theme_options_styles .= '
-        #main article {
-          border-bottom: none;
-        }';
-      }
-      
-      $additional_css = of_get_option( 'wpbs_css' );
-      if( $additional_css ){
-        $theme_options_styles .= $additional_css;
-      }
-          
-      if( $theme_options_styles ){
-        echo '<style>' 
-        . $theme_options_styles . '
-        </style>';
-      }
+      ' 
+      ;
+    }
     
-      $bootstrap_theme = of_get_option( 'wpbs_theme' );
-      $use_theme = of_get_option( 'showhidden_themes' );
+    $topbar_bg_color = of_get_option( 'top_nav_bg_color' );
+    $use_gradient = of_get_option( 'showhidden_gradient' );
+
+    if ( $topbar_bg_color && !$use_gradient ) {
+      $theme_options_styles .= '
+      .navbar-inner, .navbar .fill { 
+        background-color: '. $topbar_bg_color . ';
+        background-image: none;
+      }' . $topbar_bg_color;
+    }
+    
+    if ( $use_gradient ) {
+      $topbar_bottom_gradient_color = of_get_option( 'top_nav_bottom_gradient_color' );
       
-      if( $bootstrap_theme && $use_theme ){
-        if( $bootstrap_theme == 'default' ){}
-        else {
-          echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/admin/themes/' . $bootstrap_theme . '.css">';
-        }
+      $theme_options_styles .= '
+      .navbar-inner, .navbar .fill {
+        background-image: -khtml-gradient(linear, left top, left bottom, from(' . $topbar_bg_color . '), to('. $topbar_bottom_gradient_color . '));
+        background-image: -moz-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
+        background-image: -ms-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, ' . $topbar_bg_color . '), color-stop(100%, '. $topbar_bottom_gradient_color . '));
+        background-image: -webkit-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . '2);
+        background-image: -o-linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
+        background-image: linear-gradient(top, ' . $topbar_bg_color . ', '. $topbar_bottom_gradient_color . ');
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=\'' . $topbar_bg_color . '\', endColorstr=\''. $topbar_bottom_gradient_color . '2\', GradientType=0);
+      }';
+    }
+    else{
+    } 
+    
+    $topbar_link_color = of_get_option( 'top_nav_link_color' );
+    if ( $topbar_link_color ) {
+      $theme_options_styles .= '
+      .navbar .nav li a { 
+        color: '. $topbar_link_color . ';
+      }';
+    }
+    
+    $topbar_link_hover_color = of_get_option( 'top_nav_link_hover_color' );
+    if ( $topbar_link_hover_color ) {
+      $theme_options_styles .= '
+      .navbar .nav li a:hover { 
+        color: '. $topbar_link_hover_color . ';
+      }';
+    }
+    
+    $topbar_dropdown_hover_bg_color = of_get_option( 'top_nav_dropdown_hover_bg' );
+    if ( $topbar_dropdown_hover_bg_color ) {
+      $theme_options_styles .= '
+      .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+        background-color: ' . $topbar_dropdown_hover_bg_color . ';
       }
+      ';
+    }
+    
+    $topbar_dropdown_item_color = of_get_option( 'top_nav_dropdown_item' );
+    if ( $topbar_dropdown_item_color ){
+      $theme_options_styles .= '
+      .dropdown-menu a{
+        color: ' . $topbar_dropdown_item_color . ' !important;
+      }
+      ';
+    }
+    
+    $hero_unit_bg_color = of_get_option( 'hero_unit_bg_color' );
+    if ( $hero_unit_bg_color ) {
+      $theme_options_styles .= '
+      .hero-unit { 
+        background-color: '. $hero_unit_bg_color . ';
+      }';
+    }
+    
+    $suppress_comments_message = of_get_option( 'suppress_comments_message' );
+    if ( $suppress_comments_message ){
+      $theme_options_styles .= '
+        #main article {
+      border-bottom: none;
+    }';
+  }
+  
+  $additional_css = of_get_option( 'wpbs_css' );
+  if( $additional_css ){
+    $theme_options_styles .= $additional_css;
+  }
+  
+  if( $theme_options_styles ){
+    echo '<style>' 
+    . $theme_options_styles . '
+    </style>';
+  }
+  
+  $bootstrap_theme = of_get_option( 'wpbs_theme' );
+  $use_theme = of_get_option( 'showhidden_themes' );
+  
+  if( $bootstrap_theme && $use_theme ){
+    if( $bootstrap_theme == 'default' ){}
+      else {
+        echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/admin/themes/' . $bootstrap_theme . '.css">';
+      }
+    }
 } // end get_wpbs_theme_options function
 
 // Añadimos la acción para crear widgets desde el template
@@ -926,32 +961,32 @@ function loadBlogs()
   if ($the_query->have_posts())
   {
     while ($the_query->have_posts()) : $the_query->the_post(); 
-      $categoria    = get_the_category();
-      $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
-      $url          = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium'));
-      $url          = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
-      $contenuto    = get_the_content();
+    $categoria    = get_the_category();
+    $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
+    $url          = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium'));
+    $url          = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
+    $contenuto    = get_the_content();
 
-      $pClass = "";
+    $pClass = "";
 
-      foreach (get_post_class(array('clearfix')) as $post_cass) 
-      {
-        $pClass .= $post_cass." ";
-      }
+    foreach (get_post_class(array('clearfix')) as $post_cass) 
+    {
+      $pClass .= $post_cass." ";
+    }
 
-      $content .= '<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
-      <a href="'.get_permalink().'" rel="bookmark" title="'.the_title('','',false).'">
-       <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
-          <div class="contenido"><header ><span class="categorias">'.$categoria.'</span>
-          <h1>'.the_title('','',false).'</h1>
-          <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time>
-        </header>
-        <p>'.substr(wp_filter_nohtml_kses( $contenuto ), 0,80).'...'.'
-        <span>Leer Más +<span></p></div>
-      </a>
-      </article>';    
-      $i++;
-  endwhile;
+    $content .= '<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+    <a href="'.get_permalink().'" rel="bookmark" title="'.the_title('','',false).'">
+    <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+    <div class="contenido"><header ><span class="categorias">'.$categoria.'</span>
+    <h1>'.the_title('','',false).'</h1>
+    <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time>
+    </header>
+    <p>'.substr(wp_filter_nohtml_kses( $contenuto ), 0,80).'...'.'
+    <span>Leer Más +<span></p></div>
+    </a>
+    </article>';    
+    $i++;
+    endwhile;
   }
 
   echo $content;
@@ -965,55 +1000,55 @@ add_action('wp_ajax_getBlog', 'loadBlogs');
 function loadGallery()
 {
 
-$paged   = ( isset($_GET['paged']) ) ? $_GET['paged'] : 1;
-$content = "";
-$i = 0;
-$the_query = new WP_Query('paged=' . $paged ); 
+  $paged   = ( isset($_GET['paged']) ) ? $_GET['paged'] : 1;
+  $content = "";
+  $i = 0;
+  $the_query = new WP_Query('paged=' . $paged ); 
 
-if ($the_query->have_posts())
-{
+  if ($the_query->have_posts())
+  {
 
 
-while ($the_query->have_posts() ) : $the_query->the_post(); 
-  if(in_category(23)) :
+    while ($the_query->have_posts() ) : $the_query->the_post(); 
+    if(in_category(23)) :
 
       $categoria    = get_the_category();
-      $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
+    $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
-      $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
-      $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
-
-
-      $contenuto = get_the_content();
-
-      $pClass = "";
-
-      foreach (get_post_class(array('clearfix')) as $post_cass) 
-      {
-        $pClass .= $post_cass." ";
-      }
+    $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
+    $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
 
 
-      $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
-                <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
-                caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
-                      <span class="categorias">'.strtolower($categoria).'</span>
-                      <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
-                      <div class="contenido"><header >
-                        <h1>'.the_title('','',false).'</h1>
-                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>
-                      </header>
-                      <p>'.$contenuto.'</p></div>
-                  </a>
-                </article>';
-              
-        $i++;
-        endif;
-endwhile;
-}
+    $contenuto = get_the_content();
 
-echo $content;
-die();
+    $pClass = "";
+
+    foreach (get_post_class(array('clearfix')) as $post_cass) 
+    {
+      $pClass .= $post_cass." ";
+    }
+
+
+    $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+    <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
+    caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
+    <span class="categorias">'.strtolower($categoria).'</span>
+    <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+    <div class="contenido"><header >
+    <h1>'.the_title('','',false).'</h1>
+    <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>
+    </header>
+    <p>'.$contenuto.'</p></div>
+    </a>
+    </article>';
+    
+    $i++;
+    endif;
+    endwhile;
+  }
+
+  echo $content;
+  die();
 }
 
 
@@ -1024,61 +1059,61 @@ add_action('wp_ajax_getGallery', 'loadGallery');
 function loadGalleryPerDate()
 {
 
-$date   = explode("/", $_GET['date']);
-$content = "";
-$i = 0;
+  $date   = explode("/", $_GET['date']);
+  $content = "";
+  $i = 0;
 
-$args = array('cat'=>'23', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' ,'date_query' => array(array('year'  => $date[2] ,'month' => $date[1] ,'day'   => $date[0] ,),)  );
-$the_query = new WP_Query($args); 
-
-
-if ($the_query->have_posts())
-{
+  $args = array('cat'=>'23', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' ,'date_query' => array(array('year'  => $date[2] ,'month' => $date[1] ,'day'   => $date[0] ,),)  );
+  $the_query = new WP_Query($args); 
 
 
-while ($the_query->have_posts() ) : $the_query->the_post(); 
+  if ($the_query->have_posts())
+  {
+
+
+    while ($the_query->have_posts() ) : $the_query->the_post(); 
 
 
   // 2 -> categoria blogs
-  if(in_category(23)) :
+    if(in_category(23)) :
 
       $categoria    = get_the_category();
-      $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
+    $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
-      $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
-      $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
-
-
-      $contenuto = get_the_content();
-
-      $pClass = "";
-
-      foreach (get_post_class(array('clearfix')) as $post_cass) 
-      {
-        $pClass .= $post_cass." ";
-      }
+    $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
+    $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
 
 
-      $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
-                <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
-                caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
-                      <span class="categorias">'.strtolower($categoria).'</span>
-                      <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
-                      <div class="contenido"><header >
-                        <h1>'.the_title('','',false).'</h1>
-                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
-                      </header>
-                      <p>'.$contenuto.'</p></div>
-                  </a>
-                </article>';
-              
-        $i++;
-        endif;
-endwhile;
-}
+    $contenuto = get_the_content();
 
-echo $content;
-die();
+    $pClass = "";
+
+    foreach (get_post_class(array('clearfix')) as $post_cass) 
+    {
+      $pClass .= $post_cass." ";
+    }
+
+
+    $content .='<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+    <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
+    caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
+    <span class="categorias">'.strtolower($categoria).'</span>
+    <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+    <div class="contenido"><header >
+    <h1>'.the_title('','',false).'</h1>
+    <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').'del'.get_the_time('Y').'</time>
+    </header>
+    <p>'.$contenuto.'</p></div>
+    </a>
+    </article>';
+    
+    $i++;
+    endif;
+    endwhile;
+  }
+
+  echo $content;
+  die();
 }
 
 
@@ -1089,58 +1124,58 @@ add_action('wp_ajax_getGalleryPerDate', 'loadGalleryPerDate');
 function getElementGallery($postId)
 {
 
-$content = "";
-$args = array( 'p' => $postId, 'posts_per_page' => '1' );
-$the_query = new WP_Query($args); 
+  $content = "";
+  $args = array( 'p' => $postId, 'posts_per_page' => '1' );
+  $the_query = new WP_Query($args); 
 
-if ($the_query->have_posts())
-{
+  if ($the_query->have_posts())
+  {
 
-while ($the_query->have_posts() ) : $the_query->the_post(); 
+    while ($the_query->have_posts() ) : $the_query->the_post(); 
 
-      $categoria    = get_the_category();
-      $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
+    $categoria    = get_the_category();
+    $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
-      $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
-      $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+    $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
+    $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
 
-      $contenuto = get_the_content();
+    $contenuto = get_the_content();
 
-      $pClass = "";
+    $pClass = "";
 
-      foreach (get_post_class(array('clearfix')) as $post_cass) 
-      {
-        $pClass .= $post_cass." ";
-      }
-
-
-      $content .='<div id="post-get" ><article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
-                <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
-                caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
-                      <span class="categorias">'.strtolower($categoria).'</span>
-                      <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
-                      <div class="contenido"><header >
-                        <h1>'.the_title('','',false).'</h1>
-                        <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>
-                      </header>
-                      <p>'.$contenuto.'</p></div>
-                  </a>
-                </article></div>';
-              
-        $i++;
-
-endwhile;
-
-}
-else
-{
-
-  return null;
-
-}
+    foreach (get_post_class(array('clearfix')) as $post_cass) 
+    {
+      $pClass .= $post_cass." ";
+    }
 
 
-return $content;
+    $content .='<div id="post-get" ><article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+    <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
+    caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
+    <span class="categorias">'.strtolower($categoria).'</span>
+    <figure><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+    <div class="contenido"><header >
+    <h1>'.the_title('','',false).'</h1>
+    <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>
+    </header>
+    <p>'.$contenuto.'</p></div>
+    </a>
+    </article></div>';
+    
+    $i++;
+
+    endwhile;
+
+  }
+  else
+  {
+
+    return null;
+
+  }
+
+
+  return $content;
 
 
 
@@ -1169,27 +1204,27 @@ function get_thumbnail_youtube($youtubeUrl, $quality = 'default')
 
 function porcentajeEquivalente($probablidad)
 {
-    $porcentaje = null;
+  $porcentaje = null;
 
-    if(! empty($probablidad) )
+  if(! empty($probablidad) )
+  {
+    $probablidad = strtolower($probablidad);
+
+    if($probablidad == "baja")
     {
-        $probablidad = strtolower($probablidad);
-
-        if($probablidad == "baja")
-        {
-            $porcentaje = 30;
-        }
-        else if ($probablidad == "media")
-        {
-            $porcentaje = 60;
-        }
-        else if($probablidad == "alta")
-        {
-            $porcentaje = 80;
-        }
+      $porcentaje = 30;
     }
+    else if ($probablidad == "media")
+    {
+      $porcentaje = 60;
+    }
+    else if($probablidad == "alta")
+    {
+      $porcentaje = 80;
+    }
+  }
 
-    return $porcentaje; 
+  return $porcentaje; 
 
 }
 
@@ -1234,7 +1269,7 @@ add_action('wp_ajax_setGoogleMarkersEstaciones', 'getMarkersEstaciones');
 
 function saveLog($evento,$msg)
 {
-global $wpdb;
+  global $wpdb;
 
   $data = array();
   $data['evento'] = $evento;

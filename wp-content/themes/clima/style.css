@@ -416,7 +416,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .baja-dia{
-	background-image: url(images/BAJADIA.png);
+	background-image: url(images/BAJADIA.PNG);
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;
@@ -612,6 +612,17 @@ div.en-vivo .numMin {
 #pronosticos .ciudades li:hover, #temperaturas .ciudades li:hover {
 	color: ##114db0;
 	background-color: #84C0FD;
+}
+
+.pronosticoLluvia 
+{
+	height: 50px;
+}
+
+
+.pronosticoLluvia label
+{
+	width: 100px !important;
 }
 
 

@@ -7,7 +7,9 @@
 	@author:	Telemedellin
 */
  define("C247_CIUDADES",  serialize (array(
+ 						'medellinOr' => 'Medellín Oriente', 
 						'medellin' => 'Medellín', 
+						'medellinOcc' => 'Medellín Occidente',
 						'barbosa' => 'Barbosa',
 						'girardota' => 'Girardota',
 						'copacabana' => 'Copacabana',

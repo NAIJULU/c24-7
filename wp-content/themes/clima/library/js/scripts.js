@@ -7,8 +7,8 @@
 *  http://www.jasonmayes.com/projects/twitterApi/
 *  Updates will be posted to this site.
 *********************************************************************/
-var html  = ""; var meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'); var imagesUrl =
-window.location.origin+'/c24-7/wp-content/themes/clima/images/'; var simpleUrl = window.location.origin+'/c24-7/wp-content/themes/clima/';
+var html  = ""; var meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'); 
+var imagesUrl = window.location.origin+'/c24-7/wp-content/themes/clima/images/'; var simpleUrl = window.location.origin+'/c24-7/wp-content/themes/clima/';
 
 var twitterFetcher=function(){function x(e){return e.replace(/<b[^>]*>(.*?)<\/b>/gi,function(c,e){return e}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(e,c){for(var g=[],f=RegExp("(^| )"+c+"( |$)"),a=e.getElementsByTagName("*"),h=0,d=a.length;h<d;h++)f.test(a[h].className)&&g.push(a[h]);return g}var y="",l=20,s=!0,k=[],t=!1,q=!0,r=!0,u=null,v=!0,z=!0,w=null,A=!0;return{fetch:function(e,c,g,f,a,h,d,b,m,n){void 0===g&&(g=20);void 0===f&&(s=!0);void 0===a&&(a=
 !0);void 0===h&&(h=!0);void 0===d&&(d="default");void 0===b&&(b=!0);void 0===m&&(m=null);void 0===n&&(n=!0);t?k.push({id:e,domId:c,maxTweets:g,enableLinks:f,showUser:a,showTime:h,dateFunction:d,showRt:b,customCallback:m,showInteraction:n}):(t=!0,y=c,l=g,s=f,r=a,q=h,z=b,u=d,w=m,A=n,c=document.createElement("script"),c.type="text/javascript",c.src="//cdn.syndication.twimg.com/widgets/timelines/"+e+"?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random(),document.getElementsByTagName("head")[0].appendChild(c))},
@@ -396,40 +396,43 @@ jQuery(document).ready(function($) {
 	});
 
 	/* URL MANAGER CLIMA A FONDO */
-	if( $("#clima-fondo").length > 0)
-	{
-		if( window.location.hash )
+		if( $("#clima-fondo").length > 0)
 		{
-			var itemHash = window.location.hash;
-
-			if( $(itemHash).css("display") == "none" )
+			if( window.location.hash )
 			{
-				$("#visible").hide('fast');
-				$("#vapor").hide('fast');
-				$("#reporte-estaciones").hide('fast');
-				$(".contenedor-convencion").css("display","none");
-				$(itemHash).show();
+				var itemHash = window.location.hash;
 
-				if( itemHash == "#reporte-estaciones" )
+				if( $(itemHash).css("display") == "none" )
 				{
-					setGoogleMapsEstaciones();
+					$("#visible").hide('fast');
+					$("#vapor").hide('fast');
+					$("#reporte-estaciones").hide('fast');
+					$(".contenedor-convencion").css("display","none");
+					$(itemHash).show();
+
+					if( itemHash == "#reporte-estaciones" )
+					{
+						setGoogleMapsEstaciones();
+					}
 				}
 			}
+			//google.maps.event.addDomListener(window, "load", setGoogleMapsEstaciones);
+			setGoogleMapsEstaciones();
 		}
 
-		setGoogleMapsEstaciones();
-	}
 
 	function setGoogleMapsEstaciones()
 	{
-		var medellin = new google.maps.LatLng(6.244316, -75.539932);
-		var mapOptions = {
-			zoom: 12,
-			center: medellin,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		}
-		var map = new google.maps.Map(document.getElementById("mapa-pluviometrico"), mapOptions);
-		setGoogleMarkersEstaciones(map);
+			console.log('setGoogleMapsEstaciones');
+			var medellin = new google.maps.LatLng(6.244316, -75.539932);
+			var mapOptions = {
+				zoom: 12,
+				center: medellin,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(document.getElementById("mapa-pluviometrico"), mapOptions);
+			google.maps.event.addDomListener(map, "load", setGoogleMarkersEstaciones(map));
+			//setGoogleMarkersEstaciones(map);
 	}
 
 	function setGoogleMarkersEstaciones(map)
@@ -441,7 +444,6 @@ jQuery(document).ready(function($) {
 			data: { 'action' : 'setGoogleMarkersEstaciones' },
 		})
 		.done(function(data) {
-
 			var icon1 = null;
         	var infoG = false; 
 
@@ -454,19 +456,19 @@ jQuery(document).ready(function($) {
 
 				if( intensidad_auxiliar2 < 1)
 				{
-					icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/sun.png",
+					icon1 = new google.maps.MarkerImage(imagesUrl+"/pluviometricas/sun.png",
 					new google.maps.Size(48, 48) );
 				}
 				else
 				{
 					if( intensidad_auxiliar2 >= 1 )
 					{
-						icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/rain.png",
+						icon1 = new google.maps.MarkerImage(imagesUrl+"/pluviometricas/rain.png",
 						new google.maps.Size(48, 48) );
 					}
 					else
 					{
-						icon1 = new google.maps.MarkerImage("http://localhost/c24-7/wp-content/themes/clima/images/pluviometricas/map-orange.png",
+						icon1 = new google.maps.MarkerImage(imagesUrl+"/pluviometricas/map-orange.png",
 						new google.maps.Size(20, 30) );	  	 	
 					}
 
@@ -545,7 +547,7 @@ jQuery(document).ready(function($) {
 
 				}
 
-				google.maps.event.addListener(marker, 'click', function() {
+					google.maps.event.addListener(marker, 'click', function() {
 					infowindow.open(map,marker);
 				});
 
@@ -825,7 +827,6 @@ jQuery(document).ready(function($) {
 
 		e.preventDefault();
 		var postYear = parseInt( $("#year").val() );
-		console.log(postYear);
 
 		if(postYear == null)
 		{
