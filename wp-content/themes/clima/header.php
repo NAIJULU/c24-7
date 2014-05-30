@@ -25,7 +25,6 @@
 			<![endif]-->
 			
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-			<link rel="stylesheet" type="text/css" href="/c24-7/clima-en-vivo.css">
 			<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script> 
 
 			<!-- wordpress head functions -->
