@@ -212,6 +212,15 @@ function bones_register_sidebars() {
     'before_title' => '',
     'after_title' => '',
     )); 
+
+  register_sidebar(array(
+  'id' => 'socialwidget',
+  'name' => 'social buttons',
+  'before_widget' => '<div id="%1$s">',
+  'after_widget' => '</div>',
+  'before_title' => '',
+  'after_title' => '',
+  ));
  
  register_sidebar(array(
   'id' => 'footer1',
@@ -943,6 +952,7 @@ function creaWidgets()
  register_widget( 'widgetGaleriaHome' );
  register_widget( 'widgetMinUltimaEmision' );
  register_widget( 'widgetUltimosArticulos' );
+ register_widget( 'widgetSocialButtons' );
 }
 
 add_action( 'widgets_init', 'creaWidgets' );
@@ -1328,6 +1338,7 @@ include_once(TEMPLATEPATH.'/widgets/widget-gallery.php');
 include_once(TEMPLATEPATH.'/widgets/widget-gallery-home.php');
 include_once(TEMPLATEPATH.'/widgets/widget-mini-ultima-emision.php');
 include_once(TEMPLATEPATH.'/widgets/widget-ultimos-articulos.php');
+include_once(TEMPLATEPATH.'/widgets/widget-social-buttons.php');
 
 
 

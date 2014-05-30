@@ -82,6 +82,8 @@
 						</footer> --><!-- end article footer -->
 					
 					</article> <!-- end article -->
+					    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('socialwidget') ) : ?>
+						<?php endif; ?>
 					   <?php comments_template(); ?>
 					<?php //comments_template('',true); ?>
 					
@@ -103,7 +105,6 @@
 					<?php endif; ?>
 
 				</div> <!-- end #main -->
-    
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 		            <?php endif; ?>
 		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
