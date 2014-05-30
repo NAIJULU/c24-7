@@ -23,7 +23,7 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
-			
+			<link rel="stylesheet" type="text/css" href="/c24-7/clima-en-vivo.css">
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 			<!-- end of wordpress head -->
 			<!-- theme options from options panel -->
