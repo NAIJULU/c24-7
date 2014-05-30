@@ -40,7 +40,9 @@
 
     <?php $i=1;
 	$ciudades = array(
-		'Medellín' => 'Medellin', 
+		'Medellín Oriente' => 'MedellinOr', 
+    'Medellín Centro' => 'Medellin',
+    'Medellín Occidente' => 'MedellinOcc', 
 		'Barbosa' => 'Barbosa',
 		'Girardota' => 'Girardota',
 		'Copacabana' => 'Copacabana',
@@ -121,7 +123,7 @@
             }
             else
             {
-              if( $minima > 22 &&  $minma <= 29 )
+              if( $minima > 22 &&  $minima <= 29 )
               {
                 $classMinima = 'term-amarillo';
               }
@@ -212,16 +214,18 @@
     <?php endforeach?>
     </div>
     <ul class="ciudades">
-      <li data-target="#pronosticos" data-slide-to="0" class="active">Medellín</li>
-      <li data-target="#pronosticos" data-slide-to="1">Barbosa</li>
-      <li data-target="#pronosticos" data-slide-to="2">Girardota</li>
-      <li data-target="#pronosticos" data-slide-to="3">Copacabana</li>
-      <li data-target="#pronosticos" data-slide-to="4">Bello</li>
-      <li data-target="#pronosticos" data-slide-to="5">Envigado</li>
-      <li data-target="#pronosticos" data-slide-to="6">Sabaneta</li>
-      <li data-target="#pronosticos" data-slide-to="7">La Estrella</li>
-      <li data-target="#pronosticos" data-slide-to="8">Itagüi</li>
-      <li data-target="#pronosticos" data-slide-to="9">Caldas</li>
+      <li data-target="#pronosticos" data-slide-to="0" class="active">Medellín Oriente</li>
+      <li data-target="#pronosticos" data-slide-to="1" >Medellín</li>
+      <li data-target="#pronosticos" data-slide-to="2" >Medellín Occidente</li>
+      <li data-target="#pronosticos" data-slide-to="3">Barbosa</li>
+      <li data-target="#pronosticos" data-slide-to="4">Girardota</li>
+      <li data-target="#pronosticos" data-slide-to="5">Copacabana</li>
+      <li data-target="#pronosticos" data-slide-to="6">Bello</li>
+      <li data-target="#pronosticos" data-slide-to="7">Envigado</li>
+      <li data-target="#pronosticos" data-slide-to="8">Sabaneta</li>
+      <li data-target="#pronosticos" data-slide-to="9">La Estrella</li>
+      <li data-target="#pronosticos" data-slide-to="10">Itagüi</li>
+      <li data-target="#pronosticos" data-slide-to="11">Caldas</li>
     </ul>
   </div>
   <div id="radar">

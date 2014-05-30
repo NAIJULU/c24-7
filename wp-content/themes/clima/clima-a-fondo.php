@@ -114,8 +114,6 @@ Template Name: clima a fondo
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template(); ?>
-					
 					<?php endwhile; ?>	
 					
 					<?php else : ?>

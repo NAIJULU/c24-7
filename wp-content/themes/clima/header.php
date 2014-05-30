@@ -25,8 +25,11 @@
 			<![endif]-->
 			
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+<<<<<<< HEAD
 			<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script> 
 
+=======
+>>>>>>> ffaa833f3b775f710eb6517663b6d74ffc32a024
 			<!-- wordpress head functions -->
 			<?php  wp_head(); ?>
 

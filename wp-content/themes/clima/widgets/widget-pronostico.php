@@ -117,7 +117,7 @@
          	}
          	else
          	{
-         		if( $minima > 22 &&  $minma <= 29 )
+         		if( $minima > 22 &&  $minima <= 29 )
          		{
          			$classMinima = 'term-amarillo';
          		}

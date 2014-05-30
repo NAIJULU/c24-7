@@ -89,7 +89,7 @@
 						</a>
 					</article>
 				<?php endif; ?>
-				<?php $i++; endwhile; ?>									
+				<?php endwhile; ?>									
 			<?php endif; ?>
 		</div>
 	</div>
