@@ -51,13 +51,13 @@
 
 		 <?php 
 
-        $madrugada    = get_option('LluvMad'.$ciudad);
-        $mañana       = get_option('LluvMan'.$ciudad);
-        $tarde        = get_option('LluvTar'.$ciudad); 
-        $noche        = get_option('LluvNoc'.$ciudad);
+        $madrugada    = get_option('LluvMad'.$key);
+        $mañana       = get_option('LluvMan'.$key);
+        $tarde        = get_option('LluvTar'.$key); 
+        $noche        = get_option('LluvNoc'.$key);
         //Temperaturas
-        $minima       = get_option('tempMin'.$ciudad);
-        $maxima       = get_option('tempMax'.$ciudad);
+        $minima       = get_option('tempMin'.$key);
+        $maxima       = get_option('tempMax'.$key);
 
         $classMinima  = '';
         $classMaxima  = '';

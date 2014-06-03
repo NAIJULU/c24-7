@@ -214,9 +214,9 @@
     <?php endforeach?>
     </div>
     <ul class="ciudades">
-      <li data-target="#pronosticos" data-slide-to="0" class="active">Medellín Oriente</li>
-      <li data-target="#pronosticos" data-slide-to="1" >Medellín</li>
-      <li data-target="#pronosticos" data-slide-to="2" >Medellín Occidente</li>
+      <li data-target="#pronosticos" data-slide-to="0" class="active">MDE Oriente</li>
+      <li data-target="#pronosticos" data-slide-to="1" >MDE Centro</li>
+      <li data-target="#pronosticos" data-slide-to="2" >MDE Occidente</li>
       <li data-target="#pronosticos" data-slide-to="3">Barbosa</li>
       <li data-target="#pronosticos" data-slide-to="4">Girardota</li>
       <li data-target="#pronosticos" data-slide-to="5">Copacabana</li>
