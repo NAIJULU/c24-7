@@ -175,12 +175,8 @@ $manana = strtotime(date('Y-m-d').' +1 day');
           <div id="body-cuenca-img">
             <img  id="cuenca-inf" src="<?php echo bloginfo('wpurl').'/wp-content/themes/clima/images/fill.png' ?>" />
           </div>
-          <div id="body-cuenca-izq">
-            
-          </div>
-          <div id="body-cuenca-der">
-            
-          </div>
+          <div id="body-cuenca-izq"></div>
+          <div id="body-cuenca-der"></div>
         </div>
         
         <div id="cuenca-info" class="span5">
@@ -191,10 +187,10 @@ $manana = strtotime(date('Y-m-d').' +1 day');
               </select>
             </div>
             <div id="cuenca-info-sup" class="control-group">
-              
+
             </div>
             <div id="cuenca-info-photo" class="control-group">
-              
+
             </div>
           </div>
         </div>

@@ -350,9 +350,15 @@ jQuery(document).ready(function($) {
 
 				if( estacion.porcentaje != null )
 				{
+
 					$("#body-cuenca-der").html('<span>'+estacion.porcentaje+'</span>');
 					var por 			= estacion.porcentaje.split('%');
-					var totalPorcentaje = parseInt(por[0]) + 15;
+					var totalPorcentaje = parseInt(por[0]);
+
+					if(totalPorcentaje < 10)
+					{
+						totalPorcentaje = 10;
+					}
 					$("#body-fill").animate({ height: totalPorcentaje+"%" }, 1000 );
 				}
 			});
@@ -1098,7 +1104,9 @@ jQuery(document).ready(function($) {
 
 function getBlog(event)
 {
+	jQuery(".filtro:checked").trigger("click");
 	var pag = parseInt( jQuery("#pagina").attr('rel') );
+	jQuery(".filtro").removeAttr("checked");
 	if(pag >= 1)
 	{
 		pag = pag+1;
@@ -1124,14 +1132,15 @@ function getBlog(event)
 				jQuery("#pagina").attr('rel',pag);
 				container.isotope('destroy');
 				container.isotope({
-					animationOptions: {
-						itemSelector : '.categorias',
-						duration: 500000,
-						easing: 'linear',
-						queue: false
-					},
-					layoutMode: 'cellsByRow'
+				animationOptions: {
+					itemSelector : '.categorias',
+					duration: 500000,
+					easing: 'linear',
+					queue: false
+				},
+				layoutMode: 'cellsByRow'
 				});
+
 			}
 			jQuery(".filtro").removeAttr("checked");
 			jQuery('html, body').animate({scrollTop: heightAct},'fast');
@@ -1150,6 +1159,7 @@ function getBlog(event)
 
 function getGallery(event)
 {
+	jQuery(".filtro:checked").trigger("click");
 	var pag = parseInt( jQuery("#pagina").attr('rel') );
 	if(pag >= 1)
 	{
@@ -1204,7 +1214,7 @@ function getGallery(event)
 
 function getGalleryPerDate(event)
 {
-
+	jQuery(".filtro:checked").trigger("click");
 	var date = jQuery(".datepicker").val();
 
 	if( date.length )

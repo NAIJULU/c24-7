@@ -976,6 +976,9 @@ function loadBlogs()
     $url          = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium'));
     $url          = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
     $contenuto    = get_the_content();
+    $content      = substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; 
+    $content      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]",
+                     "", $content);
 
     $pClass = "";
 
@@ -991,7 +994,7 @@ function loadBlogs()
     <h1>'.the_title('','',false).'</h1>
     <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time>
     </header>
-    <p>'.substr(wp_filter_nohtml_kses( $contenuto ), 0,80).'...'.'
+    <p>'.$content .'
     <span>Leer Más +<span></p></div>
     </a>
     </article>';    
@@ -1013,21 +1016,17 @@ function loadGallery()
   $paged   = ( isset($_GET['paged']) ) ? $_GET['paged'] : 1;
   $content = "";
   $i = 0;
-  $the_query = new WP_Query('paged=' . $paged ); 
+
+  $args = array('cat'=>'23', 'paged'=> $paged );
+  $the_query = new WP_Query($args); 
 
   if ($the_query->have_posts())
   {
-
-
-    while ($the_query->have_posts() ) : $the_query->the_post(); 
-    if(in_category(23)) :
-
-      $categoria    = get_the_category();
-    $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
-
+    while ($the_query->have_posts()) : $the_query->the_post(); 
+    $categoria    = get_the_category();
+    $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
     $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
     $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
-
 
     $contenuto = get_the_content();
 
@@ -1053,7 +1052,6 @@ function loadGallery()
     </article>';
     
     $i++;
-    endif;
     endwhile;
   }
 
