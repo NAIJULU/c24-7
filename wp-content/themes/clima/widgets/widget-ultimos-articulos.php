@@ -61,7 +61,11 @@
 													<h1><?php the_title(); ?></h1>
 														<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
 												</header>
-												<p><?php echo substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; ?>
+												<p><?php
+														$content = substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; 
+														$content      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
+														echo $content;
+													?> 
 													<span>Leer Más +<span></p>
 											</div>	
 									</a>

@@ -973,12 +973,11 @@ function loadBlogs()
     while ($the_query->have_posts()) : $the_query->the_post(); 
     $categoria    = get_the_category();
     $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
-    $url          = wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium'));
-    $url          = (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png';
-    $contenuto    = get_the_content();
-    $content      = substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; 
-    $content      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]",
-                     "", $content);
+    $post_thumbnail_id   = get_post_thumbnail_id(get_the_ID(), 'full');
+    $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
+    $contenido      = get_the_content();
+    $contenido      = substr(wp_filter_nohtml_kses( $contenido ), 0,80).'...'; 
+    $contenido      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $contenido);
 
     $pClass = "";
 
@@ -989,12 +988,12 @@ function loadBlogs()
 
     $content .= '<article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
     <a href="'.get_permalink().'" rel="bookmark" title="'.the_title('','',false).'">
-    <figure><img src="'.$url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
+    <figure class="img-post"><img src="'.$post_thumbnail_url.'" alt="'.the_title('','',false).'" class="thumb" /></figure>
     <div class="contenido"><header ><span class="categorias">'.$categoria.'</span>
     <h1>'.the_title('','',false).'</h1>
     <time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time>
     </header>
-    <p>'.$content .'
+    <p>'.$contenido .'
     <span>Leer Más +<span></p></div>
     </a>
     </article>';    
@@ -1026,7 +1025,7 @@ function loadGallery()
     $categoria    = get_the_category();
     $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ; 
     $post_thumbnail_id   = get_post_thumbnail_id($post->ID, 'full');
-    $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+    $post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
 
     $contenuto = get_the_content();
 
