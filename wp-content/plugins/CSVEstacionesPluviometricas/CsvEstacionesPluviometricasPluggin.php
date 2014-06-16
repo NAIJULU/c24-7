@@ -90,6 +90,14 @@ function saveInfo($csv)
   global $wpdb;
 
   try {
+        
+      $none = array();
+      $none['intensidad_30m']     = null ;
+      $none['precipitacion_1h']   = null ;
+      $none['precipitacion_3h']   = null ;
+
+      $wpdb->update('c247_csv_pluviometricas', $data );
+
       foreach ($csv as $key => $value) 
       {
         $data['fecha_reporte']    = date('Y/m/d h:i:s A');

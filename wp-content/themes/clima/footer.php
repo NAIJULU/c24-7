@@ -26,10 +26,6 @@
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
   			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   			<![endif]-->
-
-  			<?php wp_footer(); // js scripts are inserted using this function ?>
-  		</body>
-  		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script> 
   		<div id="fb-root"></div>
   		<script>(function(d, s, id) {
   			var js, fjs = d.getElementsByTagName(s)[0];
@@ -38,6 +34,10 @@
   			js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=1416538475270198&version=v2.0";
   			fjs.parentNode.insertBefore(js, fjs);
   		}(document, 'script', 'facebook-jssdk'));</script>
+  			<?php wp_footer(); // js scripts are inserted using this function ?>
+  		</body>
+  		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBqYxd3SGHM1DHgs5GASk0BKMgWNZaeKeY&sensor=true"></script> 
+
 
 
 </html>

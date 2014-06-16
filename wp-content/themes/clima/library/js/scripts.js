@@ -429,7 +429,6 @@ jQuery(document).ready(function($) {
 
 	function setGoogleMapsEstaciones()
 	{
-			console.log('setGoogleMapsEstaciones');
 			var medellin = new google.maps.LatLng(6.244316, -75.539932);
 			var mapOptions = {
 				zoom: 12,
