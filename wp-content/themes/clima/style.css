@@ -2857,6 +2857,9 @@ section .menu-clima ul li a.vapor{
 	#clima-fondo .span9{
 		height: auto;
 	}
+	article.mark-estaciones .fotografia {
+	display: none;
+	}
 	/*Formulario de contacto*/
 	.formulario-contacto p{
 		font-size: 2em;
