@@ -6,7 +6,7 @@
 		<div id="widget-footer" class="clearfix row-fluid">
 			<ul class="menuInstitucional">
 				<a href="/c24-7/institucional"><li class="InstitucionalBtn">INSTITUCIONAL</li></a>
-				<a href="#"><li class="MapaBtn">MAPA DEL SITIO</li></a>
+				<a href="/c24-7/mapa-sitio"><li class="MapaBtn">MAPA DEL SITIO</li></a>
 				<a href="/c24-7/faq"><li class="FAQBtn">FAQ</li></a>
 				<a href="/c24-7/glosario"><li class="GlosarioBtn">GLOSARIO</li></a>
 				<a href="/c24-7/suscripcion"><li class="SuscripcionBtn">SUSCRIPCIÓN</li></a>
