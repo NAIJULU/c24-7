@@ -3101,3 +3101,10 @@ body {
 	padding-right: 0;
 }
 }
+
+.lead
+{
+  font-size: 14px !important;
+  line-height: 20px !important;
+  margin-bottom: 0px !important;
+}
