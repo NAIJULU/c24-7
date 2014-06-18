@@ -79,7 +79,7 @@ msgstr "Entradas Posteriores &raquo;"
 
 #: archive.php:81 author.php:69
 msgid "No Posts Yet"
-msgstr "Todabia no hay entradas"
+msgstr "Todavía no hay entradas"
 
 #: archive.php:84 author.php:72
 msgid "Sorry, What you were looking for is not here."

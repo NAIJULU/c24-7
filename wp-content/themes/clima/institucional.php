@@ -6,7 +6,7 @@ Template Name: Institucional
 <?php get_header(); ?>
 
 		<div id="content" class="clearfix row-fluid">
-				<div id="main" class="span12 clearfix" role="main">
+				<div id="main" class="span8 clearfix" role="main">
 					<section class="post_content">
                           <div class="row-fluid clearfix">
 		                       <div class="span12">
@@ -21,9 +21,14 @@ Template Name: Institucional
 								Esta iniciativa es liderada por el Área Metropolitana del Valle del Aburrá en asocio con 
 								Telemedellín, el acompañamiento de la Alcaldía de Medellín y la asesoría técnica del Sistema 
 								de Alerta Temprana de Medellín y el Valle de Aburrá.
+								 <?php //echo do_shortcode('[wp_sitemap_page]');?>
 							</div>	
 						   </div>	
 					</section>
 				</div>
+				<div id="slidebar-der" class="span4">
+      			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('slidebar_derecha') ) : ?>
+    		 	<?php endif; ?>
+    			</div>
 		</div>			
 <?php get_footer(); ?>					
