@@ -96,7 +96,7 @@ function saveInfo($csv)
       $none['precipitacion_1h']   = null ;
       $none['precipitacion_3h']   = null ;
 
-      $wpdb->update('c247_csv_pluviometricas', $data );
+      $wpdb->update('c247_csv_pluviometricas', $none, "id_estacion IS NOT NULL" );
 
       foreach ($csv as $key => $value) 
       {

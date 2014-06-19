@@ -15,12 +15,14 @@ Template Name: Suscripcion
               </header>
             </div>
             <div>
-              <?php                              
-              if (have_posts()) : while (have_posts()) : the_post();
-                echo get_the_content();
-              endwhile;
-              endif;
-              ?>
+              <p>
+                <?php                              
+                if (have_posts()) : while (have_posts()) : the_post();
+                  echo get_the_content();
+                endwhile;
+                endif;
+                ?>
+             </p>
             </div>
               <!-- para mas info consulte a functions.php -->
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
