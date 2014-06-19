@@ -83,7 +83,9 @@ body {
 	background-attachment: fixed;
 	/*background-attachment: 	fixed;*/
 }
-
+a:hover, a:focus{
+	color: #fff;
+}
 
 /* Admin Top Navigation fixes */
 
@@ -183,6 +185,10 @@ input, textarea, select, .uneditable-input {
 	float: left;
 	margin-left: 10px;
 }
+#mapa-sitio ol, #mapa-sitio ul, #mapa-sitio li, #mapa-sitio h2{
+	color: #fff;
+}
+
 /*recomendaciones twitter*/
 .recomendaciones-tw {
 	height: 37px;
@@ -1097,7 +1103,7 @@ text-transform: uppercase;
 	list-style:none;
 	margin-left:0.4em;
 }
-article.post-individual p{
+article.post-individual p, .post_content p{
 	color: #fff;
 }
 .rw-ui-container{
