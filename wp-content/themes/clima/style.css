@@ -2260,20 +2260,26 @@ div.main-galeria > article a:hover .contenido{
 }
 /*Estilos de Suscripción*/
 .widget_mailchimpsf_widget button.btn-primary{
-	background: #A5CE39;
-	padding: 10px 5px 10px 25px;
+	background: #A5CE39 url(images/mail-icon.png) no-repeat left;
+	padding: 10px 5px 10px 35px;
 	color: #fff;
 	width: 100%;
 	border: none;
 	border-radius: 0;
 	margin-top: 15px;
 	text-shadow: none;
-	background-image: url(images/mail-icon.png) left;
-	background-repeat: no-repeat;
+	font-weight: 700	
 }
+.pag-suscripcion button.btn-primary{
+	width: 40%;
+	margin: 0 auto;
+	display: block;
+}
+
 .widget_mailchimpsf_widget button:hover.btn-primary{
-	background: #8FB625;		
+	background: #8FB625 url(images/mail-icon.png) no-repeat left;	
 }
+
 
 
 #mc_signup{

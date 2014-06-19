@@ -24,9 +24,11 @@ Template Name: Suscripcion
                 ?>
              </p>
             </div>
-              <!-- para mas info consulte a functions.php -->
-            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
-            <?php endif; ?>
+            <div class="widget_mailchimpsf_widget pag-suscripcion">
+                <!-- para mas info consulte a functions.php -->
+              <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
+              <?php endif; ?>
+            </div>
           </div>
       </section>
     </div>
