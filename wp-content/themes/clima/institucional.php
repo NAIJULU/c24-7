@@ -15,13 +15,14 @@ Template Name: Institucional
 									 </header>
 								</div>
 							<div id="main">
-								Somos un proyecto de comunicación pública para la prevención de situaciones de emergencias 
-								provocadas por las variables del estado del tiempo; la divulgación de los efectos del cambio 
-								climático y la relación del clima en la salud de los habitantes del Valle del Aburrá. 
-								Esta iniciativa es liderada por el Área Metropolitana del Valle del Aburrá en asocio con 
-								Telemedellín, el acompañamiento de la Alcaldía de Medellín y la asesoría técnica del Sistema 
-								de Alerta Temprana de Medellín y el Valle de Aburrá.
-								 <?php //echo do_shortcode('[wp_sitemap_page]');?>
+								<p>
+								<?php                              
+					                if (have_posts()) : while (have_posts()) : the_post();
+					                  echo get_the_content();
+					                endwhile;
+					                endif;
+					             ?>
+								</p>
 							</div>	
 						   </div>	
 					</section>
