@@ -114,8 +114,11 @@ $categories = get_categories( $args );
 				</div>
 				</div>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mix-galeria') ) : ?>
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
 			<?php endif; ?>
+	         <div class="widget_mailchimpsf_widget" >
+	          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
+	          <?php endif; ?>
+	        </div>
 		</div>
 			
 			  <div id="main" class="span9 clearfix" role="main">

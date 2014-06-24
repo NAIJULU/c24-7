@@ -39,8 +39,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
          <?php //get_sidebar();  ?>
 
          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('widget_gallery') ) : ?>
-         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
-       <?php endif; ?>
+         <?php endif; ?>
+         <div class="widget_mailchimpsf_widget" >
+            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
+            <?php endif; ?>
+         </div>
 
      </div>
 

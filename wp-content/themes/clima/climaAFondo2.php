@@ -34,8 +34,11 @@ Template Name: Clima a fondo OK
 
                 <?php //get_sidebar();  ?>
                 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('widget_gallery') ) : ?>
-                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
                 <?php endif; ?>
+                 <div class="widget_mailchimpsf_widget" >
+                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
+                    <?php endif; ?>
+                 </div>
            </div>     
 
             <!-- Últimas fotos -->
