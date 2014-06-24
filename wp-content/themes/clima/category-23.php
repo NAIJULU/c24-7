@@ -114,6 +114,7 @@ $categories = get_categories( $args );
 				</div>
 				</div>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mix-galeria') ) : ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
 			<?php endif; ?>
 		</div>
 			

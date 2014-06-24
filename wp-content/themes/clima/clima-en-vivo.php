@@ -37,7 +37,9 @@ $manana = strtotime(date('Y-m-d').' +1 day');
          </div>
          <!-- suscripciones -->
          <?php //get_sidebar();  ?>
+
          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('widget_gallery') ) : ?>
+         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('suscrib') ) : ?>
        <?php endif; ?>
 
      </div>
