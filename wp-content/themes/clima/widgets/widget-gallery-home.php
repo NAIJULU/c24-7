@@ -53,9 +53,9 @@ function mostrarArticulos($args, $instance)
 		$item = ($active) ? "item" : "item active";
 		$galerias			= 	$galerias .'<div id="gal-'.get_the_ID().'" class="'.$item.'">'.
 								'<div class="widget-home-gallery-head row-fluid">'.
-								'<span class="widget-home-gallery-head-title span6">'.the_title('','',false).'</span>'.
-								'<span class="widget-home-gallery-head-date span6"><time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time></span>'.
+								'<span class="widget-home-gallery-head-title span12">'.the_title('','',false).'</span>'.
 								'<img class="thumb" src="'.$post_thumbnail_url.'"  ></div>'.
+								'<span class="widget-home-gallery-head-date"><time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time></span>'.
 								'<div class="widget-home-gallery-footer"><span class="gfooter-span1"> Foto enviada por: <a href="#" target="_blank">'.$contenido.'</a></span> </div></div>';
 		$active = true;
 							
