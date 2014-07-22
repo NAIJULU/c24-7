@@ -2283,6 +2283,7 @@ div.main-galeria > article a:hover .contenido{
 /*Estilos de Suscripción*/
 .widget_mailchimpsf_widget button.btn-primary{
 	background: #A5CE39 url(images/mail-icon.png) no-repeat left;
+	background-position: -6px 0;
 	padding: 10px 5px 10px 35px;
 	color: #fff;
 	width: 100%;
