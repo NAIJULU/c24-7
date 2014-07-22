@@ -1278,6 +1278,8 @@ function getGalleryPerDate(event)
 		jQuery(".layout-load .spinner").removeClass('spinner2');
 		return false;
 	}
+
+	event.preventDefault();
 }
 
 function notIsotopeActive()

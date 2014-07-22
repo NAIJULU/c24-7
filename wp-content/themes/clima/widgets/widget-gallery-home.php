@@ -90,8 +90,9 @@ function mostrarArticulos($args, $instance)
 		$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 							
 		$item = ($active) ? "item" : "item active";
-		$galerias			= $galerias .'<div  class="'.$item.'"><span class="widget-home-gallery-head-title span12">'.the_title('','',false).'</span>'.
-							'<div class="widget-home-gallery-head row-fluid"><a id="'.get_the_ID().'" href="'.$post_thumbnail_url.'"'. 
+		$galerias			= $galerias .'<div  class="'.$item.'">'.
+							'<div class="widget-home-gallery-head row-fluid"><span class="widget-home-gallery-head-title span12">'.the_title('','',false).'</span>'.
+							 '<a id="'.get_the_ID().'" href="'.$post_thumbnail_url.'"'. 
 							 'class="fancybox-single" title="'.the_title('','',false).'" '.
 							 'caption="'.get_the_content().'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" '.
 							  'cat="'.ucwords( strtolower($categoria) ).'" >'.
@@ -107,15 +108,7 @@ function mostrarArticulos($args, $instance)
 	}
 
 	?>
-		<!-- <div class="widget-home-gallery-head row-fluid">
-			<span class="widget-home-gallery-head-title span6">
-				<?php echo the_title('','',false); ?>
-			</span>
-			<span class="widget-home-gallery-head-date span6">
-				<time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('j'); echo " de "; the_time('F'); echo " del "; the_time('Y'); ?></time>
-			</span>
-		
-		</div> -->
+
 	    <div id="widget-gallery-home" class="carousel slide" data-ride="carousel">
 					    	<!-- Wrapper for slides -->
 			<div class="carousel-inner">
@@ -131,10 +124,6 @@ function mostrarArticulos($args, $instance)
 			</a>
 
 	    </div>
-	<!--    <div class="widget-home-gallery-footer">
-	    	<span class="gfooter-span1"> Foto enviada por: <a href="#" target="_blank"><?php echo $contenido ?></a></span>
-	    </div>
-	  -->  
 	</div>	
 	<?php
 

@@ -110,7 +110,7 @@ $categories = get_categories( $args );
 					<div class="bar-fecha-control-2">
 				  		<a class="btn-ir" id="ir-fecha" href="#" title="Presione este boton en caso de que quiera buscar imagenes por fecha y filtrarlas.">Ir </a>
 				  	</div>
-				 	<a class="btn-todas" href="#" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Borrar el filtro de fechas</a>
+				 	<a class="btn-todas" href="" title="Presione este boton en caso de que quiera volver a ver todas las imagenes.">Borrar el filtro de fechas</a>
 				</div>
 				</div>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mix-galeria') ) : ?>
