@@ -8,7 +8,7 @@
 *  Updates will be posted to this site.
 *********************************************************************/
 var html  = ""; var meses = new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'); 
-var imagesUrl = window.location.origin+'/c24-7/wp-content/themes/clima/images/'; var simpleUrl = window.location.origin+'/c24-7/wp-content/themes/clima/';
+var imagesUrl = window.location.origin+'/wp-content/themes/clima/images/'; var simpleUrl = window.location.origin+'/wp-content/themes/clima/';
 
 var twitterFetcher=function(){function x(e){return e.replace(/<b[^>]*>(.*?)<\/b>/gi,function(c,e){return e}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(e,c){for(var g=[],f=RegExp("(^| )"+c+"( |$)"),a=e.getElementsByTagName("*"),h=0,d=a.length;h<d;h++)f.test(a[h].className)&&g.push(a[h]);return g}var y="",l=20,s=!0,k=[],t=!1,q=!0,r=!0,u=null,v=!0,z=!0,w=null,A=!0;return{fetch:function(e,c,g,f,a,h,d,b,m,n){void 0===g&&(g=20);void 0===f&&(s=!0);void 0===a&&(a=
 !0);void 0===h&&(h=!0);void 0===d&&(d="default");void 0===b&&(b=!0);void 0===m&&(m=null);void 0===n&&(n=!0);t?k.push({id:e,domId:c,maxTweets:g,enableLinks:f,showUser:a,showTime:h,dateFunction:d,showRt:b,customCallback:m,showInteraction:n}):(t=!0,y=c,l=g,s=f,r=a,q=h,z=b,u=d,w=m,A=n,c=document.createElement("script"),c.type="text/javascript",c.src="//cdn.syndication.twimg.com/widgets/timelines/"+e+"?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random(),document.getElementsByTagName("head")[0].appendChild(c))},
@@ -258,7 +258,7 @@ jQuery(document).ready(function($) {
 	/* Se esconden todos las opciones por descarte y por ultimo se revela la que realmente
 	se quiere mostrar */
 	$("#clima-vivo a").click(function(e){
-		e.preventDefault();
+		//e.preventDefault();
 		var item = 	$(this).attr("href");
 		var id 	 = 	$(this).attr("id");
 		if( $(item).css("display") == "none" )
@@ -415,6 +415,8 @@ jQuery(document).ready(function($) {
 					$("#reporte-estaciones").hide('fast');
 					$(".contenedor-convencion").css("display","none");
 					$(itemHash).show();
+					$("#clima-fondo .item-clima a").removeClass("menu-activo");
+					$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
 
 					if( itemHash == "#reporte-estaciones" )
 					{
@@ -685,6 +687,8 @@ jQuery(document).ready(function($) {
 				$("#temperatura-actual").hide('fast');
 				$(".contenedor-convencion").css("display","none");
 				$(itemHash).show();
+				$("#clima-vivo .item-clima a").removeClass("menu-activo");
+				$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
 			}
 		}
 	}
