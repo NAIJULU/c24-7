@@ -62,7 +62,7 @@ Template Name: Clima a fondo OK
 
 
               <div id="cont-vapor" >
-                <img src="http://www.areadigital.gov.co/ftpclima/antioquiava4h.gif" />
+                <img src="http://www.areadigital.gov.co/ftpclima/humedadsatelite.gif" />
               </div> 
 
             </div>
