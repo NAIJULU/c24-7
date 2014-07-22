@@ -48,13 +48,25 @@ function mostrarArticulos($args, $instance)
 	  if(in_category(23)) :
 
 		$contenido = get_the_content();		
-		$post_thumbnail_id	= get_post_thumbnail_id(get_the_ID(), 'full');
-		$post_thumbnail_url	= (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+		//$post_thumbnail_id	= get_post_thumbnail_id(get_the_ID(), 'full');
+		//$post_thumbnail_url	= (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+		$get_post_t         = get_the_post_thumbnail($page->ID, 'thumbnail');
+		if( !empty($get_post_t ) )
+		{
+			$post_thumbnail     =  $get_post_t;
+		}
+		else
+		{
+			$post_thumbnail = '<img class="thumb" height="150" src="'.get_template_directory_uri().'/images/dummie-post.png'.'" >';
+		}
+
+
 		$item = ($active) ? "item" : "item active";
 		$galerias			= 	$galerias .'<div id="gal-'.get_the_ID().'" class="'.$item.'">'.
 								'<div class="widget-home-gallery-head row-fluid">'.
 								'<span class="widget-home-gallery-head-title span12">'.the_title('','',false).'</span>'.
-								'<img class="thumb" src="'.$post_thumbnail_url.'"  ></div>'.
+								//'<img class="thumb" src="'.$post_thumbnail_url.'"  ></div>'.
+								$post_thumbnail.'</div>'. 
 								'<span class="widget-home-gallery-head-date"><time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time></span>'.
 								'<div class="widget-home-gallery-footer"><span class="gfooter-span1"> Foto enviada por: <a href="#" target="_blank">'.$contenido.'</a></span> </div></div>';
 		$active = true;

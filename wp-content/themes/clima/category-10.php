@@ -29,15 +29,14 @@ $meses 		= unserialize(C247_MESES);
 			<div id="content" class="clearfix row-fluid">
 <?php
 
-			if( isset($_POST['fecha']) )
+			if( isset($_POST['fecha']) && !empty($_POST['fecha']) )
 			{
 				$fecha_e = explode("/", $_POST['fecha']);
-
 				$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '1' ,'date_query' => array(array('year'  => $fecha_e[2] ,'month' => $fecha_e[1] ,'day'   => $fecha_e[0] ,),)  );
 			}
 			else
 			{
-				$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '1' );	
+				$args = array('cat'=>'10', 'orderby' => 'date', 'order' > 'DESC', 'posts_per_page' => '1' );	
 			}
 
 			$query = new WP_Query( $args );
@@ -75,10 +74,9 @@ endif;
 			<div class="selector-fecha text-center">
 				<form id="form-fechas" method="POST" action="" >
 							<div class="btn-group">
-							  <input type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" >
-							  <input type="submit" id="ir-emisiones" class="btn btn-primary btn-ver" value="Ver" />
+							  <input id="fechaEmisiones" type="text" name="fecha" class="datepicker" placeholder="Selecciona la fecha" required >
+							  <input type="submit" id="ir-emisiones" class="btn btn-primary btn-ver" value="Ver" disabled  />
 							</div>
-								
 				</form>
 			</div>
 
@@ -87,9 +85,9 @@ endif;
 	<div id="emisiones-todo-dia" class="row-fluid">
 <?php
 
-			if(isset($fechaPost)) :
+			if(isset($fechaPost) ) :
 
-				if( isset($_POST['fecha']) )
+				if( isset($_POST['fecha']) && !empty($_POST['fecha']) )
 				{
 					$fecha_e = explode("/", $_POST['fecha']);
 					$args = array('cat'=>'10', 'orderby' => 'date', 'order' => 'ASC','date_query' => array(array('year'  => $fecha_e[2] ,'month' => $fecha_e[1] ,'day'   => $fecha_e[0] ,),)  );

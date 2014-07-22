@@ -280,7 +280,7 @@ input, textarea, select, .uneditable-input {
 #btnMostrarPronostico, #btnMostrarRadar, #btnMostrarTemperatura {
 	display: block;
 	color: #FFF;
-	width: 320px;
+	width: 323px;
 	height: 40px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 18px;
@@ -1645,6 +1645,7 @@ blockquote.pull-left {
 }
 .contenedor-ultima-emision .emision{
 	margin: 15px 0 0 0;
+	overflow: hidden;
 }
 h3.titulo-widget-ultima-emision {
 	color: #FFF;
@@ -1663,22 +1664,34 @@ h3.titulo-widget-ultima-emision:before {
 	margin: 0 15px 0 35px;
 }
 .contenedor-ultima-emision .emision .emision-title{
-	padding-top: 15px;
+	padding-top: 0px;
+	display: table;
 	color: #FFF;
 	text-transform: uppercase;
 	padding-left: 50px;
+	height: 35px;
 	background-image: url(images/icon2-ult-emision_02.png);
 	background-repeat: no-repeat;
-	background-position: 15px 7px;
+	background-position: 15px center;
+	width: 55%;
+	float: left;
 }
-.contenedor-ultima-emision span .btnHistorial {
+
+.contenedor-ultima-emision .emision .emision-title span{
+	display: table-cell;
+    vertical-align: middle;
+}
+.contenedor-ultima-emision .emision-historial {
 	float: right;
 	color: #FFF;
 	text-decoration: none;
-	padding: 0px 30px 5px 35px;
+	padding: 6px 30px 5px 35px;
 	background-repeat: no-repeat;
-	background-position: 0px -5px;
+	background-position: 0 center;
 	background-image: url(images/icon2-ult-emision_03.png);
+	width: 20%;
+	height: auto;
+	float: right;	
 }
 .contenedor-ultima-emision .btnHistorial:hover {
 	text-shadow: white 0 0 5px;
@@ -2496,9 +2509,13 @@ div.main-galeria > article a:hover .contenido{
 	margin-top: 2px;
 	background-color: #E9F1FC;
 	margin-bottom: 9px;
-	color: #013C49;
+	color: #013C49 !important;
 }
 
+#cuenca-info-sup p
+{
+	color: #013C49 !important;
+}
 #cuenca-info #cuenca-info-inf #cuenca-info-s
 {
 	margin-bottom: 9px;
@@ -2596,16 +2613,16 @@ article.mark-estaciones .informacion table td.info-td2{
 }
 /*NIveles de quebradas*/
 article header .page-header{padding:0;border:none;font-size:18px;color:#fff;}
-article header .page-header h1{-moz-box-shadow:inset 0 0 30px rgba(255,255,255,0.7);-webkit-box-shadow:inset 0 0 30px rgba(255,255,255,0.7);background-color:rgba(255,255,255,0.3);background-image:url("/c24-7/wp-content/themes/clima/images/icons-btns-pronostico.png");background-position:20px 11px;background-repeat:no-repeat;box-shadow:inset 0 0 30px rgba(255,255,255,0.7);font-family:Verdana;font-size:22px;font-weight:bold;padding:.5em 1em .5em 4em;text-transform:uppercase}
+article header .page-header h1{-moz-box-shadow:inset 0 0 30px rgba(255,255,255,0.7);-webkit-box-shadow:inset 0 0 30px rgba(255,255,255,0.7);background-color:rgba(255,255,255,0.3);background-image:url("/wp-content/themes/clima/images/icons-btns-pronostico.png");background-position:20px 11px;background-repeat:no-repeat;box-shadow:inset 0 0 30px rgba(255,255,255,0.7);font-family:Verdana;font-size:22px;font-weight:bold;padding:.5em 1em .5em 4em;text-transform:uppercase}
 section .menu-clima{-moz-box-shadow:inset 0 0 30px rgba(255,255,255,0.7);-webkit-box-shadow:inset 0 0 30px rgba(255,255,255,0.7);background-color:rgba(255,255,255,0.3);box-shadow:inset 0 0 30px rgba(255,255,255,0.7);padding:1em 1em 1em .5em;}
 section .menu-clima ul{list-style:none;margin:0;}
 section .menu-clima ul li a{color:#fff;display:block;font-size:12px;font-weight:bold;padding:1em 0 1em 35px;text-decoration:none;text-transform:uppercase;}
 section .menu-clima ul li a:hover{background:rgba(255,255,255,0.3)}
-section .menu-clima ul li a.radar{background-image:url("/c24-7/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -2px;background-repeat:no-repeat}
-section .menu-clima ul li a.pronostico{background-image:url("/c24-7/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -31px;background-repeat:no-repeat}
-section .menu-clima ul li a.siata{background-image:url("/c24-7/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -104px;background-repeat:no-repeat}
-section .menu-clima ul li a.sensores{background-image:url("/c24-7/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -157px;background-repeat:no-repeat}
-section .menu-clima ul li a.temperatura{background-image:url("/c24-7/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -192px;background-repeat:no-repeat}
+section .menu-clima ul li a.radar{background-image:url("/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -2px;background-repeat:no-repeat}
+section .menu-clima ul li a.pronostico{background-image:url("/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -31px;background-repeat:no-repeat}
+section .menu-clima ul li a.siata{background-image:url("/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -104px;background-repeat:no-repeat}
+section .menu-clima ul li a.sensores{background-image:url("/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -157px;background-repeat:no-repeat}
+section .menu-clima ul li a.temperatura{background-image:url("/wp-content/themes/clima/images/clima-en-vivo-iconos.png");background-position:4px -192px;background-repeat:no-repeat}
 section #suscripcion img{width:50px}
 section #suscripcion p{color:#0b3c88;display:inline-block;font-family:"Century Gothic";font-size:15px;line-height:1.2em;margin:0 0 0 0;padding:0 0 0 .3em;vertical-align:bottom;}
 section #suscripcion p strong{display:block;font-size:18px;margin:0 0 .5em 0}
@@ -2806,14 +2823,16 @@ section .menu-clima ul li a.vapor{
 		display: none;
 	}
 	.contenedor-ultima-emision .emision{
-		margin: 5px 0 0 0;
+		margin: 15px 0 0;
+    	overflow: hidden;
 	}
-	.contenedor-ultima-emision .emision .emision-title {
+	.contenedor-ultima-emision .emision {
 		text-align: center;
 		display: block;
 		width: 80%;
 	}
-	.contenedor-ultima-emision span .btnHistorial{
+
+	.contenedor-ultima-emision div span .btnHistorial{
 		float: inherit;
 		text-align: center;
 		display: block;

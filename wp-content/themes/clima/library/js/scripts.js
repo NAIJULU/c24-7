@@ -691,7 +691,9 @@ jQuery(document).ready(function($) {
 	/* Fin: Sección Blog */
 
 	/* seccion Emisiones */
-	$("#m-left").click(function(e){
+
+
+ 	$("#m-left").click(function(e){
 
 		e.preventDefault();
 		var mes = parseInt( $("#month").val() );
@@ -866,6 +868,11 @@ jQuery(document).ready(function($) {
 		$(".contenedor-video").html(content);
 
 	});
+
+	$(".datepicker").click(function(){
+		$('#ir-emisiones').removeAttr('disabled');
+	});
+	
 
 	/* para insertar datepicker **/
 	if( $(".datepicker").length )

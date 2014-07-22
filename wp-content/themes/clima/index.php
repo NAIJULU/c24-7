@@ -28,12 +28,12 @@
 						?>
 					</div>
 					<div class="emision">
-						<span class="emision-title">
-							Clima 24/7 – <?php echo the_title(); ?>
-						</span>
-						<span>
-							<a class="btnHistorial" href="emisiones">Ver Historial</a>
-						</span>          			
+						<div class="emision-title">
+							<span>Clima 24/7 – <?php echo the_title(); ?></span>
+						</div>
+						<div class="emision-historial">
+							<span><a class="btnHistorial" href="emisiones">Ver Historial</a></span>
+						</div>          			
 					</div>
 				</div>
 			</div>	

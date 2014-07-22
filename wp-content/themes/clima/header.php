@@ -65,7 +65,7 @@
 							<div class="container-fluid nav-container">
 								
 								<nav role="navigation">
-									<a class="brand hidden-phone hidden-tablet" id="logo" title="<?php echo get_bloginfo('description'); ?>" ></a>
+									<a href="<?php echo home_url(); ?>" class="brand hidden-phone hidden-tablet" id="logo" title="<?php echo get_bloginfo('description'); ?>" ></a>
 									<a data-toggle="collapse" data-target=".nav-collapse" class="brand visible-phone" id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>">Menú</a>
 									
 									<a class="btn btn-navbar hidden-tablet" data-toggle="collapse" data-target=".nav-collapse">
