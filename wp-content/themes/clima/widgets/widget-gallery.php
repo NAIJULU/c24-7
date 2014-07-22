@@ -52,15 +52,27 @@ function mostrarArticulos($args, $instance)
 
 		$post_thumbnail_id	= get_post_thumbnail_id(get_the_ID(), 'full');
 		$post_thumbnail_url	= (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
+
+		$get_post_t         = get_the_post_thumbnail($page->ID, 'thumbnail');
+		if( !empty($get_post_t ) )
+		{
+			$post_thumbnail =  $get_post_t;
+		}
+		else
+		{
+			$post_thumbnail = '<img class="thumb" height="150" src="'.get_template_directory_uri().'/images/dummie-post.png'.'" >';
+		}
+
+
 		$categoria 		= get_the_category();
 		$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 							
 		$item = ($active) ? "item" : "item active";
 		$galerias			= $galerias .'<div class="'.$item.'"><a id="'.get_the_ID().'" href="'.$post_thumbnail_url.'"'. 
 							  'class="fancybox-single" title="'.the_title('','',false).'" '.
-							  'caption="'.get_the_content().'" datePub="'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'" '.
+							  'caption="'.get_the_content().'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" '.
 							  'cat="'.ucwords( strtolower($categoria) ).'" >'.
-							  '<img alt="sizas" class="thumb" src="'.$post_thumbnail_url.'"  ></a></div>';
+							  $post_thumbnail.'</a></div>';
 		$active = true;									
 	   
 	        endif;
