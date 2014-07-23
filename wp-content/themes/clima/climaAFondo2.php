@@ -69,11 +69,11 @@ Template Name: Clima a fondo OK
 
 
             <div id="reporte-estaciones" class="container-function-1"> </a>
-               <?php viewConvenciones("Las estaciones pluviométricas del SIATA ubicadas en 
+               <?php viewConvenciones("<p>Las estaciones pluviométricas del SIATA ubicadas en 
                 diferentes sectores de los municipios del Valle de Aburrá registran minuto  a minuto las lluvias, es decir, la cantidad de agua que se ha recogido y procesado en una estación pluviométrica, en un periodo de 
-                tiempo determinado. Recomendación de monitoreo por acumulado: 
-                El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia para las cuencas hidrográficas que tengan acumulados superiores a 15 mm en un periodo de 3 horas de lluvia. El siguiente umbral es de 30 y 40 mm de acumulado.
-                Recomendaciones por intensidad: El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia cuando los registros superan los umbrales de intensidad para periodos de 10 minutos superiores a 20mm/h, 50 mm/h o 100 mm/h."); ?>
+                tiempo determinado.</p> <p><strong>Recomendación de monitoreo por acumulado:</strong> 
+                El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia para las cuencas hidrográficas que tengan acumulados superiores a 15 mm en un periodo de 3 horas de lluvia. El siguiente umbral es de 30 y 40 mm de acumulado.</p>
+                <p><strong>Recomendaciones por intensidad:</strong> El sistema de alerta temprana de Medellín emite recomendaciones de observación y vigilancia cuando los registros superan los umbrales de intensidad para periodos de 10 minutos superiores a 20mm/h, 50 mm/h o 100 mm/h.</p>"); ?>
 
                 <div id="contenedor-radar" class="fondo-contenido-1">
                   <div id="mapa-pluviometrico"></div>

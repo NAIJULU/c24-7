@@ -1904,20 +1904,23 @@ margin: 0px 20px 0px 20px;
 
 .contenedor-convencion{
 	background-color: #000000;
-	opacity:0.8;
+	opacity:0.9;
 	filter:alpha(opacity=90); /* For IE8 and earlier */
 	width: 			100%;
 	position: 		absolute;
 	z-index: 		10;
 	display: 		none;
+	padding: 6%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
 }
 
 .contenedor-convencion p{
-
 	color:#F2F2F2;
 	font-size: 14px;
-	margin: 8%;
-
 }
 
 .fondo-contenido-1{
