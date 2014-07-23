@@ -6,7 +6,7 @@
 					<?php get_sidebar(); ?>
 			</div>		
 			
-			<div id="main" class="span9 clearfix" role="main">
+			<div id="main" class="span9 clearfix articulo-blog" role="main">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				

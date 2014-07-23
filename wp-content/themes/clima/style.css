@@ -980,6 +980,10 @@ video {
   
  
 }
+.articulo-blog{
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
 
  .titulo-entrada h1{
    color:#FFF;
