@@ -1733,6 +1733,10 @@ h3.titulo-widget-ultima-emision:before {
 	width: 90%;
 	margin: 0px auto 0 auto;
 }
+.widget-home-gallery-head a {
+	display: block;
+	text-align: center;
+}
 .widget-home-gallery-head .widget-home-gallery-head-title{
 	color: #fff;
 }
