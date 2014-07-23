@@ -253,7 +253,7 @@ function mailchimpSF_signup_form($args = array()) {
 
 		<div class="mc_signup_submit modal-footer">
 			<input type="submit" name="mc_signup_submit" class="btn btn-primary" id="mc_signup_submit" value="<?php echo esc_attr($submit_text); ?>" class="button" />
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 		</div><!-- /mc_signup_submit -->
 	
 	
