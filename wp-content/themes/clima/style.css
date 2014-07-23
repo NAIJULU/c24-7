@@ -2863,6 +2863,9 @@ section .menu-clima ul li a.vapor{
 		background-color: #688e00;
 		padding: 10px;
 	}
+	.widget_mailchimpsf_widget{
+		margin-bottom: 30px;
+	}
 
 	.widget-home-gallery-contenedor h3:before{
 		display: none;
