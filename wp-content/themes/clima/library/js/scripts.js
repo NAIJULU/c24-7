@@ -481,8 +481,20 @@ jQuery(document).ready(function($) {
 
 				}
 
-				var hrefMaket        	=	window.location.href.split('c24-7/');
-				var pathMarket	      	=	hrefMaket[0]+'c24-7/clima-a-fondo-2/?'+estacion.id_estacion+'#reporte-estaciones';
+				var href            = location.hostname;
+				var hrefInfo		= null;
+				if( href === 'localhost' )
+				{
+					var href            = this.href.split('c24-7/');
+					var hrefMaket       = window.location.href.split('c24-7/');
+				    hrefInfo 			= hrefMaket[0]+'/c24-7';
+				}
+				else
+				{
+					hrefInfo 			= hrefMaket[0];	
+				}
+
+				var pathMarket	      	=	hrefInfo+'/clima-a-fondo-2/?'+estacion.id_estacion+'#reporte-estaciones';
 				var tweeterMarket 		=	'<a href="https://twitter.com/share" class="twitter-share-button" data-url="'+pathMarket+'" data-count="none">Tweet</a>';
 				var facebookMarket 		=	'<div class="fb-share-button" data-href="'+pathMarket+'" data-width="500" data-type="button"></div>';
 				var myLatLng 			= 	new google.maps.LatLng(estacion.latitud, estacion.longitud);
@@ -917,8 +929,18 @@ jQuery(document).ready(function($) {
 				var cat 			= $(this.element).attr('cat');
 				var caption 		= $(this.element).attr('caption');
 				var id 				= $(this.element).parent().attr('id').split("-");
-				var href            = this.href.split('c24-7/');
-				var pathImage	    = href[0]+'c24-7/galeria/?id='+id[1];
+				var href            = location.hostname;
+				var pathImage 		= null; 
+				if( href == 'localhost' )
+				{
+					href            	= this.href.split('c24-7/');
+					pathImage	    	= href[0]+'c24-7/galeria/?id='+id[1];
+				}
+				else
+				{
+					pathImage	    = 'http://www.'+href+'/galeria/?id='+id[1];
+				}
+
 				var tweeterFancy 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + pathImage + '">Tweet</a> ';
 				var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + pathImage + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
 				var pinterestFancy 	= '<a href="http://pinterest.com/pin/create/button/?url='+encodeURIComponent(pathImage)+'&media='+encodeURIComponent('http://scottgale.com/blogsamples/fancybox-pinterest/'+pathImage)+'&description='+title1+'" class="pin-it-button" count-layout="horizontal">'+'<img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" align="absmiddle"/></a>';
@@ -965,9 +987,16 @@ jQuery(document).ready(function($) {
 				var caption 		= $(this.element).attr('caption');
 
 				var id 				= $(this.element).attr('id');
-				var href            = this.href.split('c24-7/');
-				var pathImage	    = href[0]+'c24-7/galeria/?id='+id[1];
-
+				var href            = location.hostname;
+				if( href === 'localhost' )
+				{
+					var href            = this.href.split('c24-7/');
+					var pathImage	    = href[0]+'c24-7/galeria/?id='+id[1];
+				}
+				else
+				{
+					var pathImage	    = 'http://www.'+href+'/galeria/?id='+id[1];
+				}
 
 				var tweeterFancy 	= '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + pathImage + '">Tweet</a> ';
 				var facebookFancy 	= '<iframe src="//www.facebook.com/plugins/like.php?href=' + pathImage + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
