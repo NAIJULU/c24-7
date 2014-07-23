@@ -27,11 +27,11 @@
 						endif;
 						?>
 					</div>
-					<div class="emision">
-						<div class="emision-title">
+					<div class="emision row-fluid">
+						<div class="emision-title span8">
 							<span>Clima 24/7 – <?php echo the_title(); ?></span>
 						</div>
-						<div class="emision-historial">
+						<div class="emision-historial span4">
 							<span><a class="btnHistorial" href="emisiones">Ver Historial</a></span>
 						</div>          			
 					</div>

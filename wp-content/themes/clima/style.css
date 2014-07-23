@@ -1673,7 +1673,7 @@ h3.titulo-widget-ultima-emision:before {
 	background-image: url(images/icon2-ult-emision_02.png);
 	background-repeat: no-repeat;
 	background-position: 15px center;
-	width: 55%;
+	/*width: 55%;*/
 	float: left;
 }
 
@@ -1689,8 +1689,8 @@ h3.titulo-widget-ultima-emision:before {
 	background-repeat: no-repeat;
 	background-position: 0 center;
 	background-image: url(images/icon2-ult-emision_03.png);
-	width: 20%;
-	height: auto;
+/*	width: 20%;
+*/	height: auto;
 	float: right;	
 }
 .contenedor-ultima-emision .btnHistorial:hover {
@@ -2824,6 +2824,9 @@ section .menu-clima ul li a.vapor{
 	h3.titulo-widget-ultima-emision:before{
 		display: none;
 	}
+	.emision-title{
+		margin-bottom: 30px;
+	}
 	.contenedor-ultima-emision .emision{
 		margin: 15px 0 0;
     	overflow: hidden;
@@ -2831,16 +2834,25 @@ section .menu-clima ul li a.vapor{
 	.contenedor-ultima-emision .emision {
 		text-align: center;
 		display: block;
-		width: 80%;
+		width: 90%;
+		margin: 20px auto 0 auto;
 	}
-
+	.contenedor-ultima-emision .emision-historial{
+		padding: 0px;
+	}
 	.contenedor-ultima-emision div span .btnHistorial{
 		float: inherit;
 		text-align: center;
 		display: block;
-		width: 35%;
-		margin: 21px auto 0 auto;
+		/*width: 35%;*/
+		margin: 0px auto 0 auto;
+		background-repeat: no-repeat;
+		background-position: 20% center;
+		background-image: url(images/icon2-ult-emision_03.png);
+		background-color: #688e00;
+		padding: 10px;
 	}
+
 	.widget-home-gallery-contenedor h3:before{
 		display: none;
 	}
