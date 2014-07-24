@@ -67,8 +67,11 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
   </div>
   <div id="vista-vivo" style="display:none">
+	  
+	  <img src="<?php echo get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png' ; ?>" />
+<!--	  
     <div id="vivo-camara1" class="container-vivo">
-      <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+      <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
       <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_86_TORRESIATA_nororiente.jpg" alt="Vista Noroccidente desde el SIATA "/> 
       </div>
         <div class="description">
@@ -78,7 +81,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
 
     <div id="vivo-camara2" class="container-vivo" style="display:none">
-       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+       <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
       <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_82_TORRESIATA_suroriente.jpg" alt="Vista Suroriental desde el SIATA"/>
       </div>
       <div class="description">
@@ -88,7 +91,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
 
     <div id="vivo-camara3" class="container-vivo" style="display:none">
-       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+       <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
        <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_81_TORRESIATA_oriente.jpg" alt="Torre SIATA Oriente"/>
        </div>
        <div class="description">
@@ -98,7 +101,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
 
     <div id="vivo-camara4" class="container-vivo" style="display:none">
-       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+       <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
        <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_89_TORRESIATA_occidente.jpg" alt="Vista occidental"/> 
        </div>
        <div class="description">
@@ -108,7 +111,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
 
     <div id="vivo-camara5" class="container-vivo" style="display:none">
-       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+       <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
        <div class="img-vivo"> <img src="http://siata.gov.co/ultimasFotosCamaras/ultimacam_99_RADAR_suroccidente.jpg" alt="Suroccidental desde el radar"/> 
        </div>
        <div class="description">
@@ -118,7 +121,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
 
     <div id="vivo-camara6" class="container-vivo" style="display:none">
-       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+       <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
        <div class="img-vivo"> <img src="http://siata.gov.co/ultimasFotosCamaras/ultimacam_98_RADAR_noroccidente.jpg" alt="Noroccidental desde el radar"/>
       </div>
        <div class="description">
@@ -165,9 +168,9 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </a>
     </li>
     </ul>
-  </div>
+  </div> -->
 </div>
-    
+   
     <div id="sensores" style="display:none" class="container-function-1">
       <?php viewConvenciones("<p>El monitoreo de los ríos y quebradas en el Valle de Aburrá se realiza gracias a las estaciones de nivel del SIATA.</p><p> A través de  esta herramienta se puede conocer cuál es el nivel y porcentaje de la canalización que está siendo ocupada por agua. La canalización es la parte que se encuentra en cemento y representa el 100 % de  capacidad en zonas canalizadas.</p><p>  Se recomienda la observación y vigilancia por parte de los habitantes que habitan los sectores cercanos a las estaciones de las quebradas en monitoreo y avisar oportunamente a las autoridades en la línea  de emergencia 123, cualquier obstrucción en el cauce o eventualidad en el nivel de las quebradas.</p>"); ?>
       <?php $cuencasList = getCuencas(); ?>
@@ -212,7 +215,7 @@ $manana = strtotime(date('Y-m-d').' +1 day');
 		  	
 			if( ! verificar($url) )
 			{
-				$url =  bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+				$url = get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
 			}
 			
 		  ?>

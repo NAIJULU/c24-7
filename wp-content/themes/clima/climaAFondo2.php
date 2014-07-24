@@ -56,7 +56,7 @@ Template Name: Clima a fondo OK
 					$url = 'http://www.areadigital.gov.co/ftpclima/sateliteinfrarrojo.gif';
 					if( ! verificar($url) )
 					{
-						$url =  bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+						$url = get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
 					}
 					
 				  ?>
@@ -76,7 +76,7 @@ Template Name: Clima a fondo OK
 					$url = 'http://www.areadigital.gov.co/ftpclima/humedadsatelite.gif';
 					if( ! verificar($url) )
 					{
-						$url =  bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+						$url =  get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
 					}
 					
 				  ?>
