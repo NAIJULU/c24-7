@@ -2402,7 +2402,7 @@ div.main-galeria > article a:hover .contenido{
 	right: 0px;
 	font-size: 700;
 }
-.mc_signup_submit button.btn-default{
+.mc_signup_submit button.btn-default:hover{
 	background: #5a8e20;
 	color: #fff;
 }
