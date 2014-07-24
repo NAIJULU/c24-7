@@ -2375,6 +2375,7 @@ div.main-galeria > article a:hover .contenido{
 	text-transform: uppercase;
 	padding: 5px 15px;
 	text-shadow: none;
+	cursor: pointer;
 }
 #mc_signup .mc_signup_submit input.btn-primary:hover{
 	background: #5A8E20;
@@ -2384,6 +2385,26 @@ div.main-galeria > article a:hover .contenido{
 }
 #post-get{
 	display: none;
+}
+#acepto-terminos ul li{
+	list-style: none;
+}
+.mc_signup_submit button.btn-default{
+	background: #63a328;
+	border-radius: 0;
+	border: 0;
+	text-transform: uppercase;
+	padding: 5px 15px;
+	text-shadow: none;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 700;
+}
+.mc_signup_submit button.btn-default{
+	background: #5a8e20;
+	color: #fff;
 }
 .contenedor-video{
 	height: 0;
