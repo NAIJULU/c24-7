@@ -1323,6 +1323,20 @@ function getCuencas()
 
 }
 
+//Funcion para verificar si existe la página.
+function verificar($url)
+{
+	$id = @fopen($url,'r');
+
+	if($id)
+	{
+		return true;
+	}else
+	{
+		return false;
+	}
+} 
+
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
 

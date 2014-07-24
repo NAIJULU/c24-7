@@ -207,7 +207,16 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     <div id="temperatura-actual" style="display:none" class="container-function-1"> 
       <?php viewConvenciones("Registro actual de los valores de temperatura de las estaciones meteorológicas del SIATA, ubicadas en diferentes sectores de los municipios del Valle de Aburrá."); ?>
       <div id="temperatura" >
-        <img src="http://www.areadigital.gov.co/ftpclima/tempamva.jpg" />
+		  	<?php		
+		  	$url = 'http://www.areadigital.gov.co/ftpclima/tempamva.jpg';
+		  	
+			if( ! verificar($url) )
+			{
+				$url =  bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+			}
+			
+		  ?>
+        <img src="<?php echo $url; ?>" />
       </div> 
     </div>
   </div>

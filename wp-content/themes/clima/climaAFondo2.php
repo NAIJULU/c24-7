@@ -51,7 +51,16 @@ Template Name: Clima a fondo OK
                 <?php viewConvenciones("A partir del espectro visible del satélite GOES se obtiene imágenes de la tierra y las nubes a través del reflejo de la luz solar. Por lo tanto, esta visión sólo es útil durante las horas diurnas.  Las nubes son registradas en color blanco o  gris claro y la tierra y el agua se presentan en colores oscuros."); ?>
 
                 <div id="cont-visible" >
-                  <img src="http://www.areadigital.gov.co/ftpclima/sateliteinfrarrojo.gif" />
+				<?php
+							
+					$url = 'http://www.areadigital.gov.co/ftpclima/sateliteinfrarrojo.gif';
+					if( ! verificar($url) )
+					{
+						$url =  bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+					}
+					
+				  ?>
+                  <img src="<?php echo $url; ?>" />
                 </div> 
             </div>
             <div id="vapor" style="display:none" class="container-function-1">
@@ -62,7 +71,16 @@ Template Name: Clima a fondo OK
 
 
               <div id="cont-vapor" >
-                <img src="http://www.areadigital.gov.co/ftpclima/humedadsatelite.gif" />
+				  	<?php
+							
+					$url = 'http://www.areadigital.gov.co/ftpclima/humedadsatelite.gif';
+					if( ! verificar($url) )
+					{
+						$url =  bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+					}
+					
+				  ?>
+                  <img src="<?php echo $url; ?>" />
               </div> 
 
             </div>
