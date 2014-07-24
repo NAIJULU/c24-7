@@ -13,7 +13,7 @@ $categories = get_categories( $args );
 	<div class="blog-title page-header span12">
 		<?php if (is_category()) { ?>
 		<h1 class="archive_title h2">
-			<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+			<span><?php // _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
 		</h1>
 		<?php } elseif (is_tag()) { ?> 
 		<h1 class="archive_title h2">
@@ -44,35 +44,6 @@ $categories = get_categories( $args );
 <div id="content" class="clearfix row-fluid">
 	<div class="span3">
 		<div class="menu-clima" id="menu-clima">
-
-          <!--  <label class="checkbox">
-				<input id="filtro" class="filtro" type="checkbox" data-filter=".category-medio-ambiente">
-				Medio Ambiente
-			</label>
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-y-autos">
-				Clima y Autos
-			</label>
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-y-ciencia">
-				Clima y Ciencia
-			</label>			
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-y-salud">
-				Clima y Salud
-			</label>		
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-innovacion-sostenible">
-				Innovación Sostenible
-			</label>				
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-clima-novedades">
-				Clima Novedades
-			</label>			
-			<label class="checkbox">
-				<input class="filtro" type="checkbox" data-filter=".category-prevencion">
-				Prevención
-			</label> -->
 
 			<?php
 			foreach ($categories as  $value) 
