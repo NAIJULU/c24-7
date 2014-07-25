@@ -209,7 +209,7 @@
             </div>
             <!-- mientras se solucionan los problemas diplomaticos con el siata -->
             <div>
-              <span><strong>Datos SIATA<strong></span>
+              <span><strong>Datos SIATA</strong></span>
             </div>
           </div>
           <div class="span6 mapa-ciudades hidden-phone"> <img src="wp-content/uploads/mapas/mapa_<?php echo ucfirst($ciudad)?>.png" />   </div>
