@@ -97,6 +97,9 @@ Template Name: Clima a fondo OK
                   <div id="mapa-pluviometrico"></div>
                   <?php if(function_exists('cargarCsvPluviometricas')) { cargarCsvPluviometricas(); } ?>
                 </div>
+                <div>
+                  <span><strong>Datos SIATA</strong></span>
+                </div>
             </div>
 
 
