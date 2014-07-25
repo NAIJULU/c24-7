@@ -491,7 +491,7 @@ jQuery(document).ready(function($) {
 				}
 				else
 				{
-					hrefInfo 			= hrefMaket[0];	
+					hrefInfo 			= 'http://www.'+href;	
 				}
 
 				var pathMarket	      	=	hrefInfo+'/clima-a-fondo-2/?'+estacion.id_estacion+'#reporte-estaciones';
