@@ -2004,6 +2004,12 @@ a.emision-tumb-1 div.emision-titulo{
 	background-image: url(images/iconos-emisiones.png);
 	background-position: 0px -24px;
 	background-repeat: no-repeat;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;	
 }
 a.emision-tumb-2 div.emision-titulo{
 	background-image: url(images/iconos-emisiones.png);
