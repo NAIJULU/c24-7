@@ -238,7 +238,7 @@
     </div>
   </div>
   <div id="temperaturas" class="carousel slide, row-fluid">    
-       <img src="http://www.areadigital.gov.co/ftpclima/tempamva.jpg" />
+       <img src="http://alpha.telemedellin.tv/clima24-7/tempamva.jpg" />
   </div>
 
 <?php 
