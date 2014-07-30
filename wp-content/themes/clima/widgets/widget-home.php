@@ -207,6 +207,10 @@
                 </div>
               </div>
             </div>
+            <!-- mientras se solucionan los problemas diplomaticos con el siata -->
+            <div>
+              <span style="font-size: 14px;color: black;"><strong>Datos SIATA</strong></span>
+            </div>
           </div>
           <div class="span6 mapa-ciudades hidden-phone"> <img src="wp-content/uploads/mapas/mapa_<?php echo ucfirst($ciudad)?>.png" />   </div>
         </div>
@@ -234,7 +238,7 @@
     </div>
   </div>
   <div id="temperaturas" class="carousel slide, row-fluid">    
-       <img src="http://www.areadigital.gov.co/ftpclima/tempamva.jpg" />
+       <img src="http://alpha.telemedellin.tv/clima24-7/tempamva.jpg" />
   </div>
 
 <?php 

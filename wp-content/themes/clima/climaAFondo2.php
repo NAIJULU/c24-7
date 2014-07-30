@@ -73,7 +73,7 @@ Template Name: Clima a fondo OK
               <div id="cont-vapor" >
 				  	<?php
 							
-					$url = 'http://www.areadigital.gov.co/ftpclima/humedadsatelite.gif';
+					$url = 'http://alpha.telemedellin.tv/clima24-7/humedadsatelite.gif';
 					if( ! verificar($url) )
 					{
 						$url =  get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
@@ -96,6 +96,9 @@ Template Name: Clima a fondo OK
                 <div id="contenedor-radar" class="fondo-contenido-1">
                   <div id="mapa-pluviometrico"></div>
                   <?php if(function_exists('cargarCsvPluviometricas')) { cargarCsvPluviometricas(); } ?>
+                </div>
+                <div>
+                  <span><strong>Datos SIATA</strong></span>
                 </div>
             </div>
 

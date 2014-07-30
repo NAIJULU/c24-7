@@ -200,6 +200,10 @@
 					                  </div>
 				                </div>
 				              </div>
+				              <!-- mientras se solucionan los problemas diplomaticos con el siata -->
+				              <div>
+				              	<span style="font-size: 14px;color: black;"> <strong>Datos SIATA</strong></span>
+				              </div>
 				            </div>
 				       </div>
 			          <div class="span5 mapa-ciudades hidden-phone">

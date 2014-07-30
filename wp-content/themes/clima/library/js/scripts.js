@@ -271,7 +271,8 @@ jQuery(document).ready(function($) {
 			$(".contenedor-convencion").css("display","none");
 			$("#clima-vivo .item-clima a").css("background-color","");
 			$("#clima-vivo .item-clima a").removeClass("menu-activo");
-			$(".item-clima "+"#"+id).css("background-color","rgba(255,255,255,0.3)");
+			$(".item-clima "+"#"+id).addClass("menu-activo");
+			//$(".item-clima "+"#"+id).css("background-color","rgba(255,255,255,0.3)");
 			$(item).show();
 		}
 	});
@@ -390,7 +391,8 @@ jQuery(document).ready(function($) {
 			}
 			$("#clima-fondo .item-clima a").removeClass("menu-activo");
 			$("#clima-fondo .item-clima a").css("background-color","");
-			$(".item-clima "+"#"+id).css("background-color","rgba(255,255,255,0.3)");
+			$(".item-clima "+"#"+id).addClass("menu-activo");
+			//$(".item-clima "+"#"+id).css("background-color","rgba(255,255,255,0.3)");
 
 			$(item).show();
 
@@ -416,7 +418,8 @@ jQuery(document).ready(function($) {
 					$(".contenedor-convencion").css("display","none");
 					$(itemHash).show();
 					$("#clima-fondo .item-clima a").removeClass("menu-activo");
-					$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
+					//$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
+					$("a[href='"+itemHash+"']").addClass("menu-activo");
 
 					if( itemHash == "#reporte-estaciones" )
 					{
@@ -491,7 +494,7 @@ jQuery(document).ready(function($) {
 				}
 				else
 				{
-					hrefInfo 			= hrefMaket[0];	
+					hrefInfo 			= 'http://www.'+href;	
 				}
 
 				var pathMarket	      	=	hrefInfo+'/clima-a-fondo-2/?'+estacion.id_estacion+'#reporte-estaciones';
@@ -700,7 +703,8 @@ jQuery(document).ready(function($) {
 				$(".contenedor-convencion").css("display","none");
 				$(itemHash).show();
 				$("#clima-vivo .item-clima a").removeClass("menu-activo");
-				$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
+				//$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
+				$("a[href='"+itemHash+"']").addClass("menu-activo");
 			}
 		}
 	}

@@ -1935,7 +1935,7 @@ div.titulo-emisiones p{
 	margin: 0px;
 	background-image: url(images/h2Lineas2.png);
 	background-position: center center;
-	color: #80ad08;
+	color: #fff;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 22px;
 	text-align: center;
@@ -2004,6 +2004,12 @@ a.emision-tumb-1 div.emision-titulo{
 	background-image: url(images/iconos-emisiones.png);
 	background-position: 0px -24px;
 	background-repeat: no-repeat;
+	box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;	
 }
 a.emision-tumb-2 div.emision-titulo{
 	background-image: url(images/iconos-emisiones.png);
@@ -2083,14 +2089,14 @@ a.emision-tumb-3 div.emision-titulo{
 	border-radius: 4px;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
-	font-size: 18px;
-	padding: 15px;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	-ms-box-sizing: border-box;	
-	padding: 22px 9px;
+    font-size: 14px;
+    height: 45px;
+    padding: 11px 15px;
 	border-radius: 0;
 }
 #bar-fecha .bar-fecha-control-2 a.btn-ir{
