@@ -79,7 +79,7 @@ while ($the_query->have_posts() ) : $the_query->the_post();
 	      							'<div class="contenido">'.
 		      						'<span class="categorias">'.strtolower($categoria).'</span>'.
 		      						'<h1>'.the_title('','',false).'</h1>'.
-		      						'<time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').'de '.get_the_time('F').' del '.get_the_time('Y').'</time>'.
+		      						'<time datetime="'.get_the_time('Y-m-j').'" pubdate>'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'</time>'.
 	      							'</div></a></article>';
      }
         endif;
