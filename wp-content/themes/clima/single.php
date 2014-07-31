@@ -10,11 +10,17 @@
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<?php if( verifyCategory(get_the_category($post->ID) , 'glosario') ) 
+					<?php 
+					if( verifyCategory(get_the_category($post->ID) , 'glosario') ) 
 					{ 
 						header("Location: http://localhost/c24-7/glosario?id=".$post->ID);
 						die();
-					} 
+					}
+					else if ( verifyCategory(get_the_category($post->ID) , 'faq') )
+					{
+						header("Location: http://localhost/c24-7/faq?id=".$post->ID);
+						die();	
+					}
 
 					?>
 
