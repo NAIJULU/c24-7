@@ -1337,6 +1337,32 @@ function verificar($url)
 	}
 } 
 
+/*
+* Compara con el slug
+*/
+function verifyCategory($blogCategory, $pattern)
+{
+
+
+  if( !empty($blogCategory) && !empty($pattern) && count($blogCategory) > 0 )
+  {
+
+    foreach ($blogCategory as $key => $value) 
+    {
+      if( strtolower($value->slug) == strtolower($pattern) )
+      {
+        return true;
+      }
+
+    }
+  }
+  else
+  {
+    return false;
+  }
+
+}
+
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
 

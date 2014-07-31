@@ -9,10 +9,17 @@
 			<div id="main" class="span9 clearfix articulo-blog" role="main">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				
-					<?php if( function_exists('countArticle') ){ countArticle( $post->ID,get_the_category() ); } ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix, post-individual'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 					
+					<?php if( verifyCategory(get_the_category($post->ID) , 'glosario') ) 
+					{ 
+						header("Location: http://localhost/c24-7/glosario?id=".$post->ID);
+						die();
+					} 
+
+					?>
+
+					<?php if( function_exists('countArticle') ){ countArticle( $post->ID,get_the_category() ); } ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix, post-individual'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">			
 					<header>
 						
 						<!-- deje la linea de la imagen destacada por que aja uno no sabe -->
