@@ -55,7 +55,7 @@ $typeCollapse = '';
 								<?php echo get_the_content(); ?>
 								<div id="share">
 									<span class="social-button">
-										<div class="fb-share-button" data-href="<?php echo $url_faq ?>" data-width="500" data-type="button"></div>
+										<div class="fb-share-button" data-href="<?php echo get_permalink() ?>" data-width="500" data-type="button"></div>
 									</span>
 									<span class="social-button">
 										<a href="https://twitter.com/share" class="twitter-share-button" 

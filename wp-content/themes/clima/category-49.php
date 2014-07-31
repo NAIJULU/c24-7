@@ -56,7 +56,12 @@ $typeCollapse          = '';
               <?php echo get_the_content(); ?>
               <div id="share">
                 <span class="social-button">
-                  <div class="fb-share-button" data-href="<?php echo $url_glosario ?>" data-width="500" data-type="button"></div>
+                 <!-- <span class="facebook">
+                    <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<?php echo get_permalink(); ?>&amp;p[title]=<?php echo ucwords(the_title('','',false)); ?>&amp;p[summary]=<?php echo substr(strip_tags (get_the_content()), 0, 200) ?>">
+                      Facebook
+                    </a> -->
+                  </span>
+                  <div class="fb-share-button" data-href="<?php echo get_permalink() ?>" data-width="500" data-type="button"></div>
                 </span>
                 <span class="social-button">
                   <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $url_glosario ?>" 
