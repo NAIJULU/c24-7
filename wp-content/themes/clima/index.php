@@ -50,7 +50,7 @@
 <div class="row-fluid">
 
 	<div class="galeriaHome span12">
-		<h2>Últimos Articulos</h2>
+		<h2>Últimos Artículos</h2>
 	</div>
 	<?php
 	$args = array('cat'=>'2', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '4' );

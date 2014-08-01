@@ -50,7 +50,7 @@ $categories = get_categories( $args );
 					<div class="blog-title page-header span12">
 								<?php if (is_category()) { ?>
 									<h1 class="archive_title h2">
-										<span><?php _e("Posts Categorized:", "bonestheme"); ?></span> <?php single_cat_title(); ?>
+										<span><?php single_cat_title(); ?></span> 
 									</h1>
 								<?php } elseif (is_tag()) { ?> 
 									<h1 class="archive_title h2">
