@@ -111,7 +111,7 @@ $content1 = apply_filters('the_content', $content1);
 
 					<a id="tumb-<?php the_ID(); ?>" href="#" class="btn-tumb emision-tumb-<?php echo $i ?> span4">
 						<div class="img-emision-tumb">
-							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>"/> 
+							<img src="<?php echo get_thumbnail_youtube( $content1 ,'0'); ?>"/> 
 						</div>
 						<input type="hidden" class="emision-tumb-title" value ="<?php the_title() ?>" />
 						<input type="hidden" class="emision-tumb-content" value = '<?php echo get_the_content(); ?>' />

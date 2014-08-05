@@ -51,7 +51,7 @@
 			<div id="mini-<?php the_ID(); ?>" class="clearfix">					
 				<a href="/c24-7/emisiones" id="videoMinEmision">
 					<div class="img-min-tumb">
-							<img src="<?php echo get_thumbnail_youtube( $content1 ); ?>" />
+							<img src="<?php echo get_thumbnail_youtube( $content1, '0' ); ?>" />
 					</div>
 				</a>
 			</div>
