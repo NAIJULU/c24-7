@@ -728,24 +728,23 @@ class Bootstrap_Walker extends Walker_Nav_Menu {
         wp_register_script('modernizr',get_template_directory_uri() . '/library/js/modernizr.full.min.js',array('jquery'),'1.2' );
 
     // JQUERY UI
-
-        wp_register_script('jquery_ui','/wp-includes/js/jquery/ui/jquery.ui.datepicker.min.js', array('jquery'),'1.2' );
         wp_register_script('jquery_ui_core', '/wp-includes/js/jquery/ui/jquery.ui.core.min.js', array('jquery'), '1.2' );
-
+        wp_register_script('jquery_ui','/wp-includes/js/jquery/ui/jquery.ui.datepicker.min.js', array('jquery'),'1.2' );
+    
         wp_register_style('css_query_ui', '/wp-content/themes/clima/library/css/jquery-ui.min.css', '1.2' );
-        wp_register_style('css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.core.min.css', '1.2' );
+        //wp_register_style('css_query_ui_core', '/wp-content/themes/clima/library/css/jquery.ui.core.min.css', '1.2' );
         wp_register_style('css_query_ui_datepicker', '/wp-content/themes/clima/library/css/jquery.ui.datepicker.min.css', '1.2' );
 
     // fancyBox 
 
         wp_register_script('jquery_mousewheel', '/wp-includes/js/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js', array('jquery'), '1.2' );
         wp_register_script('fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
-        wp_register_script('fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.js', array('jquery'), '1.0.5' );
-        wp_register_script('fancybox_pack', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
-        wp_register_script('fancybox_media', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-media.js', array('jquery'), '1.0.6' );
+      //  wp_register_script('fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.js', array('jquery'), '1.0.5' );
+      //  wp_register_script('fancybox_pack', '/wp-includes/js/fancyBox/source/jquery.fancybox.pack.js', array('jquery'), '2.1.5' );
+       // wp_register_script('fancybox_media', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-media.js', array('jquery'), '1.0.6' );
 
         wp_register_style('css_fancybox', '/wp-includes/js/fancyBox/source/jquery.fancybox.css', '2.1.5' );
-        wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
+      //  wp_register_style('css_fancybox_buttons', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-buttons.css', '1.0.5' );
         wp_register_style('css_fancybox_thumbs', '/wp-includes/js/fancyBox/source/helpers/jquery.fancybox-thumbs.js', '1.0.7' );
 
     //default
@@ -758,18 +757,18 @@ class Bootstrap_Walker extends Walker_Nav_Menu {
         wp_enqueue_script('jquery_ui');
         wp_enqueue_script('jquery_ui_core');
         wp_enqueue_style('css_query_ui');
-        wp_enqueue_style('css_query_ui_core');
+        //wp_enqueue_style('css_query_ui_core');
         wp_enqueue_style('css_query_ui_datepicker');
 
    // jquery fancyBox
         wp_enqueue_script('jquery_mousewheel');
         wp_enqueue_script('fancybox');
-        wp_enqueue_script('fancybox_buttons');
-        wp_enqueue_script('fancybox_pack');
+      //  wp_enqueue_script('fancybox_buttons');
+        //wp_enqueue_script('fancybox_pack');
         wp_enqueue_script('fancybox_media');
 
         wp_enqueue_style('css_fancybox');
-        wp_enqueue_style('css_fancybox_buttons');
+       // wp_enqueue_style('css_fancybox_buttons');
         wp_enqueue_style('css_fancybox_thumbs');
 
         
