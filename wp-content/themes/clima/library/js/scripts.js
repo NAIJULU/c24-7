@@ -404,32 +404,30 @@ jQuery(document).ready(function($) {
 	});
 
 	/* URL MANAGER CLIMA A FONDO */
-		if( $("#clima-fondo").length > 0)
+	if( $("#clima-fondo").length > 0)
+	{
+		if( window.location.hash )
 		{
-			if( window.location.hash )
+			var itemHash = window.location.hash;
+
+			if( $(itemHash).css("display") == "none" )
 			{
-				var itemHash = window.location.hash;
-
-				if( $(itemHash).css("display") == "none" )
+				$("#visible").hide('fast');
+				$("#vapor").hide('fast');
+				$("#reporte-estaciones").hide('fast');
+				$(".contenedor-convencion").css("display","none");
+				$(itemHash).show();
+				$("#clima-fondo .item-clima a").removeClass("menu-activo");
+				$("a[href='"+itemHash+"']").addClass("menu-activo");
+				if( itemHash == "#reporte-estaciones" )
 				{
-					$("#visible").hide('fast');
-					$("#vapor").hide('fast');
-					$("#reporte-estaciones").hide('fast');
-					$(".contenedor-convencion").css("display","none");
-					$(itemHash).show();
-					$("#clima-fondo .item-clima a").removeClass("menu-activo");
-					//$("a[href='"+itemHash+"']").css("background-color","rgba(255,255,255,0.3)");
-					$("a[href='"+itemHash+"']").addClass("menu-activo");
-
-					if( itemHash == "#reporte-estaciones" )
-					{
-						setGoogleMapsEstaciones();
-					}
+					setGoogleMapsEstaciones();
 				}
 			}
+		}
 			//google.maps.event.addDomListener(window, "load", setGoogleMapsEstaciones);
 			setGoogleMapsEstaciones();
-		}
+	}
 
 
 	function setGoogleMapsEstaciones()
@@ -582,100 +580,7 @@ jQuery(document).ready(function($) {
 
 	/**
 	*fin clima a fondo
-	**/
-	/* Inicio: Sección Blog */
-	$(".filtro").change(function(){
-		if($("#medio-ambiente").is(':checked')){
-			if(filtro.indexOf(".category-medio-ambiente") == -1){
-				filtro.push(".category-medio-ambiente");
-			}			
-		}
-		else{
-			var i = filtro.indexOf(".category-medio-ambiente");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}
-		if($("#clima-autos").is(':checked')){
-			if(filtro.indexOf(".category-clima-y-autos") == -1){
-				filtro.push(".category-clima-y-autos");
-			}
-		}
-		else{
-			var i = filtro.indexOf(".category-clima-y-autos");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}
-		if($("#clima-ciencia").is(':checked')){
-			if(filtro.indexOf(".category-clima-y-ciencia") == -1){
-				filtro.push(".category-clima-y-ciencia");
-			}
-		}
-		else{
-			var i = filtro.indexOf(".category-clima-y-ciencia");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}	
-		if($("#clima-salud").is(':checked')){
-			if(filtro.indexOf(".category-clima-y-salud") == -1){
-				filtro.push(".category-clima-y-salud");
-			}
-		}
-		else{
-			var i = filtro.indexOf(".category-clima-y-salud");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}
-		if($("#innovacion-sostenible").is(':checked')){
-			if(filtro.indexOf(".category-innovacion-sostenible") == -1){
-				filtro.push(".category-innovacion-sostenible");
-			}
-		}
-		else{
-			var i = filtro.indexOf(".category-innovacion-sostenible");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}
-		if($("#clima-novedades").is(':checked')){
-			if(filtro.indexOf(".category-clima-novedades") == -1){
-				filtro.push(".category-clima-novedades");
-			}
-		}
-		else{
-			var i = filtro.indexOf(".category-clima-novedades");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}
-		if($("#prevencion").is(':checked')){
-			if(filtro.indexOf(".category-prevencion") == -1){
-				filtro.push(".category-prevencion");
-			}
-		}
-		else{
-			var i = filtro.indexOf(".category-prevencion");
-			if(i != -1){
-				filtro.splice(i, 1);
-			}			
-		}	
-		var valor = "", separador = "";
-		for(i=0; i<filtro.length; i++){
-			
-			if(i == 0 || i == filtro.length)
-				separador = "";
-			else
-				separador =", ";
-
-			valor = valor + separador + filtro[i];
-
-		}
-		$("#size option[value='"+valor+"']").attr("selected",true).change();
-	});
-
+	
 	/* Blogs videos adaptables */
 	if( $("#main").length > 0 && $("p iframe").length > 0 && $(".contenedor-video").length == 0 )
 	{
@@ -712,173 +617,6 @@ jQuery(document).ready(function($) {
 
 	/* seccion Emisiones */
 
-
- 	$("#m-left").click(function(e){
-
-		e.preventDefault();
-		var mes = parseInt( $("#month").val() );
-
-		if(mes == null)
-		{
-			throw "Mes null";
-			return  false;
-		}
-		else
-		{
-			if( (mes - 1) == 0 )
-			{
-				mes = 12;
-			}
-			else
-			{
-				mes = mes - 1;
-			}
-
-			$("#month").val(mes);
-			$("#label-mes").html(meses[mes-1]);
-
-		}
-
-	});
-
-	$("#m-right").click(function(e){
-
-		e.preventDefault();
-		var mes = parseInt( $("#month").val() );
-
-		if(mes == null)
-		{
-			throw "Mes null";
-			return  false;
-		}
-		else
-		{
-			if( (mes + 1) == 13 )
-			{
-				mes = 1;
-			}
-			else
-			{
-				mes = mes + 1;
-			}
-
-			$("#month").val(mes);
-			$("#label-mes").html(meses[mes-1]);
-		}
-
-	});
-
-	$("#d-left").click(function(e){
-
-		e.preventDefault();
-		var dia = parseInt( $("#day").val() );
-
-		if(dia == null)
-		{
-			throw "Dia null";
-			return  false;
-		}
-		else
-		{
-			if( (dia - 1) == 0 )
-			{
-				dia = 31;
-			}
-			else
-			{
-				dia = dia - 1;
-			}
-
-			$("#day").val(dia);
-			$("#label-day").html(dia);
-		}
-	});
-
-
-	$("#d-right").click(function(e){
-
-		e.preventDefault();
-		var dia = parseInt( $("#day").val() );
-
-		if(dia == null)
-		{
-			throw "Dia null";
-			return  false;
-		}
-		else
-		{
-			if( (dia + 1) == 32 )
-			{
-				dia = 1;
-			}
-			else
-			{
-				dia = dia + 1;
-			}
-
-			$("#day").val(dia);
-			$("#label-day").html(dia);
-		}
-	});
-
-	$("#y-left").click(function(e){
-
-		e.preventDefault();
-		var postYear = parseInt( $("#year").val() );
-
-		if(postYear == null)
-		{
-			throw "Año null";
-			return  false;
-		}
-		else
-		{
-			if( (postYear - 1) == 1990 )
-			{
-				var f = new Date();
-				var yActual = f.getFullYear();
-				postYear = yActual;
-			}
-			else
-			{
-				postYear = postYear - 1;
-			}
-
-			$("#year").val(postYear);
-			$("#label-year").html(postYear);
-		}
-
-	});
-
-	$("#y-right").click(function(e){
-
-		e.preventDefault();
-		var postYear = parseInt( $("#year").val() );
-
-		if(postYear == null)
-		{
-			throw "Año null";
-			return  false;
-		}
-		else
-		{
-			var f = new Date();
-			var yActual = f.getFullYear();
-
-			if( (postYear + 1) == yActual + 1 )
-			{
-				postYear = 1991;
-			}
-			else
-			{
-				postYear = postYear + 1;
-			}
-
-			$("#year").val(postYear);
-			$("#label-year").html(postYear);
-		}
-	});
-
 	$(".btn-tumb").click(function(e){
 		e.preventDefault();
 
@@ -887,7 +625,7 @@ jQuery(document).ready(function($) {
 		$(".page-header h1").html(title);
 		$(".contenedor-video").html(content);
 
-	});
+	});  
 
 	$(".datepicker").click(function(){
 		$('#ir-emisiones').removeAttr('disabled');
