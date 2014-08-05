@@ -397,7 +397,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .baja-noche, .baja-madrugada{
-	background-image: url(images/BAJANOCHE.png);
+	background-image: url(images/BAJANOCHE.PNG);
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;
@@ -405,7 +405,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .media-noche, .media-madrugada {
-	background-image: url(images/MEDIANOCHE.png);
+	background-image: url(images/MEDIANOCHE.PNG);
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;
@@ -430,7 +430,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .media-dia{
-	background-image: url(images/MEDIA.png);
+	background-image: url(images/MEDIA.PNG);
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;
@@ -438,7 +438,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .alta-dia{
-	background-image: url(images/MEDIAALTADIA.png);
+	background-image: url(images/MEDIAALTADIA.PNG);
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;
@@ -606,7 +606,6 @@ div.en-vivo .numMin {
 	box-shadow: inset 0 0 30px rgba(255,255,255,0.7);
 	margin: 10px 0 0 0;
 	max-width: 970px;
-	padding: 10px 0px 10px 0px;
 	text-align: center;
 
 }
@@ -619,6 +618,8 @@ div.en-vivo .numMin {
 	padding: 3px 3px;
 	text-transform: uppercase;
 	border-radius: 4px;
+	height: 25px;
+    line-height: 26px;
 }
 #pronosticos .ciudades li:hover, #temperaturas .ciudades li:hover {
 	color: ##114db0;
