@@ -53,7 +53,7 @@ Template Name: Clima a fondo OK
                 <div id="cont-visible" >
 				<?php
 							
-					$url = 'http://www.areadigital.gov.co/ftpclima/sateliteinfrarrojo.gif';
+					$url = 'http://alpha.telemedellin.tv/clima24-7/SateliteInfrarrojo.gif';
 					if( ! verificar($url) )
 					{
 						$url = get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
