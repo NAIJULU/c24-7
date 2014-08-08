@@ -208,7 +208,8 @@ jQuery(document).ready(function($) {
 			mapTypeId: google.maps.MapTypeId.HYBRID
 		}
 		var map = new google.maps.Map(document.getElementById("mapa"), mapOptions);		
-		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
+		//var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
+		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_05_240_DBZH.kml', {preserveViewport: true});
 		georssLayer.setMap(map);
 	});
 
@@ -238,7 +239,8 @@ jQuery(document).ready(function($) {
 			mapTypeId: google.maps.MapTypeId.HYBRID
 		}
 		var map = new google.maps.Map(document.getElementById("mapa"), mapOptions);		
-		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
+		//var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
+		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_05_240_DBZH.kml', {preserveViewport: true});
 		georssLayer.setMap(map);
 	});
 
