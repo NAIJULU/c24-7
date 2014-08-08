@@ -53,7 +53,7 @@ Template Name: Clima a fondo OK
                 <div id="cont-visible" >
 				<?php
 							
-					$url = 'http://alpha.telemedellin.tv/clima24-7/SateliteInfrarrojo.gif';
+					$url = 'http://alpha.telemedellin.tv/clima24-7/infrarrojosatelite.gif';
 					if( ! verificar($url) )
 					{
 						$url = get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
@@ -71,7 +71,7 @@ Template Name: Clima a fondo OK
 
 
               <div id="cont-vapor" >
-				  	<?php
+				  	<?php 
 							
 					$url = 'http://alpha.telemedellin.tv/clima24-7/humedadsatelite.gif';
 					if( ! verificar($url) )
