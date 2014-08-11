@@ -40,44 +40,54 @@ function cargarCsvPluviometricas()
 
             $path = "http://www.siata.gov.co/TM45/LinkSiataTM_Pluviometricas.csv";
             $i = 0;
+            $csv = null;
             $file = file_get_contents($path, true);
             $lineas = explode("\n", $file);
 
-            foreach ($lineas as $linea)
+            if( $file)
             {
-              if(!empty($linea))
-              {
 
-                  $linea  = explode(',', $linea);
-          
-                  foreach ($linea as $campo)
-                  {
-                      $csv[$i][] = trim($campo);  
-                  }
-                  $i = $i + 1;
-                  
+              foreach ($lineas as $linea)
+              {
+                if(!empty($linea))
+                {
+
+                    $linea  = explode(',', $linea);
+            
+                    foreach ($linea as $campo)
+                    {
+                        $csv[$i][] = trim($campo);  
+                    }
+                    $i = $i + 1;
+                    
+                }
               }
+ 
+            }
+            else
+            {
+              $msg = "Fallo en la lectura del CSV ,". $path." ";
+              throw new Exception($msg, 1);
             }
 
-          
             if(empty($csv))
             {
-              $msg = "Error en el archivo CSV, verifique que el archivo tenga el formato correcto.";
+              $msg = "Error en el archivo CSV, ". $path."verifique que el archivo tenga el formato correcto.";
               throw new Exception($msg, 1);
             }
             else
             {
               saveInfo($csv);
-              $msg = "Archivo CSV cargado con exito. ";
+              $msg = "Archivo desde ".$path." cargado con exito. ";
             }
 
           } catch (Exception $e) 
           {
-            $msg = "Error al intentar leer el archivo CSV.";
+             $msg = "Error al intentar leer el archivo CSV desde".$path." .";
           }
 
 
-          saveLog('carga automatica',$msg);
+          saveLog('carga automatica Estaciones Pluviometricas',$msg);
 }
 
 

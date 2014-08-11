@@ -21,6 +21,9 @@ require_once('library/shortcodes.php');
 
 // Custom Backend Footer
 add_filter('admin_footer_text', 'bones_custom_admin_footer');
+date_default_timezone_set('America/Bogota');
+setlocale(LC_ALL, 'es_ES.UTF-8');
+
 function bones_custom_admin_footer() {
 	echo '<span id="footer-thankyou">Developed by <a href="http://320press.com" target="_blank">320press</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
 }
@@ -1280,7 +1283,7 @@ function saveLog($evento,$msg)
   $data = array();
   $data['evento'] = $evento;
   $data['msg']    = $msg;
-  $data['fecha']  = date('Y/m/d h:i:s A');
+  $data['fecha']  = date('Y/m/d H:i:s');
 
 
 
