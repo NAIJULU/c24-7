@@ -23,6 +23,8 @@ function pluginRecursos()
   $cam2  = get_option('cam2');
   $cam3  = get_option('cam3');
   $cam4  = get_option('cam4');
+  $cam5  = get_option('cam5');
+  $cam6  = get_option('cam6');
 
   if( isset( $_POST['temperatura'] ) OR isset( $_POST['inflarojo'] ) OR isset( $_POST['vapor'] ) OR
       isset( $_POST['cam1'] ) OR isset( $_POST['cam2'] ) OR isset( $_POST['cam3'] ) OR isset( $_POST['cam4'] ) )
@@ -35,6 +37,8 @@ function pluginRecursos()
     update_option( 'cam2', $_POST['cam2'] );
     update_option( 'cam3', $_POST['cam3'] );
     update_option( 'cam4', $_POST['cam4'] );
+    update_option( 'cam5', $_POST['cam5'] );
+    update_option( 'cam6', $_POST['cam6'] );
   }
 
 ?>
@@ -89,6 +93,16 @@ function pluginRecursos()
                   <span class="r-field">Enlace Cámara 4</span>
                   <input type="text"  id="cam4" name="cam4" value="<?php echo get_option( 'cam4' )  ?>" >
                   <input type="button" onClick="urlValidator('cam4')">
+                </div>
+                <div class="elem-cam">
+                  <span class="r-field">Enlace Cámara 5</span>
+                  <input type="text"  id="cam5" name="cam5" value="<?php echo get_option( 'cam5' )  ?>" >
+                  <input type="button" onClick="urlValidator('cam5')">
+                </div>
+                <div class="elem-cam">
+                  <span class="r-field">Enlace Cámara 6</span>
+                  <input type="text"  id="cam6" name="cam6" value="<?php echo get_option( 'cam6' )  ?>" >
+                  <input type="button" onClick="urlValidator('cam6')">
                 </div>
 
               </div>
