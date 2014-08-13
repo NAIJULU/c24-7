@@ -217,8 +217,8 @@ $manana = strtotime(date('Y-m-d').' +1 day');
       <?php viewConvenciones("Registro actual de los valores de temperatura de las estaciones meteorológicas del SIATA, ubicadas en diferentes sectores de los municipios del Valle de Aburrá."); ?>
       <div id="temperatura" >
 		  	<?php		
-		  	$url = 'http://alpha.telemedellin.tv/clima24-7/paginaweb/tempamva.jpg';
-		  	
+		  //	$url = 'http://alpha.telemedellin.tv/clima24-7/paginaweb/tempamva.jpg';
+		  	 $url = get_option('temperatura');
 			if( ! verificar($url) )
 			{
 				$url = get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';

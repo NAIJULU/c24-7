@@ -1,0 +1,41 @@
+#REcursos {
+	margin-top: 50px;
+}
+
+.r-element{
+	margin-top: 10px;
+}
+
+.r-element .r-field{
+	float: left;
+	width: 150px;
+}
+
+.r-element input[type='text'] {
+	width: 500px;
+	font-family: "Times New Roman";
+    font-size: 12px;
+}
+
+#r-line{
+	margin: 20px 10px ; 
+}
+
+#r-cams{
+	margin-top: 50px;
+}
+
+#r-cams .elem-cam {
+	margin-top: 10px;
+}
+
+#r-cams .elem-cam .r-field{
+	float: left;
+	width: 150px;
+}
+
+#r-cams .elem-cam input[type='text']{
+	width: 500px;
+	font-family: "Times New Roman";
+    font-size: 12px;
+}
