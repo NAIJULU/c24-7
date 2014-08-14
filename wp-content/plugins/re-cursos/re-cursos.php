@@ -27,7 +27,8 @@ function pluginRecursos()
   $cam6  = get_option('cam6');
 
   if( isset( $_POST['temperatura'] ) OR isset( $_POST['inflarojo'] ) OR isset( $_POST['vapor'] ) OR
-      isset( $_POST['cam1'] ) OR isset( $_POST['cam2'] ) OR isset( $_POST['cam3'] ) OR isset( $_POST['cam4'] ) )
+      isset( $_POST['cam1'] ) OR isset( $_POST['cam2'] ) OR isset( $_POST['cam3'] ) OR isset( $_POST['cam4'] ) 
+      OR isset( $_POST['cam5'] ) OR isset( $_POST['cam6'] )  )
   {
     update_option( 'temperatura', $_POST['temperatura'] );   
     update_option( 'inflarojo', $_POST['inflarojo'] );
@@ -55,17 +56,17 @@ function pluginRecursos()
               <div id="r-temperatura" class="r-element">
                 <span class="r-field"> Enlace de temperatura </span>
                 <input type="text" id="temperatura" name="temperatura" value="<?php echo get_option( 'temperatura' ) ?>">
-                <input type="button" onClick="urlValidator('temperatura')">
+                <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('temperatura')">
               </div>
               <div id="r-inflarrojo" class="r-element">
                 <span class="r-field"> Enlace de inflarojo </span>
                 <input type="text" id="inflarojo" name="inflarojo" value="<?php echo get_option( 'inflarojo' )  ?>" >
-                <input type="button" onClick="urlValidator('inflarojo')">
+                <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('inflarojo')">
               </div>
               <div id="r-vapor" class="r-element">
                 <span class="r-field"> Enlace de vapor de agua </span>
                 <input type="text" id="vapor" name="vapor" value="<?php echo get_option( 'vapor' )  ?>" >
-                <input type="button" onClick="urlValidator('vapor')">
+                <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('vapor')">
               </div>
 
               <div id="r-line">
@@ -77,32 +78,32 @@ function pluginRecursos()
                 <div class="elem-cam">
                   <span class="r-field">Enlace Cámara 1</span>
                   <input type="text"  id="cam1" name="cam1"  value="<?php echo get_option( 'cam1' )  ?>" >
-                  <input type="button" onClick="urlValidator('cam1')">
+                  <input  class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam1')">
                 </div>
                 <div class="elem-cam">
                   <span class="r-field">Enlace Cámara 2</span>
                   <input type="text"  id="cam2" name="cam2" value="<?php echo get_option( 'cam2' )  ?>" >
-                  <input type="button" onClick="urlValidator('cam2')">
+                  <input class="r-button-v" class="r-button-v" value="Validar" type="button" onClick="urlValidator('cam2')">
                 </div>
                 <div class="elem-cam">
                   <span class="r-field">Enlace Cámara 3</span>
                   <input type="text"  id="cam3" name="cam3" value="<?php echo get_option( 'cam3' )  ?>" >
-                  <input type="button" onClick="urlValidator('cam3')">
+                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam3')">
                 </div>
                 <div class="elem-cam">
                   <span class="r-field">Enlace Cámara 4</span>
                   <input type="text"  id="cam4" name="cam4" value="<?php echo get_option( 'cam4' )  ?>" >
-                  <input type="button" onClick="urlValidator('cam4')">
+                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam4')">
                 </div>
                 <div class="elem-cam">
                   <span class="r-field">Enlace Cámara 5</span>
                   <input type="text"  id="cam5" name="cam5" value="<?php echo get_option( 'cam5' )  ?>" >
-                  <input type="button" onClick="urlValidator('cam5')">
+                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam5')">
                 </div>
                 <div class="elem-cam">
                   <span class="r-field">Enlace Cámara 6</span>
                   <input type="text"  id="cam6" name="cam6" value="<?php echo get_option( 'cam6' )  ?>" >
-                  <input type="button" onClick="urlValidator('cam6')">
+                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam6')">
                 </div>
 
               </div>

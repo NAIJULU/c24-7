@@ -18,8 +18,8 @@ function urlValidator(id)
 		} 
 		else
 		{
-			jQuery('#'+id).css('border-color','');
-			jQuery('#'+id).attr('title','');	
+			jQuery('#'+id).css('border-color','rgba(63, 240, 78, 1)');
+			jQuery('#'+id).attr('title','200 OK');	
 		}
 
 	});
