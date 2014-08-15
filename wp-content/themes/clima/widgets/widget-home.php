@@ -238,7 +238,15 @@
     </div>
   </div>
   <div id="temperaturas" class="carousel slide, row-fluid">    
-       <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/tempamva.jpg" />
+      <?php   
+         $url = get_option('temperatura');
+      if( ! verificar($url) )
+      {
+        $url = get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png';
+      }
+      
+      ?>
+      <img src="<?php echo $url; ?>" />
   </div>
 
 <?php 
