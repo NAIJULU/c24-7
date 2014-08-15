@@ -3395,3 +3395,14 @@ section .menu-clima ul li a.vapor{
   line-height: 20px !important;
   margin-bottom: 0px !important;
 }
+
+.breadcrumb
+{
+	 background-color: transparent !important;
+}
+
+.breadcrumb span
+{
+	margin: 0px 0px 5px 5px;
+	color: rgb(255,​ 255,​ 255);
+}

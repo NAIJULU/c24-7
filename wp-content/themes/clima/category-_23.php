@@ -1,31 +1,5 @@
 <?php
 
-/*
-function theme_name_scripts() {
-	//wp_enqueue_style( 'style-name', get_stylesheet_uri() );
-	 wp_enqueue_script('jquery_ui');
-	 wp_enqueue_script('jquery_ui_core');
-	 wp_enqueue_style('css_query_ui');
-	 wp_enqueue_style('css_query_ui_core');
-	 wp_enqueue_style('css_query_ui_datepicker');
-
-	 // jquery fancyBox
-	 wp_enqueue_script('jquery_mousewheel');
-	 wp_enqueue_script('fancybox');
-	 wp_enqueue_script('fancybox_buttons');
-	 wp_enqueue_script('fancybox_pack');
-	 wp_enqueue_script('fancybox_media');
-
-	 wp_enqueue_style('css_fancybox');
-	 wp_enqueue_style('css_fancybox_buttons');
-	 wp_enqueue_style('css_fancybox_thumbs');
-
-}
-
-add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
-
-*/
-
 // ID DE LOS ARTICULOS TIPO BLOG.
 $blogId		= 23;
 
@@ -35,16 +9,9 @@ $args = array(
   );
 
 $categories = get_categories( $args );
+
 ?>
 <?php get_header(); ?>
-
-<!--
-<div>
-	<a class="fancybox" rel="group" href="../wp-content/uploads/2014/04/bliss.jpg" title="no me importa..com"><img src="../wp-content/uploads/2014/04/bliss.jpg" alt="" /><h1>titulo de la vuelta</h1></a>
-	<a class="fancybox" rel="group" href="../wp-content/uploads/2014/04/paisajesHD.jpg" title="no me importa..com"><img src="../wp-content/uploads/2014/04/paisajesHD.jpg" alt="" /></a>
-	<a class="fancybox" rel="group" href="../wp-content/uploads/2014/04/leprosy-death_halifaxcollect.net_2-990x1024.jpg" title="no me importa..com"><img src="../wp-content/uploads/2014/04/leprosy-death_halifaxcollect.net_2-990x1024.jpg" alt="" /></a>
-</div>
--->
 
             <div class="clearfix row-fluid">
 					<div class="blog-title page-header span12">
@@ -73,10 +40,7 @@ $categories = get_categories( $args );
 								    	<span><?php _e("Yearly Archives:", "bonestheme"); ?>:</span> <?php the_time('Y'); ?>
 								    </h1>
 								<?php } ?>
-
-							
 					</div>
-
              </div>
 
 			<div id="content" class="clearfix row-fluid">
@@ -87,18 +51,19 @@ $categories = get_categories( $args );
 						foreach ($categories as  $value) 
 						{
 					?>
-				            <label class="checkbox">
-								<input id="filtro" class="filtro" type="checkbox" data-filter= "<?php echo '.category-'.strtolower($value->slug) ?>" >
+				        	<label class="checkbox">
+								<a href='<?php echo home_url().'/actualidad/'.$value->slug ?>' id="filtro" class="filtro" >
 									<?php echo $value->name ?>
+								</a>
 							</label>
-			
 					<?php				
 						}					
 					?>
 
 					<label class="checkbox">
-						<input class="filtro" type="checkbox" data-filter=".todos">
-						Todos
+						<a href='#' class="filtro" type="checkbox">
+							Todos
+						</a>
 					</label>
 
 					<select id="size" name="filter by" class="isotopenav" style="display:none"></select> 
@@ -194,14 +159,11 @@ $categories = get_categories( $args );
 					<?php endif; ?>
 					</div> 		
 					<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-							<div class="row pagination">
-								<ul class="span12">
-									<li class="span10 more-post-gallery"><?php //next_posts_link("VER MÁS") ?><a id="pagina"  rel=1 >VER MÁS</a></li>
-									<li class="span2 subir"><a href="#" title="Inicio">&#9650;</a></li>
-								</ul>
+					
+						<div class="row pagination">
+							<?php page_navi(); // use the page navi function ?>
 						</div>
-						<?php //page_navi(); // use the page navi function ?>
-
+					
 					<?php } else { // if it is disabled, display regular wp prev & next links ?>
 						<nav class="wp-prev-next">
 							<ul class="clearfix">

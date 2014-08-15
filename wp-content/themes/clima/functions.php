@@ -1365,6 +1365,30 @@ function verifyCategory($blogCategory, $pattern)
 
 }
 
+function the_breadcrumb($id='')
+{
+	if( empty($id) )
+	{
+		$emvarias = get_the_category();
+		$category = get_category( $emvarias[0]->cat_ID );
+	} 
+	else
+	{
+		$category = get_category( $id );
+	}
+	print_r($category);
+	
+	echo '<div class="breadcrumb" >';
+	if( $category->parent > 0 && isset($category->parent))
+	{
+		$categoryParent = get_category( $category->parent );
+		echo '<a id="cat-'.$categoryParent->cat_ID.'" href="'.esc_url(get_category_link($categoryParent->cat_ID)).'" class="item-breadcrumb">'. ucwords(strtolower($categoryParent->name)) .'</a> <span> &#187; </span> ';
+	} 
+	
+	echo '<a id="cat-'.$category->cat_ID.'" href="'.esc_url(get_category_link($category->cat_ID)).'" class="item-breadcrumb">'. ucwords(strtolower($category->name)) .'</a>';
+	echo '</div>';
+}
+
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');
 
