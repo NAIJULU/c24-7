@@ -1365,19 +1365,29 @@ function verifyCategory($blogCategory, $pattern)
 
 }
 
+
 function the_breadcrumb($id='')
 {
 	if( empty($id) )
 	{
-		$emvarias = get_the_category();
-		$category = get_category( $emvarias[0]->cat_ID );
-	} 
+		$current_cat = get_the_category();
+    $current_cat_count = count($current_cat);
+
+    if( $current_cat_count > 1 )
+    {
+      $category = get_category( $current_cat[ $current_cat_count - 1 ]->cat_ID );  
+    }
+    else
+    {
+      $category = get_category( $current_cat[0]->cat_ID );  
+    } 
+
+   }
 	else
 	{
 		$category = get_category( $id );
 	}
-	print_r($category);
-	
+
 	echo '<div class="breadcrumb" >';
 	if( $category->parent > 0 && isset($category->parent))
 	{
@@ -1388,6 +1398,8 @@ function the_breadcrumb($id='')
 	echo '<a id="cat-'.$category->cat_ID.'" href="'.esc_url(get_category_link($category->cat_ID)).'" class="item-breadcrumb">'. ucwords(strtolower($category->name)) .'</a>';
 	echo '</div>';
 }
+
+
 
 include_once(TEMPLATEPATH.'/blogConfig.php');
 include_once(TEMPLATEPATH.'/viewConvenciones.php');

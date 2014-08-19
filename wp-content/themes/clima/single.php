@@ -1,11 +1,12 @@
 <?php get_header();?>
 			
-			<div id="content" class=" row-fluid">
-			
+		<div id="content" class=" row-fluid">
+			<div class="span12" >
+				<?php the_breadcrumb() ?>
+			</div>
 			<div class="span3">
-					<?php get_sidebar(); ?>
-			</div>		
-			
+				<?php get_sidebar(); ?>
+			</div>	
 			<div id="main" class="span9 clearfix articulo-blog" role="main">
 
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

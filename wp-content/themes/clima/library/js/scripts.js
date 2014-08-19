@@ -80,8 +80,9 @@ function metodoC(data)
 	document.getElementById('all').click();
 }
 // as the page loads, call these scripts
-/*
+
 jQuery(document).ready(function($) {
+	/*
 	var $container = $('#main-articulos');
 	$container.isotope({
 		animationOptions: {
@@ -667,8 +668,7 @@ jQuery(document).ready(function($) {
 	/* Fancy box */
 	if( $(".fancybox").length )
 	{
-		$(".isotope-item:not(.isotope-hidden) .fancybox")
-		.fancybox({
+		$(".fancybox").fancybox({
 
 			afterLoad   : function() {
 

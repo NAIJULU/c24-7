@@ -1,24 +1,29 @@
-<?php
-// ID DE LOS ARTICULOS TIPO BLOG.
+<?php get_header(); ?>
 
+<?php
+
+// ID DE LOS ARTICULOS TIPO BLOG.
 $current_category = get_the_category();
 if($current_category[0]->parent > 0 )
 {
-	$blogId		= $current_category[0]->parent ;
+	$parent = $current_category[0]->parent ;
 }
 else
 {
-	$current_category[0]->cat_ID;
+	$parent	= $current_category[0]->cat_ID;
 }
 
 $args = array(
   'orderby' => 'name',
-  'parent'  => $blogId
-  );
+  'parent'  => $parent
+ );
   
 $categories = get_categories( $args );
+
 ?>
-<?php get_header(); ?>
+
+
+
 <div class="clearfix row-fluid">
 	<div class="blog-title page-header span12">
 		<?php if (is_category()) { ?>
@@ -58,7 +63,7 @@ $categories = get_categories( $args );
 <div id="content" class="clearfix row-fluid">
 	<div class="span3">
 		<div class="menu-clima" id="menu-clima">
-			<?php if( $current_category[0]->cat_ID == 23  || $current_category[0]->parent ==23): ?>
+			<?php if( $current_category[0]->cat_ID == 23  || $current_category[0]->parent == 23 ): ?>
 					<p class="texto-filtro">Filtra las imágenes por categoría</p>
 			<?php else: ?>
 				<p class="texto-filtro">Categorias</p>
@@ -67,8 +72,16 @@ $categories = get_categories( $args );
 			<?php
 			foreach ($categories as  $value) 
 			{	
-				?>
-				<label class="checkbox">
+				if( $value->cat_ID == $current_category[0]->cat_ID )
+				{
+					$activo = ' menu-activo';
+				}
+				else
+				{
+					$activo = '';
+				}
+			?>
+				<label class="checkbox<?php echo $activo ?>">
 					<a href='<?php echo home_url().'/'.$value->slug ?>' id="filtro" class="filtro" >
 						<?php echo $value->name ?>
 					</a>
@@ -77,7 +90,17 @@ $categories = get_categories( $args );
 			}					
 			?>
 			<label class="checkbox">
-				<a href='#' class="filtro" type="checkbox">
+				<?php 
+					if( $current_category[0]->cat_ID == $parent )
+					{
+						$activo = ' menu-activo';
+					}
+					else
+					{
+						$activo = '';
+					}
+				?>
+				<a href="<?php get_category_link($current_category[0]->cat_ID) ?>" class="filtro<?php echo $activo ?>" type="checkbox">
 					Todos
 				</a>
 			</label>
@@ -97,13 +120,15 @@ $categories = get_categories( $args );
 	</div>
 			
 			<div id="main" class="span9 clearfix" role="main">
-				<?php if( $current_category[0]->cat_ID == 23 || $current_category[0]->parent == 23 ) : ?>
+				<?php if( $current_category[0]->cat_ID == 23 || $current_category[0]->parent == 23 ) : 
+
+						$cont = 1;
+				?>
 				
-					<div id="main-articulos">
+				<div id="main-articulos" class="span12 clearfix">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<?php	if(in_category($current_category[0]->term_id)) : ?>
-					
+					<?php	if(in_category($current_category[0]->cat_ID)) : ?>				
 					<?php	
 					/* Para sacar etiquetas HTML del contenido */
 						$content 		= get_the_content();
@@ -113,17 +138,21 @@ $categories = get_categories( $args );
 
 					//	$url 			= wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; 
 					//	$url    		= (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; 				
-						$categoria 		= get_the_category();
+						$categoria 		= get_the_category($post->ID);
 						$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
-								
-					?>
+				 
+					if( $cont == 1 ) 
+					{
+						echo '<span span="clearfix row-fluid">';
+					}
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
+					?>
+					<article id="post-<?php the_ID(); ?>" role="article" class="blog-thumb span4">
 						<a href="<?php echo $post_thumbnail_url  ?>" rel="bookmark" class="galeria-item fancybox" title="<?php the_title_attribute(); ?>" 
 							caption="<?php echo $content ;  ?>" datePub="<?php echo get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y') ?>" 
 							cat="<?php echo ucwords( strtolower($categoria) ) ;  ?>" >
 
-								<!-- key isotope --><span class="categorias"><?php echo strtolower($categoria);  ?> <!-- end key isotope --></span>
+								<span class="categorias"><?php echo strtolower($categoria);  ?> <!-- end key isotope --></span>
 
 								<figure class="img-galeria"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>"  class="thumb" /></figure>
 								<div class="contenido">
@@ -135,10 +164,27 @@ $categories = get_categories( $args );
 
 								</div>	
 						</a>
+					<?php 
+					if( $cont >= 3 ) 
+					{
+						echo '</span>';
+						$cont = 1;
+					}
+					else
+					{
+						$cont = $cont + 1 ;
+					}
+					?>
 					</article>
 					<?php endif; ?>
 					<?php endwhile; ?>									
-					
+					<?php 
+					if( $cont < 3)
+					  {
+					  	echo '</span>';
+					  }
+
+					  ?>
 					<?php else : ?>
 					
 					<article id="post-not-found">
@@ -153,7 +199,7 @@ $categories = get_categories( $args );
 					</article>
 					<?php endif; ?>
 					
-			<? else: ?>
+			<?php else: ?>
 					<?php
 						if( isset($_GET['id']) )
 						{
@@ -163,8 +209,11 @@ $categories = get_categories( $args );
 								}
 						} 
 					?>
-					<div id="main-articulos">
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<div id="main-articulos" class="span12 clearfix">
+						<?php if (have_posts()) : while (have_posts()) : the_post(); 
+
+								$cont = 1;
+						?>
 						
 							<?php	if(in_category($current_category[0]->cat_ID)) : ?>
 							<?php	
@@ -173,12 +222,18 @@ $categories = get_categories( $args );
 
 							$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
 							$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
-							?>
+				 
+							if( $cont == 1 ) 
+							{
+								echo '<span span="clearfix row-fluid">';
+							}
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" class="blog-thumb">
+						?>
+
+							<article id="post-<?php the_ID(); ?>" role="article" class="blog-thumb span4">
 								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">					
 									<?php 
-									$categoria 		= get_the_category();
+									$categoria 		= get_the_category($post->ID);
 									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 									?>
 									<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
@@ -191,15 +246,32 @@ $categories = get_categories( $args );
 												$content = substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; 
 												$content      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
 												echo $content;
-												?> 
+											?> 
 										<span>Leer Más +<span></p>
 									</div>	
 								</a>
 							</article>
+						<?php 
+							if( $cont >= 3 ) 
+							{
+								echo '</span>';
+								$cont = 1;
+							}
+							else
+							{
+								$cont = $cont + 1 ;
+							}
+						?>	
 						<?php endif; ?>
-						<?php endwhile; ?>									
-						<?php else : ?>
+						<?php endwhile; ?>		
+					<?php 
+					if( $cont < 3)
+					  {
+					  	echo '</span>';
+					  }
 
+					  ?>
+						<?php else : ?>
 						<article id="post-not-found">
 							<header>
 								<h1><?php _e("No Posts Yet", "bonestheme"); ?></h1>
@@ -212,10 +284,7 @@ $categories = get_categories( $args );
 						</article>
 					<?php endif; ?>
 					
-			<? endif; ?>
-				
-			
-			
+			<?php endif; ?>
 		</div> 		
 		<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 		<?php page_navi(); // use the page navi function ?>
@@ -230,5 +299,4 @@ $categories = get_categories( $args );
 	</div> <!-- end #main -->
 
 </div> <!-- end #content -->
-
 <?php get_footer(); ?>
