@@ -3,19 +3,17 @@
 <?php
 
 // ID DE LOS ARTICULOS TIPO BLOG.
-$current_category = get_the_category();
-if($current_category[0]->parent > 0 )
-{
-	$parent = $current_category[0]->parent ;
-}
-else
-{
-	$parent	= $current_category[0]->cat_ID;
-}
+$cat_cod 		  = get_cat_ID( single_cat_title("", false) );
+$args = array(
+  'orderby' => 'ID',
+  'include' => $cat_cod
+ );
+$current_category =  get_categories( $args );
 
+$cat_menu = ($current_category[0]->category_parent != 0 ) ? $current_category[0]->category_parent : $cat_cod;
 $args = array(
   'orderby' => 'name',
-  'parent'  => $parent
+  'parent'  => $cat_menu
  );
   
 $categories = get_categories( $args );
@@ -57,13 +55,13 @@ $categories = get_categories( $args );
 
 </div>
 
-<?php the_breadcrumb() ?>
+<?php the_breadcrumb( $cat_cod ); ?>
 
 
 <div id="content" class="clearfix row-fluid">
 	<div class="span3">
 		<div class="menu-clima" id="menu-clima">
-			<?php if( $current_category[0]->cat_ID == 23  || $current_category[0]->parent == 23 ): ?>
+			<?php if( $cat_cod == 23 ): ?>
 					<p class="texto-filtro">Filtra las imágenes por categoría</p>
 			<?php else: ?>
 				<p class="texto-filtro">Categorias</p>
@@ -72,7 +70,7 @@ $categories = get_categories( $args );
 			<?php
 			foreach ($categories as  $value) 
 			{	
-				if( $value->cat_ID == $current_category[0]->cat_ID )
+				if( $value->cat_ID == $cat_cod )
 				{
 					$activo = ' menu-activo';
 				}
@@ -82,7 +80,7 @@ $categories = get_categories( $args );
 				}
 			?>
 				<label class="checkbox<?php echo $activo ?>">
-					<a href='<?php echo home_url().'/'.$value->slug ?>' id="filtro" class="filtro" >
+					<a href='<?php echo esc_url(get_category_link($value->cat_ID)) ?>' id="filtro" class="filtro" >
 						<?php echo $value->name ?>
 					</a>
 				</label>
@@ -91,7 +89,7 @@ $categories = get_categories( $args );
 			?>
 			<label class="checkbox">
 				<?php 
-					if( $current_category[0]->cat_ID == $parent )
+					if( $current_category[0]->category_parent == 0 )
 					{
 						$activo = ' menu-activo';
 					}
@@ -100,13 +98,13 @@ $categories = get_categories( $args );
 						$activo = '';
 					}
 				?>
-				<a href="<?php get_category_link($current_category[0]->cat_ID) ?>" class="filtro<?php echo $activo ?>" type="checkbox">
+				<a href="<?php get_category_link($cat_cod) ?>" class="filtro<?php echo $activo ?>" type="checkbox">
 					Todos
 				</a>
 			</label>
 									
 		</div> 
-		<?php if( $current_category[0]->cat_ID == 23): ?>
+		<?php if( $cat_cod == 23): ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mix-galeria') ) : ?>
 			<?php endif; ?>
 	         <div class="widget_mailchimpsf_widget" >
@@ -120,7 +118,7 @@ $categories = get_categories( $args );
 	</div>
 			
 			<div id="main" class="span9 clearfix" role="main">
-				<?php if( $current_category[0]->cat_ID == 23 || $current_category[0]->parent == 23 ) : 
+				<?php if( $cat_cod == 23 ) : 
 
 						$cont = 1;
 				?>
@@ -128,7 +126,7 @@ $categories = get_categories( $args );
 				<div id="main-articulos" class="span12 clearfix">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<?php	if(in_category($current_category[0]->cat_ID)) : ?>				
+					<?php	if(in_category($cat_cod)) : ?>				
 					<?php	
 					/* Para sacar etiquetas HTML del contenido */
 						$content 		= get_the_content();
@@ -215,7 +213,7 @@ $categories = get_categories( $args );
 								$cont = 1;
 						?>
 						
-							<?php	if(in_category($current_category[0]->cat_ID)) : ?>
+							<?php	//if(in_category($current_category[0]->cat_ID)) : ?>
 							<?php	
 							/* Para sacar etiquetas HTML del contenido */
 							$content = get_the_content();
@@ -262,7 +260,7 @@ $categories = get_categories( $args );
 								$cont = $cont + 1 ;
 							}
 						?>	
-						<?php endif; ?>
+						<?php //endif; ?>
 						<?php endwhile; ?>		
 					<?php 
 					if( $cont < 3)

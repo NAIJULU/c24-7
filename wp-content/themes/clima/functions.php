@@ -1366,36 +1366,35 @@ function verifyCategory($blogCategory, $pattern)
 }
 
 
-function the_breadcrumb($id='')
+function the_breadcrumb($cat_cod='')
 {
-	if( empty($id) )
+	if( !empty($cat_cod) )
 	{
-		$current_cat = get_the_category();
-    $current_cat_count = count($current_cat);
-
-    if( $current_cat_count > 1 )
-    {
-      $category = get_category( $current_cat[ $current_cat_count - 1 ]->cat_ID );  
-    }
-    else
-    {
-      $category = get_category( $current_cat[0]->cat_ID );  
-    } 
-
-   }
+		$args = array(
+		  'orderby' => 'ID',
+		  'include' => $cat_cod
+		 ); 
+		 $category = get_categories( $args );
+	}
 	else
 	{
-		$category = get_category( $id );
+		$category =  get_the_category();
 	}
 
 	echo '<div class="breadcrumb" >';
-	if( $category->parent > 0 && isset($category->parent))
+	if( $category[0]->category_parent > 0 && isset($category[0]->category_parent))
 	{
-		$categoryParent = get_category( $category->parent );
-		echo '<a id="cat-'.$categoryParent->cat_ID.'" href="'.esc_url(get_category_link($categoryParent->cat_ID)).'" class="item-breadcrumb">'. ucwords(strtolower($categoryParent->name)) .'</a> <span> &#187; </span> ';
+			
+		$args = array(
+		  'orderby' => 'ID',
+		  'include' => $category[0]->category_parent
+		 ); 
+		 
+		$categoryParent = get_categories( $args );
+		echo '<a id="cat-'.$categoryParent[0]->cat_ID.'" href="'.esc_url(get_category_link($categoryParent[0]->cat_ID)).'" class="item-breadcrumb">'. ucwords(strtolower($categoryParent[0]->name)) .'</a> <span> &#187; </span> ';
 	} 
 	
-	echo '<a id="cat-'.$category->cat_ID.'" href="'.esc_url(get_category_link($category->cat_ID)).'" class="item-breadcrumb">'. ucwords(strtolower($category->name)) .'</a>';
+	echo '<a id="cat-'.$category[0]->cat_ID.'" href="'.esc_url(get_category_link($category[0]->cat_ID)).'" class="item-breadcrumb">'.$category[0]->name.'</a>';
 	echo '</div>';
 }
 
