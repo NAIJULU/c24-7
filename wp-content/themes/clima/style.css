@@ -430,7 +430,7 @@ input, textarea, select, .uneditable-input {
 }
 
 .media-dia{
-	background-image: url(images/MEDIA.PNG);
+	background-image: url(images/MEDIA.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: contain;

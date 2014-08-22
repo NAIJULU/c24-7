@@ -17,7 +17,6 @@ $args = array(
  );
   
 $categories = get_categories( $args );
-
 ?>
 
 
@@ -104,7 +103,7 @@ $categories = get_categories( $args );
 			</label>
 									
 		</div> 
-		<?php if( $cat_cod == 23): ?>
+		<?php if( $cat_cod == 23 || $current_category[0]->category_parent == 23): ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mix-galeria') ) : ?>
 			<?php endif; ?>
 	         <div class="widget_mailchimpsf_widget" >
@@ -118,7 +117,7 @@ $categories = get_categories( $args );
 	</div>
 			
 			<div id="main" class="span9 clearfix" role="main">
-				<?php if( $cat_cod == 23 ) : 
+				<?php if( $cat_cod == 23 || $current_category[0]->category_parent == 23) : 
 
 						$cont = 1;
 				?>
@@ -126,24 +125,20 @@ $categories = get_categories( $args );
 				<div id="main-articulos" class="span12 clearfix">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<?php	if(in_category($cat_cod)) : ?>				
+			
 					<?php	
 					/* Para sacar etiquetas HTML del contenido */
 						$content 		= get_the_content();
 
 						$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
-						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';
-
-					//	$url 			= wp_get_attachment_url( get_the_post_thumbnail($post->ID,'medium') ) ; 
-					//	$url    		= (!empty($url)) ? $url : get_template_directory_uri().'/images/dummie-post.png'; 				
+						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';			
 						$categoria 		= get_the_category($post->ID);
-						$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
+						$categoria 		= $categoria[0]->name;	
 				 
-					if( $cont == 1 ) 
-					{
-						echo '<span span="clearfix row-fluid">';
-					}
-
+						if( $cont == 1 ) 
+						{
+							echo '<span span="clearfix row-fluid">';
+						}
 					?>
 					<article id="post-<?php the_ID(); ?>" role="article" class="blog-thumb span4">
 						<a href="<?php echo $post_thumbnail_url  ?>" rel="bookmark" class="galeria-item fancybox" title="<?php the_title_attribute(); ?>" 
@@ -174,7 +169,7 @@ $categories = get_categories( $args );
 					}
 					?>
 					</article>
-					<?php endif; ?>
+
 					<?php endwhile; ?>									
 					<?php 
 					if( $cont < 3)
@@ -212,8 +207,6 @@ $categories = get_categories( $args );
 
 								$cont = 1;
 						?>
-						
-							<?php	//if(in_category($current_category[0]->cat_ID)) : ?>
 							<?php	
 							/* Para sacar etiquetas HTML del contenido */
 							$content = get_the_content();
@@ -232,7 +225,7 @@ $categories = get_categories( $args );
 								<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">					
 									<?php 
 									$categoria 		= get_the_category($post->ID);
-									$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
+									$categoria 		= $categoria[0]->name;
 									?>
 									<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
 									<div class="contenido">
@@ -260,7 +253,6 @@ $categories = get_categories( $args );
 								$cont = $cont + 1 ;
 							}
 						?>	
-						<?php //endif; ?>
 						<?php endwhile; ?>		
 					<?php 
 					if( $cont < 3)

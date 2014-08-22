@@ -71,9 +71,9 @@ $manana = strtotime(date('Y-m-d').' +1 day');
   </div>
   <div id="vista-vivo" style="display:none">
 	  
-	  <img src="<?php echo get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png' ; ?>" />
-<!--	  
-    <div id="vivo-camara1" class="container-vivo">
+	<!--  <img src="<?php //echo get_bloginfo('wpurl').'/wp-content/themes/clima/images/broken.png' ; ?>" /> -->
+
+  <!--  <div id="vivo-camara1" class="container-vivo">
       <?php //viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
       <div class="img-vivo"> <img src="http://www.siata.gov.co/ultimasFotosCamaras/ultimacam_86_TORRESIATA_nororiente.jpg" alt="Vista Noroccidente desde el SIATA "/> 
       </div>
@@ -172,6 +172,63 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </li>
     </ul>
   </div> -->
+  
+  
+  <div id="vivo-camara1" class="container-vivo">
+      <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+      <div class="img-vivo"> <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/camoccidente.jpg"/> 
+      </div>
+        <div class="description">
+          <h4>Vista Occidental </h4>
+          <p>Calasanz - San Cristobal</p>
+        </div>
+    </div>
+
+    <div id="vivo-camara2" class="container-vivo" style="display:none">
+       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+      <div class="img-vivo"> <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/camnororiente.jpg" />
+      </div>
+      <div class="description">
+        <h4>Nororiental desde el radar </h4>
+        <p></p>
+      </div>
+    </div>
+
+    <div id="vivo-camara3" class="container-vivo" style="display:none">
+       <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+       <div class="img-vivo"> <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/camsuroriente.jpg" alt="Torre SIATA Oriente"/>
+       </div>
+       <div class="description">
+          <h4>Suroriental</h4>
+          <p></p>
+        </div>
+    </div>
+
+    <div id="controles-vivo">
+      <ul>
+        <li>
+         <a id="btnMostrarCam1" href="vivo-camara1" class="thumb-camara">
+          <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/camoccidente.jpg" alt="Vista Noroccidente" />
+          <p>Vista Occidental</p>
+        </a>
+      </li>
+      <li>
+        <a id="btnMostrarCam2" href="vivo-camara2" class="thumb-camara">
+          <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/camnororiente.jpg" alt="Vista Suroriental" />
+          <p>Vista Nororiental</p>
+        </a>
+      </li>
+      <li>
+       <a id="btnMostrarCam3" href="vivo-camara3" class="thumb-camara">
+        <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/camsuroriente.jpg" alt="Torre SIATA Oriente" />
+        <p>Vista Suroriental</p>
+      </a>
+    </li>
+    </ul>
+  </div> 
+   
+  
+   
 </div>
    
     <div id="sensores" style="display:none" class="container-function-1">
