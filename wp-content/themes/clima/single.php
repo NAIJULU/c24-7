@@ -1,11 +1,17 @@
 <?php get_header();?>
 			
 		<div id="content" class=" row-fluid">
-			<div class="span12" >
+		<!--	<div class="clearfix row-fluid" >
 				<?php the_breadcrumb() ?>
-			</div>
+			</div> -->
 			<div class="span3">
-				<?php get_sidebar(); ?>
+				<div>
+					<?php the_breadcrumb() ?>
+				</div>
+				<div>
+					<?php get_sidebar(); ?>
+				</div>	
+				
 			</div>	
 			<div id="main" class="span9 clearfix articulo-blog" role="main">
 
