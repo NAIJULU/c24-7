@@ -234,7 +234,8 @@
   </div>
   <div id="radar">
     <div id="contenedor-radar">
-      <div id="mapa"> </div>
+     <!--  <div id="mapa"> </div> -->
+      <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/radaranimado.gif" />
     </div>
   </div>
   <div id="temperaturas" class="carousel slide, row-fluid">    
