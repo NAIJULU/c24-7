@@ -53,7 +53,7 @@ function mostrarArticulos($args, $instance)
 		$post_thumbnail_id	= get_post_thumbnail_id(get_the_ID(), 'full');
 		$post_thumbnail_url	= (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-post.png';
 
-		$get_post_t         = get_the_post_thumbnail($page->ID, 'thumbnail');
+		$get_post_t         = get_the_post_thumbnail(get_the_ID(), 'thumbnail');
 		if( !empty($get_post_t ) )
 		{
 			$post_thumbnail =  $get_post_t;

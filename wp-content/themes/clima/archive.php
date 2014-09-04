@@ -235,7 +235,8 @@ $categories = get_categories( $args );
 										</header>
 										<p><?php
 												$content = substr(wp_filter_nohtml_kses( $content ), 0,80).'...'; 
-												$content      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
+												//$content      = preg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
+												$content      = preg_replace("/((http|https|www)[^\s]+)/","", $content);
 												echo $content;
 											?> 
 										<span>Leer Más +<span></p>
