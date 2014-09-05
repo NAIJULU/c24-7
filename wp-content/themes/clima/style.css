@@ -3405,7 +3405,7 @@ section .menu-clima ul li a.vapor{
 	}
 	#s {
 		width: 210px;
-		margin-bottom: 6px;
+		margin-bottom: 0px;
 	}
 	.widget_search input {
 		width: 209px;
@@ -3438,19 +3438,26 @@ section .menu-clima ul li a.vapor{
 	height: 60px;
 }
 .widget-container .form-search{
-	padding-top: 30px;
+	padding-top: 15px;
 }
-
+input.search-query{
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
 #search .form-search .btn-search{
 	width: 32px;
 	height: 32px;
 	border: none;
-	margin-left: 30px;
+	margin-left: 0px;
 	background: url('images/search1.png');
 	background-repeat: no-repeat;
-
 }
-
+div#search {
+	background: #A5CE39;
+	width: 80%;
+	float: right;
+}
 .tipeinfo{
 	color: #FFF;
 }
