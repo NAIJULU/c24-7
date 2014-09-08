@@ -53,7 +53,7 @@
 		<h2>Últimos Artículos</h2>
 	</div>
 	<?php
-	$args = array('cat'=>'2', 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '4' );
+	$args = array('cat'=>'2', 'posts_per_page' => '4' );
 	$query = new WP_Query( $args );
 
 	?>
@@ -62,9 +62,7 @@
 			<?php
 			if ($query->have_posts()) :
 				while ($query->have_posts() ) : $query->the_post();	
-			if(in_category(2)) : ?>
-			<?php	
-			/* Para sacar etiquetas HTML del contenido */
+
 			$content = get_the_content();
 
 			$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
@@ -77,7 +75,8 @@
 					$categoria 		= get_the_category();
 					$categoria 		= ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;	
 					?>
-					<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" /></figure>
+					<figure class="img-post"><img src="<?php echo $post_thumbnail_url ?>" alt="<?php the_title(); ?>" class="thumb" />
+					</figure>
 					<div class="contenido">
 						<header ><!-- key isotope --><span class="categorias"><?php echo $categoria;  ?> <!-- end key isotope --></span>
 							<h1><?php the_title(); ?></h1>
@@ -88,13 +87,13 @@
 								$content      = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]","", $content);
 								echo $content;
 							?> 
-							<span>Leer Más +<span></p>
-							</div>	
-						</a>
-					</article>
-				<?php endif; ?>
-				<?php endwhile; ?>									
-			<?php endif; ?>
+							<span>Leer Más +<span>
+						</p>
+					</div>	
+				</a>
+			</article>
+				<?php endwhile; ?>
+			<?php endif; ?>											
 		</div>
 	</div>
 
