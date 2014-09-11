@@ -707,6 +707,10 @@ div .mapa-ciudades figure{
 	position: relative;
 }
 
+#main article {
+	color:#FFF  !important;
+}
+
 #main article footer {
 	border-top: none;
 	margin-top: 0;

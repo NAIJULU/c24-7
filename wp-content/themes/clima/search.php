@@ -63,6 +63,11 @@
 	<?php endif; ?>
 
 	</div> <!-- end #main -->
+
+	<div id="slidebar-der" class="span4">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('slidebar_derecha') ) : ?>
+		<?php endif; ?>
+	</div> 
 </div> <!-- end #content -->
 
 <?php get_footer(); ?>

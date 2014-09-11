@@ -42,8 +42,7 @@
 		
 				if ($query->have_posts()) :
 				  	while ($query->have_posts() ) : $query->the_post();	
-							if(in_category(2)) : ?>
-								<?php	
+	
 									$content = get_the_content();
 
 									$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
@@ -70,7 +69,6 @@
 											</div>	
 									</a>
 								</article>
-							<?php endif; ?>
 					<?php endwhile; ?>									
 				<?php endif; ?>
 				
