@@ -7,7 +7,10 @@ Template Name: Faq
 
 get_header(); 
 
-$id_faq           = ( !empty($_GET['id']) ) ? $_GET['id'] : '';
+$id_faq           = ( !empty($_GET['id']) ) ? $_GET['id'] : 0;
+$id_faq           = cleanInt($id_faq);
+var_dump($id_faq );
+
 $typeCollapse = '';
 
 ?>

@@ -1150,15 +1150,7 @@ function getElementGallery($postId)
 
     $contenuto = get_the_content();
 
-    $pClass = "";
-
-    foreach (get_post_class(array('clearfix')) as $post_cass) 
-    {
-      $pClass .= $post_cass." ";
-    }
-
-
-    $content .='<div id="post-get" ><article id="post-'.get_the_ID().'"  class="'. $pClass.' isotope-item" role="article" class="blog-thumb">
+    $content .='<div id="post-get" ><article id="post-'.get_the_ID().'"  role="article" class="blog-thumb span4">
     <a href="'.$post_thumbnail_url.'" rel="bookmark" class="galeria-item fancybox" title="'.the_title('','',false).'" 
     caption="'.$contenuto.'" datePub="'.get_the_time('j').' de '.get_the_time('F').' del '.get_the_time('Y').'" cat="'.ucwords( strtolower($categoria) ).'" >
     <span class="categorias">'.strtolower($categoria).'</span>
@@ -1171,8 +1163,6 @@ function getElementGallery($postId)
     </a>
     </article></div>';
     
-    $i++;
-
     endwhile;
 
   }
@@ -1396,6 +1386,28 @@ function the_breadcrumb($cat_cod='')
 	
 	echo '<a id="cat-'.$category[0]->cat_ID.'" href="'.esc_url(get_category_link($category[0]->cat_ID)).'" class="item-breadcrumb">'.$category[0]->name.'</a>';
 	echo '</div>';
+}
+
+/* 
+ Permite senear variables pasadas por get, tipo entero
+ @param paramInt int 
+ @author Pablo Martínez
+ @return int
+*/
+function cleanInt( $paramInt )
+{
+
+  if( !empty( $paramInt) )
+  {
+    settype( $paramInt , "int")  ;
+  }
+  else
+  {
+    return 0;
+  }
+
+  return $paramInt;
+  
 }
 
 

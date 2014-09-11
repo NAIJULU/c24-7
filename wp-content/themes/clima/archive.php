@@ -119,21 +119,34 @@ $categories = get_categories( $args );
 			<div id="main" class="span9 clearfix" role="main">
 				<?php if( $cat_cod == 23 || $current_category[0]->category_parent == 23) : 
 
-						$cont = 1;
+					$idGallery = cleanInt($_GET['id']);
+
+					if( getElementGallery($idGallery) != null )
+					{
+						echo '<span span="clearfix row-fluid">';
+						echo  getElementGallery($idGallery);	
+						$cont = 2;
+
+					}
+					else
+					{
+						$cont = 1;	
+					}
+					
 				?>
 				
 				<div id="main-articulos" class="span12 clearfix">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-			
-					<?php	
-					/* Para sacar etiquetas HTML del contenido */
-						$content 		= get_the_content();
+					<?php
+
+					
+						$content 			 = get_the_content();
 
 						$post_thumbnail_id 	 = get_post_thumbnail_id($post->ID, 'full');
 						$post_thumbnail_url  = (!empty($post_thumbnail_id)) ? wp_get_attachment_url( $post_thumbnail_id ) : get_template_directory_uri().'/images/dummie-galeria.png';			
-						$categoria 		= get_the_category($post->ID);
-						$categoria 		= $categoria[0]->name;	
+						$categoria 			 = get_the_category($post->ID);
+						$categoria 			 = $categoria[0]->name;	
 				 
 						if( $cont == 1 ) 
 						{
@@ -193,15 +206,6 @@ $categories = get_categories( $args );
 					<?php endif; ?>
 					
 			<?php else: ?>
-					<?php
-						if( isset($_GET['id']) )
-						{
-								if( getElementGallery($_GET['id']) != null )
-								{
-									echo getElementGallery($_GET['id']);	
-								}
-						} 
-					?>
 					<div id="main-articulos" class="span12 clearfix">
 						<?php if (have_posts()) : while (have_posts()) : the_post(); 
 

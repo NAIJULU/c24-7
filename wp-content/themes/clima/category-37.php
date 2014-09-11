@@ -7,8 +7,9 @@ Template Name: Faq
 
 get_header(); 
 
-$id_faq           = ( !empty($_GET['id']) ) ? $_GET['id'] : '';
-$typeCollapse = '';
+$id_faq           	= ( !empty($_GET['id']) ) ? $_GET['id'] : 0;
+$id_faq      		= cleanInt($id_faq);
+$typeCollapse		= '';
 
 ?>
 <div id="content" class="clearfix row-fluid">

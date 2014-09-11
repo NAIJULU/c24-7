@@ -6,7 +6,8 @@ Template Name: Glosario
 <?php 
 
 get_header();
-$id_glosario           = ( !empty($_GET['id']) ) ? $_GET['id'] : '';
+$id_glosario           = ( !empty($_GET['id']) ) ? $_GET['id'] : 0;
+$id_glosario           = cleanInt($glosario);
 $typeCollapse          = '';
 
  ?>
