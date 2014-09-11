@@ -121,7 +121,7 @@ $categories = get_categories( $args );
 
 					$idGallery = cleanInt($_GET['id']);
 
-					if( getElementGallery($idGallery) != null )
+					if( $idGallery != 0 )
 					{
 						echo '<span span="clearfix row-fluid">';
 						echo  getElementGallery($idGallery);	

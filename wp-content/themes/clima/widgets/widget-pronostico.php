@@ -148,7 +148,7 @@
 		        <div class="row-fluid">
 				          <div class="span7">
 				    	      <div class="row-fluid clearfix">
-				        	      <div class="span12 texto-centro"> <span class="dia">Hoy</span> <span class="mes"><?php echo $this->meses[date('n')]; ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
+				        	      <div class="span12 texto-centro"> <span class="dia">Hoy </span> <span class="mes"><?php echo $this->meses[date('n')]; ?> </span> <span class="dias"><?php echo strftime("%d", $this->hoy); ?> </span> </div>
 					              <div class="span12 lluvias"> <span class="titulo2">Probabilidad de Lluvia</span>
 					                <div class="row-fluid">
 						               	  <div class="span3 item-left">
