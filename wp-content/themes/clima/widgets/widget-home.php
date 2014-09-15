@@ -161,29 +161,25 @@
                   <div class="span3 item-left">
 
                       <div class="pronostico-item <?php echo $classMadrugada ?> ">Madrugada</div>
-                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMad'.$ciudad) )."%"; ?></div>
-                      <div class="numMax"><?php echo get_option('LluvMad'.$ciudad) ?></div>
+                      <div class="numMax"><?php echo textoProbabilidad( get_option('LluvMad'.$ciudad) ) ?></div>
                     
                   </div>
                   <div class="span3 item-right">
                     
                       <div class="pronostico-item <?php echo $classMañana ?> ">Mañana</div>
-                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvMan'.$ciudad) )."%"; ?></div>
-                      <div class="numMax"><?php echo get_option('LluvMan'.$ciudad) ?></div>
+                      <div class="numMax"><?php echo textoProbabilidad( get_option('LluvMan'.$ciudad) ) ?></div>
                     
                   </div>
                   <div class="span3 item-left">
                     
                       <div class="pronostico-item <?php echo $classTarde ?> ">Tarde</div>
-                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvTar'.$ciudad) )."%"; ?></div>
-                      <div class="numMax"><?php echo get_option('LluvTar'.$ciudad) ?></div>
+                      <div class="numMax"><?php echo textoProbabilidad( get_option('LluvTar'.$ciudad) ) ?></div>
                     
                   </div>
                   <div class="span3 item-right">
                     
                       <div class="pronostico-item <?php echo $classNoche ?>">Noche</div>
-                       <div class="numMax"><?php echo porcentajeEquivalente( get_option('LluvNoc'.$ciudad) )."%"; ?></div>
-                      <div class="numMax"><?php echo get_option('LluvNoc'.$ciudad) ?></div>
+                      <div class="numMax"><?php echo textoProbabilidad( get_option('LluvNoc'.$ciudad) ) ?></div>
                     
                   </div>
                 </div>

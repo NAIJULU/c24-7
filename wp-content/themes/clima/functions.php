@@ -1227,6 +1227,33 @@ function porcentajeEquivalente($probablidad)
 
 }
 
+function textoProbabilidad($probablidad)
+{
+  $texto = null;
+
+  if(! empty($probablidad) )
+  {
+    $probablidad = strtolower($probablidad);
+
+    if($probablidad == "baja")
+    {
+      $texto = 'Inferior a 30%';
+    }
+    else if ($probablidad == "media")
+    {
+      $texto = 'Entre 40% y 60%';
+    }
+    else if($probablidad == "alta")
+    {
+      $texto = 'Mayor a 70%';
+    }
+  }
+
+  return $texto; 
+
+}
+
+
 
 function getMarkersEstaciones()
 {
