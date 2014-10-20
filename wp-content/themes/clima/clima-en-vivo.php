@@ -55,7 +55,10 @@ $manana = strtotime(date('Y-m-d').' +1 day');
      <!-- <div id="contenedor-radar" class="fondo-contenido-1">
         <div id="mapa" style="width: 721px; height: 638px"></div>
       </div> --> 
+        <div id="contenedor-radar">
           <img src="http://alpha.telemedellin.tv/clima24-7/paginaweb/radaranimado.gif" />
+        </div>
+         
       <div>
         <span ><strong>Datos SIATA</strong></span>
       </div>

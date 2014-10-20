@@ -16,7 +16,7 @@ if (!defined('WP_PLUGIN_URL'))
 if (!defined('WP_PLUGIN_DIR'))
       define('WP_PLUGIN_DIR', WP_CONTENT_DIR.'/plugins');
 
-
+//error_reporting(0);
 
 add_action( 'admin_menu', 'admin_csv_niveles' );
 //add_action( 'widgets_init', 'creaWidgetView' );
@@ -37,56 +37,56 @@ function cargarCsvNiveles()
   $msg = "";
 
 
-        try {
+  try {
 
-            $path = "http://www.siata.gov.co/TM45/LinkSiataTM.csv";
-            $i = 0;
-            $csv = array();
-            $file = file_get_contents($path, true);
-            $lineas = explode("\n", $file);
+    $path = "http://www.siata.gov.co/TM45/LinkSiataTM.csv";
+    $i = 0;
+    $csv    = array();
+    $file   = @file_get_contents($path);
+    $lineas = explode("\n", $file);
     if( $file)
     {
 
-            foreach ($lineas as $linea)
-            {
-              if(!empty($linea))
-              {
-                  $linea  = explode(',', $linea);
-          
-                  foreach ($linea as $campo)
-                  {
-                      $csv[$i][] = trim($campo);  
-                  }
-                  $i = $i + 1;
-              }
-            }
-      }
-      else
+      foreach ($lineas as $linea)
       {
-              $msg = "Fallo en la lectura del CSV ,". $path." ";
-            throw new Exception($msg, 1);
-      }
-                
-            if(empty($csv))
-            {
-              $msg = "Error en el archivo CSV,". $path." verifique que el archivo tenga el formato correcto.";
-              throw new Exception($msg, 1);
-            }
-            else
-            {
-
-              saveInfoNvl($csv);
-              $msg = "Archivo CSV ". $path." cargado con exito. ";
-            }
-
-          } catch (Exception $e) 
+        if(!empty($linea))
+        {
+          $linea  = explode(',', $linea);
+          
+          foreach ($linea as $campo)
           {
-
-            $msg = "Error al intentar leer el archivo CSV ". $path." ";
+            $csv[$i][] = trim($campo);  
           }
+          $i = $i + 1;
+        }
+      }
+    }
+    else
+    {
+      $msg = "Fallo en la lectura del CSV ,". $path." ";
+      throw new Exception($msg, 1);
+    }
+
+    if(empty($csv))
+    {
+      $msg = "Error en el archivo CSV,". $path." verifique que el archivo tenga el formato correcto.";
+      throw new Exception($msg, 1);
+    }
+    else
+    {
+
+      saveInfoNvl($csv);
+      $msg = "Archivo CSV ". $path." cargado con exito. ";
+    }
+
+  } catch (Exception $e) 
+  {
+
+    $msg = "Error al intentar leer el archivo CSV ". $path." ";
+  }
 
 
-          saveLog('carga automatica niveles de quebradas '. $path,$msg);
+  saveLog('carga automatica niveles de quebradas '. $path,$msg);
 }
 
 

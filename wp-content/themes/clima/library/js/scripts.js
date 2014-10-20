@@ -205,7 +205,7 @@ jQuery(document).ready(function($) {
 		$("#pronosticos").fadeOut();
 		$("#temperaturas").fadeOut();
 		$("#radar").fadeIn(1000);
-		var medellin = new google.maps.LatLng(6.244316, -75.539932);
+	/*	var medellin = new google.maps.LatLng(6.244316, -75.539932);
 		var mapOptions = {
 			zoom: 12,
 			center: medellin,
@@ -215,6 +215,7 @@ jQuery(document).ready(function($) {
 		//var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
 		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_05_240_DBZH.kml', {preserveViewport: true});
 		georssLayer.setMap(map);
+	*/
 	});
 
 	$("#btnMostrarTemperatura").click(function(e){
@@ -236,7 +237,13 @@ jQuery(document).ready(function($) {
 	* Sección para el manejo de la página Clima en Vivo
 	*/
 	$("#radar-meterologico").ready(function(){
-		var medellin = new google.maps.LatLng(6.244316, -75.539932);
+
+		setInterval(function(){
+			$("#radar-meterologico #contenedor-radar")
+			.html("<img src='http://alpha.telemedellin.tv/clima24-7/paginaweb/radaranimado.gif' /> ");
+		}, 300000);
+
+	/*	var medellin = new google.maps.LatLng(6.244316, -75.539932);
 		var mapOptions = {
 			zoom: 12,
 			center: medellin,
@@ -246,6 +253,7 @@ jQuery(document).ready(function($) {
 		//var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_10_120_DBZH.kml', {preserveViewport: true});
 		var georssLayer = new google.maps.KmlLayer('http://www.siata.gov.co/kml/00_Radar/Ultimo_Barrido/AreaMetropolitanaRadar_05_240_DBZH.kml', {preserveViewport: true});
 		georssLayer.setMap(map);
+		*/
 	});
 
 	$(".convencion").click(function(e){
@@ -366,6 +374,14 @@ jQuery(document).ready(function($) {
 					{
 						totalPorcentaje = 10;
 					}
+					else
+					{
+						if( totalPorcentaje > 90 )
+						{
+							totalPorcentaje = 90;
+						}
+					}
+
 					$("#body-fill").animate({ height: totalPorcentaje+"%" }, 1000 );
 				}
 			});

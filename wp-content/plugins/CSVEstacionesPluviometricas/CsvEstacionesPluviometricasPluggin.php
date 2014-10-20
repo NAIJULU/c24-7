@@ -41,7 +41,7 @@ function cargarCsvPluviometricas()
             $path = "http://www.siata.gov.co/TM45/LinkSiataTM_Pluviometricas.csv";
             $i = 0;
             $csv = null;
-            $file = file_get_contents($path, true);
+            $file = @file_get_contents($path);
             $lineas = explode("\n", $file);
 
             if( $file)
