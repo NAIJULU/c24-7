@@ -3484,6 +3484,11 @@ div#search {
 
 /* widget */
 
+#widget .p-lluvia
+{ 
+	max-width: 250px;
+}
+
 
 #widget .p-lluvia footer
 {
@@ -3519,6 +3524,7 @@ div#search {
 #widget .p-lluvia section .enc-ciudad
 {
 	background-color: #1B2B44  ;
+	height: 40px;
 }
 
 #widget .p-lluvia section .enc
@@ -3536,9 +3542,10 @@ div#search {
 
 #widget .p-lluvia section .enc-ciudad-cont h3
 {
-	font-size: 12px;
+	font-size: 10px;
+	font-weight: bold;
 	text-align: center;
-	line-height: 0;
+	line-height: 2;
 }
 
 
@@ -3572,11 +3579,13 @@ div#search {
 #widget .p-lluvia section .body-ciudad div #enc-temp h3
 {
 	font-size: 12px;
+	line-height: 12px;
 }
 
 #widget .p-lluvia section .body-ciudad div #enc-lluvia h3
 {
 	font-size: 12px;
+	line-height: 12px;
 }
 
 #widget .p-lluvia footer .more-info

@@ -36,8 +36,10 @@
   		}(document, 'script', 'facebook-jssdk'));</script>
   			<?php wp_footer(); // js scripts are inserted using this function ?>
   		</body>
-  		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAtTGsM7_Hz8RUumKbBzv1LPOy2fy_Ph5o&sensor=true"></script> 
 
+ <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvM4HoaMDCGAl_A4WVG-m5XQyaEQ_FuMo&sensor=SET_TO_TRUE_OR_FALSE">
+ </script>
 
 
 </html>
