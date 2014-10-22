@@ -3479,3 +3479,115 @@ div#search {
 .tipeinfo{
 	color: #FFF;
 }
+
+
+
+/* widget */
+
+
+#widget .p-lluvia footer
+{
+	font-size: 10px;
+	background-color: #1B2B44 ;
+}
+
+#widget .p-lluvia header
+{
+	background-color: rgba(25, 40, 63, 0.55)  ;
+	color: #fff ;
+}
+
+#widget .p-lluvia header #img-encabezado
+{
+	width: 100%;
+	color: #fff ;
+}
+
+#widget .p-lluvia header #img-encabezado img
+{
+	width: 150px;
+	height: auto;
+	margin: auto;
+}
+
+#widget .p-lluvia
+{
+	background-color: rgba(25, 40, 63, 0.55)  ;
+	color: #fff ;
+}
+
+#widget .p-lluvia section .enc-ciudad
+{
+	background-color: #1B2B44  ;
+}
+
+#widget .p-lluvia section .enc
+{
+	background-color: #1B2B44  ;
+}
+
+
+#widget .p-lluvia section .enc-ciudad .enc-ciudad-cont h1
+{
+	font-size: 20px;
+	text-align: center;
+	line-height: 0;
+}
+
+#widget .p-lluvia section .enc-ciudad-cont h3
+{
+	font-size: 12px;
+	text-align: center;
+	line-height: 0;
+}
+
+
+#widget .p-lluvia section .body-ciudad
+{
+	text-align: center;
+}
+
+
+#widget .p-lluvia section .body-ciudad div .det
+{
+	height: 30px;
+}
+
+#widget .p-lluvia section .body-ciudad div #enc-lluvia
+{
+	height: 50px;
+	border-width: 3px;
+	border-style: solid;
+	boder-color:rgba(25, 40, 63, 0.55) ;
+}
+
+#widget .p-lluvia section .body-ciudad div #enc-temp
+{
+	height: 50px;
+	border-width: 3px;
+	border-style: solid;
+	boder-color:rgba(25, 40, 63, 0.55) ;
+}
+
+#widget .p-lluvia section .body-ciudad div #enc-temp h3
+{
+	font-size: 12px;
+}
+
+#widget .p-lluvia section .body-ciudad div #enc-lluvia h3
+{
+	font-size: 12px;
+}
+
+#widget .p-lluvia footer .more-info
+{
+	text-align: center;
+	height: 35px;
+	color: #fff ;
+	padding-top: 10px; 
+}
+
+#widget .p-lluvia footer .more-info a
+{ 
+	color: #fff ;
+}
