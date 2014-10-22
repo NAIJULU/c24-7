@@ -36,7 +36,12 @@ get_header();
     						<span>Madrugada</span>
     					</div>
     					<div class="det span6">
-    						<span>30%</span>
+                <span class="span5">
+                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
+                </span>
+                <span class="span6">
+                  <span>30%</span>
+                </span>
     					</div>
     				</div>
 
@@ -45,7 +50,12 @@ get_header();
     						<span>Madrugada</span>
     					</div>
     					<div class="det span6">
-    						<span>30%</span>
+    						 <span class="span5">
+                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
+                </span>
+                <span class="span6">
+                  <span>30%</span>
+                </span>
     					</div>
     				</div>
 
@@ -54,7 +64,12 @@ get_header();
     						<span>Tarde</span>
     					</div>
     					<div class="det span6">
-    						<span>30%</span>
+    						 <span class="span5">
+                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
+                </span>
+                <span class="span6">
+                  <span>30%</span>
+                </span>
     					</div>
     				</div>
 
@@ -63,7 +78,12 @@ get_header();
     						<span>Noche</span>
     					</div>
     					<div class="det span6">
-    						<span>30%</span>
+    						<span class="span5">
+                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
+                </span>
+                <span class="span6">
+                  <span>30%</span>
+                </span>ss
     					</div>
     				</div>
     			</div>
