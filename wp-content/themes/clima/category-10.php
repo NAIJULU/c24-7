@@ -13,13 +13,9 @@ function theme_name_scripts() {
 	 wp_enqueue_style('css_query_ui');
 	 wp_enqueue_style('css_query_ui_core');
 	 wp_enqueue_style('css_query_ui_datepicker');
-
-
 }
 
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
-
-
 
 
 get_header(); 
