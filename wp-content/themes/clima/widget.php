@@ -4,7 +4,6 @@ Template Name: widget
 */
 get_header(); 
 ?>
-
 <div id="content" class="clearfix row-fluid">
   <div id="widget" class="span12 clearfix" role="main">
 
@@ -26,28 +25,31 @@ get_header();
             <div class="control-group">
                 <label class="control-label" for="inputOpciones">Tema: </label>
                 <div class="controls">
-                    <select name="tema">
-                        <option value="1">Claro (defecto)</option>
-                        <option value="2">Oscuro</option>
-                        <option value="3">Crema</option>
+                    <select id="tema" name="tema">
+                        <option value="1">Azul (defecto)</option>
+                        <option value="2">Crema</option>
+                        <option value="3">Darks</option>
                         <option value="4">Frutas tropiclaes</option>
                     </select>
                 </div>
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="inputOpciones">Tamaño máximo (px): </label>
+                <label class="control-label" for="inputOpciones">Tamaño (px): </label>
                 <div class="controls">
-                  <input type="text" name="max" placeholder="Maximo 350px">
+                  <input id="max" type="text" name="max" placeholder="350px - 450px">
                 </div>
             </div>
 
+            <div class="control-group">
+               <input id="btn-widget" class="btn btn-success" type="button" value="Generar">
+            </div>
 
         </form>
     </div>
 
     <div class="span6">
-    	<article class="p-lluvia">
+    	<article id="p-lluvia">
     		<header>
     			<div id="img-encabezado">
     				<img src="<?php echo bloginfo('template_url') .'/images/logoClima.png' ?>" alt="clima 24/7">
@@ -75,66 +77,83 @@ get_header();
     						<span>Madrugada</span>
     					</div>
     					<div class="det span6">
-                <span class="span5">
-                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
-                </span>
-                <span class="span6">
-                  <span>30%</span>
-                </span>
-    					</div>
-    				</div>
+                            <span class="span5">
+                              <img src="<?php echo bloginfo('template_url') .'/images/BAJANOCHE.png' ?>" alt="clima 24/7">
+                          </span>
+                          <span class="span6">
+                              <span>30%</span>
+                          </span>
+                      </div>
+                  </div>
 
-    				<div class="span12">
-    					<div class="det span6">
-    						<span>Madrugada</span>
-    					</div>
-    					<div class="det span6">
-    						 <span class="span5">
-                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
-                </span>
-                <span class="span6">
-                  <span>30%</span>
-                </span>
-    					</div>
-    				</div>
-
-    				<div class="span12">
-    					<div class="det span6">
-    						<span>Tarde</span>
-    					</div>
-    					<div class="det span6">
-    						 <span class="span5">
-                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
-                </span>
-                <span class="span6">
-                  <span>30%</span>
-                </span>
-    					</div>
-    				</div>
-
-    				<div class="span12">
-    					<div class="det span6">
-    						<span>Noche</span>
-    					</div>
-    					<div class="det span6">
-    						<span class="span5">
-                  <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7">
-                </span>
-                <span class="span6">
-                  <span>30%</span>
-                </span>ss
-    					</div>
-    				</div>
-    			</div>
-    		</section>
-    		<footer class="span12">
-    			<div class="more-info">
-    				<a href="http://www.clima247.gov.co">¿Quieres conocer mas sobre el clima?</a>
-    			</div>
-    		</footer>
-    	</article>
+                  <div class="span12">
+                        <div class="det span6">
+                              <span>Madrugada</span>
+                        </div>
+                        <div class="det span6">
+                            <span class="span5">
+                              <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7" />
+                            </span>
+                             <span class="span6">
+                              <span>30%</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="span12">
+                          <div class="det span6">
+                              <span>Tarde</span>
+                          </div>
+                          <div class="det span6">
+                               <span class="span5">
+                                  <img src="<?php echo bloginfo('template_url') .'/images/MEDIA.png' ?>" alt="clima 24/7">
+                               </span>
+                              <span class="span6">
+                                <span>40%</span>
+                              </span>
+                           </div>
+                    </div>
+                    <div class="span12">
+                         <div class="det span6">
+                          <span>Noche</span>
+                        </div>
+                        <div class="det span6">
+                          <span class="span5">
+                              <img src="<?php echo bloginfo('template_url') .'/images/ALTANOCHE.png' ?>" alt="clima 24/7">
+                          </span>
+                          <span class="span6">
+                              <span>60%</span>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="span12">
+             <div class="more-info">
+                <a href="http://www.clima247.gov.co">¿Quieres conocer mas sobre el clima?</a>
+            </div>
+            </footer>
+        </article>
     </div>
 
   </div> <!-- end main -->
 </div><!-- end content -->
+
+
+<!-- ventana modal de confirmacion -->
+
+<div id="modalWidget" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Datos Básicos </h3>
+  </div>
+  <div class="modal-body">
+    <p>Para poder generar el widget, te pediremos datos basicos.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Cerrar</a>
+    <a href="#" class="btn btn-primary">Guardar</a>
+  </div>
+</div>
+
+
 <?php get_footer(); ?>

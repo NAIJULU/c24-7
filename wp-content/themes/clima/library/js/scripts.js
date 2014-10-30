@@ -476,7 +476,7 @@ jQuery(document).ready(function($) {
 		.done(function(data) {
 			var icon1 = null;
         	var infoG = false; 
-
+        	
 			$.each(data, function(i, estacion) {
 
 				var intensidad_auxiliar 	= estacion.intensidad_30m.split('m') ;
@@ -576,6 +576,7 @@ jQuery(document).ready(function($) {
 						{
 							map.setCenter(marker.getPosition());
 							infowindow.open(map, marker);
+
 						}
 					}
 					else
@@ -590,8 +591,8 @@ jQuery(document).ready(function($) {
 				}
 
 					google.maps.event.addListener(marker, 'click', function() {
-					infowindow.open(map,marker);
-				});
+						infowindow.open(map,marker);
+					});
 
 			});
 		})
@@ -831,6 +832,53 @@ jQuery(document).ready(function($) {
 	 $("#btn-suscripcion").click(function(){
 	 	$("#mc_signup").css('display','inline');
 	 });
+
+	 /* WIDGET clima 24/7 */
+
+	 if( $("#widget").length > 0 )
+	 {
+	 	var temaId = null;
+		$("#tema").change( function(){
+
+			$("#p-lluvia").removeClass();
+
+			temaId = $("#tema").val();
+	 		$("#p-lluvia").addClass("tema-"+temaId);
+
+		}).change();
+
+		$("#max").change( function(){
+
+			var max = 	$("#max").val();
+
+			if( isNaN(max) )
+			{
+				alert("Solo numero para el tamaño del widget");
+			}
+			else
+			{
+				$("#widget .tema-"+temaId).css('width',max+"px")
+			}
+
+		});
+
+
+		$("#btn-widget").click( function(){
+
+			if( $("input[name='opciones']:checked").length > 0 && $("#tema").length > 0 && $("#max").length > 0)
+			{
+				$('#modalWidget').modal('show');
+			}
+			else
+			{
+				alert('Que porqueria');
+			}
+
+		});
+
+
+
+	 }
 
 
 	 /* Twitter Feed */
