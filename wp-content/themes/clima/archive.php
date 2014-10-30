@@ -54,7 +54,13 @@ $categories = get_categories( $args );
 
 </div>
 
-<?php the_breadcrumb( $cat_cod ); ?>
+	<div class="breadcrumbs">
+		<?php if(function_exists('bcn_display'))
+		{
+			bcn_display();
+		}
+		?>
+	</div>
 
 
 <div id="content" class="clearfix row-fluid">

@@ -6,7 +6,13 @@
 			</div> -->
 			<div class="span3">
 				<div>
-					<?php the_breadcrumb() ?>
+					<div class="breadcrumbs">
+						<?php if(function_exists('bcn_display'))
+						{
+							bcn_display();
+						}
+						?>
+					</div>
 				</div>
 				<div>
 					<?php get_sidebar(); ?>
