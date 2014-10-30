@@ -3,21 +3,36 @@
 Template Name: widget
 */
 get_header(); 
+
+$tema     = $_POST['tema'];
+$opcion1  = $_POST['opcion1'];
+$opcion2  = $_POST['opcion2'];
+
+echo $opcion2;
+
+gettype($tema, "int");
+gettype($opcion1, "int");
+gettype($opcion2 ,"int" );
+
+$nombre     = filter_var($_POST['nombre'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$correo     = filter_var($_POST['correo'],FILTER_SANITIZE_EMAIL);
+$web        = filter_var($_POST['web'],FILTER_SANITIZE_URL);
+
 ?>
 <div id="content" class="clearfix row-fluid">
   <div id="widget" class="span12 clearfix" role="main">
 
     <div class="span6">
         <p> incluye en tu web, el widget de clima 24/7 </p>
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" action="">
             <div class="control-group">
                 <label class="control-label" for="inputOpciones">Pronostico: </label>
                 <div class="controls">
                      <label class="checkbox">
-                        Lluvias  <input type="checkbox" name="opciones" value="1">
+                        Lluvias  <input type="checkbox" name="opcion1" value="1">
                     </label>
                     <label class="checkbox">
-                        Temperatura <input type="checkbox" name="opciones" value="2">
+                        Temperatura <input type="checkbox" name="opcion2" value="1">
                     </label>
                 </div>
             </div>
@@ -35,16 +50,37 @@ get_header();
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="inputOpciones">Tamaño (px): </label>
-                <div class="controls">
-                  <input id="max" type="text" name="max" placeholder="350px - 450px">
-                </div>
-            </div>
-
-            <div class="control-group">
                <input id="btn-widget" class="btn btn-success" type="button" value="Generar">
             </div>
+            <!-- ventana modal de confirmacion -->
 
+            <div id="modalWidget" class="modal hide fade">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Datos Básicos </h3>
+              </div>
+              <div class="modal-body">
+                <p>
+                   <label >
+                        Nombre <input type="text" name="nombre" value="" required>
+                    </label>
+                </p>
+                <p>
+                   <label >
+                        Correo Electronico <input type="email" name="correo" value="" required>
+                    </label>
+                </p>
+                <p>
+                   <label >
+                        Web <input type="text" name="web" value="">
+                    </label>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" id="btn-clima-cerrar" class="btn">Cerrar</a>
+                <input type="submit" class="btn btn-primary" value="Guardar" />
+              </div>
+            </div>
         </form>
     </div>
 
@@ -139,21 +175,7 @@ get_header();
 </div><!-- end content -->
 
 
-<!-- ventana modal de confirmacion -->
 
-<div id="modalWidget" class="modal hide fade">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Datos Básicos </h3>
-  </div>
-  <div class="modal-body">
-    <p>Para poder generar el widget, te pediremos datos basicos.</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn">Cerrar</a>
-    <a href="#" class="btn btn-primary">Guardar</a>
-  </div>
-</div>
 
 
 <?php get_footer(); ?>

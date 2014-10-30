@@ -847,7 +847,7 @@ jQuery(document).ready(function($) {
 
 		}).change();
 
-		$("#max").change( function(){
+/*		$("#max").change( function(){
 
 			var max = 	$("#max").val();
 
@@ -860,12 +860,12 @@ jQuery(document).ready(function($) {
 				$("#widget .tema-"+temaId).css('width',max+"px")
 			}
 
-		});
-
+		});*/
 
 		$("#btn-widget").click( function(){
 
-			if( $("input[name='opciones']:checked").length > 0 && $("#tema").length > 0 && $("#max").length > 0)
+			if( ( $("input[name='opcion1']:checked").length > 0 || $("input[name='opcion1']:checked").length > 0  )
+				 && $("#tema").length > 0)
 			{
 				$('#modalWidget').modal('show');
 			}
@@ -875,6 +875,13 @@ jQuery(document).ready(function($) {
 			}
 
 		});
+
+		$("#btn-clima-cerrar").click( function(){
+
+			$('#modalWidget').modal('hide');
+		});
+
+		
 
 
 
