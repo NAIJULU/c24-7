@@ -4,19 +4,10 @@ Template Name: widget
 */
 get_header(); 
 
-$tema     = $_POST['tema'];
-$opcion1  = $_POST['opcion1'];
-$opcion2  = $_POST['opcion2'];
-
-echo $opcion2;
-
-gettype($tema, "int");
-gettype($opcion1, "int");
-gettype($opcion2 ,"int" );
-
-$nombre     = filter_var($_POST['nombre'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$correo     = filter_var($_POST['correo'],FILTER_SANITIZE_EMAIL);
-$web        = filter_var($_POST['web'],FILTER_SANITIZE_URL);
+if( count( $_POST ) > 0 )
+{
+  include( 'procesoWidget.php');  
+}
 
 ?>
 <div id="content" class="clearfix row-fluid">
