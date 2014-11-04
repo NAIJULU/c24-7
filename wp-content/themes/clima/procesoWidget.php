@@ -1,8 +1,17 @@
 <?php
 
+
+
+
 $tema     = $_POST['tema'];
-$opcion1  = ( !empty($_POST['opcion1']) ) ? $_POST['opcion1'] : 0;
-$opcion2  = ( !empty($_POST['opcion2']) ) ? $_POST['opcion2'] : 0;
+$opcion1  = ( isset($_POST['opcion1']) ) ? $_POST['opcion1'] : 0;
+$opcion2  = ( isset($_POST['opcion2']) ) ? $_POST['opcion2'] : 0;
+
+settype($opcion1, "int");
+settype($opcion2 ,"int" );
+
+echo "opcion1".$opcion1.' - opcion2 '.$opcion2.'<br>';
+
 
 if($opcion1 > 0) 
 {
@@ -22,9 +31,9 @@ else
 	$opcion2 = 'n';
 }
 
+echo "opcion1".$opcion1.' - opcion2 '.$opcion2;
+
 settype($tema, "int");
-settype($opcion1, "int");
-settype($opcion2 ,"int" );
 
 $nombre     = filter_var($_POST['nombre'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $correo     = filter_var($_POST['correo'],FILTER_SANITIZE_EMAIL);
@@ -48,8 +57,8 @@ VALUES
 '%s',
 '%s',
 '%s',
-%d,
-%d,
+'%s',
+'%s',
 %d,
 '%s',
 %d

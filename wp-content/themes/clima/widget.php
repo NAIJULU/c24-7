@@ -15,7 +15,7 @@ if( count( $_POST ) > 0 )
 
     <div class="span6">
         <p> incluye en tu web, el widget de clima 24/7 </p>
-        <form class="form-horizontal" method="post" action="">
+        <form id="widget-form" class="form-horizontal" method="post" action="">
             <div class="control-group">
                 <label class="control-label" for="inputOpciones">Pronostico: </label>
                 <div class="controls">
@@ -51,25 +51,30 @@ if( count( $_POST ) > 0 )
                 <h3>Datos Básicos </h3>
               </div>
               <div class="modal-body">
-                <p>
-                   <label >
-                        Nombre <input type="text" name="nombre" value="" required>
-                    </label>
-                </p>
-                <p>
-                   <label >
-                        Correo Electronico <input type="email" name="correo" value="" required>
-                    </label>
-                </p>
-                <p>
-                   <label >
-                        Web <input type="text" name="web" value="">
-                    </label>
-                </p>
+
+                <div class="control-group">
+                  <label class="control-label" for="inputNombre">Nombre: </label>
+                  <div class="controls">
+                        <input id="widget-nombre" type="text" name="nombre" value="" required>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="inputNombre">Correo : </label>
+                  <div class="controls">
+                        <input id="widget-correo" type="email" name="correo" value="" required>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label class="control-label" for="inputNombre">Web : </label>
+                  <div class="controls">
+                         <input id="widget-web" type="text" name="web" value="">
+                  </div>
+                </div>
               </div>
               <div class="modal-footer">
                 <a href="#" id="btn-clima-cerrar" class="btn">Cerrar</a>
-                <input type="submit" class="btn btn-primary" value="Guardar" />
+                <input id="btn-guardar-widget" type="submit" class="btn btn-primary" value="Guardar" />
               </div>
             </div>
         </form>

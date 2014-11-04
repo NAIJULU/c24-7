@@ -864,14 +864,14 @@ jQuery(document).ready(function($) {
 
 		$("#btn-widget").click( function(){
 
-			if( ( $("input[name='opcion1']:checked").length > 0 || $("input[name='opcion1']:checked").length > 0  )
+			if( ( $("input[name='opcion1']:checked").length > 0 || $("input[name='opcion2']:checked").length > 0  )
 				 && $("#tema").length > 0)
 			{
 				$('#modalWidget').modal('show');
 			}
 			else
 			{
-				alert('Que porqueria');
+				alert('Seleccione un pronostico');
 			}
 
 		});
@@ -879,6 +879,22 @@ jQuery(document).ready(function($) {
 		$("#btn-clima-cerrar").click( function(){
 
 			$('#modalWidget').modal('hide');
+		});
+
+		$("#btn-guardar-widget").click( function(e){
+
+			e.preventDefault();
+
+			if( $("#widget-nombre").val() != "" && $("#widget-correo").val() != "" )
+			{
+				$( "#widget-form" ).submit();
+			}
+			else
+			{
+				alert('Ingrese todos los datos');
+			}
+
+
 		});
 
 		
