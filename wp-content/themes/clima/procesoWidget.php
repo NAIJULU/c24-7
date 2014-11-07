@@ -10,9 +10,6 @@ $opcion2  = ( isset($_POST['opcion2']) ) ? $_POST['opcion2'] : 0;
 settype($opcion1, "int");
 settype($opcion2 ,"int" );
 
-echo "opcion1".$opcion1.' - opcion2 '.$opcion2.'<br>';
-
-
 if($opcion1 > 0) 
 {
 	$opcion1 = 's';
@@ -31,7 +28,6 @@ else
 	$opcion2 = 'n';
 }
 
-echo "opcion1".$opcion1.' - opcion2 '.$opcion2;
 
 settype($tema, "int");
 

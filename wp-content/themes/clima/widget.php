@@ -1,12 +1,14 @@
 <?php
 /*
-Template Name: widget
+* Template Name: widget
 */
 get_header(); 
+$generado   = false;
 
 if( count( $_POST ) > 0 )
 {
   include( 'procesoWidget.php');  
+  $generado = true;
 }
 
 ?>
@@ -14,8 +16,10 @@ if( count( $_POST ) > 0 )
   <div id="widget" class="span12 clearfix" role="main">
 
     <div class="span6">
-        <p> incluye en tu web, el widget de clima 24/7 </p>
+      
         <form id="widget-form" class="form-horizontal" method="post" action="">
+          <div id="inner-form">
+              <p> Incluye en tu web, el widget de clima 24/7 </p>
             <div class="control-group">
                 <label class="control-label" for="inputOpciones">Pronostico: </label>
                 <div class="controls">
@@ -39,10 +43,13 @@ if( count( $_POST ) > 0 )
                     </select>
                 </div>
             </div>
+          </div>
 
+          <?php if( !$generado ): ?>
             <div class="control-group">
                <input id="btn-widget" class="btn btn-success" type="button" value="Generar">
             </div>
+          <?php endif; ?> 
             <!-- ventana modal de confirmacion -->
 
             <div id="modalWidget" class="modal hide fade">
@@ -78,6 +85,20 @@ if( count( $_POST ) > 0 )
               </div>
             </div>
         </form>
+
+        <?php if( $generado ): ?>
+        <?php
+          $lastId = mysql_insert_id();
+          settype($lastId, 'int');
+        ?>
+        <p> Copia y pega el codigo en tu web </p>
+        <div class="well">
+          <code>
+           <?php echo htmlspecialchars('<div class="widget-c247"><script src="http://clima247.gov.co/embed-widget"></script><div class="inner-widget" data-id="'.$lastId.'"></div></div>'); ?> 
+         </code>
+        </div>
+        <?php endif; ?>
+
     </div>
 
     <div class="span6">

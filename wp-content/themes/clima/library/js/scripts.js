@@ -837,6 +837,11 @@ jQuery(document).ready(function($) {
 
 	 if( $("#widget").length > 0 )
 	 {
+	 	if($(".alert").length > 0)
+	 	{
+	 		$( ".alert" ).fadeOut( 2000 );
+	 	}
+
 	 	var temaId = null;
 		$("#tema").change( function(){
 
@@ -879,6 +884,7 @@ jQuery(document).ready(function($) {
 		$("#btn-clima-cerrar").click( function(){
 
 			$('#modalWidget').modal('hide');
+			
 		});
 
 		$("#btn-guardar-widget").click( function(e){
@@ -896,9 +902,6 @@ jQuery(document).ready(function($) {
 
 
 		});
-
-		
-
 
 
 	 }

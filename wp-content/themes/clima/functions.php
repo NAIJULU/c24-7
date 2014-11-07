@@ -1437,6 +1437,31 @@ function cleanInt( $paramInt )
   
 }
 
+/*
+* Codigo del widget embebido clima 24/7
+*
+*/
+function widget_embed()
+{
+
+  $id     =  $_GET['date'];
+  $embed  = "";
+  settype($id, 'int');
+
+  if( $id > 0)
+  {
+    $embed = "<div id ='widget'> Prueba</div> ";
+  }
+  else
+  {
+    return false;
+  }
+
+    return $embed;
+}
+
+add_action('wp_ajax_nopriv_widget_embed', 'widget_embed');
+add_action('wp_ajax_widget_embed', 'widget_embed');
 
 
 include_once(TEMPLATEPATH.'/blogConfig.php');

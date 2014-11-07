@@ -3484,6 +3484,12 @@ div#search {
 
 /* widget */
 
+#content #widget #inner-form
+{
+	font-size: 14px;
+	color: #FFF;
+}
+
 #widget #p-lluvia
 { 
 	max-width: 350px;
@@ -3678,3 +3684,5 @@ div#search {
 {
 	boder-color: rgba(201, 204, 60, 0.81);
 }
+
+
