@@ -16,7 +16,7 @@ if( count( $_POST ) > 0 )
   <div id="widget" class="span12 clearfix" role="main">
 
     <div class="span6">
-      
+    
         <form id="widget-form" class="form-horizontal" method="post" action="">
           <div id="inner-form">
               <p> Incluye en tu web, el widget de clima 24/7 </p>
@@ -94,7 +94,7 @@ if( count( $_POST ) > 0 )
         <p> Copia y pega el codigo en tu web </p>
         <div class="well">
           <code>
-           <?php echo htmlspecialchars('<div class="widget-c247"><script src="http://clima247.gov.co/embed-widget"></script><div class="inner-widget" data-id="'.$lastId.'"></div></div>'); ?> 
+           <?php echo htmlspecialchars('<div class="widget-c247"><div class="inner-widget" data-id="'.$lastId.'"></div><script src="http://localhost/c24-7/wp-content/themes/clima/library/js/widget-embed.js"></script></div>'); ?> 
          </code>
         </div>
         <?php endif; ?>

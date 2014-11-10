@@ -1443,21 +1443,21 @@ function cleanInt( $paramInt )
 */
 function widget_embed()
 {
-
-  $id     =  $_GET['date'];
+  $id     =  $_GET['id_widget'];
   $embed  = "";
   settype($id, 'int');
 
   if( $id > 0)
   {
-    $embed = "<div id ='widget'> Prueba</div> ";
+    $embed = "<iframe id ='widget'><script  type='text/javascript' src='js/jquery-1.11.1.min.js'></script></iframe>";
   }
   else
   {
     return false;
   }
 
-    return $embed;
+    echo $embed;
+    die;
 }
 
 add_action('wp_ajax_nopriv_widget_embed', 'widget_embed');
