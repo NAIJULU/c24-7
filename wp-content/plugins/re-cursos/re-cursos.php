@@ -19,27 +19,38 @@ function pluginRecursos()
   $inflarojo    = get_option('inflarojo');
   $vapor        = get_option('vapor');
 
-  $cam1  = get_option('cam1' );
-  $cam2  = get_option('cam2');
-  $cam3  = get_option('cam3');
-  $cam4  = get_option('cam4');
-  $cam5  = get_option('cam5');
-  $cam6  = get_option('cam6');
 
-  if( isset( $_POST['temperatura'] ) OR isset( $_POST['inflarojo'] ) OR isset( $_POST['vapor'] ) OR
-      isset( $_POST['cam1'] ) OR isset( $_POST['cam2'] ) OR isset( $_POST['cam3'] ) OR isset( $_POST['cam4'] ) 
-      OR isset( $_POST['cam5'] ) OR isset( $_POST['cam6'] )  )
+  if( isset( $_POST['temperatura'] ) OR isset( $_POST['inflarojo'] ) OR isset( $_POST['vapor'] ) )
   {
     update_option( 'temperatura', $_POST['temperatura'] );   
     update_option( 'inflarojo', $_POST['inflarojo'] );
     update_option( 'vapor', $_POST['vapor'] );
+  }
 
-    update_option( 'cam1', $_POST['cam1'] );   
-    update_option( 'cam2', $_POST['cam2'] );
-    update_option( 'cam3', $_POST['cam3'] );
-    update_option( 'cam4', $_POST['cam4'] );
-    update_option( 'cam5', $_POST['cam5'] );
-    update_option( 'cam6', $_POST['cam6'] );
+ /* $j = 1;
+  while(  !empty(get_option('cam'.$j )) )
+  {
+    $cam.$$j                     = get_option('cam'.$j ); 
+    $j ++;     
+  }
+
+  $j = 1; 
+  while(  !empty(get_option('text_cam'.$j )) )
+  {
+    $text_cam.$$j.'text_cam'.$j  = get_option('text_cam'.$j );   
+    $j ++;     
+  }
+*/
+  $j = 1;
+  while( isset( $_POST['cam'.$j] ) )
+  {
+    update_option( 'cam'.$j, $_POST['cam'.$j] );
+    if( isset( $_POST['text_cam'.$j] ) )
+    {
+      update_option( 'text_cam'.$j, $_POST['text_cam'.$j] );       
+    }
+    
+    $j ++;     
   }
 
 ?>
@@ -75,36 +86,14 @@ function pluginRecursos()
 
               <div id="r-cams">
                 <h1> Cámaras vista en vivo </h1>
-                <div class="elem-cam">
-                  <span class="r-field">Enlace Cámara 1</span>
-                  <input type="text"  id="cam1" name="cam1"  value="<?php echo get_option( 'cam1' )  ?>" >
-                  <input  class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam1')">
-                </div>
-                <div class="elem-cam">
-                  <span class="r-field">Enlace Cámara 2</span>
-                  <input type="text"  id="cam2" name="cam2" value="<?php echo get_option( 'cam2' )  ?>" >
-                  <input class="r-button-v" class="r-button-v" value="Validar" type="button" onClick="urlValidator('cam2')">
-                </div>
-                <div class="elem-cam">
-                  <span class="r-field">Enlace Cámara 3</span>
-                  <input type="text"  id="cam3" name="cam3" value="<?php echo get_option( 'cam3' )  ?>" >
-                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam3')">
-                </div>
-                <div class="elem-cam">
-                  <span class="r-field">Enlace Cámara 4</span>
-                  <input type="text"  id="cam4" name="cam4" value="<?php echo get_option( 'cam4' )  ?>" >
-                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam4')">
-                </div>
-                <div class="elem-cam">
-                  <span class="r-field">Enlace Cámara 5</span>
-                  <input type="text"  id="cam5" name="cam5" value="<?php echo get_option( 'cam5' )  ?>" >
-                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam5')">
-                </div>
-                <div class="elem-cam">
-                  <span class="r-field">Enlace Cámara 6</span>
-                  <input type="text"  id="cam6" name="cam6" value="<?php echo get_option( 'cam6' )  ?>" >
-                  <input class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam6')">
-                </div>
+                <?php for($i=1; $i <= 10 ; $i++ ): ?>
+                  <div class="elem-cam">
+                    <span class="r-field">Enlace Cámara <?php echo $i ?></span><br>   
+                    <input type="text"  id="cam<?php echo $i ?>" name="cam<?php echo $i ?>"  value="<?php echo get_option( 'cam'.$i )  ?>" ><input  class="r-button-v" type="button" value="Validar" onClick="urlValidator('cam'.$i)">
+                    <br>
+                    <input type="text"  id="text_cam<?php echo $i ?>" placeholder="Titulo Camara" name="text_cam<?php echo $i ?>"  value="<?php echo get_option('text_cam'.$i ); ?>" >
+                  </div>
+                <?php endfor; ?>
 
               </div>
               <div>

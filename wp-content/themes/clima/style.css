@@ -2797,7 +2797,7 @@ section #suscripcion .enviar-suscripcion{background:#0b3c88;color:#fff;display:i
 #controles-vivo ul li:first-child a{padding-left:0}
 #controles-vivo ul li a{padding:0 .5em;color:#fff;text-decoration:none;text-align:center;display:block;}
 #controles-vivo ul li a img{width:105px;height:80px}
-#controles-vivo ul li a p{background:#a3d039;padding:.2em .5em;display:block;margin:.5em 0 0 0}
+#controles-vivo ul li a p{max-width:120px;background:#a3d039;padding:.2em .5em;display:block;margin:.5em 0 0 0}
 .convencion{background:#a4ce3a;border-top:5px solid #cfe276;color:#fff;display:block;font-size:17px;font-weight:bold;margin:0 0 .5em 0;padding:.5em 0;text-align:center;text-decoration:none;text-transform:uppercase;}
 .convencion:hover{background:#95b935;color:#fff;text-decoration:none}
 .container-vivo{position:relative;}

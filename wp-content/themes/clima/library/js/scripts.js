@@ -303,6 +303,11 @@ jQuery(document).ready(function($) {
 			$("#vivo-camara4").hide('fast');
 			$("#vivo-camara5").hide('fast');
 			$("#vivo-camara6").hide('fast');
+			$("#vivo-camara7").hide('fast');
+			$("#vivo-camara8").hide('fast');
+			$("#vivo-camara9").hide('fast');
+			$("#vivo-camara10").hide('fast');
+
 			$(".contenedor-convencion").css('display', 'none');
 			$("#"+item).show('fast');
 		}

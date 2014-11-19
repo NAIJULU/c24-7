@@ -74,76 +74,42 @@ $manana = strtotime(date('Y-m-d').' +1 day');
     </div>
   </div>
   <div id="vista-vivo" style="display:none">
+    <?php ini_set('display_errors', 1); ?>
+    <?php $display = ''; ?>
+    <?php $i = 1; ?>
 
-    <div id="vivo-camara1" class="container-vivo">
-      <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
-      <div class="img-vivo"> <img src="<?php echo get_option( 'cam1' ) ?>"/> 
+    <?php while ( get_option( 'cam'.$i ) != "" ) : ?>
+
+      <div id="vivo-camara<?php echo $i ?>" class="container-vivo" style="<?php echo $display ?>">
+        <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
+        <div class="img-vivo"> <img src="<?php echo get_option( 'cam'.$i ) ?>"/> 
+        </div>
+        <div class="description">
+          <h4><?php echo get_option( 'text_cam'.$i ) ?></h4>
+        </div>
       </div>
-      <div class="description">
-        <h4>Vista Occidental </h4>
-        <p>Calasanz - San Cristobal</p>
-      </div>
-    </div>
 
-    <div id="vivo-camara2" class="container-vivo" style="display:none">
-     <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
-     <div class="img-vivo"> <img src="<?php echo get_option( 'cam2' ) ?>" />
-     </div>
-     <div class="description">
-      <h4>Vista Noroccidental</h4>
-      <p></p>
-    </div>
-  </div>
+      <?php $display = 'display:none;'; ?>
+      <?php $i ++; ?>
 
-  <div id="vivo-camara3" class="container-vivo" style="display:none">
-   <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
-   <div class="img-vivo"> <img src="<?php echo get_option( 'cam3' ) ?>" alt="Torre SIATA Suroriental"/>
-   </div>
-   <div class="description">
-    <h4>Suroriental</h4>
-    <p></p>
-  </div>
-</div>
+    <?php endwhile; ?>
 
-<div id="vivo-camara4" class="container-vivo" style="display:none">
-   <?php viewConvenciones("<p>La vista en vivo de las cámaras ubicadas desde la torre SIATA y el Radar ubicado en Santa Elena permiten apreciar la formación y  el desplazamiento de las nubes en gran parte  de los sectores del Valle de Aburrá.</p><p> Desde la Torre SIATA, ubicada en el sector  Estadio Atanasio Girardot, se aprecia la  vista hacia el oriente, suroriente, nororiente, noroccidente y occidente de algunos  municipios del Valle de Aburrá. Y gracias a las cámaras ubicadas en el Radar  en Santa Elena se observa la vista de los  sectores Noroccidente y Suroccidente de  Medellín.</p>"); ?>
-   <div class="img-vivo"> <img src="<?php echo get_option( 'cam4' ) ?>" alt="Torre SIATA Nororiental"/>
-   </div>
-   <div class="description">
-    <h4>Nororiental</h4>
-    <p></p>
-  </div>
-</div>
+  <div id="controles-vivo">
+      <ul>
+        <?php $i = 1; ?>
+        <?php while ( get_option( 'cam'.$i ) != "" ) : ?>
 
-<div id="controles-vivo">
-  <ul>
-    <li>
-     <a id="btnMostrarCam1" href="vivo-camara1" class="thumb-camara">
-      <img src="<?php echo get_option( 'cam1' ) ?>" alt="Vista Occidental" />
-      <p>Vista Occidental</p>
-    </a>
-  </li>
-  <li>
-    <a id="btnMostrarCam2" href="vivo-camara2" class="thumb-camara">
-      <img src="<?php echo get_option( 'cam2' ) ?>" alt="Vista Noroccidente" />
-      <p>Vista Noroccidente</p>
-    </a>
-  </li>
-  <li>
-   <a id="btnMostrarCam3" href="vivo-camara3" class="thumb-camara">
-    <img src="<?php echo get_option( 'cam3' ) ?>" alt="Torre SIATA Oriente" />
-    <p>Vista Suroriental</p>
-  </a>
-</li>
-<li>
-   <a id="btnMostrarCam4" href="vivo-camara4" class="thumb-camara">
-    <img src="<?php echo get_option( 'cam4' ) ?>" alt="Torre SIATA Nororiental" />
-    <p>Vista Nororiental</p>
-  </a>
-</li>
-</ul>
-</div> 
+          <li>
+             <a id="btnMostrarCam<?php echo $i ?>" href="vivo-camara<?php echo $i ?>" class="thumb-camara">
+              <img src="<?php echo get_option( 'cam'.$i ) ?>" alt="<?php echo get_option( 'text_cam'.$i ) ?>" />
+              <p><?php echo get_option( 'text_cam'.$i ); ?></p>
+            </a>
+          </li>
+          <?php $i ++; ?>
 
+        <?php endwhile; ?>
+      </ul>
+  </div> 
 
 </div>
    

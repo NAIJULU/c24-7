@@ -1437,6 +1437,35 @@ function cleanInt( $paramInt )
   
 }
 
+
+function getStringSubcategories($parent)
+{
+  settype($parent, 'int');
+
+  $args = array(
+    'orderby' => 'id',
+    'parent'  => $parent
+    );
+
+  $categories = get_categories( $args );
+  $catList    = '';
+
+  if($categories == NULL || count($categories) == 0 )
+  {
+    return NULL;
+  }
+  else
+  {
+    foreach ($categories as $key => $category) 
+    {
+      $catList = $catList .','. $category->cat_ID;
+    }
+  }
+
+  return $catList;
+}
+
+
 /*
 * Codigo del widget embebido clima 24/7
 *
@@ -1449,7 +1478,7 @@ function widget_embed()
 
   if( $id > 0)
   {
-    $embed = "<iframe id ='widget'><script  type='text/javascript' src='js/jquery-1.11.1.min.js'></script></iframe>";
+    $embed = "<iframe id ='widget' src='http://localhost/c24-7/wp-content/themes/clima/embed.php?id_widget=$id' frameborder='0'></iframe>";
   }
   else
   {
