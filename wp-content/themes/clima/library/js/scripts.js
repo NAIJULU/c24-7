@@ -614,8 +614,15 @@ jQuery(document).ready(function($) {
 	{
 		if( $("p iframe").length )
 		{
-			$("p iframe").parent().append('<div class="contenedor-video"></div>');
-			$("p iframe").appendTo(".contenedor-video");
+			var numiframe = $("p iframe").length; 
+			var i = 0;
+
+			for(i = 0; i <= numiframe; i++ )
+			{
+				$("p iframe:eq("+i+")").parent().append('<div class="contenedor-video"></div>');
+				$("p iframe:eq("+i+")").appendTo(".contenedor-video:eq("+i+")");
+			}
+
 		}
 	}
 
