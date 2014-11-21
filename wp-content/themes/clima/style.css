@@ -3490,7 +3490,7 @@ div#search {
 	color: #FFF;
 }
 
-#widget #p-lluvia
+#widget #p-lluvia, #p-temperatura
 { 
 	max-width: 350px;
 	min-width: 250px;
@@ -3522,32 +3522,32 @@ div#search {
 	margin: auto;
 }
 
-#widget #p-lluvia
+#widget #p-lluvia, #p-temperatura
 {
 /*	background-color: rgba(25, 40, 63, 0.55)  ;*/
 	color: #fff ;
 }
 
-#widget #p-lluvia section .enc-ciudad
+#widget #p-lluvia section .enc-ciudad, , #p-temperatura section .enc-ciudad
 {
 /*	background-color: #1B2B44  ;*/
 	height: 40px;
 }
 
-#widget #p-lluvia section .enc
+#widget #p-lluvia section .enc, #p-temperatura section .enc
 {
 /*	background-color: #1B2B44  ;*/
 }
 
 
-#widget #p-lluvia section .enc-ciudad .enc-ciudad-cont h1
+#widget #p-lluvia section .enc-ciudad .enc-ciudad-cont h1, #widget #p-temperatura section .enc-ciudad .enc-ciudad-cont h1
 {
 	font-size: 20px;
 	text-align: center;
 	line-height: 0;
 }
 
-#widget #p-lluvia section .enc-ciudad-cont h3
+#widget #p-lluvia section .enc-ciudad-cont h3, #widget #p-temperatura section .enc-ciudad-cont h3
 {
 	font-size: 10px;
 	font-weight: bold;
@@ -3556,18 +3556,18 @@ div#search {
 }
 
 
-#widget #p-lluvia section .body-ciudad
+#widget #p-lluvia section .body-ciudad, #widget #p-temperatura section .body-ciudad
 {
 	text-align: center;
 }
 
 
-#widget #p-lluvia section .body-ciudad div .det
+#widget #p-lluvia section .body-ciudad div .det, #widget #p-temperatura section .body-ciudad div .det
 {
 	height: 30px;
 }
 
-#widget #p-lluvia section .body-ciudad div #enc-lluvia
+#widget #p-lluvia section .body-ciudad div #enc-lluvia, #widget #p-temperatura section .body-ciudad div #enc-lluvia
 {
 	height: 50px;
 	border-width: 3px;
@@ -3575,7 +3575,7 @@ div#search {
 /*	boder-color:rgba(25, 40, 63, 0.55) ;*/
 }
 
-#widget #p-lluvia section .body-ciudad div #enc-temp
+#widget #p-lluvia section .body-ciudad div #enc-temp,  #widget #p-temperatura section .body-ciudad div #enc-temp
 {
 	height: 50px;
 	border-width: 3px;
@@ -3583,19 +3583,19 @@ div#search {
 	boder-color:rgba(25, 40, 63, 0.55) ;
 }
 
-#widget #p-lluvia section .body-ciudad div #enc-temp h3
+#widget #p-lluvia section .body-ciudad div #enc-temp h3, #widget #p-temperatura section .body-ciudad div #enc-temp h3
 {
 	font-size: 12px;
 	line-height: 12px;
 }
 
-#widget #p-lluvia section .body-ciudad div #enc-lluvia h3
+#widget #p-lluvia section .body-ciudad div #enc-lluvia h3, #widget #p-temperatura section .body-ciudad div #enc-lluvia h3 
 {
 	font-size: 12px;
 	line-height: 12px;
 }
 
-#widget #p-lluvia footer .more-info
+#widget #p-lluvia footer .more-info, #widget #p-temperatura footer .more-info 
 {
 	text-align: center;
 	height: 35px;
@@ -3603,7 +3603,7 @@ div#search {
 	padding-top: 10px; 
 }
 
-#widget #p-lluvia footer .more-info a
+#widget #p-lluvia footer .more-info a, #widget #p-temperatura footer .more-info a 
 { 
 	color: #fff ;
 }

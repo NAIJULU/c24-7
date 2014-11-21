@@ -858,9 +858,11 @@ jQuery(document).ready(function($) {
 		$("#tema").change( function(){
 
 			$("#p-lluvia").removeClass();
+			$("#p-temperatura").removeClass();
 
 			temaId = $("#tema").val();
 	 		$("#p-lluvia").addClass("tema-"+temaId);
+	 		$("#p-temperatura").addClass("tema-"+temaId);
 
 		}).change();
 

@@ -3,7 +3,7 @@
 define( 'SHORTINIT', true );
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/c24-7/wp-load.php' );
 global $wpdb;  
-error_reporting(E_ALL);
+
 ini_set('display_errors', 1);
 
 $id = $_GET['id_widget'];
@@ -33,38 +33,36 @@ foreach ($result as $key => $widget)
     $tema    = $widget->tema;
 } 
 
-echo $lluvia;
-
-
 if( $lluvia == "s")
 {
-    $query      = "SELECT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE 'lluv%medellin';";
-    $RLluvias   = $wpdb->get_results( "SELECT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE 'lluv%medellin';");
+    $query      = "SELECT DISTINCT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE '%s' ;";
+    $RLluvias   = $wpdb->get_results( sprintf($query, 'lluv%medellin'));
+
     $lluvias    = array(); 
 
-print_r($RLluvias);
 
     foreach ($RLluvias as $key => $value) 
     {
-       if( strpos( strtolower($value->option_name, 'mad'))
+
+       if( strpos( strtolower($value->option_name), 'mad') )
        {
             $lluvias['mad'] = $value->option_value;       
        }
        else
        {
-         if(strpos( strtolower($value->option_name, 'man'))
+         if(strpos( strtolower($value->option_name), 'man') )
          {
             $lluvias['man'] = $value->option_value;
          }
         else
         {
-            if( strpos( strtolower($value->option_name, 'tar') )
+            if( strpos( strtolower($value->option_name), 'tar') )
             {
                 $lluvias['tar'] = $value->option_value;
             }
             else
             {
-                if( strpos( strtolower($value->option_name, 'noc') )
+                if( strpos( strtolower($value->option_name), 'noc') )
                 {
                     $lluvias['noc'] = $value->option_value;
                 }   
@@ -74,15 +72,32 @@ print_r($RLluvias);
        }
     } 
 
-    echo $lluvias;
+
+
 }
 
-
-/*
 if( $temperatura == "s")
 {
+    $query   = "SELECT DISTINCT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE '%s' ;";
+    $RTemp   = $wpdb->get_results( sprintf($query, 'temp%medellin'));
+    $temp    = array(); 
 
+
+    foreach ($RTemp as $key => $value) 
+    {
+       if( strpos( strtolower($value->option_name), 'min') )
+       {
+            $temp['min'] = $value->option_value;       
+       }
+       else
+       {
+         if(strpos( strtolower($value->option_name), 'max') )
+         {
+            $temp['max'] = $value->option_value;
+         }
+       }
+    }
 }
-*/
+
 
 ?>
