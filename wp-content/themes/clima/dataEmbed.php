@@ -24,79 +24,95 @@ $tema        = null;
 foreach ($result as $key => $widget) 
 {
 
+    $cliente      = $widget->cliente;
+    $correo       = $widget->correo;
+    $web          = $widget->web;
+    $lluvia       = $widget->lluvia;
+    $temperatura  = $widget->temperatura;
+    $tema         = $widget->tema;
+}
 
-   $cliente = $widget->cliente;
-    $correo  = $widget->correo;
-    $web     = $widget->web;
-    $lluvia  = $widget->lluvia;
-    $temperatura = $widget->temperatura;
-    $tema    = $widget->tema;
-} 
+
+
+$queryrel   = "SELECT wc.widget,c.ciudad, wc.ciudad as cod_ciudad, c.option_name FROM c247_widget_ciudad wc ".
+              "LEFT JOIN c247_ciudades c ON  ( wc.ciudad = c.id_ciudad ) ".
+              "WHERE widget = %d AND wc.estado = 1";
+$cw         = $wpdb->get_results( sprintf($queryrel,$id) );
 
 if( $lluvia == "s")
 {
-    $query      = "SELECT DISTINCT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE '%s' ;";
-    $RLluvias   = $wpdb->get_results( sprintf($query, 'lluv%medellin'));
 
-    $lluvias    = array(); 
+  $lluvias    = array(); 
 
+  foreach ($cw as $key => $ciudad) 
+  {
+    $query      = "SELECT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE  '%s' ;";
+    $RLluvias   = $wpdb->get_results( sprintf($query, 'lluv%'.strtolower($ciudad->option_name)));
 
     foreach ($RLluvias as $key => $value) 
     {
 
        if( strpos( strtolower($value->option_name), 'mad') )
        {
-            $lluvias['mad'] = $value->option_value;       
+            $lluvias[$ciudad->cod_ciudad]['mad'] = $value->option_value;       
        }
        else
        {
-         if(strpos( strtolower($value->option_name), 'man') )
-         {
-            $lluvias['man'] = $value->option_value;
-         }
-        else
-        {
-            if( strpos( strtolower($value->option_name), 'tar') )
-            {
-                $lluvias['tar'] = $value->option_value;
-            }
-            else
-            {
-                if( strpos( strtolower($value->option_name), 'noc') )
-                {
-                    $lluvias['noc'] = $value->option_value;
-                }   
-            }
-
+           if(strpos( strtolower($value->option_name), 'man') )
+           {
+              $lluvias[$ciudad->cod_ciudad]['man'] = $value->option_value;
+           }
+          else
+          {
+              if( strpos( strtolower($value->option_name), 'tar') )
+              {
+                  $lluvias[$ciudad->cod_ciudad]['tar'] = $value->option_value;
+              }
+              else
+              {
+                  if( strpos( strtolower($value->option_name), 'noc') )
+                  {
+                      $lluvias[$ciudad->cod_ciudad]['noc'] = $value->option_value;
+                  }   
+              }
+          }
         }
-       }
+
     } 
 
-
-
+  }
 }
 
 if( $temperatura == "s")
-{
-    $query   = "SELECT DISTINCT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE '%s' ;";
-    $RTemp   = $wpdb->get_results( sprintf($query, 'temp%medellin'));
-    $temp    = array(); 
+{    
 
+  $temp    = array(); 
+
+  foreach ($cw as $key => $ciudad) 
+  {
+    $query   = "SELECT option_name , option_value FROM c247_options WHERE LOWER(option_name) LIKE  '%s' ;";
+    $RTemp   = $wpdb->get_results( sprintf($query, 'temp%'.strtolower($ciudad->option_name)));
 
     foreach ($RTemp as $key => $value) 
     {
        if( strpos( strtolower($value->option_name), 'min') )
        {
-            $temp['min'] = $value->option_value;       
+            $temp[$ciudad->cod_ciudad]['min'] = $value->option_value;       
        }
        else
        {
          if(strpos( strtolower($value->option_name), 'max') )
          {
-            $temp['max'] = $value->option_value;
+            $temp[$ciudad->cod_ciudad]['max'] = $value->option_value;
          }
        }
     }
+
+  }
+
+
+
+
 }
 
 

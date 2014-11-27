@@ -854,15 +854,27 @@ jQuery(document).ready(function($) {
 	 		$( ".alert" ).fadeOut( 2000 );
 	 	}
 
+		$("#enc-lluvia").click( function(){
+
+			$("#lluvias").css('display','');
+			$("#p-temperatura").css('display','none');
+
+		});
+
+		$("#enc-temp").click( function(){
+
+			$("#lluvias").css('display','none');
+			$("#p-temperatura").css("display","");
+
+		});
+
 	 	var temaId = null;
 		$("#tema").change( function(){
 
-			$("#p-lluvia").removeClass();
-			$("#p-temperatura").removeClass();
+			$("#pronosticos").removeClass();
 
 			temaId = $("#tema").val();
-	 		$("#p-lluvia").addClass("tema-"+temaId);
-	 		$("#p-temperatura").addClass("tema-"+temaId);
+	 		$("#pronosticos").addClass("tema-"+temaId);
 
 		}).change();
 
@@ -881,19 +893,7 @@ jQuery(document).ready(function($) {
 
 		});*/
 
-		$("#btn-widget").click( function(){
-
-			if( ( $("input[name='opcion1']:checked").length > 0 || $("input[name='opcion2']:checked").length > 0  )
-				 && $("#tema").length > 0)
-			{
-				$('#modalWidget').modal('show');
-			}
-			else
-			{
-				alert('Seleccione un pronostico');
-			}
-
-		});
+	
 
 		$("#btn-clima-cerrar").click( function(){
 
@@ -905,15 +905,37 @@ jQuery(document).ready(function($) {
 
 			e.preventDefault();
 
-			if( $("#widget-nombre").val() != "" && $("#widget-correo").val() != "" )
+			if( ( $("input[name='opcion1']:checked").length > 0 || $("input[name='opcion2']:checked").length > 0 ))
 			{
-				$( "#widget-form" ).submit();
+				if( $("#tema").length > 0)
+				{
+					if( $(".widget-ciudad:checked").length > 0 )
+					{
+						if( $("#widget-nombre").val() != "" && $("#widget-correo").val() != "" )
+						{
+							$( "#widget-form" ).submit();
+						}
+						else
+						{
+							alert('Ingrese todos los datos');
+						}
+					}
+					else
+					{
+						alert('Seleccione un sector');			
+					}
+
+				}
+				else
+				{
+					alert('Seleccione un Tema para el widget');
+				}
+				
 			}
 			else
 			{
-				alert('Ingrese todos los datos');
+				alert('Seleccione un pronostico');
 			}
-
 
 		});
 

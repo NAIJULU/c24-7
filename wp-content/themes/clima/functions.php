@@ -1465,6 +1465,25 @@ function getStringSubcategories($parent)
   return $catList;
 }
 
+/*
+* Obtener las dispobibles en clima24/7
+*
+*/
+function getCiudades()
+{
+    global $wpdb;  
+
+    $query    = "SELECT ciudad FROM c247_ciudades;";
+    $results  = $wpdb->get_results($query);
+    $ciudad = array();
+
+    foreach ($results as $key => $value) 
+    {
+      $ciudad[] = $value->ciudad;
+    }
+
+    return $ciudad;
+}
 
 /*
 * Codigo del widget embebido clima 24/7

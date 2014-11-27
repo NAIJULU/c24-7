@@ -4,6 +4,8 @@
 */
 get_header(); 
 $generado   = false;
+$ciudades = getCiudades();
+
 
 if( count( $_POST ) > 0 )
 {
@@ -31,6 +33,16 @@ if( count( $_POST ) > 0 )
                     </label>
                 </div>
             </div>
+            <div class="control-group">
+              <label class="control-label" for="inputOpciones">Sectores: </label>
+              <div class="controls">
+                  <?php foreach ($ciudades as $key => $value) : ?>
+                     <label class="checkbox">
+                        <?php echo $value ?><input class="widget-ciudad" type="checkbox" name="ciudades[]" value="<?php echo $key ?>" />
+                    </label>
+                  <?php endforeach; ?>    
+              </div>
+            </div>
 
             <div class="control-group">
                 <label class="control-label" for="inputOpciones">Tema: </label>
@@ -43,66 +55,53 @@ if( count( $_POST ) > 0 )
                     </select>
                 </div>
             </div>
-          </div>
 
-          <?php if( !$generado ): ?>
+            <div>
+              <label >Datos personales: </label>
+            </div>
+
             <div class="control-group">
-               <input id="btn-widget" class="btn btn-success" type="button" value="Generar">
-            </div>
-          <?php endif; ?> 
-            <!-- ventana modal de confirmacion -->
-
-            <div id="modalWidget" class="modal hide fade">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>Datos Básicos </h3>
-              </div>
-              <div class="modal-body">
-
-                <div class="control-group">
-                  <label class="control-label" for="inputNombre">Nombre: </label>
-                  <div class="controls">
-                        <input id="widget-nombre" type="text" name="nombre" value="" required>
-                  </div>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="inputNombre">Correo : </label>
-                  <div class="controls">
-                        <input id="widget-correo" type="email" name="correo" value="" required>
-                  </div>
-                </div>
-
-                <div class="control-group">
-                  <label class="control-label" for="inputNombre">Web : </label>
-                  <div class="controls">
-                         <input id="widget-web" type="text" name="web" value="">
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <a href="#" id="btn-clima-cerrar" class="btn">Cerrar</a>
-                <input id="btn-guardar-widget" type="submit" class="btn btn-primary" value="Guardar" />
+              <label class="control-label" for="inputNombre">Nombre: </label>
+              <div class="controls">
+                <input id="widget-nombre" type="text" name="nombre" value="" required>
               </div>
             </div>
-        </form>
+            <div class="control-group">
+              <label class="control-label" for="inputNombre">Correo : </label>
+              <div class="controls">
+                <input id="widget-correo" type="email" name="correo" value="" required>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="inputNombre">Web : </label>
+              <div class="controls">
+               <input id="widget-web" type="text" name="web" value="">
+             </div>
+           </div>
+
+             <?php if( !$generado ): ?>
+                <div class="control-group">
+                  <input id="btn-guardar-widget" type="submit" class="btn btn-primary" value="Guardar" />
+                </div>
+            <?php endif; ?> 
+        </div>
+      </form>
 
         <?php if( $generado ): ?>
         <?php
-          $lastId = mysql_insert_id();
           settype($lastId, 'int');
         ?>
         <p> Copia y pega el codigo en tu web </p>
         <div class="well">
-          <code>
            <?php echo htmlspecialchars('<div class="widget-c247"><div class="inner-widget" data-id="'.$lastId.'"></div><script src="http://localhost/c24-7/wp-content/themes/clima/library/js/widget-embed.js"></script></div>'); ?> 
-         </code>
         </div>
         <?php endif; ?>
 
     </div>
 
     <div class="span6">
-    	<article class="span12" id="p-lluvia">
+    	<article class="span12" id="pronosticos">
     		<header>
     			<div id="img-encabezado">
     				<img src="<?php echo bloginfo('template_url') .'/images/logoClima.png' ?>" alt="clima 24/7">
@@ -116,120 +115,109 @@ if( count( $_POST ) > 0 )
     				</div>
     			</div>
     			<div class="body-ciudad">
-    				<div class="span12">
-    					<div id="enc-lluvia" class="enc span6">
-    						<h3>Pronostico de lluvias</h3>
-    					</div>
-    					<div id="enc-temp" class="enc span6">
-    						<h3>pronostico de temperatura</h3>
-    					</div>
-    				</div>
-
-    				<div class="span12">
-    					<div class="det span6">
-    						<span>Madrugada</span>
-    					</div>
-    					<div class="det span6">
-                            <span class="span5">
-                              <img src="<?php echo bloginfo('template_url') .'/images/BAJANOCHE.png' ?>" alt="clima 24/7">
-                          </span>
-                          <span class="span6">
-                              <span>30%</span>
-                          </span>
-                      </div>
-                  </div>
-
-                  <div class="span12">
-                        <div class="det span6">
-                              <span>Madrugada</span>
-                        </div>
-                        <div class="det span6">
-                            <span class="span5">
-                              <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7" />
-                            </span>
-                             <span class="span6">
-                              <span>30%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="span12">
-                          <div class="det span6">
-                              <span>Tarde</span>
-                          </div>
-                          <div class="det span6">
-                               <span class="span5">
-                                  <img src="<?php echo bloginfo('template_url') .'/images/MEDIA.png' ?>" alt="clima 24/7">
-                               </span>
-                              <span class="span6">
-                                <span>40%</span>
-                              </span>
-                           </div>
-                    </div>
-                    <div class="span12">
-                         <div class="det span6">
-                          <span>Noche</span>
-                        </div>
-                        <div class="det span6">
-                          <span class="span5">
-                              <img src="<?php echo bloginfo('template_url') .'/images/ALTANOCHE.png' ?>" alt="clima 24/7">
-                          </span>
-                          <span class="span6">
-                              <span>60%</span>
-                          </span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer class="span12">
-             <div class="more-info">
-                <a href="http://www.clima247.gov.co">¿Quieres conocer mas sobre el clima?</a>
-            </div>
-            </footer>
-        </article>
-
-        <article class="span12"  id="p-temperatura">
-          <header>
-            <div id="img-encabezado">
-              <img src="<?php echo bloginfo('template_url') .'/images/logoClima.png' ?>" alt="clima 24/7">
-            </div>
-          </header>
-          <section>
-            <div class="enc-ciudad">
-              <div class="enc enc-ciudad-cont">
-                <h3>Miercoles 25 de Julio</h3>
-                <h1>Copacabana</h1>
+            <div class="span12">
+               <div id="enc-lluvia" class="enc span6">
+                <h3>Pronostico de lluvias</h3>
+              </div>
+              <div id="enc-temp" class="enc span6">
+                <h3>pronostico de temperatura</h3>
               </div>
             </div>
-            <div class="body-ciudad">
+
+            <div id="lluvias">
               <div class="span12">
-                <div id="enc-lluvia" class="enc span6">
-                  <h3>Minimo</h3>
+                <div class="det span6">
+                  <span>Madrugada</span>
                 </div>
-                <div id="enc-temp" class="enc span6">
-                  <h3>Maximo</h3>
-                </div>
-              </div>
-              <div class="span12">
-                <div  class="det span6">
-                   <span class="span5">
-                      <img src="<?php echo bloginfo('template_url') .'/images/t-azul.png' ?>" alt="clima 24/7">
-                  </span>
-                </div>
-                <div  class="det span6">
+                <div class="det span6">
                   <span class="span5">
-                      <img src="<?php echo bloginfo('template_url') .'/images/t-naranja.png' ?>" alt="clima 24/7">
+                    <img src="<?php echo bloginfo('template_url') .'/images/BAJANOCHE.png' ?>" alt="clima 24/7">
+                  </span>
+                  <span class="span6">
+                    <span>30%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="span12">
+                <div class="det span6">
+                  <span>Madrugada</span>
+                </div>
+                <div class="det span6">
+                  <span class="span5">
+                    <img src="<?php echo bloginfo('template_url') .'/images/BAJADIA.PNG' ?>" alt="clima 24/7" />
+                  </span>
+                  <span class="span6">
+                    <span>30%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="span12">
+                <div class="det span6">
+                  <span>Tarde</span>
+                </div>
+                <div class="det span6">
+                   <span class="span5">
+                    <img src="<?php echo bloginfo('template_url') .'/images/MEDIA.png' ?>" alt="clima 24/7">
+                  </span>
+                  <span class="span6">
+                    <span>40%</span>
+                  </span>
+                </div>
+              </div>
+              <div class="span12">
+                 <div class="det span6">
+                  <span>Noche</span>
+                </div>
+                <div class="det span6">
+                  <span class="span5">
+                    <img src="<?php echo bloginfo('template_url') .'/images/ALTANOCHE.png' ?>" alt="clima 24/7">
+                  </span>
+                  <span class="span6">
+                    <span>60%</span>
                   </span>
                 </div>
               </div>
             </div>
-          </section>
-          <footer class="span12">
-            <div class="more-info">
-              <a href="http://www.clima247.gov.co">¿Quieres conocer mas sobre el clima?</a>
+            <div id="p-temperatura" style="display:none;">
+              <div class="span12">
+                <div  class="det-temp span6">
+                 <span class="span5">
+                  <img src="<?php echo bloginfo('template_url') .'/images/t-azul.png' ?>" alt="clima 24/7">
+                </span>
+              </div>
+              <div  class="det-temp span6">
+                <span class="span5">
+                  <img src="<?php echo bloginfo('template_url') .'/images/t-naranja.png' ?>" alt="clima 24/7">
+                </span>
+              </div>
             </div>
-         </footer>
-  </article>
+            <div class="span12">
+               <div class="enc span6">
+                <h3>30 %</h3>
+              </div>
+              <div class="enc span6">
+                <h3>60 %</h3>
+              </div>
+            </div>
+            <div class="span12">
+               <div class="enc span6">
+                <h3>Minimo</h3>
+              </div>
+              <div class="enc span6">
+                <h3>Maximo</h3>
+              </div>
+            </div>
+          </div>
 
+        </div>
+        </section>
+        <footer class="span12">
+           <div class="more-info">
+            <a target="_blank" href="http://www.clima247.gov.co">¿Quieres conocer mas sobre el clima?</a>
+          </div>
+        </footer>
+    </article>
+    
     </div>
 
   </div> <!-- end main -->
