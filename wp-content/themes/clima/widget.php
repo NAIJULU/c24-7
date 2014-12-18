@@ -21,9 +21,18 @@ if( count( $_POST ) > 0 )
     
         <form id="widget-form" class="form-horizontal" method="post" action="">
           <div id="inner-form">
-              <p> Incluye en tu web, el widget de clima 24/7 </p>
+              <div class="page-header">
+                <h1> Incluye el widget de clima 24/7 en tu sitio web</h1>
+              </div>
+
+              <p>Ahora toda la información de clima 24/7 la podras tener en tu sitio web
+              .Configura el siguiente widget con el contenido que te interese , 
+              genera el código e inclúyelo en tu sitio web </p>
+
             <div class="control-group">
-                <label class="control-label" for="inputOpciones">Pronostico: </label>
+                <label>
+                  1. Selecciona la información que quieres incluir en el widget:
+                </label>
                 <div class="controls">
                      <label class="checkbox">
                         Lluvias  <input type="checkbox" name="opcion1" value="1">
@@ -34,21 +43,26 @@ if( count( $_POST ) > 0 )
                 </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="inputOpciones">Sectores: </label>
+              <label>
+                2. Selecciona los sectores del Área Metropolitana de los cuales quieres 
+                que se muestre información:
+              </label>
               <div class="controls">
                   <?php foreach ($ciudades as $key => $value) : ?>
                      <label class="checkbox">
-                        <?php echo $value ?><input class="widget-ciudad" type="checkbox" name="ciudades[]" value="<?php echo $key ?>" />
+                        <?php echo $value ?><input class="widget-ciudad" type="checkbox" name="ciudades[]" value="<?php echo ( $key + 1 ) ?>" />
                     </label>
                   <?php endforeach; ?>    
               </div>
             </div>
 
             <div class="control-group">
-                <label class="control-label" for="inputOpciones">Tema: </label>
+                <label>
+                  3. Selecciona el esquema de color que más se ajuste a tu sitio web: 
+                </label>
                 <div class="controls">
                     <select id="tema" name="tema">
-                        <option value="1">Azul (defecto)</option>
+                        <option value="1">Azul (Por Defecto )</option>
                         <option value="2">Crema</option>
                         <option value="3">Darks</option>
                         <option value="4">Frutas tropiclaes</option>
@@ -57,7 +71,9 @@ if( count( $_POST ) > 0 )
             </div>
 
             <div>
-              <label >Datos personales: </label>
+              <label >
+                4. Llena estos datos basicos para completar el proceso:
+              </label>
             </div>
 
             <div class="control-group">

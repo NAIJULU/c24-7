@@ -15,6 +15,8 @@
 				$("#select-ciudad").change( function(){
 
 					var title = $("#select-ciudad").val();
+					title = title.replace(" ", ""); 
+
 					$("#widget-title").html(title);
 
 					if( $(".widget-lluvia").length > 0 )
@@ -41,6 +43,8 @@
 
 						$(".widget-lluvia .element-ciudad").css('display',"none");
 						$(".widget-lluvia .ciudad-"+title).css('display',"");
+
+
 
 					});
 
@@ -73,7 +77,7 @@
 				<?php 
 				foreach ($cw as $key => $value)
 				{
-					echo '<option value="'.$value->ciudad.'">'.$value->ciudad.'</option>';
+					echo '<option value="'.str_replace(' ','',$value->ciudad).'">'.$value->ciudad.'</option>';
 				}
 				?>
 			</select>
@@ -97,7 +101,7 @@
 
 		<?php foreach ($cw as $key => $ciudad): ?>
 				<div class="widget-lluvia">
-					<div class="element-ciudad ciudad-<?php echo $ciudad->ciudad ?>" style="<?php echo $display ?>">
+					<div class="element-ciudad ciudad-<?php str_replace(' ','',$ciudad->ciudad)  ?>" style="<?php echo $display ?>">
 						<div class="encabezados">
 							<div class="mad">
 								<span>Madrugada</span>
@@ -138,7 +142,7 @@
 
 		<?php foreach ($cw as $key => $ciudad): ?>
 				<div class="widget-temp">
-					<div class="element-ciudad ciudad-<?php echo $ciudad->ciudad ?>" style="<?php echo $display ?>" >
+					<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad) ?>" style="<?php echo $display ?>" >
 						<div class="encabezados">
 							<div class="min">
 								<span>Minimo</span>
