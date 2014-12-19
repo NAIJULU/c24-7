@@ -1,0 +1,44 @@
+.widget-admin .tabla-widget
+{
+	width: 95%;
+	border: 1px solid black;
+	font-size: 12px;
+
+}
+
+.widget-admin .tabla-widget .enc
+{
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+}
+
+.widget-admin .tabla-widget tr td
+{
+	border-right: 1px solid black;
+}
+
+.widget-admin .tabla-widget .enc .medium
+{
+	width: 300px;
+}
+
+.widget-admin .paginador 
+{
+	width: 80%;
+}
+
+.widget-admin .paginador .area-izquierda
+{
+	width: 100px;
+	float: left;
+}
+
+
+.widget-admin .paginador .area-derecha
+{
+	width: 100px;
+	float: right;
+}
+
+
