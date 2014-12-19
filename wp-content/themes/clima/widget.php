@@ -108,7 +108,7 @@ if( count( $_POST ) > 0 )
         <?php
           settype($lastId, 'int');
         ?>
-        <p> Copia y pega el codigo en tu web </p>
+        <p> Ingresa el siguiente código dentro de tu sitio web web </p>
         <div class="well">
            <?php echo htmlspecialchars('<div class="widget-c247"><div class="inner-widget" data-id="'.$lastId.'"></div><script src="http://localhost/c24-7/wp-content/themes/clima/library/js/widget-embed.js"></script></div>'); ?> 
         </div>
