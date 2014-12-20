@@ -117,6 +117,9 @@ if( count( $_POST ) > 0 )
     </div>
 
     <div class="span6">
+      <div class="info">
+         Previsualización con datos de ejemplo
+      </div> 
     	<article class="span12" id="pronosticos">
     		<header>
     			<div id="img-encabezado">

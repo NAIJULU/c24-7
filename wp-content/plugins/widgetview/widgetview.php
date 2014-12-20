@@ -112,7 +112,6 @@ function adminView()
         <div class="area-derecha">
           <?php if( ( $pag * 30) < $total ): ?>
           <?php $incr = $pag +1 ; ?>
-
             <a href="<?php echo 'http://localhost/c24-7/wp-admin/options-general.php?page=adminView&pagina='.$incr ?>" class="sig"> Siguiente  </a> 
           <?php endif; ?>
         </div>
