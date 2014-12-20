@@ -2,6 +2,8 @@
 
 define( 'SHORTINIT', true );
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/c24-7/wp-load.php' );
+$pathImages = $_SERVER['DOCUMENT_ROOT'] . '/c24-7/wp-content/themes/clima/images/';
+
 global $wpdb;  
 
 ini_set('display_errors', 1);
@@ -113,6 +115,171 @@ if( $temperatura == "s")
 
 
 
+}
+
+
+
+
+function imgNoche($prob)
+{
+  $pathImages = 'images/';
+
+  $return = '<div class="pron-imagen">';
+
+  if( strtolower($prob) == 'baja')
+  {
+     
+    $return .= '<img src="'.$pathImages.'BAJANOCHE.png'.'" >';
+
+  }
+
+
+  if( strtolower($prob) == 'media')
+  {
+     $return .= '<img src="'.$pathImages.'MEDIANOCHE.png'.'" >';
+  }
+
+
+  if( strtolower($prob) == 'alta')
+  {
+     $return .= '<img src="'.$pathImages.'ALTANOCHE.png'.'" >';
+  }
+
+  $return .= '</div>';
+
+  return $return;
+
+
+}
+
+
+function imgDia($prob)
+{
+  $pathImages = 'images/';
+
+  $return = '<div class="pron-imagen">';
+
+  if( strtolower($prob) == 'baja')
+  {
+     
+    $return .= '<img src="'.$pathImages.'BAJADIA.PNG'.'" >';
+
+  }
+
+
+  if( strtolower($prob) == 'media')
+  {
+     $return .= '<img src="'.$pathImages.'MEDIA.png'.'" >';
+  }
+
+
+  if( strtolower($prob) == 'alta')
+  {
+     $return .= '<img src="'.$pathImages.'MEDIAALTADIA.PNG'.'" >';
+  }
+
+  $return .= '</div>';
+
+  return $return;
+
+}
+
+function imgMax($maxima)
+{
+
+  $pathImages = 'images/';
+
+  $return = '<div class="temp-imagen">';
+
+  if( $maxima > 0 && $maxima <= 15 )
+  {
+     $return .= '<img src="'.$pathImages.'t-azul.png'.'" >';
+  }
+  else
+  {
+    if( $maxima > 15 && $maxima <= 22 )
+    {
+      $return .= '<img src="'.$pathImages.'t-verde.png'.'" >';
+    }
+    else
+    {
+      if( $maxima > 22 &&  $maxima <= 29 )
+      {
+        $return .= '<img src="'.$pathImages.'t-amarillo.png'.'" >';
+      }
+      else
+      {
+        if( $maxima > 29 && $maxima <= 37)
+        {
+          $return .= '<img src="'.$pathImages.'t-naranja.png'.'" >';
+        }
+        else
+        {
+          if( $maxima > 37 )
+          {
+            $return .= '<img src="'.$pathImages.'t-rojo.png'.'" >';
+          }
+          else
+          {
+            $return .= '<img src="'.$pathImages.'t-azul.png'.'" >';
+          }
+        }
+      }
+    }
+  }
+
+  $return .= '</div>';
+
+  return $return;
+
+}
+
+function imgMin($minima)
+{
+    $pathImages = 'images/';
+
+    $return = '<div class="temp-imagen">';
+
+    if( $minima > 0 && $minima <= 15 )
+    {
+     $return .= '<img src="'.$pathImages.'t-azul.png'.'" >';
+    }
+    else
+    {
+      if( $minima > 15 && $minima <= 22 )
+      {
+         $return .= '<img src="'.$pathImages.'t-verde.png'.'" >';
+      }
+      else
+      {
+        if( $minima > 22 &&  $minima <= 29 )
+        {
+           $return .= '<img src="'.$pathImages.'t-amarillo.png'.'" >';
+        }
+        else
+        {
+          if( $minima > 29 && $minima <= 37)
+          {
+            $return .= '<img src="'.$pathImages.'t-naranja.png'.'" >';
+          }
+          else
+          {
+            if( $minima > 37 )
+            {
+              $return .= '<img src="'.$pathImages.'t-rojo.png'.'" >';
+            }
+            else
+            {
+              $return .= '<img src="'.$pathImages.'t-azul.png'.'" >';
+            }
+          }
+        }
+      }
+    }
+
+    $return .= '</div>';
+
+    return $return;
 }
 
 

@@ -101,7 +101,7 @@
 
 		<?php foreach ($cw as $key => $ciudad): ?>
 				<div class="widget-lluvia">
-					<div class="element-ciudad ciudad-<?php str_replace(' ','',$ciudad->ciudad)  ?>" style="<?php echo $display ?>">
+					<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad)  ?>" style="<?php echo $display ?>">
 						<div class="encabezados">
 							<div class="mad">
 								<span>Madrugada</span>
@@ -118,15 +118,19 @@
 						</div>
 						<div class="pron-lluvias">
 							<div class="mad">
+								<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['mad'] ) ?>
 								<?php echo @$lluvias[$ciudad->cod_ciudad]['mad']; ?>
 							</div>
 							<div class="man">
+								<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['man'] ) ?>
 								<?php echo @$lluvias[$ciudad->cod_ciudad]['man']; ?>
 							</div>
 							<div class="tar">
+								<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['tar'] ) ?>
 								<?php echo @$lluvias[$ciudad->cod_ciudad]['tar']; ?>
 							</div>
 							<div class="noc">
+								<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['noc'] ) ?>
 								<?php echo @$lluvias[$ciudad->cod_ciudad]['noc']; ?>
 							</div>
 						</div>
@@ -153,9 +157,11 @@
 						</div>
 						<div class="pron-temp">
 							<div class="min">
+								<?php echo imgMin( $temp[$ciudad->cod_ciudad]['min'] ) ?>
 								<?php echo @$temp[$ciudad->cod_ciudad]['min']; ?>
 							</div>
 							<div class="max">
+								<?php echo imgMax( $temp[$ciudad->cod_ciudad]['max'] ) ?>
 								<?php echo @$temp[$ciudad->cod_ciudad]['max']; ?>
 							</div>
 						</div>
