@@ -70,105 +70,110 @@
 		</script>
 	</head>
 	<body>
+
 		<?php include_once('dataEmbed.php'); ?>
-		
-		<div cass="ciudades">
-			<select id="select-ciudad">
-				<?php 
-				foreach ($cw as $key => $value)
-				{
-					echo '<option value="'.str_replace(' ','',$value->ciudad).'">'.$value->ciudad.'</option>';
-				}
-				?>
-			</select>
-		</div>
-		<div class="widget-temp-header">
-			<h1> Clima 24/7</h1>
-			<h1 id="widget-title"> <?php echo $cw[0]->ciudad; ?></h1>
-		</div>
+		<div class="tema-<?php echo $tema ?>">	
+			<div cass="ciudades">
+			<?php if( count($cw) > 1 ) : ?>
+				<select id="select-ciudad">
+					<?php 
+						foreach ($cw as $key => $value)
+						{
+							echo '<option value="'.str_replace(' ','',$value->ciudad).'">'.$value->ciudad.'</option>';
+						}
+					?>
+				<?php endif; ?>
+				</select>
+			</div>
+			<div class="widget-temp-header">
+				<h1> Clima 24/7</h1>
+				<h1 id="widget-title"> <?php echo $cw[0]->ciudad; ?></h1>
+			</div>
 
-		<div id="navbar">
-			<?php if( $lluvia == "s" &&  $temperatura == "s" ): ?>
-				<input id="btn-lluvia" type="button" value="Lluvia" />
-				<input id="btn-temperatura" type="button" value="Temperatura" />
-			<?php endif; ?>
-		</div>
-
-
-	<?php if( $lluvia == "s" ): ?>
-
-	<?php $display = "display:none;"; ?>
-
-		<?php foreach ($cw as $key => $ciudad): ?>
-				<div class="widget-lluvia">
-					<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad)  ?>" style="<?php echo $display ?>">
-						<div class="encabezados">
-							<div class="mad">
-								<span>Madrugada</span>
-							</div>
-							<div class="man">
-								<span>Mañana</span>
-							</div>
-							<div class="tar">
-								<span>Tarde</span>
-							</div>
-							<div class="noc">
-								<span>Noche</span>
-							</div>
-						</div>
-						<div class="pron-lluvias">
-							<div class="mad">
-								<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['mad'] ) ?>
-								<?php echo @$lluvias[$ciudad->cod_ciudad]['mad']; ?>
-							</div>
-							<div class="man">
-								<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['man'] ) ?>
-								<?php echo @$lluvias[$ciudad->cod_ciudad]['man']; ?>
-							</div>
-							<div class="tar">
-								<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['tar'] ) ?>
-								<?php echo @$lluvias[$ciudad->cod_ciudad]['tar']; ?>
-							</div>
-							<div class="noc">
-								<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['noc'] ) ?>
-								<?php echo @$lluvias[$ciudad->cod_ciudad]['noc']; ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<?php $display = ""; ?>
-		<?php endforeach; ?>
-	<?php endif; ?>
+			<div id="navbar">
+				<?php if( $lluvia == "s" &&  $temperatura == "s" ): ?>
+					<input id="btn-lluvia" type="button" value="Lluvia" />
+					<input id="btn-temperatura" type="button" value="Temperatura" />
+				<?php endif; ?>
+			</div>
 
 
-	<?php if( $temperatura == "s" ): ?>
-	<?php $display = ""; ?>
+		<?php if( $lluvia == "s" ): ?>
 
-		<?php foreach ($cw as $key => $ciudad): ?>
-				<div class="widget-temp">
-					<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad) ?>" style="<?php echo $display ?>" >
-						<div class="encabezados">
-							<div class="min">
-								<span>Minimo</span>
+			<?php $display = ""; ?>
+			<?php foreach ($cw as $key => $ciudad): ?>
+					<div class="widget-lluvia">
+						<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad)  ?>" style="<?php echo $display ?>">
+							<div class="encabezados">
+								<div class="mad">
+									<span>Madrugada</span>
+								</div>
+								<div class="man">
+									<span>Mañana</span>
+								</div>
+								<div class="tar">
+									<span>Tarde</span>
+								</div>
+								<div class="noc">
+									<span>Noche</span>
+								</div>
 							</div>
-							<div class="max">
-								<span>Maximo</span>
-							</div>
-						</div>
-						<div class="pron-temp">
-							<div class="min">
-								<?php echo imgMin( $temp[$ciudad->cod_ciudad]['min'] ) ?>
-								<?php echo @$temp[$ciudad->cod_ciudad]['min']; ?>
-							</div>
-							<div class="max">
-								<?php echo imgMax( $temp[$ciudad->cod_ciudad]['max'] ) ?>
-								<?php echo @$temp[$ciudad->cod_ciudad]['max']; ?>
+							<div class="pron-lluvias">
+								<div class="mad">
+									<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['mad'] ) ?>
+									<?php echo @$lluvias[$ciudad->cod_ciudad]['mad']; ?>
+								</div>
+								<div class="man">
+									<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['man'] ) ?>
+									<?php echo @$lluvias[$ciudad->cod_ciudad]['man']; ?>
+								</div>
+								<div class="tar">
+									<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['tar'] ) ?>
+									<?php echo @$lluvias[$ciudad->cod_ciudad]['tar']; ?>
+								</div>
+								<div class="noc">
+									<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['noc'] ) ?>
+									<?php echo @$lluvias[$ciudad->cod_ciudad]['noc']; ?>
+								</div>
 							</div>
 						</div>
 					</div>
-					<?php $display = "display:none;" ?>
-				</div>
-		<?php endforeach; ?>	
-	<?php endif; ?>
+					
+					<?php $display = "display:none;"; ?>
+			<?php endforeach; ?>
+		<?php endif; ?>
+
+
+		<?php if( $temperatura == "s" ): ?>
+		<?php $display = ""; ?>
+
+			<?php foreach ($cw as $key => $ciudad): ?>
+					<div class="widget-temp">
+						<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad) ?>" style="<?php echo $display ?>" >
+							<div class="encabezados">
+								<div class="min">
+									<span>Minimo</span>
+								</div>
+								<div class="max">
+									<span>Maximo</span>
+								</div>
+							</div>
+							<div class="pron-temp">
+								<div class="min">
+									<?php echo imgMin( $temp[$ciudad->cod_ciudad]['min'] ) ?>
+									<?php echo @$temp[$ciudad->cod_ciudad]['min']; ?>
+								</div>
+								<div class="max">
+									<?php echo imgMax( $temp[$ciudad->cod_ciudad]['max'] ) ?>
+									<?php echo @$temp[$ciudad->cod_ciudad]['max']; ?>
+								</div>
+							</div>
+						</div>
+						<?php $display = "display:none;" ?>
+					</div>
+			<?php endforeach; ?>	
+		<?php endif; ?>
+
+	</div>
 	</body>
 </html>
