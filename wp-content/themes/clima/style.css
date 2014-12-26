@@ -3618,6 +3618,19 @@ div#search {
 	color: #fff ;
 }
 
+
+#inner-form .punteo
+{
+	border: 1px dashed #fff;
+	padding-left: 5px;
+    padding-right: 3px;
+}
+
+.control-par
+{
+	width: 43%;
+}
+
 /* ------------ -  TEMA 1 ------------------ */  
 
 #widget .tema-1 header

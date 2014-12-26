@@ -29,36 +29,33 @@ if( count( $_POST ) > 0 )
               .Configura el siguiente widget con el contenido que te interese , 
               genera el código e inclúyelo en tu sitio web </p>
 
-            <div class="control-group">
+            <div class="control-group punteo">
                 <label>
-                  1. Selecciona la información que quieres incluir en el widget:
+                 <strong> 1. Selecciona la información que quieres incluir en el widget:</strong>
                 </label>
-                <div class="controls">
-                     <label class="checkbox">
-                        Lluvias  <input type="checkbox" name="opcion1" value="1">
-                    </label>
-                    <label class="checkbox">
-                        Temperatura <input type="checkbox" name="opcion2" value="1">
-                    </label>
-                </div>
+                  <label class="checkbox inline control-par">
+                      Lluvias  <input type="checkbox" name="opcion1" value="1">
+                  </label>
+                  <label class="checkbox inline control-par">
+                          Temperatura <input type="checkbox" name="opcion2" value="1">
+                  </label>
             </div>
-            <div class="control-group">
+
+            <div class="control-group punteo">
               <label>
-                2. Selecciona los sectores del Área Metropolitana de los cuales quieres 
-                que se muestre información:
+                <strong>2. Selecciona los sectores del Área Metropolitana de los cuales quieres 
+                que se muestre información:</strong>
               </label>
-              <div class="controls">
                   <?php foreach ($ciudades as $key => $value) : ?>
-                     <label class="checkbox">
+                     <label class="checkbox inline control-par">
                         <?php echo $value ?><input class="widget-ciudad" type="checkbox" name="ciudades[]" value="<?php echo ( $key + 1 ) ?>" />
                     </label>
                   <?php endforeach; ?>    
-              </div>
             </div>
 
-            <div class="control-group">
+            <div class="control-group punteo">
                 <label>
-                  3. Selecciona el esquema de color que más se ajuste a tu sitio web: 
+                  <strong>3. Selecciona el esquema de color que más se ajuste a tu sitio web: </strong>
                 </label>
                 <div class="controls">
                     <select id="tema" name="tema">
@@ -69,36 +66,38 @@ if( count( $_POST ) > 0 )
                     </select>
                 </div>
             </div>
+            <div class="punteo" >
 
-            <div>
-              <label >
-                4. Llena estos datos basicos para completar el proceso:
-              </label>
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="inputNombre">Nombre: </label>
-              <div class="controls">
-                <input id="widget-nombre" type="text" name="nombre" value="" required>
+              <div>
+                <label >
+                  <strong>4. Llena estos datos basicos para completar el proceso:</strong>
+                </label>
               </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" for="inputNombre">Correo : </label>
-              <div class="controls">
-                <input id="widget-correo" type="email" name="correo" value="" required>
-              </div>
-            </div>
 
-            <div class="control-group">
-              <label class="control-label" for="inputNombre">Web : </label>
-              <div class="controls">
-               <input id="widget-web" type="text" name="web" value="">
+              <div class="control-group">
+                <label class="control-label" for="inputNombre">Nombre: </label>
+                <div class="controls">
+                  <input id="widget-nombre" type="text" name="nombre" value="" required>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputNombre">Correo : </label>
+                <div class="controls">
+                  <input id="widget-correo" type="email" name="correo" value="" required>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="inputNombre">Web : </label>
+                <div class="controls">
+                 <input id="widget-web" type="text" name="web" value="">
+               </div>
              </div>
-           </div>
+           </div>  
 
              <?php if( !$generado ): ?>
                 <div class="control-group">
-                  <input id="btn-guardar-widget" type="submit" class="btn btn-primary" value="Guardar" />
+                  <input id="btn-guardar-widget" type="submit" class="btn btn-success" value="Generar" />
                 </div>
             <?php endif; ?> 
         </div>
