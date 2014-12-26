@@ -3631,6 +3631,12 @@ div#search {
 	width: 43%;
 }
 
+#widget .info
+{
+	color: #fff;
+	font-style: oblique;
+}
+
 /* ------------ -  TEMA 1 ------------------ */  
 
 #widget .tema-1 header
