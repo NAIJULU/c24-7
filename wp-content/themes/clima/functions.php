@@ -1497,7 +1497,8 @@ function widget_embed()
 
   if( $id > 0)
   {
-    $embed = "<iframe id ='widget' src='http://localhost/c24-7/wp-content/themes/clima/embed.php?id_widget=$id' frameborder='0'></iframe>";
+    $embed = "<iframe style='width:100%' id ='widget' ".
+              "src='http://localhost/c24-7/wp-content/themes/clima/embed.php?id_widget=$id' frameborder='0'></iframe>";
   }
   else
   {
