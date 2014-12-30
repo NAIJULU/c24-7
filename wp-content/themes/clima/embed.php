@@ -3,7 +3,7 @@
 	<head>
 		<meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 		<script  type='text/javascript' src='http://localhost/c24-7/wp-content/themes/clima/library/js/libs/jquery-1.7.1.min.js'></script>
-		<link rel="stylesheet" href="styles-widget.css">
+		<link rel="stylesheet" type="text/css" href="styles-widget.css">
 		<script type="text/javascript">
 			$( document ).ready(function() {
 
@@ -73,6 +73,10 @@
 
 		<?php include_once('dataEmbed.php'); ?>
 		<div class="tema-<?php echo $tema ?>">	
+			<div class="widget-temp-header">
+				<a href="http://clima247.gov.co/" class="logo-clima" target="_blank"> Clima 24/7</h1>
+				<h1 id="widget-title" class="titulo-ciudad"> <?php echo $cw[0]->ciudad; ?></h1>
+			</div>
 			<div cass="ciudades">
 			<?php if( count($cw) > 1 ) : ?>
 				<select id="select-ciudad">
@@ -85,11 +89,6 @@
 				<?php endif; ?>
 				</select>
 			</div>
-			<div class="widget-temp-header">
-				<h1> Clima 24/7</h1>
-				<h1 id="widget-title"> <?php echo $cw[0]->ciudad; ?></h1>
-			</div>
-
 			<div id="navbar">
 				<?php if( $lluvia == "s" &&  $temperatura == "s" ): ?>
 					<input id="btn-lluvia" type="button" value="Lluvia" />

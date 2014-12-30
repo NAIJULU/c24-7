@@ -1497,7 +1497,7 @@ function widget_embed()
 
   if( $id > 0)
   {
-    $embed = "<iframe style='width:100%' id ='widget' ".
+    $embed = "<iframe class='widget-clima' style='width:100%; height:1500px;'".
               "src='http://localhost/c24-7/wp-content/themes/clima/embed.php?id_widget=$id' frameborder='0'></iframe>";
   }
   else
