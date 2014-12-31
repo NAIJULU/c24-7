@@ -74,12 +74,12 @@
 		<?php include_once('dataEmbed.php'); ?>
 		<div class="tema-<?php echo $tema ?>">	
 			<div class="widget-temp-header">
-				<a href="http://clima247.gov.co/" class="logo-clima" target="_blank"> Clima 24/7</h1>
-				<h1 id="widget-title" class="titulo-ciudad"> <?php echo $cw[0]->ciudad; ?></h1>
+				<a href="http://clima247.gov.co/" class="logo-clima" target="_blank"> Clima 24/7</a>
 			</div>
-			<div cass="ciudades">
+			<div class="ciudades">
+			<h1 id="widget-title" class="titulo-ciudad"> <?php echo $cw[0]->ciudad; ?></h1>
 			<?php if( count($cw) > 1 ) : ?>
-				<select id="select-ciudad">
+				<select id="select-ciudad" class="select-ciudad">
 					<?php 
 						foreach ($cw as $key => $value)
 						{
@@ -91,8 +91,8 @@
 			</div>
 			<div id="navbar">
 				<?php if( $lluvia == "s" &&  $temperatura == "s" ): ?>
-					<input id="btn-lluvia" type="button" value="Lluvia" />
-					<input id="btn-temperatura" type="button" value="Temperatura" />
+					<a class="btn-lluvia btn-widget" id="btn-lluvia" >Pronóstico de lluvia<a/>
+					<a class="btn-temperatura btn-widget" id="btn-temperatura">Pronóstico de temperatura</a>
 				<?php endif; ?>
 			</div>
 
@@ -103,37 +103,25 @@
 			<?php foreach ($cw as $key => $ciudad): ?>
 					<div class="widget-lluvia">
 						<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad)  ?>" style="<?php echo $display ?>">
-							<div class="encabezados">
-								<div class="mad">
-									<span>Madrugada</span>
-								</div>
-								<div class="man">
-									<span>Mañana</span>
-								</div>
-								<div class="tar">
-									<span>Tarde</span>
-								</div>
-								<div class="noc">
-									<span>Noche</span>
-								</div>
+							<div class="madrugada">
+								<div class="titulo">Madrugada</div>
+								<div class="imagen"><?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['mad'] ) ?></div>
+								<div class="pronostico"><?php echo @$lluvias[$ciudad->cod_ciudad]['mad']; ?></div>
 							</div>
-							<div class="pron-lluvias">
-								<div class="mad">
-									<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['mad'] ) ?>
-									<?php echo @$lluvias[$ciudad->cod_ciudad]['mad']; ?>
-								</div>
-								<div class="man">
-									<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['man'] ) ?>
-									<?php echo @$lluvias[$ciudad->cod_ciudad]['man']; ?>
-								</div>
-								<div class="tar">
-									<?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['tar'] ) ?>
-									<?php echo @$lluvias[$ciudad->cod_ciudad]['tar']; ?>
-								</div>
-								<div class="noc">
-									<?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['noc'] ) ?>
-									<?php echo @$lluvias[$ciudad->cod_ciudad]['noc']; ?>
-								</div>
+							<div class="manana">
+								<div class="titulo">Mañana</div>
+								<div class="imagen"><?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['man'] ) ?></div>
+								<div class="pronostico"><?php echo @$lluvias[$ciudad->cod_ciudad]['man']; ?></div>
+							</div>
+							<div class="tarde">
+								<div class="titulo">Tarde</div>
+								<div class="imagen"><?php echo imgDia( $lluvias[$ciudad->cod_ciudad]['tar'] ) ?></div>
+								<div class="pronostico"><?php echo @$lluvias[$ciudad->cod_ciudad]['tar']; ?></div>
+							</div>
+							<div class="noche">
+								<div class="titulo">Noche</div>
+								<div class="imagen"><?php echo imgNoche( $lluvias[$ciudad->cod_ciudad]['noc'] ) ?></div>
+								<div class="pronostico"><?php echo @$lluvias[$ciudad->cod_ciudad]['noc']; ?></div>
 							</div>
 						</div>
 					</div>
@@ -172,7 +160,9 @@
 					</div>
 			<?php endforeach; ?>	
 		<?php endif; ?>
-
-	</div>
+		<div class="conoce-clima">
+			<a href="http://clima247.gov.co/?utm_source=web&utm_medium=widget&utm_campaign=widget_embebido" target="_blank">¿Quieres conocer más sobre el clima?</a>
+		</div>
+		</div>
 	</body>
 </html>

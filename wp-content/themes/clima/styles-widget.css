@@ -1,8 +1,99 @@
+body{
+	font-family: Arial;
+}
+.widget-temp-header{
+	padding: 5% 3%;
+	background: url(/c24-7/wp-content/themes/clima/images/fondo-widget.jpg) no-repeat;
+	background-size: cover;
+}
 a.logo-clima{
 	display: block;
-	width: 100%;
-	height: 80px;
+	width: 250px;
+	height: 100px;
+	margin: 0 auto;
+	background: url(/c24-7/wp-content/themes/clima/images/logoClima.png) no-repeat top center;
+	text-indent: -9999px;
+	background-size: cover;
 }
-body{
-	background: yellow;
+.ciudades{
+	background: #A6CE3A;
+	border-top: solid 5px #CFE277;
+	text-align: center;
+}
+.ciudades h1{
+	color: #fff;
+	text-transform: uppercase;
+	font-family: Arial;
+	margin: 15px 0 5px 0;
+	font-style: 24px;
+}
+.select-ciudad{
+	margin: 0 0 15px 0;
+	font-size: 16px;
+}
+.btn-widget{
+	border: none;
+	border-radius: none;
+	padding: 3% 2%;
+	width: 43%;
+	display: inline-block;
+	text-align: center;
+	margin: 2% 1%;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #fff;
+	cursor: pointer;
+}
+.btn-lluvia{
+	background: #2565A5;
+}
+.btn-temperatura{
+	background: #2D74C4;
+}
+.element-ciudad {
+	padding: 0% 3%;
+}
+.madrugada, .manana, .tarde,{
+	width: 95%;
+	margin: 0 auto;
+	border-bottom: solid #B2D1E5;
+}
+.titulo{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 11%;
+	font-size: 24px;
+	color: #677C91;
+	font-weight: 700;
+}
+.imagen{
+	width: 30%;
+	display: inline-block;
+}
+.imagen img{
+	width: 100%;
+}
+.pronostico{
+	width: 15%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 11%;
+	font-weight: 700;
+	color: #677C91;
+}
+.conoce-clima{
+	text-align: center;
+}
+.conoce-clima a{
+	background: #A6CE3A;
+	color: #fff;
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 13px;
+	text-decoration: none;
+}
+.conoce-clima a:hover{
+	background: #99BE35;;
 }
