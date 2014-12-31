@@ -14,10 +14,10 @@
 
 				$("#select-ciudad").change( function(){
 
-					var title = $("#select-ciudad").val();
-					title = title.replace(" ", ""); 
+					var title_f = $("#select-ciudad").val();
+					var title = title_f.replace(" ", ""); 
 
-					$("#widget-title").html(title);
+					$("#widget-title").html(title_f);
 
 					if( $(".widget-lluvia").length > 0 )
 					{
@@ -36,7 +36,8 @@
 				{
 					$("#btn-lluvia").click( function(){
 
-						var title = $("#select-ciudad").val();
+						var title_f = $("#select-ciudad").val();
+						var title = title_f.replace(" ", "");
 
 						$(".widget-temp").css('display',"none");
 						$(".widget-lluvia").css('display',"");
@@ -54,8 +55,8 @@
 				{
 					$("#btn-temperatura").click( function(){
 
-						var title = $("#select-ciudad").val();
-
+						var title_f = $("#select-ciudad").val();
+						var title = title_f.replace(" ", "");
 
 						$(".widget-lluvia").css('display',"none");
 						$(".widget-temp").css('display',"");
@@ -76,6 +77,11 @@
 			<div class="widget-temp-header">
 				<a href="http://clima247.gov.co/" class="logo-clima" target="_blank"> Clima 24/7</a>
 			</div>
+			<div class="hoy"> <span class="dia"><?php echo $dias[strftime("%w", $hoy)] ?> </span> 
+				<span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
+				de <span class="mes"><?php echo $meses[date('n')]; ?> </span>
+			</div>
+
 			<div class="ciudades">
 			<h1 id="widget-title" class="titulo-ciudad"> <?php echo $cw[0]->ciudad; ?></h1>
 			<?php if( count($cw) > 1 ) : ?>
@@ -83,7 +89,7 @@
 					<?php 
 						foreach ($cw as $key => $value)
 						{
-							echo '<option value="'.str_replace(' ','',$value->ciudad).'">'.$value->ciudad.'</option>';
+							echo '<option value="'.$value->ciudad.'">'.$value->ciudad.'</option>';
 						}
 					?>
 				<?php endif; ?>
