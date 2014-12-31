@@ -5,6 +5,10 @@
 get_header(); 
 $generado   = false;
 $ciudades = getCiudades();
+$hoy      = strtotime(date('Y-m-d'));
+$manana   = strtotime(date('Y-m-d').' +1 day');
+$dias     = unserialize(C247_DIAS);
+$meses    = unserialize(C247_MESES);
 
 
 if( count( $_POST ) > 0 )
@@ -128,7 +132,7 @@ if( count( $_POST ) > 0 )
     		<section>
     			<div class="enc-ciudad">
     				<div class="enc enc-ciudad-cont">
-    					<h3>Miercoles 25 de Julio</h3>
+    					<h3><span class="dia"><?php echo $dias[strftime("%w", $hoy)] ?> </span> <span class="dias"><?php echo strftime("%d", $hoy); ?> </span> de <span class="mes"><?php echo $meses[date('n')]; ?> </span></h3>
     					<h1>Copacabana</h1>
     				</div>
     			</div>
