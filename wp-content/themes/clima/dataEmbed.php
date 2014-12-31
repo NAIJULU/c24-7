@@ -23,6 +23,40 @@ $lluvia      = null;
 $temperatura = null;
 $tema        = null;
 
+ define("C247_MESES", serialize (array(
+            '1' => 'Enero',
+            '2' => 'Febrero',
+            '3' => 'Marzo',
+            '4' => 'Abril',
+            '5' => 'Mayo',
+            '6' => 'Junio',
+            '7' => 'Julio',
+            '8' => 'Agosto',
+            '9' => 'Septiembre',
+            '10' => 'Octubre',
+            '11' => 'Noviembre',
+            '12' => 'Diciembre'
+            ))
+  );
+
+  define("C247_DIAS", serialize (array(
+            '1' => 'Lunes',
+            '2' => 'Martes',
+            '3' => 'Miércoles',
+            '4' => 'Jueves',
+            '5' => 'Viernes',
+            '6' => 'Sábado',
+            '7' => 'Domingo'
+            ))
+  );
+
+$hoy      = strtotime(date('Y-m-d'));
+$manana   = strtotime(date('Y-m-d').' +1 day');
+$dias     = unserialize(C247_DIAS);
+$meses    = unserialize(C247_MESES);
+
+
+
 foreach ($result as $key => $widget) 
 {
 

@@ -21,6 +21,17 @@
 						'caldas' => 'Caldas'))
 	);
 
+define("C247_DIAS", serialize (array(
+            '1' => 'Lunes',
+            '2' => 'Martes',
+            '3' => 'Miercoles',
+            '4' => 'Jueves',
+            '5' => 'Viernes',
+            '6' => 'Sabado',
+            '7' => 'Domingo'
+            ))
+ );
+
  define("C247_MESES", serialize (array(
 						'1' => 'Enero',
 						'2' => 'Febrero',
