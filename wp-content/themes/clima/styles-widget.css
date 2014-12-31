@@ -97,3 +97,8 @@ a.logo-clima{
 .conoce-clima a:hover{
 	background: #99BE35;;
 }
+.minima, .maxima{
+	display: inline-block;
+	width: 48%;
+	text-align: center;
+}

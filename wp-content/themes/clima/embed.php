@@ -77,12 +77,11 @@
 			<div class="widget-temp-header">
 				<a href="http://clima247.gov.co/" class="logo-clima" target="_blank"> Clima 24/7</a>
 			</div>
+			<div class="ciudades">
 			<div class="hoy"> <span class="dia"><?php echo $dias[strftime("%w", $hoy)] ?> </span> 
 				<span class="dias"><?php echo strftime("%d", $hoy); ?> </span> 
 				de <span class="mes"><?php echo $meses[date('n')]; ?> </span>
 			</div>
-
-			<div class="ciudades">
 			<h1 id="widget-title" class="titulo-ciudad"> <?php echo $cw[0]->ciudad; ?></h1>
 			<?php if( count($cw) > 1 ) : ?>
 				<select id="select-ciudad" class="select-ciudad">
@@ -143,22 +142,26 @@
 			<?php foreach ($cw as $key => $ciudad): ?>
 					<div class="widget-temp">
 						<div class="element-ciudad ciudad-<?php echo str_replace(' ','',$ciudad->ciudad) ?>" style="<?php echo $display ?>" >
-							<div class="encabezados">
+							<div class="minima">
 								<div class="min">
-									<span>Minimo</span>
-								</div>
-								<div class="max">
-									<span>Maximo</span>
+									<div class="titulo-temperatura">Minimo</div>
+									<div class="img-temperatura">
+										<?php echo imgMin( $temp[$ciudad->cod_ciudad]['min'] ) ?>
+									</div>
+									<div class="grados">
+										<?php echo @$temp[$ciudad->cod_ciudad]['min']; ?>
+									</div>
 								</div>
 							</div>
-							<div class="pron-temp">
+							<div class="maxima">
 								<div class="min">
-									<?php echo imgMin( $temp[$ciudad->cod_ciudad]['min'] ) ?>
-									<?php echo @$temp[$ciudad->cod_ciudad]['min']; ?>
-								</div>
-								<div class="max">
-									<?php echo imgMax( $temp[$ciudad->cod_ciudad]['max'] ) ?>
-									<?php echo @$temp[$ciudad->cod_ciudad]['max']; ?>
+									<div class="titulo-temperatura">Máxima</div>
+									<div class="img-temperatura">
+										<?php echo imgMax( $temp[$ciudad->cod_ciudad]['max'] ) ?>
+									</div>
+									<div class="grados">
+										<?php echo @$temp[$ciudad->cod_ciudad]['max']; ?>
+									</div>
 								</div>
 							</div>
 						</div>
