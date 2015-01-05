@@ -20,11 +20,16 @@ a.logo-clima{
 	border-top: solid 5px #CFE277;
 	text-align: center;
 }
+.hoy {
+	color: #fff;
+	display: block;
+	margin: 15px 0 0 0px;
+}
 .ciudades h1{
 	color: #fff;
 	text-transform: uppercase;
 	font-family: Arial;
-	margin: 15px 0 5px 0;
+	margin: 5px 0 5px 0;
 	font-style: 24px;
 }
 .select-ciudad{
@@ -50,20 +55,26 @@ a.logo-clima{
 .btn-temperatura{
 	background: #2D74C4;
 }
+a:hover.btn-temperatura{
+	background: #1E4F86;
+}
+a:hover.btn-lluvia{
+	background: #1E4F86;
+}
 .element-ciudad {
 	padding: 0% 3%;
 }
-.madrugada, .manana, .tarde,{
+.madrugada, .manana, .tarde{
 	width: 95%;
 	margin: 0 auto;
 	border-bottom: solid #B2D1E5;
 }
 .titulo{
-	width: 50%;
+	width: 45%;
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 11%;
-	font-size: 24px;
+	margin-top: 8%;
+	font-size: 20px;
 	color: #677C91;
 	font-weight: 700;
 }
@@ -75,12 +86,13 @@ a.logo-clima{
 	width: 100%;
 }
 .pronostico{
-	width: 15%;
+	width: 20%;
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 11%;
+	margin-top: 8%;
 	font-weight: 700;
-	color: #677C91;
+	color: #3072C0;
+	font-size: 24px;
 }
 .conoce-clima{
 	text-align: center;
@@ -101,4 +113,18 @@ a.logo-clima{
 	display: inline-block;
 	width: 48%;
 	text-align: center;
+}
+.titulo-temperatura {
+	font-size: 22px;
+	font-weight: 700;
+	color: #3F586E;
+}
+.grados {
+	font-size: 30px;
+	font-weight: 700;
+	color: #2970C2;
+	margin: 0 0 10px 0;
+}
+.temp-imagen img{
+	height: 190px;
 }
