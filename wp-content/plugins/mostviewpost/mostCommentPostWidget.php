@@ -47,7 +47,7 @@ function mostrarArticulosRel($args, $instance)
 
 	$args = array('cat'=>$optionPost, 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => '-1' );
 	$the_query = new WP_Query($args); 
-	$cont_coment = $wpdb->get_results("SELECT c.comment_post_ID, COUNT(*) as count FROM c247_comments c GROUP BY comment_post_ID ORDER BY count DESC LIMIT ".$num_per." ;");
+	$cont_coment = $wpdb->get_results("SELECT c.comment_post_ID, COUNT(*) as count FROM c247_comments c INNER JOIN c247_posts p ON ( c.comment_post_ID = p.id ) WHERE post_status = 'publish' GROUP BY comment_post_ID ORDER BY count DESC  LIMIT ".$num_per." ;");
 
 	if ($the_query->have_posts())
 	{
@@ -58,9 +58,11 @@ function mostrarArticulosRel($args, $instance)
 
 		foreach ($cont_coment as $key => $value) 
 		{
-
+			echo '<span style="visibility: hidden">'.get_the_ID().'</span>';
 			if(get_the_ID() == $value->comment_post_ID)
 			{
+				
+
 	    	  $categoria    = get_the_category();
 	      	  $categoria    = ( !empty($categoria[1]->name) ) ? $categoria[1]->name : $categoria[0]->name ;
 
